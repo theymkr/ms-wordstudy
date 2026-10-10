@@ -25,4 +25,12 @@ page=page.replace('</body>',"<script id=\"ym-naver-dictionary-v1\">\n(()=>{\nfun
 const oldFeedbackTiming='ymFeedbackMissMemory.set(key, Math.min(2, previous + 1));\n return previous >= 1 ? 4000 : 2000;';
 if(!page.includes(oldFeedbackTiming))throw Error('Feedback timing source changed');
 page=page.replace(oldFeedbackTiming,'ymFeedbackMissMemory.set(key, Math.min(3, previous + 1));\n return previous >= 2 ? 3000 : 2000;');
+
+page=page.replace("button.textContent='🔊 발음 3번 다시 듣기';button.onclick=playMeaning;","button.id='ymMeaningSpeaker';button.textContent='🔊 발음 듣기';button.onclick=playMeaning;");
+page=page.replace('</head>','<style id="ym-top-speaker-style">.ym-top-speaker{display:flex;justify-content:flex-end;margin:0 0 8px}.ym-top-speaker button{margin:0;padding:10px 16px;min-height:44px;border-radius:10px;font-size:16px;font-weight:700;background:#3478ee;color:white;border:0;cursor:pointer}</style>\n</head>');
+page=page.replace('</body>',`<script id="ym-top-speaker-v1">
+(()=>{function mount(){const c=document.querySelector('.quiz-container'),q=document.getElementById('question');if(!c||!q)return;const button=document.getElementById('play')||document.getElementById('ymMeaningSpeaker');if(!button)return;const bar=document.createElement('div');bar.className='ym-top-speaker';button.textContent='🔊 발음 듣기';button.setAttribute('aria-label','현재 단어 발음 3회 재생');bar.append(button);c.prepend(bar);}
+const oldLoad=load;load=function(...args){const result=oldLoad.apply(this,args);mount();return result;};mount();})();
+</script>\n</body>`);
+
 fs.writeFileSync(pagePath,page);
