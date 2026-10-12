@@ -3,12 +3,22 @@
 'use strict';
 const POS={n:'n',v:'v',a:'a',adj:'a',ad:'ad',adv:'ad','명사':'n','동사':'v','형용사':'a','부사':'ad'};
 const normalizePos=s=>POS[String(s||'').trim().toLowerCase().replace(/\.$/,'')]||'';
-const clean=s=>String(s||'').replace(/\u00a0/g,' ').replace(/[ \t]+/g,' ').trim();
+const clean=s=>String(s||'').normalize('NFKC').replace(/[\u200B-\u200D\u2060\uFEFF]/g,'').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g,'').replace(/[‘’]/g,"'").replace(/[“”]/g,'"').replace(/[‐‑–—]/g,'-').replace(/\u00a0/g,' ').replace(/[ \t]+/g,' ').trim();
 const cleanWord=s=>clean(s).replace(/^[\s\d①-⑳.)·•▶▷>]+/,'').replace(/[*＊™®“”]+$/,'').trim();
 function meaningInfo(value){
  const meaning=clean(String(value||'').trim().replace(/\s*\n\s*/g,' / '));
  const senses=[...meaning.matchAll(/(?:^|\s\/\s)(n|v|adj|adv|ad|a)[.,]\s*/gi)];
  return {meaning:senses.length===1&&senses[0].index===0?meaning.slice(senses[0][0].length).trim():meaning,pos:senses.length===1?normalizePos(senses[0][1]):''};
+}
+function reviewIssues(row){
+ const word=clean(row.word),meaning=clean(row.meaning),issues=[];
+ if(!word||!meaning)issues.push('단어 또는 뜻이 비어 있습니다.');
+ if(/[£€¥₩$]\s*\d/.test(meaning))issues.push('통화기호·숫자가 뜻에 섞였습니다. 원문을 확인해 주세요.');
+ if(/(?:^|\s\/\s)[0-9Γ].\s*[가-힣]/.test(meaning))issues.push('품사 표시가 숫자·기호로 읽힌 것 같습니다.');
+ if(/\b[A-Z]{2,}\]/.test(meaning))issues.push('영문·괄호가 한글 뜻에 섞였습니다.');
+ if(meaning&&/[A-Za-z]/.test(meaning)&&!/[가-힣]/.test(meaning))issues.push('뜻이 영문으로만 읽혔습니다. 원문과 비교해 주세요.');
+ if(/[�]/.test(word+meaning))issues.push('읽지 못한 글자가 있습니다.');
+ return issues;
 }
 function csv(line){const out=[];let part='',quoted=false;for(let i=0;i<line.length;i++){const c=line[i];if(c==='"'){if(quoted&&line[i+1]==='"'){part+='"';i++;}else quoted=!quoted;}else if(c===','&&!quoted){out.push(part);part='';}else part+=c;}out.push(part);return out;}
 function parse(text){
@@ -86,6 +96,6 @@ async function extractImage(source,recognize,check=()=>{},progress=()=>{}){
  }
  return {rows,regions:regions.length};
 }
-const api={normalizePos,cleanWord,meaningInfo,parse,serialize,detectRegions,prepareCrop,canvasFor,extractImage};
+const api={normalizePos,cleanWord,meaningInfo,reviewIssues,clean,parse,serialize,detectRegions,prepareCrop,canvasFor,extractImage};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;root.YMExtraction=api;
 })(typeof window!=='undefined'?window:globalThis);
