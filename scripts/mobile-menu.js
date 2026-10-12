@@ -103,3 +103,67 @@
   }).observe(container,{childList:true,subtree:true});
   mount();
 })();
+
+/* Keep exam controls at normal phone width. Paging only changes visibility;
+ * the original answer buttons and per-part grading state remain intact. */
+(() => {
+  'use strict';
+  function viewportSize() {
+    document.documentElement.style.setProperty('--ym-exam-height', (window.visualViewport?.height || window.innerHeight) + 'px');
+  }
+  viewportSize();
+  window.addEventListener('resize',viewportSize);
+  window.visualViewport?.addEventListener('resize',viewportSize);
+  function mountExam() {
+    const c = document.querySelector('.quiz-container'), question = document.getElementById('question');
+    if (!c || !question || document.getElementById('ymExamToolbar')) return;
+    const toolbar = document.createElement('div'); toolbar.id = 'ymExamToolbar';
+    const header = c.querySelector('.quiz-header'), speaker = c.querySelector('.ym-top-speaker');
+    if (header) toolbar.append(header);
+    if (speaker) toolbar.append(speaker);
+    c.prepend(toolbar);
+    const meta = document.createElement('div'); meta.id = 'ymExamMeta';
+    const number = [...c.children].find(node => node.tagName === 'P' && node.textContent.startsWith('단어 번호'));
+    if (number) meta.append(number);
+    const elapsed = document.getElementById('elapsedTime'); if (elapsed) meta.append(elapsed);
+    toolbar.after(meta);
+    const speed = document.getElementById('pronunciationSpeed');
+    if (speed) {
+      const details = document.createElement('details'); details.id = 'ymExamSettings';
+      const summary = document.createElement('summary'); summary.id = 'ymExamSettingsSummary';
+      const update = () => { const value = '발음 속도 ' + speed.querySelector('output').textContent + ' · 설정'; if (summary.textContent !== value) summary.textContent = value; };
+      details.append(summary); speed.before(details); details.append(speed);
+      const dictionary = document.getElementById('ymNaverDictionary'); if (dictionary) details.append(dictionary);
+      const close = document.createElement('button'); close.type = 'button'; close.className = 'option-btn'; close.textContent = '설정 닫기'; close.onclick = () => { details.open = false; summary.focus(); }; details.append(close);
+      details.addEventListener('keydown',event => { if (event.key === 'Escape') { details.open = false; summary.focus(); } });
+      update(); new MutationObserver(update).observe(speed.querySelector('output'),{childList:true,subtree:true});
+    }
+    const input = document.getElementById('answer'); if (input) input.placeholder = '영어 단어 입력';
+    const home = document.getElementById('home'); if (home) { home.textContent = '시험 종료 · 메뉴'; home.title = '10문제 이상 채점한 기록은 자동 저장됩니다.'; }
+    const area = document.getElementById('area');
+    const parts = [...area.children].filter(node => node.classList.contains('answer-panel'));
+    if (parts.length > 1) {
+      let current = 0;
+      const nav = document.createElement('div'); nav.id = 'ymPartPager'; nav.setAttribute('aria-label','품사와 뜻 선택 단계');
+      const prev = document.createElement('button'), next = document.createElement('button'), label = document.createElement('span');
+      prev.type = next.type = 'button'; prev.textContent = '← 이전'; next.textContent = '다음 →';
+      label.setAttribute('aria-live','polite'); nav.append(prev,label,next); area.before(nav);
+      function show(index) {
+        current = index; parts.forEach((panel,i) => { panel.hidden = i !== current; });
+        label.textContent = '품사·뜻 ' + (current + 1) + ' / ' + parts.length;
+        prev.disabled = current === 0; next.disabled = current === parts.length-1;
+      }
+      prev.onclick = () => show(current-1); next.onclick = () => show(current+1);
+      area.addEventListener('click',event => {
+        if (locked || !event.target.closest('button[data-part]')) return;
+        const panel = parts[current];
+        if (current < parts.length-1 && panel.querySelector('[data-part="pos"][aria-pressed="true"]') && panel.querySelector('[data-part="meaning"][aria-pressed="true"]')) show(current+1);
+      });
+      show(0);
+    }
+    viewportSize();
+  }
+  const previousLoad = load;
+  load = function () { const result = previousLoad.apply(this,arguments); mountExam(); return result; };
+  mountExam();
+})();
