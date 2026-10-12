@@ -76,5 +76,6 @@ page=page.replace('a<=2956&&((a-1)%50===0)&&count>=50&&count%50===0','a<=2956&&c
 page=require('./scripts/extraction-build.cjs')(page,__dirname);
 page=require('./scripts/book-range-build.cjs').applyBookRange(page);
 page=require('./scripts/book-trash-build.cjs').applyBookTrash(page);
+page=require('./scripts/mobile-menu-build.cjs')(page);
 fs.writeFileSync(pagePath,page);
 
