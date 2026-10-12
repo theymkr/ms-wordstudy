@@ -13,6 +13,9 @@ module.exports = function applyMobileMenu(page) {
   const focusHook = "document.getElementById('answer').focus();play();";
   if (!page.includes(focusHook)) throw Error('Listening focus hook changed.');
   page = page.replace(focusHook, "if(window.YMVoicePreference?.()!=='voice')document.getElementById('answer').focus();play();");
+  const restHook = "const overlay=document.createElement('div');restOverlay=overlay;";
+  if (!page.includes(restHook)) throw Error('Rest screen hook changed.');
+  page = page.replace(restHook, restHook + "overlay.id='ymRestScreen';");
   const css = fs.readFileSync(path.join(__dirname, 'mobile-menu.css'), 'utf8') + '\n' + fs.readFileSync(path.join(__dirname, 'voice-resume.css'), 'utf8');
   const js = fs.readFileSync(path.join(__dirname, 'mobile-menu.js'), 'utf8') + '\n' + fs.readFileSync(path.join(__dirname, 'audio-playback.js'), 'utf8') + '\n' + fs.readFileSync(path.join(__dirname, 'voice-resume.js'), 'utf8');
   return page.replace('</body>', '<style id="ym-mobile-menu-style">\n' + css + '\n</style>\n<script id="ym-mobile-menu-script">\n' + js + '\n</script>\n</body>');
