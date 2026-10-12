@@ -75,5 +75,6 @@ page=page.replace('if (window.__ymAllowClipboard) return;',"if (window.__ymAllow
 page=page.replace('a<=2956&&((a-1)%50===0)&&count>=50&&count%50===0','a<=2956&&count>=1&&count<=2956');
 page=require('./scripts/extraction-build.cjs')(page,__dirname);
 page=require('./scripts/book-range-build.cjs').applyBookRange(page);
+page=require('./scripts/book-trash-build.cjs').applyBookTrash(page);
 fs.writeFileSync(pagePath,page);
 
