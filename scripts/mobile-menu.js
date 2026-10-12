@@ -109,11 +109,16 @@
 (() => {
   'use strict';
   function viewportSize() {
-    document.documentElement.style.setProperty('--ym-exam-height', (window.visualViewport?.height || window.innerHeight) + 'px');
+    const height = window.visualViewport?.height || window.innerHeight;
+    document.documentElement.style.setProperty('--ym-exam-height', height + 'px');
+    const c = document.querySelector('.quiz-container');
+    c?.classList.toggle('ym-keyboard-compact', document.activeElement?.id === 'answer' && height < 500);
   }
   viewportSize();
   window.addEventListener('resize',viewportSize);
   window.visualViewport?.addEventListener('resize',viewportSize);
+  document.addEventListener('focusin',viewportSize);
+  document.addEventListener('focusout',() => requestAnimationFrame(viewportSize));
   function mountExam() {
     const c = document.querySelector('.quiz-container'), question = document.getElementById('question');
     if (!c || !question || document.getElementById('ymExamToolbar')) return;
@@ -138,7 +143,16 @@
       details.addEventListener('keydown',event => { if (event.key === 'Escape') { details.open = false; summary.focus(); } });
       update(); new MutationObserver(update).observe(speed.querySelector('output'),{childList:true,subtree:true});
     }
-    const input = document.getElementById('answer'); if (input) input.placeholder = '영어 단어 입력';
+    const input = document.getElementById('answer');
+    if (input) {
+      input.placeholder = '영어 단어 입력';
+      input.setAttribute('enterkeyhint','done');
+      const dismiss = document.createElement('button');
+      dismiss.id = 'ymHideKeyboard'; dismiss.type = 'button';
+      dismiss.textContent = '키보드 닫기';
+      dismiss.addEventListener('click',() => { input.blur(); viewportSize(); });
+      toolbar.append(dismiss);
+    }
     const home = document.getElementById('home'); if (home) { home.textContent = '시험 종료 · 메뉴'; home.title = '10문제 이상 채점한 기록은 자동 저장됩니다.'; }
     const area = document.getElementById('area');
     const parts = [...area.children].filter(node => node.classList.contains('answer-panel'));

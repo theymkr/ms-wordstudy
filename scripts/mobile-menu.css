@@ -75,6 +75,14 @@
   #ymExamToolbar .quiz-header {flex:1;margin:0;font-size:12px;gap:6px;min-width:0}
   #ymExamToolbar .ym-top-speaker {margin:0;flex:none}
   #ymExamToolbar .ym-top-speaker button {min-height:44px;padding:8px 10px;font-size:14px}
+  #ymHideKeyboard {min-height:44px;padding:6px 8px;font-size:12px;border:1px solid #63758d;border-radius:8px;background:#27364a;color:#fff;flex:none}
+  .quiz-container.ym-keyboard-compact #ymExamMeta,
+  .quiz-container.ym-keyboard-compact #ymExamSettings,
+  .quiz-container.ym-keyboard-compact #question,
+  .quiz-container.ym-keyboard-compact .live-score,
+  .quiz-container.ym-keyboard-compact #home {display:none}
+  .quiz-container.ym-keyboard-compact #answer {min-height:48px!important;padding:8px!important}
+  .quiz-container.ym-keyboard-compact .ym-listening-meaning {max-height:70px;font-size:14px}
   #ymExamMeta {display:flex;align-items:center;justify-content:space-between;gap:8px;flex:none}
   #ymExamMeta p {margin:0!important;font-size:12px!important;line-height:1.3}
   .quiz-container:has(#question) .live-score {margin:0;padding:7px;gap:5px 10px;font-size:13px;line-height:1.3;flex:none}
