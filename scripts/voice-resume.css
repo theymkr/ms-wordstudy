@@ -10,3 +10,5 @@
 #ymVoiceStatus {font-size:12px;line-height:1.4;margin:0;color:#c0d9f5;flex:none}
 .quiz-container:has(#ymVoiceControls) #form {flex:none}
 .quiz-container.ym-keyboard-compact #ymVoiceStatus {font-size:11px}
+
+.ym-audio-recovery{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}.ym-audio-recovery button{font-size:13px;padding:8px 10px;border:1px solid #596577;border-radius:8px;background:#293242;color:#fff;min-height:38px}
