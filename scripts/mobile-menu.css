@@ -147,7 +147,7 @@
 @media screen {
   /* Keep both meaning choices available together for two-sense questions. */
   .quiz-container:has(#question) #area.ym-multi-sense {
-    display:flex;flex-direction:column;gap:4px;min-height:0;overflow-y:auto;overflow-x:hidden;
+    display:flex;flex-direction:column;gap:12px;min-height:0;overflow-y:auto;overflow-x:hidden;
     overscroll-behavior:contain;-webkit-overflow-scrolling:touch;
   }
   .quiz-container:has(#question) #area.ym-multi-sense .answer-panel {flex:none;padding:4px 6px}
