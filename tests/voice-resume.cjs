@@ -59,19 +59,29 @@ const click=(w,id)=>{assert(w.document.getElementById(id),id);w.document.getElem
  w.document.querySelector('#ymAudioRecovery button').click();assert.equal(w.spoken.length,utterances+2,'direct device replay');w.T.stop();w.rejectPlayback=null;
  // Spelling mode listens exactly twice, with three-second gaps between and after.
  let c=boot(),p=c.w;p.T.user('timing');await new Promise(r=>setTimeout(r,30));
- p.localStorage.setItem('ym-answer-method-v1:timing','voice');p.T.audioSource('iphone');
+ p.localStorage.setItem('ym-answer-method-v1:timing','voice');click(p,'sourceIphone');
+ // The audio layer replaces the counter with loading/playing status, so capture counter writes.
+ const counters=[],textContent=Object.getOwnPropertyDescriptor(p.Node.prototype,'textContent');
+ Object.defineProperty(p.Node.prototype,'textContent',{...textContent,set(value){
+  if(this.id==='audioStatus' && /^발음 재생 /.test(value))counters.push(value);
+  textContent.set.call(this,value);
+ }});
  const delays=[],nativeSetTimeout=p.setTimeout.bind(p);
  p.setTimeout=(fn,ms,...args)=>{if(ms===3000){delays.push(ms);fn(...args);return 0;}return nativeSetTimeout(fn,ms,...args);};
  const spokenBefore=p.spoken.length;p.T.start('listen',1);
  assert.equal(p.spoken.length,spokenBefore+1,'first spelling-mode pronunciation');
+ assert.deepEqual(counters,['발음 재생 1 / 2'],'first pronunciation reports the two-play total');
  p.spoken.at(-1).onend();
  assert.equal(p.spoken.length,spokenBefore+2,'one replay after three seconds');
+ assert.deepEqual(counters,['발음 재생 1 / 2','발음 재생 2 / 2'],'second pronunciation reports the two-play total');
  p.spoken.at(-1).onend();
+ assert.equal(p.spoken.length,spokenBefore+2,'no third pronunciation after the final pause');
  assert.deepEqual(delays,[3000,3000],'three-second gap before replay and prompt');
  assert(p.document.getElementById('audioStatus').textContent.includes('철자 말하기'));
- p.T.stop();p.close();
+ p.T.stop();
 
  Object.defineProperty(w.document,'visibilityState',{configurable:true,value:'hidden'});w.document.dispatchEvent(new w.Event('visibilitychange'));const before=w.T.state().elapsed;await new Promise(r=>setTimeout(r,30));assert.equal(w.T.state().elapsed,before);Object.defineProperty(w.document,'visibilityState',{configurable:true,value:'visible'});w.document.dispatchEvent(new w.Event('visibilitychange'));assert(w.document.getElementById('ymResumeCard'));
  assert.equal(a.errors.length,0,a.errors.map(String).join('\n'));assert.equal(b.errors.length,0,b.errors.map(String).join('\n'));
- console.log('PASS: letter-name decoding, cumulative spelling, media reuse, blocked playback, TTS fallback, voice confirmation, stale speech cancellation, reload during grading, draft/elapsed resume, account isolation, retry completion, partial MCQ, corrupt checkpoint.');w.close();process.exit(0);
+ assert.equal(c.errors.length,0,c.errors.map(String).join('\n'));
+ console.log('PASS: letter-name decoding, cumulative spelling, media reuse, blocked playback, TTS fallback, voice confirmation, stale speech cancellation, reload during grading, draft/elapsed resume, account isolation, retry completion, partial MCQ, corrupt checkpoint, two-play counter and three-second pauses.');p.close();w.close();process.exit(0);
 })().catch(e=>{console.error(e);process.exit(1)});

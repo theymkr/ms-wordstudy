@@ -177,7 +177,7 @@
     const next = () => {
       if (id !== token) return;
       const status = byId('audioStatus'); if (!status) return;
-      status.textContent = '발음 재생 ' + (++count) + ' / 3';
+      status.textContent = '발음 재생 ' + (++count) + ' / 2';
       playWordPronunciation(questions[currentIdx].word,id,() => {
         if (id !== token) return;
         if (count < 2) timer = setTimeout(next,3000);
