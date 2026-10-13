@@ -57,6 +57,20 @@ const click=(w,id)=>{assert(w.document.getElementById(id),id);w.document.getElem
  w.T.audioSource('us');w.rejectPlayback={name:'NetworkError'};const utterances=w.spoken.length;click(w,'play');await new Promise(r=>setTimeout(r,0));assert.equal(w.spoken.length,utterances+1,'recording failure falls back to synthesis');assert.equal(w.T.state().records.length,0);
  w.spoken.at(-1).onerror();assert(w.document.getElementById('audioStatus').textContent.includes('기기 음성'));assert.equal(w.T.state().records.length,0);
  w.document.querySelector('#ymAudioRecovery button').click();assert.equal(w.spoken.length,utterances+2,'direct device replay');w.T.stop();w.rejectPlayback=null;
+ // Spelling mode listens exactly twice, with three-second gaps between and after.
+ let c=boot(),p=c.w;p.T.user('timing');await new Promise(r=>setTimeout(r,30));
+ p.localStorage.setItem('ym-answer-method-v1:timing','voice');p.T.audioSource('iphone');
+ const delays=[],nativeSetTimeout=p.setTimeout.bind(p);
+ p.setTimeout=(fn,ms,...args)=>{if(ms===3000){delays.push(ms);fn(...args);return 0;}return nativeSetTimeout(fn,ms,...args);};
+ const spokenBefore=p.spoken.length;p.T.start('listen',1);
+ assert.equal(p.spoken.length,spokenBefore+1,'first spelling-mode pronunciation');
+ p.spoken.at(-1).onend();
+ assert.equal(p.spoken.length,spokenBefore+2,'one replay after three seconds');
+ p.spoken.at(-1).onend();
+ assert.deepEqual(delays,[3000,3000],'three-second gap before replay and prompt');
+ assert(p.document.getElementById('audioStatus').textContent.includes('철자 말하기'));
+ p.T.stop();p.close();
+
  Object.defineProperty(w.document,'visibilityState',{configurable:true,value:'hidden'});w.document.dispatchEvent(new w.Event('visibilitychange'));const before=w.T.state().elapsed;await new Promise(r=>setTimeout(r,30));assert.equal(w.T.state().elapsed,before);Object.defineProperty(w.document,'visibilityState',{configurable:true,value:'visible'});w.document.dispatchEvent(new w.Event('visibilitychange'));assert(w.document.getElementById('ymResumeCard'));
  assert.equal(a.errors.length,0,a.errors.map(String).join('\n'));assert.equal(b.errors.length,0,b.errors.map(String).join('\n'));
  console.log('PASS: letter-name decoding, cumulative spelling, media reuse, blocked playback, TTS fallback, voice confirmation, stale speech cancellation, reload during grading, draft/elapsed resume, account isolation, retry completion, partial MCQ, corrupt checkpoint.');w.close();process.exit(0);
