@@ -1,0 +1,68 @@
+@media screen {
+  .quiz-container:has(#scoreHistory) {
+    zoom:1!important;transform:none!important;width:min(1120px,100%)!important;max-width:100%!important;
+    height:calc(100dvh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    min-width:0;margin:0 auto!important;padding:16px!important;
+    display:flex;flex-direction:column;gap:10px;overflow:hidden;
+  }
+  body:has(#scoreHistory) {padding-top:max(8px,env(safe-area-inset-top))!important;padding-bottom:max(8px,env(safe-area-inset-bottom))!important}
+  .quiz-container:has(#scoreHistory) [hidden] {display:none!important}
+  .quiz-container:has(#scoreHistory)>h2 {font-size:22px;line-height:1.3;margin:0;flex:none}
+  #scoreHistory {display:flex;flex-direction:column;gap:8px;flex:1;min-width:0;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain}
+  #scoreHistory>h3 {font-size:15px;line-height:1.3;margin:0;flex:none}
+  #scoreHistory>label {display:flex;align-items:center;gap:10px;font-size:14px;flex:none}
+  #scoreFilter {min-height:44px;font-size:16px;min-width:0;max-width:100%}
+  #scoreSummary {margin:0;font-size:14px;line-height:1.5;word-break:keep-all;overflow-wrap:normal;flex:none}
+  #scoreChart {flex:none;min-width:0}
+  #scoreChart svg {display:block;width:100%!important;height:140px;max-height:140px!important}
+  #scoreChart .hint {font-size:12px;line-height:1.4;margin:4px 0 0;word-break:keep-all}
+  #scoreTable {flex:none;min-width:0;overflow:visible!important}
+  #scoreTable table {table-layout:fixed;width:100%!important}
+  #scoreTable th,#scoreTable td {box-sizing:border-box;word-break:keep-all;overflow-wrap:normal!important;white-space:normal!important;vertical-align:middle}
+  #scoreTable th {padding:8px 6px!important;line-height:1.4}
+  #scoreTable th:nth-child(1) {width:7%}
+  #scoreTable th:nth-child(2) {width:21%}
+  #scoreTable th:nth-child(3) {width:33%}
+  #scoreTable th:nth-child(4) {width:15%}
+  #scoreTable th:nth-child(5) {width:24%}
+  #scoreTable .ym-score-print-pair {display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  #scoreTable .ym-attempt-print {min-height:44px;min-width:104px;max-width:100%}
+  #scoreTable .ym-page-nav {margin:8px 0 0;gap:12px;min-height:44px}
+  #scoreTable .ym-page-nav button {font-size:14px;min-width:72px}
+  #scoreTable .ym-page-nav span {min-width:60px;text-align:center;font-size:14px}
+  #scoreTable>.hint,#storageNote {font-size:12px;line-height:1.45;margin:6px 0 0;word-break:keep-all}
+  .ym-history-notes {font-size:12px;line-height:1.4;flex:none;position:relative;margin-top:auto}
+  .ym-history-notes summary {cursor:pointer;color:#b4c5dc;padding:6px 0}
+  .ym-history-notes[open] {border:1px solid #45576f;border-radius:8px;padding:8px;background:#202731}
+  #historyHome {min-height:44px;flex:none;width:100%;margin:0;padding:10px;font-size:15px;box-sizing:border-box}
+  .quiz-container:has(#scoreHistory)>.result-screen {min-width:0;min-height:0;overflow:auto}
+  @media(max-width:700px) {
+    .quiz-container:has(#scoreHistory) {padding:12px!important;gap:8px}
+    #scoreHistory {gap:6px}
+    #scoreTable table {display:block}
+    #scoreTable tbody {display:block}
+    #scoreTable .ym-history-head {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+    #scoreTable tr[data-attempt-id] {display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 10px;padding:10px;border:1px solid #45576f;border-radius:10px;background:#242a33}
+    #scoreTable tr[data-attempt-id]>td {display:block;padding:0!important;border:0!important;font-size:14px;line-height:1.4;min-width:0}
+    #scoreTable tr[data-attempt-id]>td:nth-child(1) {font-weight:700;color:#a8cfff;white-space:nowrap!important}
+    #scoreTable tr[data-attempt-id]>td:nth-child(1)::after {content:'회차'}
+    #scoreTable tr[data-attempt-id]>td:nth-child(2) {text-align:right;font-size:12px;white-space:nowrap!important}
+    #scoreTable tr[data-attempt-id]>td:nth-child(3) {grid-column:1/-1;line-height:1.5}
+    #scoreTable tr[data-attempt-id]>td:nth-child(4) {grid-column:1/-1;color:#bdc8d8}
+    #scoreTable tr[data-attempt-id]>td:nth-child(4)::before {content:'정답 '}
+    #scoreTable tr[data-attempt-id]>td:nth-child(4)::after {content:'문제'}
+    #scoreTable tr[data-attempt-id]>td:nth-child(5) {grid-column:1/-1}
+    #scoreTable .ym-score-print-pair {justify-content:space-between;flex-wrap:nowrap;gap:12px}
+    #scoreTable .ym-score-print-pair>span {font-size:24px;font-weight:700;color:#9fceff;white-space:nowrap}
+    #scoreTable .ym-legacy-attempt-note {font-size:11px;margin-top:2px}
+  }
+  @media(max-height:740px) {
+    .quiz-container:has(#scoreHistory) {padding:10px!important;gap:6px}
+    .quiz-container:has(#scoreHistory)>h2 {font-size:20px}
+    #scoreChart svg {height:100px;max-height:100px!important}
+    #scoreSummary {font-size:13px}
+  }
+  @media(max-height:620px) {
+    #scoreChart svg {height:60px;max-height:60px!important}
+  }
+}
