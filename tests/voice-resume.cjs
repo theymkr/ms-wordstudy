@@ -25,7 +25,7 @@ const click=(w,id)=>{assert(w.document.getElementById(id),id);w.document.getElem
  assert(w.document.getElementById('ymSpeakAnswer'));assert.notEqual(w.document.activeElement.id,'answer');
  click(w,'ymSpeakAnswer');assert.equal(w.rec.lang,'en-US');w.rec.result(w.T.word().split('').join(' ')+'.');
  assert.equal(w.document.getElementById('answer').value,w.T.word());assert.equal(w.T.state().records.length,0,'speech needs confirmation');
- click(w,'submit');assert.equal(w.T.state().records[0].answerMethod,'voice');assert(w.T.state().locked);
+ const enter=new w.KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true});w.document.getElementById('answer').dispatchEvent(enter);assert(enter.defaultPrevented,'Enter confirms a spoken spelling');assert.equal(w.T.state().records[0].answerMethod,'voice');assert(w.T.state().locked);
  // Reload during feedback must advance once, not grade a second time.
  let b=boot(saved(w));w.T.stop();w=b.w;w.T.user('test');await new Promise(r=>setTimeout(r,30));click(w,'ymResumeCard');
  w.document.querySelector('#ymResumeCard button').click();assert.equal(w.T.state().currentIdx,1);assert.equal(w.T.state().records.length,1);
