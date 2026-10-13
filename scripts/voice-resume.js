@@ -171,8 +171,8 @@
       status.textContent = '발음 재생 ' + (++count) + ' / 3';
       playWordPronunciation(questions[currentIdx].word,id,() => {
         if (id !== token) return;
-        if (count < 3) timer = setTimeout(next,600);
-        else status.textContent = '🎤 철자 말하기를 누르세요. 확인 후 채점합니다.';
+        if (count < 2) timer = setTimeout(next,3000);
+        else timer = setTimeout(() => { if (id === token) status.textContent = '🎤 철자 말하기를 누르세요. 확인 후 채점합니다.'; },3000);
       },() => { if (id === token) status.textContent = '발음을 다시 재생하거나 말로 답하기를 누르세요.'; });
     }; next();
   };

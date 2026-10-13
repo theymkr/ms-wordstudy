@@ -7,7 +7,9 @@
   stop = function () {
     generation++; clearTimeout(watchdog); watchdog = null;
     audio.onended = audio.onerror = audio.onplaying = null;
-    audio.pause(); utterance = null;
+    audio.pause();
+    if (utterance && window.speechSynthesis) { try { speechSynthesis.cancel(); } catch (_) {} }
+    utterance = null;
     return previousStop.apply(this, arguments);
   };
   playWordPronunciation = function (word, id, onend, onerror) {
@@ -45,7 +47,12 @@
     if (!filename) { speak(); return; }
     audio.onended = finished;
     audio.onplaying = () => { if (!current()) return; clearTimeout(watchdog); setAudioSourceStatus('재생 중 · 미국식 원어민 녹음'); watchdog = setTimeout(() => failed('녹음 재생이 멈췄습니다. 아래 듣기 버튼을 다시 눌러 주세요.'),30000); };
-    const fallback = () => { if (!current()) return; audio.pause(); audio.onerror = audio.onended = audio.onplaying = null; activeRecordedAudio = null; speak(); };
+    const fallback = () => {
+      if (!current()) return;
+      clearTimeout(watchdog); watchdog = null;
+      audio.pause(); audio.onerror = audio.onended = audio.onplaying = null;
+      activeRecordedAudio = null; speak();
+    };
     audio.onerror = fallback;
     audio.src = '/audio-pilot/' + encodeURIComponent(filename); audio.muted = false; audio.volume = 1;
     audio.defaultPlaybackRate = rate; audio.playbackRate = rate; audio.preservesPitch = true;
