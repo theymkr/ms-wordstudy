@@ -156,7 +156,10 @@
     const home = document.getElementById('home'); if (home) { home.textContent = '시험 종료 · 메뉴'; home.title = '10문제 이상 채점한 기록은 자동 저장됩니다.'; }
     const area = document.getElementById('area');
     const parts = [...area.children].filter(node => node.classList.contains('answer-panel'));
-    if (parts.length > 1) {
+    if (parts.length === 2 && c.classList.contains('wide-quiz')) {
+      area.classList.add('ym-multi-sense');
+      parts.forEach(panel => { panel.hidden = false; });
+    } else if (parts.length > 1) {
       let current = 0;
       const nav = document.createElement('div'); nav.id = 'ymPartPager'; nav.setAttribute('aria-label','품사와 뜻 선택 단계');
       const prev = document.createElement('button'), next = document.createElement('button'), label = document.createElement('span');
