@@ -146,6 +146,15 @@
       speechTimer = setTimeout(() => { if (current()) { stopSpeech(); if (!received) notice('음성 인식 응답이 없습니다. Safari 또는 키보드 마이크를 이용해 주세요.'); } },30000);
     } catch (_) { stopSpeech(); notice('음성 인식을 시작하지 못했습니다. 다시 누르거나 직접 입력해 주세요.'); }
   }
+  // Enter confirms a completed spoken spelling, including when the mobile keyboard is hidden.
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Enter' || mode !== 'listen' || answerMethod !== 'voice' || !voiceText || locked || !attemptActive) return;
+    const input = byId('answer'), submit = byId('submit');
+    if (!input || input.value !== voiceText || event.target === submit) return;
+    event.preventDefault();
+    stopSpeech();
+    submit?.click();
+  }, true);
   function mountExam() {
     if (!byId('question')) return;
     const home = byId('home'); if (home) home.textContent = '저장·나가기';
