@@ -11,10 +11,11 @@
   #scoreHistory {display:flex;flex-direction:column;gap:8px;flex:1;min-width:0;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain}
   #scoreHistory>h3 {font-size:15px;line-height:1.3;margin:0;flex:none}
   #scoreHistory>label {display:flex;align-items:center;gap:10px;font-size:14px;flex:none}
-  #scoreFilter {min-height:44px;font-size:16px;min-width:0;max-width:100%}
+  #scoreFilter,#scoreWeek {min-height:44px;font-size:16px;min-width:0;max-width:100%;background:#292929;color:white;border-radius:6px}
   #scoreSummary {margin:0;font-size:14px;line-height:1.5;word-break:keep-all;overflow-wrap:normal;flex:none}
   #scoreChart {flex:none;min-width:0}
-  #scoreChart svg {display:block;width:100%!important;height:140px;max-height:140px!important}
+  #scoreChart .ym-history-plot {overflow-x:auto;max-width:100%;}
+  #scoreChart .ym-history-plot svg {display:block;width:auto!important;min-width:540px!important;height:180px;max-height:none!important}
   #scoreChart .hint {font-size:12px;line-height:1.4;margin:4px 0 0;word-break:keep-all}
   #scoreTable {flex:none;min-width:0;overflow:visible!important}
   #scoreTable table {table-layout:fixed;width:100%!important}

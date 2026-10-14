@@ -2,6 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 module.exports = function applyMobileMenu(page) {
+  page = require('./history-build.cjs')(page);
   if (!page.includes('id="ym-book-range-script"')) throw Error('Mobile menu requires book/range controls.');
   const oldFit = "c.style.zoom='1';const v=window.visualViewport;";
   if (!page.includes(oldFit)) throw Error('Screen fitting hook changed.');
