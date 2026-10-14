@@ -16,3 +16,31 @@ test('sync keeps deleted books hidden against stale remote and restores newer de
 test('sync merges concurrent imported-book scores by attempt IDs',()=>{const merge=merger(),key='-set-abc-123';const r=JSON.parse(merge({[key]:JSON.stringify([{id:'a',date:'2026-01-01'},{id:'b',date:'2026-01-02'}])},{[key]:JSON.stringify([{id:'a',date:'2026-01-01'},{id:'c',date:'2026-01-03'}])})[key]);assert.equal(r.length,3);});
 test('generic delimiter formats preserve meaning fragments',()=>{for(const s of ['apple;n;사과','apple;사과;n','apple,n,사과'])assert.equal(core.parse(s)[0].meaning,'사과');assert.deepEqual(core.parse('apple,사과,과일,n'),[{word:'apple',meaning:'사과, 과일',pos:'n',synonyms:''}]);});
 test('uncertain structured records remain editable rather than disappearing',()=>{const rows=[{word:'uncertain?',meaning:'',pos:'',synonyms:'trial'},{word:'',meaning:'불확실',pos:'',synonyms:''}];assert.equal(core.parse(core.serialize(rows)).length,2);});
+test('new file imports keep English and Korean while stripping symbols and other scripts',()=>{
+ const source='① ★apple*** | 사과🍎, 과일! 123 | n.\n12. clout | influence, pull, power ★ | n. 권력, 영향력 / v. 때리다\n日本語 | 中文';
+ assert.deepEqual(core.parseImport(source),[
+  {word:'apple',meaning:'사과 과일',pos:'n',synonyms:''},
+  {word:'clout',meaning:'n 권력 영향력 v 때리다',pos:'',synonyms:'influence pull power'}
+ ]);
+ for(const row of core.parseImport(source))for(const value of Object.values(row))assert.match(value,/^[A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3 ]*$/);
+});
+test('file filtering preserves columns and incomplete rows, and does not change legacy parsing',()=>{
+ const rows=[{word:'uncertain?',meaning:'',pos:'',synonyms:'trial★'},{word:'',meaning:'불확실!',pos:'',synonyms:''}];
+ const result=core.parse(core.prepareImport(core.serialize(rows)));
+ assert.deepEqual(result,[{word:'uncertain',meaning:'',pos:'',synonyms:'trial'},{word:'',meaning:'불확실',pos:'',synonyms:''}]);
+ assert.equal(core.parseImport('"apple","사과, 과일!","n"')[0].meaning,'사과 과일');
+ assert.equal(core.parseImport('apple;사과★;n')[0].pos,'n');
+ assert.equal(core.parseImport('well-known | 잘 알려진!')[0].word,'wellknown');
+ assert.equal(core.parse('well-known | 잘 알려진!')[0].word,'well-known');
+ assert.equal(core.prepareImport('★ 日本語 中文 @#$ 123'),'');
+ assert.equal(core.parseImport('apple [ˈæpəl] 사과')[0].word,'apple');
+ assert.equal(core.parseImport('apple™ | 사과®')[0].word,'apple');
+ assert.equal(core.parseImport('B12 | 비타민 12')[0].word,'B');
+});
+test('OCR whitelist uses only English and Korean plus temporary parsing delimiters',()=>{
+ const en=core.ocrParameters('eng','7'),ko=core.ocrParameters('eng+kor','6');
+ assert(en.tessedit_char_whitelist.includes('Z'));assert(!en.tessedit_char_whitelist.includes('한'));
+ for(const character of '가한글힣ㄱ')assert(ko.tessedit_char_whitelist.includes(character));
+ for(const character of '★♡€¥₩中文日本あ')assert(!ko.tessedit_char_whitelist.includes(character));
+ assert.equal(ko.tessedit_pageseg_mode,'6');assert.throws(()=>core.ocrParameters('chi_sim','6'));
+});

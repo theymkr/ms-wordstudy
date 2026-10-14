@@ -47,6 +47,31 @@ function parse(text){
  return rows;
 }
 function serialize(rows){return 'word\tmeaning\tpos\tsynonyms\n'+rows.map(r=>[r.word,r.meaning,r.pos||'',r.synonyms||''].map(x=>String(x).replace(/[\t\r\n]/g,' ')).join('\t')).join('\n');}
+// File-import policy only. Existing books and manual edits retain their spelling.
+const withoutPhonetics=value=>String(value||'').replace(/\p{S}/gu,char=>char.normalize('NFKC')==='|'?'|':'').normalize('NFKC')
+ .replace(/\[[^\]\r\n]*[æðθ\u0250-\u02ff][^\]\r\n]*\]/g,' ')
+ .replace(/\/[^/\r\n]*[æðθ\u0250-\u02ff][^/\r\n]*\//g,' ');
+function importLetters(value,word=false){
+ return withoutPhonetics(value).replace(/[^A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3\s]/g,word?'':' ').replace(/\s+/g,' ').trim();
+}
+function parseImport(text){
+ // Keep delimiters and POS markers until columns are parsed; none reach fields.
+ const source=withoutPhonetics(text).replace(/[^A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3\s0-9|,;."'()\/*-]/g,'')
+  .replace(/^[ \d.)*]+/gm,'').replace(/\d+/g,'');
+ return parse(source).map(row=>({word:importLetters(row.word,true),meaning:importLetters(row.meaning),pos:normalizePos(row.pos),synonyms:importLetters(row.synonyms)})).filter(row=>row.word||row.meaning);
+}
+function prepareImport(text){
+ const rows=parseImport(text);
+ return rows.length?serialize(rows):String(text||'').split(/\r?\n/).map(line=>importLetters(line)).filter(Boolean).join('\n');
+}
+const ocrLatin='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+let ocrHangul;
+function ocrParameters(language,psm){
+ if(!['eng','eng+kor','kor+eng'].includes(language))throw Error('영어와 한국어만 인식할 수 있습니다.');
+ if(language!=='eng'&&!ocrHangul)ocrHangul=[[0xac00,0xd7a3],[0x1100,0x11ff],[0x3131,0x318e]].map(([first,last])=>Array.from({length:last-first+1},(_,i)=>String.fromCharCode(first+i)).join('')).join('');
+ // Numbers, separators and POS punctuation are structural input, removed above.
+ return {tessedit_pageseg_mode:psm,preserve_interword_spaces:'1',tessedit_char_whitelist:ocrLatin+(language==='eng'?'':ocrHangul)+"0123456789 \t\n.,;|'()/\"-"};
+}
 function detectRegions(image){
  const {width:w,height:h,data}=image,mask=new Uint8Array(w*h),seen=new Uint8Array(w*h),components=[];
  for(let i=0;i<mask.length;i++){const p=i*4,r=data[p],g=data[p+1],b=data[p+2],hi=Math.max(r,g,b),lo=Math.min(r,g,b);mask[i]=hi>110&&hi-lo>22?1:0;}
@@ -96,6 +121,6 @@ async function extractImage(source,recognize,check=()=>{},progress=()=>{}){
  }
  return {rows,regions:regions.length};
 }
-const api={normalizePos,cleanWord,meaningInfo,reviewIssues,clean,parse,serialize,detectRegions,prepareCrop,canvasFor,extractImage};
+const api={normalizePos,cleanWord,meaningInfo,reviewIssues,clean,parse,serialize,importLetters,parseImport,prepareImport,ocrParameters,detectRegions,prepareCrop,canvasFor,extractImage};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;root.YMExtraction=api;
 })(typeof window!=='undefined'?window:globalThis);
