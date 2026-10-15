@@ -1,10 +1,11 @@
-/* Local account-scoped checkpoints; speech capture starts only on a tap. */
+/* Local account-scoped checkpoints; voice mode listens after one pronunciation. */
 (() => {
   'use strict';
   const byId = id => document.getElementById(id);
   const key = () => activeUser ? 'ym-resume-v1:' + encodeURIComponent(activeUser) : null;
   const methodKey = () => 'ym-answer-method-v1:' + encodeURIComponent(activeUser);
   let restoring = false, owner = '', suspended = false, speech = null, speechTimer = null;
+  let silenceTimer = null, finishTimer = null, completeSpeech = null;
   let speechGeneration = 0, answerMethod = 'keyboard', voiceText = '', preferred = 'keyboard';
   function preference() {
     try { return localStorage.getItem(methodKey()) === 'voice' ? 'voice' : 'keyboard'; } catch (_) { return preferred; }
@@ -12,8 +13,16 @@
   window.YMVoicePreference = preference;
   function setPreference(value) { preferred = value; try { localStorage.setItem(methodKey(), value); } catch (_) {} }
   function notice(message) { const node = byId('ymVoiceStatus'); if (node) node.textContent = message; }
+  function playbackLabel() {
+    const button = byId('play'); if (!button) return;
+    const voice = preference() === 'voice';
+    button.textContent = voice ? '🔊 발음 1번 듣기' : '🔊 발음 3번 듣기';
+    button.setAttribute('aria-label', voice ? '현재 단어 발음 1회 후 철자 말하기 자동 시작' : '현재 단어 발음 3회 재생');
+  }
   function stopSpeech() {
     speechGeneration++; clearTimeout(speechTimer); speechTimer = null;
+    clearTimeout(silenceTimer); silenceTimer = null;
+    clearTimeout(finishTimer); finishTimer = null; completeSpeech = null;
     const old = speech; speech = null; if (old) { try { old.abort(); } catch (_) {} }
     const button = byId('ymSpeakAnswer'); if (button) { button.textContent = '🎤 철자 말하기'; button.setAttribute('aria-pressed','false'); }
   }
@@ -96,7 +105,7 @@
     const choice = document.createElement('label'); choice.id = 'ymVoiceChoice';
     const checkbox = document.createElement('input'); checkbox.type = 'checkbox'; checkbox.checked = preference() === 'voice';
     checkbox.onchange = () => setPreference(checkbox.checked ? 'voice' : 'keyboard');
-    choice.append(checkbox, document.createTextNode('알파벳을 하나씩 말하기 · 확인 후 채점'));
+    choice.append(checkbox, document.createTextNode('철자 말하기 · 발음 1회 후 자동 시작 · 3초 또는 Enter로 완료'));
     panel.querySelector('.exam-mode-buttons')?.before(choice);
     if (!choice.isConnected) panel.append(choice);
     const data = readCheckpoint(); if (!data) return;
@@ -115,75 +124,116 @@
     return tokens.map(t => aliases[t]).join('');
   }
   function startSpeech() {
-    if (locked) return;
-    if (speech) { try { speech.stop(); notice('철자를 정리하고 있습니다.'); } catch (_) { stopSpeech(); } return; }
-    setPreference('voice'); stop(); byId('answer')?.blur();
+    if (locked || !attemptActive || mode !== 'listen') return;
+    if (speech) { completeSpeech?.(); return; }
+    setPreference('voice'); stop(); playbackLabel(); byId('answer')?.blur();
     const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (!Recognition) { notice('음성 입력을 지원하지 않습니다. Safari에서 열거나 키보드의 마이크를 사용해 주세요.'); return; }
     const input = byId('answer'), generation = ++speechGeneration;
     const current = () => generation === speechGeneration && input?.isConnected && !locked && attemptActive;
-    let received = false;
+    let received = false, completing = false, speaking = false;
+    const commit = () => {
+      if (!current()) return;
+      const valid = received && voiceText && input.value === voiceText;
+      stopSpeech();
+      if (valid) submitListeningAnswer();
+      else notice('인식된 철자가 없습니다. 다시 말하거나 직접 입력해 주세요.');
+    };
+    const complete = () => {
+      if (!current() || completing) return;
+      completing = true; clearTimeout(silenceTimer); silenceTimer = null;
+      clearTimeout(speechTimer); speechTimer = null;
+      if (!speech) { commit(); return; }
+      notice('철자를 정리하고 있습니다.');
+      // stop() can deliver a final result before end; retain those callbacks.
+      finishTimer = setTimeout(commit,1500);
+      try { speech.stop(); } catch (_) { commit(); }
+    };
+    const waitForCompletion = () => {
+      clearTimeout(silenceTimer); silenceTimer = null;
+      if (received && !completing && !speaking) silenceTimer = setTimeout(complete,3000);
+    };
     try {
-      const recognition = new Recognition(); speech = recognition;
-      recognition.lang = 'en-US'; recognition.continuous = true; recognition.interimResults = false; recognition.maxAlternatives = 1;
+      const recognition = new Recognition(); speech = recognition; completeSpeech = complete;
+      recognition.lang = 'en-US'; recognition.continuous = true; recognition.interimResults = true; recognition.maxAlternatives = 1;
+      recognition.onspeechstart = () => { if (current() && !completing) { speaking = true; clearTimeout(silenceTimer); silenceTimer = null; } };
+      recognition.onspeechend = () => { if (current()) { speaking = false; waitForCompletion(); } };
       recognition.onresult = event => {
         if (!current()) return;
         const raw = Array.from(event.results || [], result => result[0]?.transcript || '').join(' ');
         const text = spelledLetters(raw);
-        if (!text) { notice('알파벳 이름을 하나씩 말해 주세요. 예: B · O · T · T · O · M. 다시 누르면 처음부터 인식합니다.'); stopSpeech(); return; }
+        if (!text) {
+          received = false; voiceText = ''; waitForCompletion();
+          notice('알파벳 이름을 하나씩 말해 주세요. 예: B · O · T · T · O · M.');
+          if (Array.from(event.results || []).every(result => result.isFinal !== false)) stopSpeech();
+          return;
+        }
         received = true; input.value = text; answerMethod = 'voice'; voiceText = text;
-        notice('인식한 철자: ' + text.toUpperCase().split('').join(' · ') + ' → ' + text + ' · 다 말했으면 말하기 완료를 누르세요.'); checkpoint();
+        notice('인식한 철자: ' + text.toUpperCase().split('').join(' · ') + ' → ' + text + ' · 추가 입력이 없으면 3초 후 완료 · Enter로 바로 완료');
+        waitForCompletion(); checkpoint();
       };
       recognition.onerror = event => {
         if (!current()) return;
         const message = ['not-allowed','service-not-allowed'].includes(event.error) ? '마이크·음성 인식 권한을 허용해 주세요.' : event.error === 'no-speech' ? '목소리가 감지되지 않았습니다. 다시 눌러 말해 주세요.' : '음성 인식이 연결되지 않았습니다. Safari 또는 키보드 마이크를 이용해 주세요.';
         stopSpeech(); notice(message);
       };
-      recognition.onend = () => { if (!current()) return; stopSpeech(); notice(received ? '인식한 철자를 확인 후 입력 완료를 누르세요.' : '인식된 철자가 없습니다. 다시 말하거나 직접 입력해 주세요.'); };
+      recognition.onend = () => {
+        if (!current()) return;
+        speech = null; speaking = false; clearTimeout(speechTimer); speechTimer = null;
+        const button = byId('ymSpeakAnswer');
+        if (button) { button.textContent = '🎤 철자 다시 말하기'; button.setAttribute('aria-pressed','false'); }
+        if (completing) commit();
+        else if (received) { if (silenceTimer === null) waitForCompletion(); }
+        else { stopSpeech(); notice('인식된 철자가 없습니다. 다시 말하거나 직접 입력해 주세요.'); }
+      };
       recognition.start();
       const button = byId('ymSpeakAnswer'); button.textContent = '■ 말하기 완료'; button.setAttribute('aria-pressed','true');
-      notice('알파벳을 하나씩 말해 주세요. 예: B · O · T · T · O · M. 다시 시작하면 새 철자로 바뀝니다.');
+      notice('알파벳을 하나씩 말해 주세요. 마지막 철자 뒤 3초 또는 Enter로 입력 완료 · 음성은 브라우저 인식 서비스에서 처리됩니다.');
       speechTimer = setTimeout(() => { if (current()) { stopSpeech(); if (!received) notice('음성 인식 응답이 없습니다. Safari 또는 키보드 마이크를 이용해 주세요.'); } },30000);
     } catch (_) { stopSpeech(); notice('음성 인식을 시작하지 못했습니다. 다시 누르거나 직접 입력해 주세요.'); }
   }
-  // Enter confirms a completed spoken spelling, including when the mobile keyboard is hidden.
+  const originalSubmit = submitListeningAnswer;
+  submitListeningAnswer = function () {
+    if (completeSpeech) { completeSpeech(); return; }
+    return originalSubmit.apply(this,arguments);
+  };
+  // Capture Enter before the legacy input/form handlers; finish recognition once.
   document.addEventListener('keydown', event => {
-    if (event.key !== 'Enter' || mode !== 'listen' || answerMethod !== 'voice' || !voiceText || locked || !attemptActive) return;
-    const input = byId('answer'), submit = byId('submit');
-    if (!input || input.value !== voiceText || event.target === submit) return;
-    event.preventDefault();
-    stopSpeech();
-    submit?.click();
+    if (event.key !== 'Enter' || event.isComposing || mode !== 'listen' || locked || !attemptActive) return;
+    if (!completeSpeech && (answerMethod !== 'voice' || !voiceText)) return;
+    const input = byId('answer');
+    if (!input || (!completeSpeech && input.value !== voiceText)) return;
+    event.preventDefault(); event.stopImmediatePropagation();
+    if (!event.repeat) submitListeningAnswer();
   }, true);
   function mountExam() {
     if (!byId('question')) return;
+    playbackLabel();
     const home = byId('home'); if (home) home.textContent = '저장·나가기';
     window.YMPlaybackControls?.();
     const input = byId('answer'); if (!input || byId('ymVoiceControls')) return;
     const controls = document.createElement('div'); controls.id = 'ymVoiceControls';
     const speak = document.createElement('button'); speak.id = 'ymSpeakAnswer'; speak.type = 'button'; speak.textContent = '🎤 철자 말하기'; speak.setAttribute('aria-pressed','false'); speak.onclick = startSpeech;
-    const keyboard = document.createElement('button'); keyboard.type = 'button'; keyboard.textContent = '직접 입력'; keyboard.onclick = () => { stop(); setPreference('keyboard'); input.focus(); notice('답을 입력한 뒤 입력 완료를 누르세요.'); };
+    const keyboard = document.createElement('button'); keyboard.type = 'button'; keyboard.textContent = '직접 입력'; keyboard.onclick = () => { stop(); setPreference('keyboard'); answerMethod = 'keyboard'; voiceText = ''; playbackLabel(); input.focus(); notice('답을 입력한 뒤 입력 완료를 누르세요.'); };
     const status = document.createElement('p'); status.id = 'ymVoiceStatus'; status.setAttribute('role','status');
-    status.textContent = '알파벳을 하나씩 말하기 → 철자 확인 → 입력 완료 · 음성은 브라우저 인식 서비스에서 처리됩니다.';
+    status.textContent = '발음 1회 → 철자 말하기 자동 시작 → 마지막 철자 뒤 3초 또는 Enter로 완료';
     controls.append(speak,keyboard); input.before(controls); controls.after(status);
-    input.addEventListener('input',() => { answerMethod = 'keyboard'; voiceText = ''; checkpoint(); });
+    input.addEventListener('input',() => { stopSpeech(); answerMethod = 'keyboard'; voiceText = ''; checkpoint(); });
     if (preference() === 'voice') input.blur();
   }
   const originalPlay = play;
   play = function () {
     if (preference() !== 'voice') return originalPlay.apply(this,arguments);
     if (locked) return;
-    stop(); byId('answer')?.blur(); const id = token; let count = 0;
-    const next = () => {
+    stop(); byId('answer')?.blur(); const id = token;
+    const status = byId('audioStatus'); if (!status) return;
+    playbackLabel();
+    status.textContent = '발음 재생 1 / 1';
+    playWordPronunciation(questions[currentIdx].word,id,() => {
       if (id !== token) return;
-      const status = byId('audioStatus'); if (!status) return;
-      status.textContent = '발음 재생 ' + (++count) + ' / 2';
-      playWordPronunciation(questions[currentIdx].word,id,() => {
-        if (id !== token) return;
-        if (count < 2) timer = setTimeout(next,3000);
-        else timer = setTimeout(() => { if (id === token) status.textContent = '🎤 철자 말하기를 누르세요. 확인 후 채점합니다.'; },3000);
-      },() => { if (id === token) status.textContent = '발음을 다시 재생하거나 말로 답하기를 누르세요.'; });
-    }; next();
+      status.textContent = '발음 1회 완료 · 철자 말하기';
+      mountExam(); startSpeech();
+    },() => { if (id === token) status.textContent = '발음을 다시 재생하거나 철자 말하기를 누르세요.'; });
   };
   const originalLoad = load;
   load = function () { answerMethod = 'keyboard'; voiceText = ''; const r = originalLoad.apply(this,arguments); mountExam(); checkpoint(); return r; };
