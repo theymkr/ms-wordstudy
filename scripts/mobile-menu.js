@@ -134,14 +134,16 @@
     toolbar.after(meta);
     const speed = document.getElementById('pronunciationSpeed');
     if (speed) {
+      speed.classList.add('ym-exam-speed');
+      speed.title = '발음 속도 · 다음 발음부터 적용';
+      toolbar.after(speed);
       const details = document.createElement('details'); details.id = 'ymExamSettings';
       const summary = document.createElement('summary'); summary.id = 'ymExamSettingsSummary';
-      const update = () => { const value = '발음 속도 ' + speed.querySelector('output').textContent + ' · 설정'; if (summary.textContent !== value) summary.textContent = value; };
-      details.append(summary); speed.before(details); details.append(speed);
+      summary.textContent = '사전 · 설정';
+      details.append(summary); meta.after(details);
       const dictionary = document.getElementById('ymNaverDictionary'); if (dictionary) details.append(dictionary);
       const close = document.createElement('button'); close.type = 'button'; close.className = 'option-btn'; close.textContent = '설정 닫기'; close.onclick = () => { details.open = false; summary.focus(); }; details.append(close);
       details.addEventListener('keydown',event => { if (event.key === 'Escape') { details.open = false; summary.focus(); } });
-      update(); new MutationObserver(update).observe(speed.querySelector('output'),{childList:true,subtree:true});
     }
     const input = document.getElementById('answer');
     if (input) {

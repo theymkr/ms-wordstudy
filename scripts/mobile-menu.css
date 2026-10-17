@@ -75,6 +75,11 @@
   #ymExamToolbar .quiz-header {flex:1;margin:0;font-size:12px;gap:6px;min-width:0}
   #ymExamToolbar .ym-top-speaker {margin:0;flex:none}
   #ymExamToolbar .ym-top-speaker button {min-height:44px;padding:8px 10px;font-size:14px}
+  .quiz-container:has(#question) .ym-exam-speed {display:flex;align-items:center;gap:8px;flex:none;margin:0;padding:2px 6px;border-radius:8px;min-width:0}
+  .ym-exam-speed .pronunciation-speed-heading {display:flex;flex-direction:column;align-items:flex-start;gap:0;flex:none;font-size:11px;line-height:1.2}
+  .ym-exam-speed .pronunciation-speed-heading output {font-size:15px;min-width:52px}
+  .ym-exam-speed .pronunciation-speed-range {flex:1;min-width:0;margin:0;gap:6px}
+  .ym-exam-speed .pronunciation-speed-reset,.ym-exam-speed .pronunciation-speed-scale,.ym-exam-speed [data-speed-note] {display:none}
   #ymHideKeyboard {min-height:44px;padding:6px 8px;font-size:12px;border:1px solid #63758d;border-radius:8px;background:#27364a;color:#fff;flex:none}
   .quiz-container.ym-keyboard-compact #ymExamMeta,
   .quiz-container.ym-keyboard-compact #ymExamSettings,
