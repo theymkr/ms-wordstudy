@@ -22,7 +22,7 @@ const click=(w,id)=>{assert(w.document.getElementById(id),id);w.document.getElem
  let a=boot(),w=a.w;w.T.user('test');await new Promise(r=>setTimeout(r,30));
  assert(w.document.querySelector('#ymVoiceChoice'),'voice choice');
  w.localStorage.setItem('ym-answer-method-v1:test','voice');w.T.start();
- assert(w.document.getElementById('ymSpeakAnswer'));assert.notEqual(w.document.activeElement.id,'answer');
+ assert(w.document.getElementById('ymSpeakAnswer'));assert.equal(w.document.activeElement.id,'answer','typing is the default even with an old voice preference');
  click(w,'ymSpeakAnswer');assert.equal(w.rec.lang,'en-US');w.rec.result(w.T.word().split('').join(' ')+'.');
  assert.equal(w.document.getElementById('answer').value,w.T.word());assert.equal(w.T.state().records.length,0,'speech needs confirmation');
  const enter=new w.KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true});w.document.getElementById('answer').dispatchEvent(enter);assert(enter.defaultPrevented,'Enter confirms a spoken spelling');assert.equal(w.T.state().records[0].answerMethod,'voice');assert(w.T.state().locked);
@@ -57,56 +57,63 @@ const click=(w,id)=>{assert(w.document.getElementById(id),id);w.document.getElem
  w.T.audioSource('us');w.rejectPlayback={name:'NetworkError'};const utterances=w.spoken.length;click(w,'play');await new Promise(r=>setTimeout(r,0));assert.equal(w.spoken.length,utterances+1,'recording failure falls back to synthesis');assert.equal(w.T.state().records.length,0);
  w.spoken.at(-1).onerror();assert(w.document.getElementById('audioStatus').textContent.includes('기기 음성'));assert.equal(w.T.state().records.length,0);
  w.document.querySelector('#ymAudioRecovery button').click();assert.equal(w.spoken.length,utterances+2,'direct device replay');w.T.stop();w.rejectPlayback=null;
- // Voice mode: one pronunciation, automatic capture, then three seconds or Enter.
+ // Speech is optional: saved preferences never activate the microphone.
  let c=boot(),p=c.w;p.T.user('timing');await new Promise(r=>setTimeout(r,30));
  p.localStorage.setItem('ym-answer-method-v1:timing','voice');click(p,'sourceIphone');
  const timers=new Map(),nativeSetTimeout=p.setTimeout.bind(p),nativeClearTimeout=p.clearTimeout.bind(p);
  let now=0,nextTimer=-1;
  p.setTimeout=(fn,ms,...args)=>{
-  if(ms===3000||ms===1500){const id=nextTimer--;timers.set(id,{at:now+ms,run:()=>fn(...args)});return id;}
+  if([200,600,1500,3000,30000].includes(ms)){const id=nextTimer--;timers.set(id,{at:now+ms,run:()=>fn(...args)});return id;}
   return nativeSetTimeout(fn,ms,...args);
  };
  p.clearTimeout=id=>{if(!timers.delete(id))nativeClearTimeout(id);};
  const advance=ms=>{const end=now+ms;while(true){const entry=[...timers].filter(([,t])=>t.at<=end).sort((a,b)=>a[1].at-b[1].at)[0];if(!entry)break;now=entry[1].at;timers.delete(entry[0]);entry[1].run();}now=end;};
  const begin=()=>{
-  const before=p.spoken.length,oldRec=p.rec;p.T.start('listen',2);
-  assert.equal(p.rec,oldRec,'capture waits for pronunciation end');
-  assert.equal(p.spoken.length,before+1,'exactly one pronunciation');
-  assert(p.document.getElementById('play').textContent.includes('1번'));
-  p.spoken.at(-1).onend();assert.notEqual(p.rec,oldRec,'capture automatically starts');
-  assert.equal(p.spoken.length,before+1,'no second pronunciation');
-  assert(p.rec.interimResults,'receive interim letters without waiting for service disconnect');
+  const oldRec=p.rec;p.T.start('listen',2);
+  assert.equal(p.rec,oldRec,'starting never activates the microphone');
+  assert.equal(p.document.activeElement.id,'answer','typing starts focused');
+  assert(p.document.getElementById('play').textContent.includes('3번'));
+  p.spoken.at(-1).onend();assert.equal(p.rec,oldRec,'pronunciation never starts speech');
+  click(p,'ymSpeakAnswer');assert.notEqual(p.rec,oldRec,'speech requires an explicit choice');
   return p.rec;
  };
  const pressEnter=(target=p.document.body,extra={})=>{const e=new p.KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true,...extra});target.dispatchEvent(e);return e;};
- let rec=begin();rec.result('A');advance(2000);rec.result('A P');advance(2999);
- assert.equal(p.T.state().records.length,0,'new letters restart the three-second wait');
- advance(1);assert.equal(p.T.state().records.length,1);assert.equal(p.T.state().records[0].typed,'ap');assert.equal(p.T.state().records[0].answerMethod,'voice');
+ let rec=begin();rec.result('A');advance(2000);rec.result('A P');advance(5000);
+ assert.equal(p.T.state().records.length,0,'silence never automatically submits');
+ click(p,'ymSpeakAnswer');assert.equal(p.T.state().records.length,1,'speaking complete is explicitly selected');
+ assert.equal(p.T.state().records[0].typed,'ap');assert.equal(p.T.state().records[0].answerMethod,'voice');
  rec.result('A P P L E');assert.equal(p.T.state().records.length,1,'late result cannot submit twice');p.T.stop();
- rec=begin();rec.onspeechstart();rec.result('B');advance(4000);assert.equal(p.T.state().records.length,0,'never submit while speech is active');
- rec.onspeechend();advance(2999);assert.equal(p.T.state().records.length,0);advance(1);assert.equal(p.T.state().records.length,1);p.T.stop();
- rec=begin();rec.result('A');advance(1000);rec.onend();advance(1999);assert.equal(p.T.state().records.length,0,'natural end preserves the pending delay');advance(1);assert.equal(p.T.state().records.length,1);p.T.stop();
+ rec=begin();rec.result('A');rec.onend();advance(5000);
+ assert.equal(p.T.state().records.length,0,'natural recognition end never submits');
+ pressEnter();assert.equal(p.T.state().records.length,1,'Enter still submits after recognition ends');p.T.stop();
  rec=begin();rec.result('A P');let stopping=0;rec.stop=()=>{stopping++;};
  assert(pressEnter(p.document.getElementById('answer'),{isComposing:true}).defaultPrevented===false);assert.equal(stopping,0,'IME Enter does not submit');
  assert(pressEnter(p.document.getElementById('answer')).defaultPrevented);assert.equal(stopping,1);
  pressEnter(p.document.getElementById('answer'),{repeat:true});assert.equal(stopping,1,'held Enter stops only once');
  assert.equal(p.T.state().records.length,0,'wait for the final recognition result');rec.result('A P P L E');rec.onend();
  assert.equal(p.T.state().records.length,1);assert.equal(p.T.state().records[0].typed,'apple');advance(1500);assert.equal(p.T.state().records.length,1,'completion fallback was cleared');p.T.stop();
- rec=begin();rec.result('B');rec.stop=()=>{};pressEnter();advance(1500);assert.equal(p.T.state().records.length,1,'stuck recognition still completes with captured letters');p.T.stop();
- rec=begin();pressEnter();assert.equal(p.T.state().records.length,0,'no empty answer auto-grading');assert(p.document.getElementById('ymVoiceStatus').textContent.includes('인식된 철자'));
- rec=begin();rec.result('C');click(p,'submit');assert.equal(p.T.state().records.length,1,'completion button uses the same finalization');p.T.stop();
- rec=begin();rec.result('A');advance(2000);p.document.querySelector('#ymVoiceControls button:last-child').click();advance(4000);assert.equal(p.T.state().records.length,0,'keyboard switch cancels submission');assert(rec.aborted);assert(p.document.getElementById('play').textContent.includes('3번'));
- p.localStorage.setItem('ym-answer-method-v1:timing','voice');
- rec=begin();rec.result('B');const typed=p.document.getElementById('answer');typed.value='edited';typed.dispatchEvent(new p.Event('input'));advance(4000);assert.equal(p.T.state().records.length,0,'manual edits cancel speech submission');rec.result('C');assert.equal(typed.value,'edited');
- rec=begin();rec.result('B');click(p,'home');advance(4000);assert.equal(p.T.state().records.length,0,'leaving cancels speech submission');assert(rec.aborted);
+ rec=begin();rec.result('B');rec.stop=()=>{};pressEnter();advance(1500);assert.equal(p.T.state().records.length,1,'explicit submission finishes even if recognition is stuck');p.T.stop();
+ rec=begin();pressEnter();assert.equal(p.T.state().records.length,0,'no empty voice grading');assert(p.document.getElementById('ymVoiceStatus').textContent.includes('인식된 철자'));
+ rec=begin();rec.result('C');click(p,'submit');assert.equal(p.T.state().records.length,1,'input completion button submits explicitly');p.T.stop();
+ rec=begin();rec.result('A');advance(2000);p.document.querySelector('#ymVoiceControls button:last-child').click();advance(4000);assert.equal(p.T.state().records.length,0,'keyboard switch never submits');assert(rec.aborted);assert.equal(p.document.activeElement.id,'answer');
+ rec=begin();rec.result('B');const typed=p.document.getElementById('answer');typed.value='edited';typed.dispatchEvent(new p.Event('input'));advance(4000);assert.equal(p.T.state().records.length,0,'manual edits cancel speech');rec.result('C');assert.equal(typed.value,'edited');
+ rec=begin();rec.result('B');click(p,'home');advance(4000);assert.equal(p.T.state().records.length,0,'leaving never submits');assert(rec.aborted);
  rec=begin();rec.result('A');rec.onerror({error:'not-allowed'});advance(4000);assert.equal(p.T.state().records.length,0,'permission errors never grade');assert(p.document.getElementById('ymVoiceStatus').textContent.includes('권한'));
- rec=begin();rec.result('A');rec.result('not a letter');advance(4000);assert.equal(p.T.state().records.length,0,'unrecognized text cancels stale partial submission');
- rec=begin();rec.result('A');Object.defineProperty(p.document,'visibilityState',{configurable:true,value:'hidden'});p.document.dispatchEvent(new p.Event('visibilitychange'));advance(4000);assert.equal(p.T.state().records.length,0,'hidden page cancels submission');assert(rec.aborted);
- Object.defineProperty(p.document,'visibilityState',{configurable:true,value:'visible'});p.document.dispatchEvent(new p.Event('visibilitychange'));p.document.querySelector('#ymResumeCard button').click();assert.equal(p.rec,rec,'resume does not automatically activate the microphone');
+ rec=begin();rec.result('A');rec.result('not a letter');advance(4000);assert.equal(p.T.state().records.length,0,'unrecognized text never submits');
+ rec=begin();rec.result('B');advance(30000);assert.equal(p.T.state().records.length,0,'microphone timeout never submits');assert(rec.aborted);pressEnter();assert.equal(p.T.state().records.length,1,'timeout preserves captured letters for explicit submission');p.T.stop();
+ rec=begin();rec.result('A');Object.defineProperty(p.document,'visibilityState',{configurable:true,value:'hidden'});p.document.dispatchEvent(new p.Event('visibilitychange'));advance(4000);assert.equal(p.T.state().records.length,0,'hidden page never submits');assert(rec.aborted);
+ Object.defineProperty(p.document,'visibilityState',{configurable:true,value:'visible'});p.document.dispatchEvent(new p.Event('visibilitychange'));p.document.querySelector('#ymResumeCard button').click();assert.equal(p.rec,rec,'resume never activates the microphone');
  p.T.stop();
+ // Restore the original typing flow: three pronunciations and the existing grading delay.
+ const previousRec=p.rec,typingPlaybackCount=p.spoken.length;p.T.start('listen',2);
+ const answer=p.document.getElementById('answer');answer.value=p.T.word();answer.dispatchEvent(new p.Event('input'));
+ for(let i=0;i<3;i++){p.spoken.at(-1).onend();if(i<2)advance(600);}
+ assert.equal(p.spoken.length,typingPlaybackCount+3);assert.equal(p.rec,previousRec,'all three pronunciations leave speech off');
+ advance(199);assert.equal(p.T.state().records.length,0);advance(1);assert.equal(p.T.state().records.length,1);assert.equal(p.T.state().records[0].answerMethod,'keyboard');
+ p.T.next();assert.equal(p.document.activeElement.id,'answer','next question returns to typing');assert.equal(p.rec,previousRec);p.T.stop();
 
  Object.defineProperty(w.document,'visibilityState',{configurable:true,value:'hidden'});w.document.dispatchEvent(new w.Event('visibilitychange'));const before=w.T.state().elapsed;await new Promise(r=>setTimeout(r,30));assert.equal(w.T.state().elapsed,before);Object.defineProperty(w.document,'visibilityState',{configurable:true,value:'visible'});w.document.dispatchEvent(new w.Event('visibilitychange'));assert(w.document.getElementById('ymResumeCard'));
  assert.equal(a.errors.length,0,a.errors.map(String).join('\n'));assert.equal(b.errors.length,0,b.errors.map(String).join('\n'));
  assert.equal(c.errors.length,0,c.errors.map(String).join('\n'));
- console.log('PASS: letter-name decoding, cumulative spelling, media reuse, blocked playback, TTS fallback, voice confirmation, stale speech cancellation, reload during grading, draft/elapsed resume, account isolation, retry completion, partial MCQ, corrupt checkpoint, single pronunciation, automatic voice capture, three-second silence reset, final-result Enter completion, no empty grading, and cancellation on edits/navigation/visibility.');p.close();w.close();process.exit(0);
+ console.log('PASS: optional speech, typing default with legacy preference, no automatic microphone or silence submission, explicit completion/Enter, final recognition result, typing playback, resume, cancellation, media fallback and account isolation.');p.close();w.close();process.exit(0);
 })().catch(e=>{console.error(e);process.exit(1)});

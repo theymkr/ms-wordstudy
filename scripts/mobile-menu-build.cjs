@@ -10,14 +10,11 @@ module.exports = function applyMobileMenu(page) {
   const pagination = / function paginate\(\)\{[^\n]*\}\n/;
   if (!pagination.test(page)) throw Error('History pagination hook changed.');
   page = page.replace(pagination, ' function paginate(){window.YMHistoryLayout?.();}\n');
-  page = page.replace(/(<meta name="ym-build" content=")[^"]+/, (_, prefix) => prefix + '20261015-voice-auto-v1');
+  page = page.replace(/(<meta name="ym-build" content=")[^"]+/, (_, prefix) => prefix + '20261017-optional-voice-v1');
   const shrink = "const scale=Math.min(1,(h-16)/Math.max(1,c.scrollHeight+16),(w-16)/Math.max(1,c.scrollWidth));c.style.zoom=String(Math.max(.1,scale));";
   if (!page.includes(shrink)) throw Error('Quiz fitting hook changed.');
   page = page.replace(shrink, "if(!c.querySelector('#question')){" + shrink + "}");
   page = page.replace("input.placeholder='영어 단어 입력 · 한글 입력도 자동 변환';", "input.placeholder='영어 단어 입력';");
-  const focusHook = "document.getElementById('answer').focus();play();";
-  if (!page.includes(focusHook)) throw Error('Listening focus hook changed.');
-  page = page.replace(focusHook, "if(window.YMVoicePreference?.()!=='voice')document.getElementById('answer').focus();play();");
   const restHook = "const overlay=document.createElement('div');restOverlay=overlay;";
   if (!page.includes(restHook)) throw Error('Rest screen hook changed.');
   page = page.replace(restHook, restHook + "overlay.id='ymRestScreen';");
