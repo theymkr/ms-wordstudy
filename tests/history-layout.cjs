@@ -75,6 +75,19 @@ const entries = scores.map((score, i) => ({id:'layout-'+i,date:'2026-10-11T09:14
     await page.locator('#ymReviewPrint').click();
     assert.equal(await page.evaluate(()=>window.testPrints),1);
     await page.locator('#ymReviewClose').click();
+    const storedBefore=await page.evaluate(()=>localStorage.getItem(SCORE_KEY));
+    assert(await page.locator('#ymScreenForward').isDisabled());
+    await page.locator('#ymScreenBack').click();
+    assert(await page.locator('#ymTab-study').getAttribute('aria-selected')==='true');
+    assert(await page.locator('#ymScreenBack').isDisabled());
+    assert(await page.locator('#ymScreenForward').isEnabled());
+    await page.locator('#ymScreenForward').click();
+    assert.equal(await page.locator('#scoreFilter').inputValue(),'meaning');
+    assert.equal(await page.evaluate(()=>localStorage.getItem(SCORE_KEY)),storedBefore);
+    assert(await page.locator('#ymScreenBack').isEnabled());
+    await page.locator('#historyHome').click();assert(await page.locator('#ymScreenForward').isEnabled());
+    await page.locator('#ymScreenForward').click();
+
     // More than 100 records across September/October, including old score-only rows.
     const history = Array.from({length:120}, (_,i) => ({...entries[i%8],id:'archive-'+i,
       date:new Date(Date.UTC(2026,8,1)+i*8*3600000).toISOString(),

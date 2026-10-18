@@ -1,0 +1,4 @@
+#ymScreenNavigation{display:flex;justify-content:space-between;gap:10px;flex:none;width:100%;}
+#ymScreenNavigation button{font:inherit;font-size:14px;min-height:44px;margin:0;padding:10px 16px;border:1px solid #52627a;border-radius:8px;background:#26374e;color:#fff;cursor:pointer;}
+#ymScreenNavigation button:disabled{opacity:.4;cursor:default;}
+#ymScreenNavigation button:focus-visible{outline:3px solid #9dd0ff;outline-offset:2px;}
