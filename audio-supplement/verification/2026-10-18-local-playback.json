@@ -1,0 +1,181 @@
+{
+  "mode": "local-build",
+  "origin": "https://audio-verification.test",
+  "results": [
+    {
+      "word": "feather",
+      "file": "extra-us-feather.mp3",
+      "playing": 3,
+      "ended": 3,
+      "ttsFallback": false,
+      "events": [
+        {
+          "type": "playing",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-feather.mp3",
+          "error": null,
+          "duration": 0.499229
+        },
+        {
+          "type": "ended",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-feather.mp3",
+          "error": null,
+          "duration": 0.499229
+        },
+        {
+          "type": "playing",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-feather.mp3",
+          "error": null,
+          "duration": 0.499229
+        },
+        {
+          "type": "ended",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-feather.mp3",
+          "error": null,
+          "duration": 0.499229
+        },
+        {
+          "type": "playing",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-feather.mp3",
+          "error": null,
+          "duration": 0.499229
+        },
+        {
+          "type": "ended",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-feather.mp3",
+          "error": null,
+          "duration": 0.499229
+        }
+      ]
+    },
+    {
+      "word": "atom",
+      "file": "extra-us-atom.mp3",
+      "playing": 3,
+      "ended": 3,
+      "ttsFallback": false,
+      "events": [
+        {
+          "type": "playing",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-atom.mp3",
+          "error": null,
+          "duration": 0.812698
+        },
+        {
+          "type": "ended",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-atom.mp3",
+          "error": null,
+          "duration": 0.812698
+        },
+        {
+          "type": "playing",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-atom.mp3",
+          "error": null,
+          "duration": 0.812698
+        },
+        {
+          "type": "ended",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-atom.mp3",
+          "error": null,
+          "duration": 0.812698
+        },
+        {
+          "type": "playing",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-atom.mp3",
+          "error": null,
+          "duration": 0.812698
+        },
+        {
+          "type": "ended",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-atom.mp3",
+          "error": null,
+          "duration": 0.812698
+        }
+      ]
+    },
+    {
+      "word": "stripe",
+      "file": "extra-us-stripe.mp3",
+      "playing": 3,
+      "ended": 3,
+      "ttsFallback": false,
+      "events": [
+        {
+          "type": "playing",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-stripe.mp3",
+          "error": null,
+          "duration": 0.893968
+        },
+        {
+          "type": "ended",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-stripe.mp3",
+          "error": null,
+          "duration": 0.893968
+        },
+        {
+          "type": "playing",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-stripe.mp3",
+          "error": null,
+          "duration": 0.893968
+        },
+        {
+          "type": "ended",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-stripe.mp3",
+          "error": null,
+          "duration": 0.893968
+        },
+        {
+          "type": "playing",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-stripe.mp3",
+          "error": null,
+          "duration": 0.893968
+        },
+        {
+          "type": "ended",
+          "src": "https://audio-verification.test/audio-pilot/extra-us-stripe.mp3",
+          "error": null,
+          "duration": 0.893968
+        }
+      ]
+    }
+  ],
+  "responses": [
+    {
+      "url": "https://audio-verification.test/audio-pilot/extra-us-feather.mp3",
+      "status": 200
+    },
+    {
+      "url": "https://audio-verification.test/audio-pilot/extra-us-feather.mp3",
+      "status": 200
+    },
+    {
+      "url": "https://audio-verification.test/audio-pilot/extra-us-feather.mp3",
+      "status": 200
+    },
+    {
+      "url": "https://audio-verification.test/audio-pilot/extra-us-atom.mp3",
+      "status": 200
+    },
+    {
+      "url": "https://audio-verification.test/audio-pilot/extra-us-atom.mp3",
+      "status": 200
+    },
+    {
+      "url": "https://audio-verification.test/audio-pilot/extra-us-atom.mp3",
+      "status": 200
+    },
+    {
+      "url": "https://audio-verification.test/audio-pilot/extra-us-stripe.mp3",
+      "status": 200
+    },
+    {
+      "url": "https://audio-verification.test/audio-pilot/extra-us-stripe.mp3",
+      "status": 200
+    },
+    {
+      "url": "https://audio-verification.test/audio-pilot/extra-us-stripe.mp3",
+      "status": 200
+    }
+  ],
+  "pageErrors": [],
+  "personalDataWrites": false
+}

@@ -20,5 +20,6 @@ module.exports = function applyMobileMenu(page) {
   page = page.replace(restHook, restHook + "overlay.id='ymRestScreen';");
   const css = ['mobile-menu.css', 'voice-resume.css', 'history-layout.css', 'memorize.css', 'screen-navigation.css'].map(file => fs.readFileSync(path.join(__dirname, file), 'utf8')).join('\n');
   const js = ['mobile-menu.js', 'audio-playback.js', 'voice-resume.js', 'history-layout.js', 'memorize.js', 'screen-navigation.js'].map(file => fs.readFileSync(path.join(__dirname, file), 'utf8')).join('\n');
-  return page.replace('</body>', '<style id="ym-mobile-menu-style">\n' + css + '\n</style>\n<script id="ym-mobile-menu-script">\n' + js + '\n</script>\n</body>');
+  page = page.replace('</body>', '<style id="ym-mobile-menu-style">\n' + css + '\n</style>\n<script id="ym-mobile-menu-script">\n' + js + '\n</script>\n</body>');
+  return require('./audio-supplement-build.cjs')(page, path.join(__dirname, '..'));
 };

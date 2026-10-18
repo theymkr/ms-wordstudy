@@ -1,0 +1,381 @@
+{
+  "date": "2026-10-18",
+  "baseMain": "2adbe2b2bd1e95cac28c72fd6b6ffd3034a509e4",
+  "baseline": {
+    "total": 2956,
+    "mapped": 2316,
+    "remaining": 640,
+    "deployedWordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true
+  },
+  "batch": {
+    "size": 40,
+    "firstNumber": 7,
+    "lastNumber": 478
+  },
+  "processed": [
+    {
+      "number": 7,
+      "word": "photographer",
+      "status": "needs_dialect_evidence",
+      "reason": "Candidate only; English language and CC0 alone do not prove American pronunciation. No download or acquired credit.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-photographer.wav"
+      ]
+    },
+    {
+      "number": 51,
+      "word": "revival",
+      "status": "needs_dialect_evidence",
+      "reason": "Candidate only; English language and CC0 alone do not prove American pronunciation. No download or acquired credit.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Simplificationalizer-revival.wav"
+      ]
+    },
+    {
+      "number": 97,
+      "word": "greeting",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 100,
+      "word": "overhear",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 129,
+      "word": "iceberg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 137,
+      "word": "semester",
+      "status": "needs_dialect_evidence",
+      "reason": "Candidate only; English language and CC0 alone do not prove American pronunciation. No download or acquired credit.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Simplificationalizer-semester.wav"
+      ]
+    },
+    {
+      "number": 141,
+      "word": "puzzle",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 166,
+      "word": "earning",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 180,
+      "word": "monk",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 189,
+      "word": "envelope / envelop",
+      "status": "needs_compound_review",
+      "reason": "Multiple different words/pronunciations in one app entry; do not substitute a single word.",
+      "candidatePages": []
+    },
+    {
+      "number": 205,
+      "word": "nickname",
+      "status": "needs_dialect_evidence",
+      "reason": "Candidate only; English language and CC0 alone do not prove American pronunciation. No download or acquired credit.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-nickname.wav"
+      ]
+    },
+    {
+      "number": 212,
+      "word": "hurray",
+      "status": "needs_dialect_evidence",
+      "reason": "Candidate only; English language and CC0 alone do not prove American pronunciation. No download or acquired credit.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-hurray.wav"
+      ]
+    },
+    {
+      "number": 226,
+      "word": "scar",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 254,
+      "word": "loaf",
+      "status": "needs_dialect_evidence",
+      "reason": "Candidate only; English language and CC0 alone do not prove American pronunciation. No download or acquired credit.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-loaf.wav"
+      ]
+    },
+    {
+      "number": 269,
+      "word": "kindergarten",
+      "status": "needs_dialect_evidence",
+      "reason": "Candidate only; English language and CC0 alone do not prove American pronunciation. No download or acquired credit.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-kindergarten.wav"
+      ]
+    },
+    {
+      "number": 288,
+      "word": "petal",
+      "status": "needs_dialect_evidence",
+      "reason": "Candidate only; English language and CC0 alone do not prove American pronunciation. No download or acquired credit.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-petal.wav"
+      ]
+    },
+    {
+      "number": 289,
+      "word": "sometime",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 303,
+      "word": "sample",
+      "status": "needs_dialect_evidence",
+      "reason": "Candidate only; English language and CC0 alone do not prove American pronunciation. No download or acquired credit.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-sample.wav"
+      ]
+    },
+    {
+      "number": 305,
+      "word": "bend",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 331,
+      "word": "feather",
+      "status": "app_playback_verified",
+      "reason": "Downloaded and fully decoded original and MP3; actual app playback ended 3/3 without TTS. Production verification follows publication.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-feather.ogg"
+      ]
+    },
+    {
+      "number": 346,
+      "word": "amuse",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 358,
+      "word": "clap",
+      "status": "needs_dialect_evidence",
+      "reason": "Candidate only; English language and CC0 alone do not prove American pronunciation. No download or acquired credit.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-clap.wav"
+      ]
+    },
+    {
+      "number": 359,
+      "word": "booth",
+      "status": "needs_dialect_evidence",
+      "reason": "Candidate only; English language and CC0 alone do not prove American pronunciation. No download or acquired credit.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-booth.wav"
+      ]
+    },
+    {
+      "number": 377,
+      "word": "invader",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 379,
+      "word": "hesitate",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 380,
+      "word": "pilgrim",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 386,
+      "word": "funeral",
+      "status": "deferred_rate_limit",
+      "reason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-funeral.ogg"
+      ]
+    },
+    {
+      "number": 402,
+      "word": "tomb",
+      "status": "deferred_rate_limit",
+      "reason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-tomb.ogg"
+      ]
+    },
+    {
+      "number": 403,
+      "word": "hobby",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 404,
+      "word": "stripe",
+      "status": "app_playback_verified",
+      "reason": "Downloaded and fully decoded original and MP3; actual app playback ended 3/3 without TTS. Production verification follows publication.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-stripe.ogg"
+      ]
+    },
+    {
+      "number": 419,
+      "word": "dollar",
+      "status": "deferred_rate_limit",
+      "reason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-dollar.ogg"
+      ]
+    },
+    {
+      "number": 427,
+      "word": "eraser",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 435,
+      "word": "comedy",
+      "status": "deferred_rate_limit",
+      "reason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-comedy.ogg"
+      ]
+    },
+    {
+      "number": 449,
+      "word": "atom",
+      "status": "app_playback_verified",
+      "reason": "Downloaded and fully decoded original and MP3; actual app playback ended 3/3 without TTS. Production verification follows publication.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-atom.ogg"
+      ]
+    },
+    {
+      "number": 451,
+      "word": "statue",
+      "status": "deferred_rate_limit",
+      "reason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-statue.ogg"
+      ]
+    },
+    {
+      "number": 458,
+      "word": "bow",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 469,
+      "word": "pal",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/WAV candidates not found by Commons imageinfo; no repeated same-title lookup next run.",
+      "candidatePages": []
+    },
+    {
+      "number": 470,
+      "word": "whisper",
+      "status": "deferred_rate_limit",
+      "reason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-whisper.ogg"
+      ]
+    },
+    {
+      "number": 472,
+      "word": "explode",
+      "status": "deferred_rate_limit",
+      "reason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-explode.ogg"
+      ]
+    },
+    {
+      "number": 478,
+      "word": "actually",
+      "status": "deferred_rate_limit",
+      "reason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-actually.ogg"
+      ]
+    }
+  ],
+  "sourceFailures": [
+    {
+      "source": "https://upload.wikimedia.org",
+      "status": 429,
+      "affectedWords": [
+        "comedy",
+        "dollar",
+        "funeral",
+        "statue",
+        "tomb",
+        "actually",
+        "explode",
+        "whisper"
+      ],
+      "policy": "No immediate retry. Retain candidate metadata and wait at least 24 hours before another bounded original download batch."
+    },
+    {
+      "source": "https://en.wiktionary.org/w/api.php",
+      "status": 403,
+      "affectedWords": [
+        "photographer"
+      ],
+      "policy": "Do not repeat the same API route. Candidate dialect remains unverified; use another publicly available source later."
+    }
+  ],
+  "next": {
+    "afterWordNumber": 478,
+    "nextWordNumber": 481,
+    "batchSize": 40,
+    "downloadHostCooldownUntil": "2026-10-19T19:45:00+09:00",
+    "instructions": "Continue after last processed baseline word number using freshly calculated remaining list; do not restart first 40. Keep uncertain rows pending. HTTP 429 host cooldown must be respected even when processing different words."
+  },
+  "result": {
+    "additionalDownloaded": 3,
+    "additionalLocalAppPlaybackVerified": 3,
+    "totalMappedAfterBuild": 2319,
+    "remainingAfterBuild": 637,
+    "productionVerification": "pending"
+  }
+}
