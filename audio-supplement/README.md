@@ -23,8 +23,12 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 40 originally missing rows (number 7 through 478) were processed.
-  Continue at number 481 with a new finite batch, preserving unresolved earlier rows.
+- The first 80 originally missing rows (number 7 through 769) were reviewed.
+  Continue at number 779 (stare), preserving unresolved earlier rows.
+  The second batch added no recordings: 19 Commons US candidates are deferred,
+  including absent which also needs adjective/verb stress review; four Lingua
+  Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
+  Candidate metadata is not a download or playback verification.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown

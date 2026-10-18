@@ -1,0 +1,614 @@
+{
+  "date": "2026-10-18T20:35:15+09:00",
+  "baseMain": "5251883bf26266928450bfd575e8530455426f23",
+  "baseline": {
+    "total": 2956,
+    "mapped": 2319,
+    "remaining": 637,
+    "deployedWordListAndMappingEqual": true
+  },
+  "batch": {
+    "size": 40,
+    "firstNumber": 481,
+    "lastNumber": 769,
+    "scope": "Source metadata review only; Wikimedia originals not retried during host cooldown."
+  },
+  "processed": [
+    {
+      "number": 481,
+      "word": "joke",
+      "meaning": "n. 농담 / v. 농담을 하다",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-joke.ogg"
+      ],
+      "checkedTitle": "File:En-us-joke.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 488,
+      "word": "solution",
+      "meaning": "n. 해결책, 용매, 용액",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-solution.ogg"
+      ],
+      "checkedTitle": "File:En-us-solution.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 494,
+      "word": "pulse",
+      "meaning": "n. 맥박 / v. 맥박치다, 고동치다, 활기가 넘치다",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-pulse.ogg"
+      ],
+      "checkedTitle": "File:En-us-pulse.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 498,
+      "word": "absent",
+      "meaning": "a. 결석한, 부재의 / v. 결석하다, 결근하다, 불참하다",
+      "status": "needs_sense_review",
+      "reason": "App includes adjective and verb; stress differs. Single unspecified recording cannot yet cover both. Download deferred.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-absent.ogg"
+      ],
+      "checkedTitle": "File:En-us-absent.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 505,
+      "word": "detective",
+      "meaning": "n. 탐정, 수사관",
+      "status": "needs_dialect_evidence",
+      "reason": "English language and CC0 do not establish American accent. Candidate only; no download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-detective.wav"
+      ],
+      "checkedTitle": "File:LL-Q1860 (eng)-Arlo Barnes-detective.wav",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 513,
+      "word": "twin",
+      "meaning": "a. 한 쌍의 / n. 쌍둥이의 한 사람",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-twin.ogg"
+      ],
+      "checkedTitle": "File:En-us-twin.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 516,
+      "word": "million",
+      "meaning": "n. 100만, 백만",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-million.ogg"
+      ],
+      "checkedTitle": "File:En-us-million.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 524,
+      "word": "robber",
+      "meaning": "n. 강도",
+      "status": "needs_dialect_evidence",
+      "reason": "English language and CC0 do not establish American accent. Candidate only; no download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-robber.wav"
+      ],
+      "checkedTitle": "File:LL-Q1860 (eng)-Arlo Barnes-robber.wav",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 525,
+      "word": "crop",
+      "meaning": "n. 농작물",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-crop.ogg"
+      ],
+      "checkedTitle": "File:En-us-crop.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 527,
+      "word": "relative",
+      "meaning": "n. 친척 / a. 비교상의, 상대적인",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-relative.ogg"
+      ],
+      "checkedTitle": "File:En-us-relative.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 530,
+      "word": "hometown",
+      "meaning": "n. 고향",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-hometown.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 539,
+      "word": "sculpture",
+      "meaning": "n. 조각품, 조소",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-sculpture.ogg"
+      ],
+      "checkedTitle": "File:En-us-sculpture.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 547,
+      "word": "outline",
+      "meaning": "n. 윤곽, 약도 / v. 윤곽을 그리다, 요약하다",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-outline.ogg"
+      ],
+      "checkedTitle": "File:En-us-outline.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 566,
+      "word": "inning",
+      "meaning": "n. 회(回)",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-inning.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 567,
+      "word": "wood",
+      "meaning": "n. 나무, 숲",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-wood.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 569,
+      "word": "riddle",
+      "meaning": "n. 수수께끼",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-riddle.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 578,
+      "word": "cleave",
+      "meaning": "v. 쪼개다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-cleave.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 609,
+      "word": "sunrise",
+      "meaning": "n. 해돋이",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-sunrise.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 623,
+      "word": "carve",
+      "meaning": "v. 새기다, 조각하다",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-carve.ogg"
+      ],
+      "checkedTitle": "File:En-us-carve.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 629,
+      "word": "belong to",
+      "meaning": "v. ~에 속하다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-belong to.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 634,
+      "word": "steal",
+      "meaning": "v. 훔치다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-steal.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 638,
+      "word": "silly",
+      "meaning": "a. 어리석은",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-silly.ogg"
+      ],
+      "checkedTitle": "File:En-us-silly.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 648,
+      "word": "election",
+      "meaning": "n. 선거",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-election.ogg"
+      ],
+      "checkedTitle": "File:En-us-election.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 650,
+      "word": "cookie",
+      "meaning": "n. 쿠키",
+      "status": "needs_dialect_evidence",
+      "reason": "English language and CC0 do not establish American accent. Candidate only; no download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Simplificationalizer-cookie.wav"
+      ],
+      "checkedTitle": "File:LL-Q1860 (eng)-Simplificationalizer-cookie.wav",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 657,
+      "word": "pet",
+      "meaning": "n. 애완동물",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-pet.ogg"
+      ],
+      "checkedTitle": "File:En-us-pet.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 658,
+      "word": "compulsory",
+      "meaning": "a. 강제적인, 의무적인",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-compulsory.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 672,
+      "word": "colorful",
+      "meaning": "a. 다채로운, 화려한",
+      "status": "needs_dialect_evidence",
+      "reason": "English language and CC0 do not establish American accent. Candidate only; no download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-colorful.wav"
+      ],
+      "checkedTitle": "File:LL-Q1860 (eng)-Arlo Barnes-colorful.wav",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 686,
+      "word": "crown",
+      "meaning": "n. 왕관, 왕위",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-crown.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 701,
+      "word": "suburb",
+      "meaning": "n. 교외, 주변",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-suburb.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 703,
+      "word": "sniff",
+      "meaning": "v. 코를 킁킁거리다, 냄새를 맡다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-sniff.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 707,
+      "word": "introduce",
+      "meaning": "v. 소개하다, 도입하다",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-introduce.ogg"
+      ],
+      "checkedTitle": "File:En-us-introduce.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 709,
+      "word": "hit",
+      "meaning": "n. 치기, 강타, 타격 / v. 치다, 때리다",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-hit.ogg"
+      ],
+      "checkedTitle": "File:En-us-hit.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 712,
+      "word": "trousers",
+      "meaning": "n. 바지",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-trousers.ogg"
+      ],
+      "checkedTitle": "File:En-us-trousers.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 720,
+      "word": "stethoscope",
+      "meaning": "n. 청진기",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-stethoscope.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 732,
+      "word": "halt",
+      "meaning": "n. 멈춤, 중단 / v. 멈추다, 서다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-halt.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 742,
+      "word": "shower",
+      "meaning": "n. 샤워기, 샤워실, 샤워, 소나기 / v. 샤워를 하다, 쏟아져 내리다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-shower.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 751,
+      "word": "bedside",
+      "meaning": "n. 침대 곁",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-bedside.ogg"
+      ],
+      "checkedTitle": "File:En-us-bedside.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 756,
+      "word": "relay",
+      "meaning": "v. 전달하다, 중계하다 / n. 릴레이 경주, 계주",
+      "status": "needs_sense_review",
+      "reason": "App includes transmission verb and race noun; pronunciation/sense must be checked. Exact En-us Ogg title absent.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-relay.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 761,
+      "word": "tool",
+      "meaning": "n. 도구, 기구",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg title returned missing. Do not repeat same title; other filenames/sources remain unsearched.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-tool.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 769,
+      "word": "unlike",
+      "meaning": "prep. ~와 다른, ~와 달리 / a. 서로 다른",
+      "status": "deferred_host_cooldown",
+      "reason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-unlike.ogg"
+      ],
+      "checkedTitle": "File:En-us-unlike.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    }
+  ],
+  "sourceReview": {
+    "metadataFile": "candidate-metadata-2026-10-18T2035.json",
+    "commonsRequests": 1,
+    "commonsTitles": 40,
+    "commonsPresent": 23,
+    "commonsMissing": 17,
+    "usMetadataCandidates": 19,
+    "linguaLibreDialectUnverified": 4,
+    "independentSources": [
+      {
+        "source": "https://fsi-languages.yojik.eu/oldshtooka/English%20irregular%20verbs%20-%20Shtooka%20Project.html",
+        "index": "https://fsi-languages.yojik.eu/audiocollections/detailled/eng-balm-verbs/mp3/index.xml",
+        "rights": "https://fsi-languages.yojik.eu/audiocollections/detailled/eng-balm-verbs/readme.txt",
+        "speaker": "Alyson Heimer, native English; Massachusetts, United States; Boston",
+        "license": "CC BY 2.0 France",
+        "indexEntries": 466,
+        "exactBatchMatches": 0,
+        "relatedWords": [
+          "hit",
+          "steal"
+        ],
+        "reason": "swac_text contains phrases to hit / I hit / I have hit and to steal / I stole / I have stolen. Baseform is not exact spoken text. No download, cropping, app mapping or acquisition credit."
+      },
+      {
+        "source": "https://fsi-languages.yojik.eu/audiocollections/detailled/eng-balm-judith/readme.txt",
+        "dialectEvidence": "https://commons.wikimedia.org/wiki/File:En-uk-a_trip.ogg",
+        "reason": "Judith Franck, London England, UK; excluded regardless of CC BY 3.0 US license jurisdiction."
+      }
+    ]
+  },
+  "sourceFailures": [
+    {
+      "source": "https://upload.wikimedia.org",
+      "status": 429,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Retain existing cooldown; no original downloads, mirrors or changed parameters to evade rate limit."
+    },
+    {
+      "source": "https://en.wiktionary.org/w/api.php",
+      "status": 403,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Do not repeat blocked API endpoint."
+    },
+    {
+      "source": "https://fsi-languages.yojik.eu/audiocollections/detailled/eng-wims-mary/flac/",
+      "status": 404,
+      "paths": [
+        "index.xml",
+        "index.xml.bz2"
+      ],
+      "policy": "Both linked indexes returned 404. Do not retry these exact paths; original archive and index.tags.txt were not fetched in this run."
+    }
+  ],
+  "next": {
+    "afterWordNumber": 769,
+    "nextWordNumber": 779,
+    "batchSize": 40,
+    "downloadHostCooldownUntil": "2026-10-19T19:45:00+09:00",
+    "instructions": "Recalculate main/site remaining list; next new-source batch starts at 779 (stare). Retain pending earlier rows. After host cooldown, use a small bounded download batch of metadata-verified candidates; stop on another 429. No candidate is acquired until download and app playback validation."
+  },
+  "result": {
+    "additionalDownloaded": 0,
+    "additionalLocalAppPlaybackVerified": 0,
+    "additionalProductionPlaybackVerified": 0,
+    "totalMappedAfterBuild": 2319,
+    "remainingAfterBuild": 637,
+    "productionVerification": "Fresh production HTML word list and audio map equal local current main; audio mappings/assets unchanged. No new playback credit."
+  }
+}

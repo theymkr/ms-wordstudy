@@ -55,9 +55,11 @@ module.exports = function applyAudioSupplement(page, root) {
   fs.writeFileSync(path.join(target, 'SOURCES-KO.md'), sources);
   const csv = value => '"' + String(value).replaceAll('"', '""') + '"';
   const located = JSON.parse(fs.readFileSync(path.join(target, 'located-audio.json'), 'utf8'));
-  const latestRun = fs.readdirSync(path.join(directory, 'runs')).filter(file => file.endsWith('.json')).sort().at(-1);
-  const run = JSON.parse(fs.readFileSync(path.join(directory, 'runs', latestRun), 'utf8'));
-  const statuses = Object.fromEntries(run.processed.map(item => [item.word, item]));
+  const runs = fs.readdirSync(path.join(directory, 'runs')).filter(file => file.endsWith('.json')).sort()
+    .map(file => JSON.parse(fs.readFileSync(path.join(directory, 'runs', file), 'utf8')));
+  const run = runs.at(-1);
+  // Preserve unresolved earlier batches; newer reviews override only the same word.
+  const statuses = Object.fromEntries(runs.flatMap(history => history.processed.map(item => [item.word, item])));
   const lines = [['단어장 번호', '단어', '상태', '확인한 출처'], ...remaining.map(item => {
     const state = statuses[item.q];
     return [item.number, item.q, state ? state.status + ': ' + state.reason : '미확보 · 다음 검토 대상', (state?.candidatePages || (located[item.q] || []).map(source => source.imageinfo?.[0]?.descriptionurl).filter(Boolean)).join(' | ')];
