@@ -67,9 +67,9 @@
     render();
   }
   function mount() {
-    const panel=document.getElementById('ymPanel-study');
+    const panel=document.getElementById('ymPanel-memorize');
     if(!panel||document.getElementById('ymMemoOpen'))return;
-    const button=document.createElement('button');button.id='ymMemoOpen';button.type='button';button.className='option-btn';button.textContent='암기 · 발음 듣기 (100개씩)';button.onclick=open;const range=panel.querySelector('#rangeCount');if(range)range.after(button);else panel.prepend(button);
+    const button=document.createElement('button');button.id='ymMemoOpen';button.type='button';button.className='option-btn';button.textContent='선택한 범위 암기 시작';button.onclick=open;const range=panel.querySelector('#rangeCount');if(range)range.after(button);else panel.prepend(button);
   }
   const priorMenu=menu;
   menu=function(){stop();const result=priorMenu.apply(this,arguments);mount();return result;};

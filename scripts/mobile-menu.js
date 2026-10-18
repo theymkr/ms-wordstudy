@@ -10,6 +10,12 @@
       if (selected && focus) tab.focus();
     }
     for (const panel of document.querySelectorAll('.ym-menu-panel')) panel.hidden = panel.dataset.panel !== name;
+    if (name === 'memorize' || name === 'study') {
+      const panel=byId('ymPanel-'+name), fields=document.querySelector('.range-fields');
+      const nodes=[fields,byId('ymCustomRange'),byId('rangeCount')].filter(Boolean);
+      if(panel)panel.prepend(...nodes);
+    }
+    if(typeof stop==='function')stop();
   }
   function refreshSummary() {
     const summary = byId('ymAudioSummary');
@@ -34,7 +40,7 @@
     if (sync.children.length) header.append(sync);
     const nav = document.createElement('div'); nav.id = 'ymMenuTabs'; nav.setAttribute('role','tablist'); nav.setAttribute('aria-label','단어 공부 메뉴');
     const panels = {};
-    for (const [name, label] of [['study','학습'], ['review','오답·성적'], ['settings','설정·관리']]) {
+    for (const [name, label] of [['memorize','암기·발음'], ['study','시험·성적'], ['settings','설정·관리']]) {
       const tab = document.createElement('button'); tab.type = 'button'; tab.id = 'ymTab-' + name;
       tab.dataset.panel = name; tab.textContent = label; tab.setAttribute('role','tab');
       tab.setAttribute('aria-controls','ymPanel-' + name); tab.onclick = () => selectTab(name);
@@ -50,7 +56,7 @@
       panel.className = 'ym-menu-panel'; panel.dataset.panel = name; panel.setAttribute('role','tabpanel');
       panel.setAttribute('aria-labelledby',tab.id); panels[name] = panel;
     }
-    const study = panels.study, review = panels.review, settings = panels.settings;
+    const study = panels.study, review = panels.study, settings = panels.settings;
     const fields = c.querySelector('.range-fields');
     const intro = fields?.previousElementSibling;
     if (intro?.classList.contains('hint')) intro.hidden = true;
@@ -90,8 +96,8 @@
       rules.before(details); details.append(title,rules);
     }
     if (speedHelp.children.length) settings.append(speedHelp);
-    c.append(header,nav,study,review,settings);
-    selectTab('study'); refreshSummary();
+    c.append(header,nav,panels.memorize,study,settings);
+    selectTab('memorize'); refreshSummary();
   }
   const previousMenu = menu;
   menu = function () { const result = previousMenu.apply(this,arguments); mount(); return result; };

@@ -7,6 +7,12 @@ const html=fs.readFileSync('public/index.html','utf8').replace(/<script([^>]*)>(
  await page.addInitScript(()=>{window.fetch=async()=>({ok:false,json:async()=>({})});window.alert=()=>{};window.spoken=[];window.SpeechSynthesisUtterance=function(text){this.text=text;};Object.defineProperty(window,'speechSynthesis',{value:{getVoices:()=>[],cancel(){},resume(){},speak(u){window.spoken.push(u);}}});});
  await page.goto('https://memo.test/');await page.evaluate(()=>enterUser('memorize-test'));
  assert(await page.locator('#ymMemoOpen').count());
+ assert.equal(await page.locator('#ymMenuTabs button').count(),3);
+ assert.equal(await page.locator('#ymTab-memorize').textContent(),'암기·발음');
+ assert(await page.locator('#ymPanel-memorize #ymBookSelect').isVisible());
+ await page.locator('#ymTab-study').click();assert(await page.locator('#ymPanel-study #ymBookSelect').isVisible());assert(await page.locator('#ymPanel-study #rangeStartListen').count());assert(await page.locator('#ymPanel-study #wrong-listen').count());
+ await page.locator('#ymTab-memorize').click();assert(await page.locator('#ymMemoOpen').isVisible());await page.screenshot({path:'/tmp/memo-tabs.png'});
+
  await page.evaluate(()=>{captureRange=()=>true;selectedQuestions=()=>allQuestions.slice(0,205);pronunciationSource='iphone';YMMemorize.open();});
  assert.equal(await page.locator('.ym-memo-word').count(),100);assert.equal(await page.evaluate(()=>spoken.length),0);
  const baseline=await page.evaluate(()=>({count:pronunciationCount,records:JSON.stringify(records)}));
