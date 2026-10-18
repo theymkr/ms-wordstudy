@@ -23,8 +23,8 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 200 originally missing rows (number 7 through 1280) were reviewed.
-  Continue at number 1282 (contend), preserving unresolved earlier rows.
+- The first 240 originally missing rows (number 7 through 1410) were reviewed.
+  Continue at number 1422 (venerable), preserving unresolved earlier rows.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
@@ -44,6 +44,11 @@ local decoding, app playback and deployment verification are separate stages.
   One candidate was rejected: `En-us-diplomacy.ogg` resolves to a Canadian English
   recording (`En-ca-diplomacy.oga`). Always inspect the resolved source URL and
   dialect metadata; an `En-us` title alone is not sufficient.
+- The sixth batch added no recordings: 21 US candidates are deferred, one
+  Lingua Libre candidate lacks dialect evidence, and 17 rows need other sources.
+  `En-us-colloquial.ogg` resolves to Canadian `En-ca-colloquial.oga` and was
+  rejected; no exact OGA/WAV/MP3 US alternative was found. The app requires the
+  verb pronunciation of complicate, while narrate allows multiple US stresses.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown
