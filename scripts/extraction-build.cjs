@@ -7,5 +7,5 @@ module.exports=function(page,root){
  const memory="memoryHistory=JSON.parse(localStorage.getItem(prefix())||'[]');";
  if(!page.includes(memory))throw Error('Sync memory source changed');
  page=page.replace(memory,"if(!scoreMemoryDirty)memoryHistory=JSON.parse(localStorage.getItem(SCORE_KEY)||'[]');");
- return page;
+ return page.replace('</head>','<style id="ym-import-layout">\n'+fs.readFileSync(path.join(root,'scripts/document-import.css'),'utf8')+'\n</style>\n</head>');
 };

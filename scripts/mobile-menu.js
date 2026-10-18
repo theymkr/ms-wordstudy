@@ -113,6 +113,7 @@
     document.documentElement.style.setProperty('--ym-exam-height', height + 'px');
     const c = document.querySelector('.quiz-container');
     c?.classList.toggle('ym-keyboard-compact', document.activeElement?.id === 'answer' && height < 500);
+    c?.classList.toggle('ym-import-compact', height < 500);
   }
   viewportSize();
   window.addEventListener('resize',viewportSize);
