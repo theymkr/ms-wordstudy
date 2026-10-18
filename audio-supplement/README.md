@@ -23,8 +23,8 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 240 originally missing rows (number 7 through 1410) were reviewed.
-  Continue at number 1422 (venerable), preserving unresolved earlier rows.
+- The first 280 originally missing rows (number 7 through 1558) were reviewed.
+  Continue at number 1559 (well-being), preserving unresolved earlier rows.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
@@ -49,6 +49,13 @@ local decoding, app playback and deployment verification are separate stages.
   `En-us-colloquial.ogg` resolves to Canadian `En-ca-colloquial.oga` and was
   rejected; no exact OGA/WAV/MP3 US alternative was found. The app requires the
   verb pronunciation of complicate, while narrate allows multiple US stresses.
+- The seventh batch added no recordings: 26 US candidates are deferred, three
+  Lingua Libre candidates lack dialect evidence, and 11 rows need other sources.
+  Sage's herb/wise-person/wise-adjective senses share a pronunciation; juvenile
+  has multiple US vowel variants. These reference checks do not replace playback.
+  Forvo lists US speakers for venerable/juvenile, but MP3 download requires
+  registration and its current terms restrict systematic reuse. Do not create an
+  account, scrape player media, or assume historical Creative Commons licensing.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown
