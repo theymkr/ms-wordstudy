@@ -23,8 +23,8 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 160 originally missing rows (number 7 through 1167) were reviewed.
-  Continue at number 1168 (controversy), preserving unresolved earlier rows.
+- The first 200 originally missing rows (number 7 through 1280) were reviewed.
+  Continue at number 1282 (contend), preserving unresolved earlier rows.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
@@ -39,6 +39,11 @@ local decoding, app playback and deployment verification are separate stages.
   lacks dialect evidence, and 18 rows need other sources. The original Shtooka
   Emmanuel index (986 entries) also has zero exact matches in the current missing
   set. Its coverage audit is complete; do not download the full archive again.
+- The fifth batch added no recordings: 22 US candidates are deferred, three
+  Lingua Libre candidates lack dialect evidence, and 14 rows need other sources.
+  One candidate was rejected: `En-us-diplomacy.ogg` resolves to a Canadian English
+  recording (`En-ca-diplomacy.oga`). Always inspect the resolved source URL and
+  dialect metadata; an `En-us` title alone is not sufficient.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown
