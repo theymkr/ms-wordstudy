@@ -23,8 +23,8 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 520 originally missing rows (number 7 through 2273) were reviewed.
-  Continue at number 2274 (prodigal), preserving unresolved earlier rows.
+- The first 560 originally missing rows (number 7 through 2377) were reviewed.
+  Continue at number 2379 (suffrage), preserving unresolved earlier rows.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
@@ -101,6 +101,14 @@ local decoding, app playback and deployment verification are separate stages.
   explicit California-English metadata. Stable's shared dialect IPA does not
   verify its separate audio candidate. Futile/miniature pronunciation references
   were recorded without treating a single vowel or syllable count as dialect proof.
+- The fourteenth batch added no recordings: 21 rows have US metadata candidates,
+  three Lingua Libre rows lack dialect evidence, and 16 need other sources.
+  Anarchy's exact Simplificationalizer and Wodencafe files are linked as New Jersey
+  and Texas audio; this is not native-speaker, download or playback verification.
+  Torment's US verb also allows initial stress in OAAD, but a final-stressed clip
+  alone cannot cover the noun. Repose noun and verb share a pronunciation. Defense
+  must match the protection/legal sense, not just sporting stress. Draft's linked
+  US clip is titled draught and was not selected as an exact-spelling recording.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown

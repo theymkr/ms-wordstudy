@@ -1,0 +1,688 @@
+{
+  "date": "2026-10-19T08:35:02+09:00",
+  "baseMain": "daa4b1371cfa61de705c1b5ed54515b0bbd25af5",
+  "baseline": {
+    "total": 2956,
+    "mapped": 2319,
+    "remaining": 637,
+    "deployedWordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true
+  },
+  "batch": {
+    "size": 40,
+    "firstNumber": 2274,
+    "lastNumber": 2377,
+    "scope": "Finite metadata/provenance review; no original media downloads during existing cooldown."
+  },
+  "processed": [
+    {
+      "number": 2274,
+      "word": "prodigal",
+      "meaning": "a. 낭비하는, 방탕한",
+      "checkedTitle": "File:En-us-prodigal.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2275,
+      "word": "meager",
+      "meaning": "a. 메마른, 빈약한",
+      "checkedTitle": "File:En-us-meager.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2276,
+      "word": "soothe",
+      "meaning": "v. 달래다, 진정시키다",
+      "checkedTitle": "File:En-us-soothe.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-soothe.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2277,
+      "word": "conspicuous",
+      "meaning": "a. 눈에 띄는",
+      "checkedTitle": "File:En-us-conspicuous.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-conspicuous.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2280,
+      "word": "intercourse",
+      "meaning": "n. 교제",
+      "checkedTitle": "File:En-us-intercourse.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-intercourse.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2281,
+      "word": "bliss",
+      "meaning": "n. 기쁨, 행복",
+      "checkedTitle": "File:En-us-bliss.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2285,
+      "word": "treason",
+      "meaning": "n. 반역죄, 배반",
+      "checkedTitle": "File:En-us-treason.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2287,
+      "word": "fuel",
+      "meaning": "n. 연료 / v. 연료를 공급하다",
+      "checkedTitle": "File:En-us-fuel.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2291,
+      "word": "slang",
+      "meaning": "n. 속어",
+      "checkedTitle": "File:En-us-slang.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-slang.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2300,
+      "word": "surmount",
+      "meaning": "v. 오르다, 극복하다",
+      "checkedTitle": "File:En-us-surmount.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2302,
+      "word": "cell",
+      "meaning": "n. 세포, 방",
+      "checkedTitle": "File:En-us-cell.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-cell.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2303,
+      "word": "forlorn",
+      "meaning": "a. 고독한, 버림받은",
+      "checkedTitle": "File:En-us-forlorn.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-forlorn.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2304,
+      "word": "jealousy",
+      "meaning": "n. 질투",
+      "checkedTitle": "File:En-us-jealousy.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-jealousy.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2305,
+      "word": "unemployment",
+      "meaning": "n. 실업",
+      "checkedTitle": "File:LL-Q1860 (eng)-Arlo Barnes-unemployment.wav",
+      "status": "needs_dialect_evidence",
+      "reason": "English/CC0 metadata names a speaker but does not establish US dialect. Not downloaded or counted. Pages link Southern England audio only. Strategy's General American/Canada IPA does not identify dialect of the independent Arlo Barnes files. Both retained as dialect-unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-unemployment.wav"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2306,
+      "word": "inhabit",
+      "meaning": "v. 거주하다, 살다",
+      "checkedTitle": "File:En-us-inhabit.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-inhabit.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2307,
+      "word": "hideous",
+      "meaning": "a. 무서운, 못생긴",
+      "checkedTitle": "File:En-us-hideous.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-hideous.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2314,
+      "word": "repose",
+      "meaning": "n. 휴식, 쉼 / v. 쉬게 하다",
+      "checkedTitle": "File:En-us-repose.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification. OAAD gives /rɪˈpoʊz/ for both noun and verb. Actual downloaded audio still required.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-repose.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2315,
+      "word": "equator",
+      "meaning": "n. 적도",
+      "checkedTitle": "File:En-us-equator.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-equator.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2316,
+      "word": "defense",
+      "meaning": "n. 방어, 변호",
+      "checkedTitle": "File:En-us-defense.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles. App protection/legal senses use /dɪˈfens/; US sporting sense may have initial /ˈdiːfens/. No exact En-us Ogg/OGA/WAV/MP3 candidate found.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2319,
+      "word": "durable",
+      "meaning": "a. 오래 견디는, 튼튼한",
+      "checkedTitle": "File:En-us-durable.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2321,
+      "word": "notable",
+      "meaning": "a. 주목할 만한, 두드러진",
+      "checkedTitle": "File:En-us-notable.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-notable.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2327,
+      "word": "torment",
+      "meaning": "n. 고통, 고뇌 / v. 괴롭히다",
+      "checkedTitle": "File:En-us-torment.ogg",
+      "status": "needs_pos_evidence_and_download",
+      "reason": "Noun has initial stress. Cambridge lists final-stressed verb; OAAD also permits initial-stressed US verb. Actual candidate stress remains unheard: final-stressed clip alone cannot cover app noun, while verified initial stress may cover both. Do not assume every mixed-POS row needs two files. Separate noun/verb Ogg titles missing; host cooldown respected.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-torment.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2329,
+      "word": "allure",
+      "meaning": "v. 유혹하다, 꾀다",
+      "checkedTitle": "File:En-us-allure.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2331,
+      "word": "starve",
+      "meaning": "v. 굶어 죽다, 갈망하다",
+      "checkedTitle": "File:En-us-starve.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-starve.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2332,
+      "word": "censure",
+      "meaning": "n. 비난 / v. 비난하다",
+      "checkedTitle": "File:En-us-censure.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2334,
+      "word": "basis",
+      "meaning": "n. 기초",
+      "checkedTitle": "File:En-us-basis.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-basis.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2338,
+      "word": "strategy",
+      "meaning": "n. 전략, 책략",
+      "checkedTitle": "File:LL-Q1860 (eng)-Arlo Barnes-strategy.wav",
+      "status": "needs_dialect_evidence",
+      "reason": "English/CC0 metadata names a speaker but does not establish US dialect. Not downloaded or counted. Pages link Southern England audio only. Strategy's General American/Canada IPA does not identify dialect of the independent Arlo Barnes files. Both retained as dialect-unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-strategy.wav"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2340,
+      "word": "insolent",
+      "meaning": "a. 건방진, 무례한",
+      "checkedTitle": "File:En-us-insolent.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2346,
+      "word": "anarchy",
+      "meaning": "n. 무정부 상태",
+      "checkedTitle": "File:LL-Q1860 (eng)-Simplificationalizer-anarchy.wav",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact Simplificationalizer file linked as New Jersey audio; exact Wodencafe file linked as Texas audio. Both Commons CC0 English human-speaker metadata. Regional labels apply to these exact files, not all recordings by either speaker; native status, spoken content, download and playback remain unverified. Host cooldown respected.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Simplificationalizer-anarchy.wav",
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Wodencafe-anarchy.wav"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2349,
+      "word": "vocation",
+      "meaning": "n. 천직, 직업, 사명감",
+      "checkedTitle": "File:En-us-vocation.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-vocation.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2351,
+      "word": "heredity",
+      "meaning": "n. 유전",
+      "checkedTitle": "File:En-us-heredity.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2352,
+      "word": "exclude",
+      "meaning": "v. 배제하다, 몰아내다",
+      "checkedTitle": "File:En-us-exclude.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-exclude.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2355,
+      "word": "persecute",
+      "meaning": "v. 학대하다, 괴롭히다, 박해하다",
+      "checkedTitle": "File:En-us-persecute.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2356,
+      "word": "faculty",
+      "meaning": "n. 능력, 재능, 학부, 교수진",
+      "checkedTitle": "File:En-us-faculty.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-faculty.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2361,
+      "word": "instructive",
+      "meaning": "a. 교훈적인, 유익한",
+      "checkedTitle": "File:En-us-instructive.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2365,
+      "word": "draft",
+      "meaning": "n. 도안, 초안, 징병, 징집 / v. ~의 밑그림을 그리다",
+      "checkedTitle": "File:LL-Q1860 (eng)-Arlo Barnes-draft.wav",
+      "status": "needs_dialect_evidence",
+      "reason": "English/CC0 metadata names a speaker but does not establish US dialect. Not downloaded or counted. US audio link on draft resolves to En-us-draught.ogg; Commons describes draught. Alternative spelling and homophony noted but not selected or counted as exact draft recording. Existing Arlo Barnes draft file lacks independent US dialect evidence.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-draft.wav"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "unselectedRelatedPages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-draught.ogg"
+      ]
+    },
+    {
+      "number": 2366,
+      "word": "exempt",
+      "meaning": "v. 면제하다 / a. 면제된",
+      "checkedTitle": "File:En-us-exempt.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-exempt.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2369,
+      "word": "appoint",
+      "meaning": "v. 지명하다, 임명하다",
+      "checkedTitle": "File:En-us-appoint.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2371,
+      "word": "acquaint",
+      "meaning": "v. 알리다, 익히다",
+      "checkedTitle": "File:En-us-acquaint.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2377,
+      "word": "betray",
+      "meaning": "v. 배반하다",
+      "checkedTitle": "File:En-us-betray.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-betray.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    }
+  ],
+  "sourceReview": {
+    "metadataFile": "candidate-metadata-2026-10-19T0835.json",
+    "commonsImageInfoRequests": 4,
+    "commonsImageInfoFileTitles": 96,
+    "commonsProvenanceRequests": 0,
+    "usMetadataCandidateRows": 21,
+    "rightsUnresolvedWithinUsRows": 0,
+    "linguaLibreDialectUnverified": 3,
+    "rowsWithoutSuitableCandidate": 16,
+    "senseReferences": [
+      {
+        "word": "torment",
+        "urls": [
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/torment_1",
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/torment_2",
+          "https://dictionary.cambridge.org/pronunciation/english/torment"
+        ],
+        "finding": "Noun has initial stress. Cambridge lists final-stressed verb; OAAD also permits initial-stressed US verb. Actual candidate stress remains unheard: final-stressed clip alone cannot cover app noun, while verified initial stress may cover both. Do not assume every mixed-POS row needs two files."
+      },
+      {
+        "word": "repose",
+        "urls": [
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/repose_1",
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/repose_2"
+        ],
+        "finding": "OAAD gives /rɪˈpoʊz/ for both noun and verb. Actual downloaded audio still required."
+      },
+      {
+        "word": "defense",
+        "urls": [
+          "https://www.oxfordlearnersdictionaries.com/us/definition/english/defense"
+        ],
+        "finding": "App protection/legal senses use /dɪˈfens/; US sporting sense may have initial /ˈdiːfens/. No exact En-us Ogg/OGA/WAV/MP3 candidate found."
+      },
+      {
+        "word": "anarchy",
+        "urls": [
+          "https://en.wiktionary.org/wiki/anarchy",
+          "https://en.wiktionary.org/wiki/File:LL-Q1860_(eng)-Simplificationalizer-anarchy.wav",
+          "https://en.wiktionary.org/wiki/File:LL-Q1860_(eng)-Wodencafe-anarchy.wav"
+        ],
+        "finding": "Exact Simplificationalizer file linked as New Jersey audio; exact Wodencafe file linked as Texas audio. Both Commons CC0 English human-speaker metadata. Regional labels apply to these exact files, not all recordings by either speaker; native status, spoken content, download and playback remain unverified."
+      },
+      {
+        "word": "draft",
+        "urls": [
+          "https://en.wiktionary.org/wiki/draft",
+          "https://en.wiktionary.org/wiki/File:En-us-draught.ogg"
+        ],
+        "finding": "US audio link on draft resolves to En-us-draught.ogg; Commons describes draught. Alternative spelling and homophony noted but not selected or counted as exact draft recording. Existing Arlo Barnes draft file lacks independent US dialect evidence."
+      },
+      {
+        "word": "unemployment / strategy",
+        "urls": [
+          "https://en.wiktionary.org/wiki/unemployment",
+          "https://en.wiktionary.org/wiki/strategy"
+        ],
+        "finding": "Pages link Southern England audio only. Strategy's General American/Canada IPA does not identify dialect of the independent Arlo Barnes files. Both retained as dialect-unverified."
+      }
+    ],
+    "previousSourceAuditsPreserved": true
+  },
+  "sourceFailures": [
+    {
+      "source": "https://upload.wikimedia.org",
+      "status": 429,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Do not download originals until existing cooldown ends; no alternate hosts, mirrors or parameters to evade limit."
+    },
+    {
+      "source": "https://en.wiktionary.org/w/api.php",
+      "status": 403,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Do not retry blocked API endpoint."
+    },
+    {
+      "source": "https://dictionary.cambridge.org",
+      "status": 403,
+      "observedInRun": "2026-10-18T2238.json",
+      "paths": [
+        "/dictionary/english/summons",
+        "/dictionary/english/multiply"
+      ],
+      "retriedThisRun": false,
+      "policy": "Blocked direct pages not retried."
+    },
+    {
+      "source": "https://lingualibre.org/wiki/Q532035",
+      "resolvedUrl": "https://archive.lingualibre.org/wiki/Q532035",
+      "status": 500,
+      "retriedThisRun": false,
+      "policy": "Profile unavailable through retrieval tool; do not immediately repeat. English/CC0 does not establish US dialect."
+    },
+    {
+      "source": "https://www.festvox.org/cmu_arctic/",
+      "status": 502,
+      "observedInRun": "2026-10-19T0335.json",
+      "retriedThisRun": false,
+      "retryNotBefore": "2026-10-20T03:35:11+09:00",
+      "policy": "One curl check after web timeout; stop for this run. Retry only after stated time. No media acquired."
+    },
+    {
+      "source": "https://www.youtube.com/watch?v=enJxEQrNXPk",
+      "status": "web_retrieval_disabled",
+      "observedInRun": "2026-10-19T0538.json",
+      "retriedThisRun": false,
+      "policy": "No bypass or alternate video extraction; astray rights provenance unresolved."
+    }
+  ],
+  "next": {
+    "afterWordNumber": 2377,
+    "nextWordNumber": 2379,
+    "batchSize": 40,
+    "downloadHostCooldownUntil": "2026-10-19T19:45:00+09:00",
+    "instructions": "Recompute fresh main and deployed word/mapping counts; continue at suffrage 2379 preserving earlier unresolved rows. Anarchy has exact New Jersey/Texas file labels, not yet acquired. Torment OAAD permits initial-stressed verb; verify actual noun/verb coverage. Do not substitute draught for exact draft without resolving spelling/sense requirements. Do not repeat missing titles, blocked APIs, completed corpus audits, or local Chrome permission failure. CMU ARCTIC has a separate retry-not-before time in sourceFailures; no download-host or browser restriction bypass."
+  },
+  "result": {
+    "additionalDownloaded": 0,
+    "additionalLocalAppPlaybackVerified": 0,
+    "additionalProductionPlaybackVerified": 0,
+    "totalMappedAfterBuild": 2319,
+    "remainingAfterBuild": 637,
+    "productionVerification": "Fresh production word list and mapping matched fresh main before review. No audio/app-code changes or new playback claim. Research records require post-publication live comparison."
+  },
+  "validation": {
+    "build": "passed",
+    "wordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true,
+    "localBrowserPlayback": {
+      "status": "not_retried_known_permission_blocker",
+      "observedInRun": "2026-10-19T0436.json",
+      "error": "Chrome socket() failed: Operation not permitted (1)",
+      "policy": "No browser/security-setting retries. Only research records changed; prior playback success is not presented as new."
+    }
+  }
+}
