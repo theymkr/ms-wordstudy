@@ -23,8 +23,8 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 480 originally missing rows (number 7 through 2137) were reviewed.
-  Continue at number 2140 (panic), preserving unresolved earlier rows.
+- The first 520 originally missing rows (number 7 through 2273) were reviewed.
+  Continue at number 2274 (prodigal), preserving unresolved earlier rows.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
@@ -94,6 +94,13 @@ local decoding, app playback and deployment verification are separate stages.
   was not selected for the app verb. US IPA on rural/historian pages does not
   establish the dialect of the separate Arlo Barnes recordings. Existing host
   cooldowns and browser permission restrictions were respected without retries.
+- The thirteenth batch added no recordings: 23 rows have US metadata candidates
+  (lament needs rights-holder permission evidence), one Lingua Libre row lacks
+  dialect evidence, and 16 rows need other sources. Principle's description names
+  EncycloPetey despite its blank machine-readable author field. Correspond has
+  explicit California-English metadata. Stable's shared dialect IPA does not
+  verify its separate audio candidate. Futile/miniature pronunciation references
+  were recorded without treating a single vowel or syllable count as dialect proof.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown
