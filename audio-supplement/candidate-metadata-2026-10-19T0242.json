@@ -1,0 +1,598 @@
+{
+  "date": "2026-10-19T02:42:37+09:00",
+  "stage": "metadata-only; no audio downloaded or playback verified",
+  "requests": 3,
+  "titles": 94,
+  "records": [
+    {
+      "title": "File:En-us-incessant.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-incessant.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/En-us-incessant.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "04e019e08b7cc54a159ccf51d0abd0adae875f0b",
+      "description": "Pronunciation of the word 'incessant' in US English",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+      "license": "Public domain",
+      "categories": "U.S. English pronunciation|Self-published work|PD-self",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-copy.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-copy.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/En-us-copy.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "4b5d9044267f208521aa799b831b5a8cb71b15c1",
+      "description": "Pronunciation of the term in US English",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-property.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-property.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/En-us-property.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "8cc01b10b4d0a65aeb3c8907a571b77dc9b6e29e",
+      "description": "Pronunciation of the term in US English",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-commerce.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-commerce.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/En-us-commerce.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "3ff20f81f2f58de72ca497bdcda3dd6286fed12c",
+      "description": "Audio pronunciation of the term 'commerce' in United States English.",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-institution.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-institution.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/En-us-institution.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "cb2afa955ea61e57233966d7c7c7da2c05dad328",
+      "description": "Audio pronunciation of the term 'institution' in United States English.",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-remedy.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-remedy.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/En-us-remedy.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "eb4f0360fd1885570c1b91db78bc35035a67833c",
+      "description": "Audio pronunciation of the term 'remedy' in United States English.",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-ample.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-ample.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/En-us-ample.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "c69d219b0928b8bf6061abcb3342d51473af4ba4",
+      "description": "Audio pronunciation of the term 'ample' in United States English.",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Neskaya\" title=\"User:Neskaya\">Neskaya</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-ingenious.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-ingenious.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4b/En-us-ingenious.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "a8d988f6ec1a6d188e79eda53b9886dc8ef278ef",
+      "description": "Audio pronunciation of the term 'ingenious' in United States English.",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Neskaya\" title=\"User:Neskaya\">Neskaya</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-rapture.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-rapture.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cb/En-us-rapture.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "7615f0b5a170ca2698724be559fac61b83cc8a91",
+      "description": "Audio pronunciation of the term 'rapture' in United States English.",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Neskaya\" title=\"User:Neskaya\">Neskaya</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-aggressive.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-aggressive.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/6/63/En-us-aggressive.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "a580ff9ae3337aa5e9b932b3270541c6021e6901",
+      "description": "Audio pronunciation of the term 'aggressive' in United States English.",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Neskaya\" title=\"User:Neskaya\">Neskaya</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-aristocracy.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-aristocracy.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/En-us-aristocracy.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "c8a3c3b1208ff8c272ff3eb60ea5dc0d4dcaec13",
+      "description": "Audio pronunciation of the term <i>aristocracy</i> in United States English",
+      "artist": "<a rel=\"mw:WikiLink\" href=\"https://commons.wikimedia.org/wiki/User:Neskaya\" title=\"User:Neskaya\">Neskaya</a>.",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-exertion.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-exertion.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/En-us-exertion.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "3cc9c6b0637979a97181f7b33ff2ec949cc77a60",
+      "description": "Audio pronunciation of the term 'exertion' in United States English.",
+      "artist": "<a rel=\"mw:WikiLink\" href=\"https://commons.wikimedia.org/wiki/User:Neskaya\" title=\"User:Neskaya\">Neskaya</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-extract.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-extract.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/En-us-extract.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "dde8dd76c61997491ed3aa9ccd62f0c6429268f3",
+      "description": "Audio pronunciation of the term 'extract' in United States English.",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Neskaya\" title=\"User:Neskaya\">Neskaya</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-persist.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-persist.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/En-us-persist.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "8fd8fb7a16f11e104c469384144d94c60650a751",
+      "description": "Audio pronunciation of the term 'persist' in United States English.",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Neskaya\" title=\"User:Neskaya\">Neskaya</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-accomplish.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-accomplish.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/En-us-accomplish.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "90b9ed772c40d2ea43ba2b22a9a33d4bdcb86ee7",
+      "description": "Audio pronunciation of the term 'accomplish' in United States English.",
+      "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:TreeMama&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:TreeMama (page does not exist)\">TreeMama</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work|Audio files created with Shtooka Recorder",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-fatigue.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-fatigue.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/En-us-fatigue.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "d7645d18489282ea69d5833644c3749b4b20873c",
+      "description": "Audio pronunciation of the term 'fatigue' in United States English.",
+      "artist": "<a rel=\"mw:WikiLink\" href=\"https://commons.wikimedia.org/wiki/User:TreeMama?action=edit&amp;redlink=1\" title=\"User:TreeMama (page does not exist)\" class=\"new\" typeof=\"mw:LocalizedAttrs\" data-mw-i18n='{\"title\":{\"lang\":\"x-page\",\"key\":\"red-link-title\",\"params\":[\"User:TreeMama\"]}}'>TreeMama</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work|Audio files created with Shtooka Recorder",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-induce.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-induce.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/En-us-induce.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "d80af10d2bb87045edc8392c404a256fa90abff7",
+      "description": "Audio pronunciation of the term 'induce' in United States English.",
+      "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:TreeMama&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:TreeMama (page does not exist)\">TreeMama</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work|Audio files created with Shtooka Recorder",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-sermon.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-sermon.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/En-us-sermon.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "2251398a9f0a266e53f662f8957d7c8cc65b96ef",
+      "description": "Audio pronunciation of the term 'sermon' in United States English.",
+      "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:TreeMama&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:TreeMama (page does not exist)\">TreeMama</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "categories": "U.S. English pronunciation|GFDL|Sermons|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work|Audio files created with Shtooka Recorder",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-forbear.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-forbear.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/En-us-forbear.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "fd17aace4521ddf5b56acc9147eb7d34baae6d62",
+      "description": "Pronunciation of the term in US English",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:EncycloPetey\" title=\"User:EncycloPetey\">EncycloPetey</a>",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "categories": "U.S. English pronunciation|GFDL|License migration redundant|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-amaze.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-amaze.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/En-us-amaze.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "e76e2e5f7d2372696d2b70b9bfdc3e3ccce53176",
+      "description": "அமெரிக்க உச்சரிப்பு",
+      "artist": "தகவலுழவன்",
+      "license": "Public domain",
+      "categories": "U.S. English pronunciation|Self-published work|PD-self|Uploaded with Commonist",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-routine.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-routine.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/En-us-routine.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "5923eed30e35ea24bffc8b291a15118e8710d00e",
+      "description": "Pronunciation of the term in US English, recorded by <a href=\"//commons.wikimedia.org/wiki/User:Sylvanmoon\" title=\"User:Sylvanmoon\">Sylvanmoon</a>",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Sylvanmoon\" title=\"User:Sylvanmoon\">Sylvanmoon</a>",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "categories": "U.S. English pronunciation|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-vow.ogg",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:En-us-vow.ogg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/En-us-vow.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "cdf9234671fdf448400de9340609d1471ff43434",
+      "description": "Audio pronunciation of the word \"vow\" in U.S. English.",
+      "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Paul2520\" title=\"User:Paul2520\">Paul2520</a>",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "categories": "U.S. English pronunciation|Self-published work",
+      "restrictions": ""
+    },
+    {
+      "title": "File:LL-Q1860 (eng)-Arlo Barnes-globe.wav",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-globe.wav",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/LL-Q1860_%28eng%29-Arlo_Barnes-globe.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "42accc02423e174da101ce8b95d7dcc6eb5c4f5e",
+      "description": "<span class=\"plainlinks\">Audio pronunciation file from the <b><a rel=\"nofollow\" class=\"external text\" href=\"https://lingualibre.org\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project. </span>",
+      "artist": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q532035\" class=\"extiw\" title=\"lingualibre:Q532035\">Arlo Barnes</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Arlo_Barnes\" title=\"User:Arlo Barnes\">Arlo Barnes</a></li></ul>",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "categories": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Arlo Barnes",
+      "restrictions": ""
+    },
+    {
+      "title": "File:LL-Q1860 (eng)-Arlo Barnes-ruthless.wav",
+      "missing": false,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-ruthless.wav",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/LL-Q1860_%28eng%29-Arlo_Barnes-ruthless.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "sourceSha1": "6918bfced3a41888372b02bc696169e420c51b04",
+      "description": "<span class=\"plainlinks\">Audio pronunciation file from the <b><a rel=\"nofollow\" class=\"external text\" href=\"https://lingualibre.org\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project. </span>",
+      "artist": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q532035\" class=\"extiw\" title=\"lingualibre:Q532035\">Arlo Barnes</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Arlo_Barnes\" title=\"User:Arlo Barnes\">Arlo Barnes</a></li></ul>",
+      "license": "CC0",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "categories": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Arlo Barnes",
+      "restrictions": ""
+    },
+    {
+      "title": "File:En-us-well-being.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-outcome.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-pastime.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-imprison.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-allot.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-exceed.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-predecessor.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-wholesome.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-seclude.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-extravagant.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-uphold.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-allude.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-renounce.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-prime.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-intrude.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-abstract.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-well-being.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-well-being.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-well-being.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-outcome.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-outcome.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-outcome.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-pastime.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-pastime.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-pastime.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-imprison.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-imprison.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-imprison.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-allot.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-allot.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-allot.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-exceed.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-exceed.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-exceed.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-predecessor.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-predecessor.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-predecessor.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-wholesome.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-wholesome.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-wholesome.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-seclude.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-seclude.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-seclude.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-extravagant.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-extravagant.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-extravagant.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-uphold.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-uphold.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-uphold.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-allude.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-allude.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-allude.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-renounce.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-renounce.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-renounce.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-prime.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-prime.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-prime.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-intrude.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-intrude.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-intrude.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-abstract.oga",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-abstract.wav",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-abstract.mp3",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-globe.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-ruthless.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-extract-noun.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-extract-verb.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-abstract-noun.ogg",
+      "missing": true
+    },
+    {
+      "title": "File:En-us-abstract-verb.ogg",
+      "missing": true
+    }
+  ]
+}

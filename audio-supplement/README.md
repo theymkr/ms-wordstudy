@@ -23,8 +23,8 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 280 originally missing rows (number 7 through 1558) were reviewed.
-  Continue at number 1559 (well-being), preserving unresolved earlier rows.
+- The first 320 originally missing rows (number 7 through 1689) were reviewed.
+  Continue at number 1690 (oracle), preserving unresolved earlier rows.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
@@ -56,6 +56,14 @@ local decoding, app playback and deployment verification are separate stages.
   Forvo lists US speakers for venerable/juvenile, but MP3 download requires
   registration and its current terms restrict systematic reuse. Do not create an
   account, scrape player media, or assume historical Creative Commons licensing.
+- The eighth batch added no recordings: 22 US metadata candidates remain
+  unverified (extract and forbear also require POS/stress evidence), two Lingua
+  Libre candidates lack dialect evidence, and 16 rows need other sources.
+  Extract/abstract combine distinct pronunciations in one app entry; do not count
+  an ambiguous single clip as full coverage. No word data was changed.
+  New corpus reviews are recorded: Mozilla's US subset has hosting conditions
+  and no established exact-word workflow; UCSB's conversation corpus is BY-ND,
+  so isolated-word cropping permission is not established. Neither was downloaded.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown
