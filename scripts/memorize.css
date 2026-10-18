@@ -12,3 +12,5 @@
 @media(max-height:450px){#ymMemorizeScreen header h2,#ymMemorizeScreen header p{display:none;}#ymMemorizeScreen{gap:4px;}}
 #ymMemoList{grid-auto-rows:max-content;}#ymMemoList .ym-memo-word{height:auto;min-height:max-content;overflow:visible;}
 #ymMemorizeScreen header button,#ymMemoPager button,#ymMemoStop{background:#2878d8;color:white;border:0;border-radius:8px;padding:10px;}
+
+#ymMemoRange{display:flex;gap:6px;align-items:end;margin:0;flex:none;}#ymMemoRange label{flex:1;min-width:0;font-size:12px;}#ymMemoRange input{box-sizing:border-box;width:100%;min-height:40px;font-size:16px;padding:6px;margin:3px 0 0;}#ymMemoRange button{background:#2878d8;color:white;border:0;border-radius:8px;padding:8px;}#ymMemoRangeError{font-size:12px;color:#ffc66d;}#ymMemoRangeError:empty{display:none;}
