@@ -23,8 +23,8 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 440 originally missing rows (number 7 through 2024) were reviewed.
-  Continue at number 2026 (antiquity), preserving unresolved earlier rows.
+- The first 480 originally missing rows (number 7 through 2137) were reviewed.
+  Continue at number 2140 (panic), preserving unresolved earlier rows.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
@@ -87,6 +87,13 @@ local decoding, app playback and deployment verification are separate stages.
   noun/verb stress coverage. Ally allows an initial-stressed verb variant, but a
   final-stressed clip alone cannot cover the noun. The previous browser socket
   permission blocker was not retried or bypassed; no new playback was claimed.
+- The twelfth batch added no recordings: 22 US metadata candidates remain
+  unverified, three Lingua Libre rows lack dialect evidence, and 15 rows need
+  suitable alternatives. Discharge needs both noun/verb stresses; overlook needs
+  verb stress. Wodencafe's US-labelled discard file is linked under the noun and
+  was not selected for the app verb. US IPA on rural/historian pages does not
+  establish the dialect of the separate Arlo Barnes recordings. Existing host
+  cooldowns and browser permission restrictions were respected without retries.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown
