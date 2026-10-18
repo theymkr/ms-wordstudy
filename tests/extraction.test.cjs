@@ -44,3 +44,19 @@ test('OCR whitelist uses only English and Korean plus temporary parsing delimite
  for(const character of '★♡€¥₩中文日本あ')assert(!ko.tessedit_char_whitelist.includes(character));
  assert.equal(ko.tessedit_pageseg_mode,'6');assert.throws(()=>core.ocrParameters('chi_sim','6'));
 });
+test('PDF fragments reconstruct words and preserve column boundaries despite item EOL flags',()=>{
+ const item=(str,x,y,width)=>({str,transform:[10,0,0,10,x,y],width,height:10,hasEOL:true});
+ const text=core.pdfText([item('구식의',200,100,30),item('solete',30,100,30),item('n.',300,70,10),item('시험',200,70,20),item('ob',20,100,10),item('test',20,70,20),item('a.',300,100,10)]);
+ assert.equal(text,'obsolete\t구식의\ta.\ntest\t시험\tn.');
+ assert.deepEqual(core.parseImport(text).map(x=>x.word),['obsolete','test']);
+ assert.equal(core.pdfText([item('look',20,100,20),item('after',44,100,25)]),'look after');
+});
+test('low confidence survives import serialization and suspicious words require review',()=>{
+ const row={word:'extinct',meaning:'멸종한',pos:'a',synonyms:'',review:true};
+ assert.deepEqual(core.parse(core.prepareImport(core.serialize([row]))),[row]);
+ assert(core.reviewIssues(row).length);
+ for(const word of ['strike b','extin Mayb'])assert(core.reviewIssues({word,meaning:'뜻'}).length);
+ assert(core.reviewIssues({word:'obsolete',meaning:'unused'}).length);
+ assert.deepEqual(core.reviewIssues({...row,reviewed:true}),[]);
+ assert(core.reviewIssues({...row,word:'',reviewed:true}).length);
+});

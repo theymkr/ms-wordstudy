@@ -13,6 +13,10 @@ function meaningInfo(value){
 function reviewIssues(row){
  const word=clean(row.word),meaning=clean(row.meaning),issues=[];
  if(!word||!meaning)issues.push('단어 또는 뜻이 비어 있습니다.');
+ if(row.reviewed)return issues;
+ if(row.review)issues.push('인식 신뢰도가 낮습니다. 원문과 비교해 주세요.');
+ if(/[가-힣]/.test(word)||word.split(/\s+/).length>5||/\b[b-hj-z]\b/i.test(word)||/[a-z]\s+[A-Z][a-z]/.test(word))issues.push('단어에 다른 글자나 예문이 섞였는지 확인해 주세요.');
+ if(/[가-힣]/.test(meaning)&&/\b[A-Z]{2,}\b/.test(meaning))issues.push('한글 뜻에 영문이 섞였습니다. 원문을 확인해 주세요.');
  if(/[£€¥₩$]\s*\d/.test(meaning))issues.push('통화기호·숫자가 뜻에 섞였습니다. 원문을 확인해 주세요.');
  if(/(?:^|\s\/\s)[0-9Γ].\s*[가-힣]/.test(meaning))issues.push('품사 표시가 숫자·기호로 읽힌 것 같습니다.');
  if(/\b[A-Z]{2,}\]/.test(meaning))issues.push('영문·괄호가 한글 뜻에 섞였습니다.');
@@ -25,7 +29,7 @@ function parse(text){
  const rows=[];let pending='',canonical=false;
  for(let line of String(text||'').split(/\r?\n/)){
   if(/^word\tmeaning\tpos\tsynonyms$/i.test(line.trim())){canonical=true;continue;}
-  if(canonical&&line.includes('\t')){const p=line.split('\t');if(p.length===4){rows.push({word:cleanWord(p[0]),meaning:clean(p[1]),pos:normalizePos(p[2]),synonyms:clean(p[3])});continue;}}
+  if(canonical&&line.includes('\t')){const p=line.split('\t');if(p.length===4||p.length===5){rows.push({word:cleanWord(p[0]),meaning:clean(p[1]),pos:normalizePos(p[2]),synonyms:clean(p[3]),...(p[4]==='review'?{review:true}:{})});continue;}}
   line=line.trim().replace(/^\d+[.)\s]+/,'');if(!line||/^(word|단어|영단어)\s*[,\t;|]/i.test(line))continue;
   const delimiter=line.includes('\t')?'tab':line.includes('|')?'pipe':line.includes(';')?'semi':'comma';
   let parts=delimiter==='tab'?line.split('\t'):delimiter==='pipe'?line.split(/\s*\|\s*/):delimiter==='semi'?line.split(/\s*;\s*/):line.includes(',')?csv(line):[line];
@@ -46,7 +50,7 @@ function parse(text){
  }
  return rows;
 }
-function serialize(rows){return 'word\tmeaning\tpos\tsynonyms\n'+rows.map(r=>[r.word,r.meaning,r.pos||'',r.synonyms||''].map(x=>String(x).replace(/[\t\r\n]/g,' ')).join('\t')).join('\n');}
+function serialize(rows){return 'word\tmeaning\tpos\tsynonyms\n'+rows.map(r=>[r.word,r.meaning,r.pos||'',r.synonyms||'',...(r.review?['review']:[])].map(x=>String(x).replace(/[\t\r\n]/g,' ')).join('\t')).join('\n');}
 // File-import policy only. Existing books and manual edits retain their spelling.
 const withoutPhonetics=value=>String(value||'').replace(/\p{S}/gu,char=>char.normalize('NFKC')==='|'?'|':'').normalize('NFKC')
  .replace(/\[[^\]\r\n]*[æðθ\u0250-\u02ff][^\]\r\n]*\]/g,' ')
@@ -58,7 +62,26 @@ function parseImport(text){
  // Keep delimiters and POS markers until columns are parsed; none reach fields.
  const source=withoutPhonetics(text).replace(/[^A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3\s0-9|,;."'()\/*-]/g,'')
   .replace(/^[ \d.)*]+/gm,'').replace(/\d+/g,'');
- return parse(source).map(row=>({word:importLetters(row.word,true),meaning:importLetters(row.meaning),pos:normalizePos(row.pos),synonyms:importLetters(row.synonyms)})).filter(row=>row.word||row.meaning);
+ return parse(source).map(row=>({word:importLetters(row.word,true),meaning:importLetters(row.meaning),pos:normalizePos(row.pos),synonyms:importLetters(row.synonyms),...(row.review?{review:true}:{})})).filter(row=>row.word||row.meaning);
+}
+// PDF text items can be individual letters, words or cells. Reassemble nearby
+// fragments before introducing column separators; hasEOL is not reading order.
+function pdfText(items){
+ const lines=[];
+ for(const item of items.filter(x=>typeof x.str==='string'&&x.str.trim()).sort((a,b)=>(b.transform?.[5]||0)-(a.transform?.[5]||0))){
+  const y=item.transform?.[5]||0,height=Math.abs(item.height||item.transform?.[3]||10);
+  let line=lines.find(l=>Math.abs(l.y-y)<=Math.max(2,Math.min(l.height,height)*.3));
+  if(!line){line={y,height,items:[]};lines.push(line);}line.items.push(item);
+ }
+ return lines.map(line=>{
+  let text='',previous;
+  for(const item of line.items.sort((a,b)=>(a.transform?.[4]||0)-(b.transform?.[4]||0))){
+   if(previous){const height=Math.abs(previous.height||previous.transform?.[3]||10),width=Number.isFinite(previous.width)?previous.width:previous.str.length*height*.5;
+    const gap=(item.transform?.[4]||0)-(previous.transform?.[4]||0)-width;
+    text+=gap>Math.max(12,height*.9)?'\t':gap>height*.12?' ':'';
+   }text+=item.str;previous=item;
+  }return text;
+ }).join('\n');
 }
 function prepareImport(text){
  const rows=parseImport(text);
@@ -121,6 +144,6 @@ async function extractImage(source,recognize,check=()=>{},progress=()=>{}){
  }
  return {rows,regions:regions.length};
 }
-const api={normalizePos,cleanWord,meaningInfo,reviewIssues,clean,parse,serialize,importLetters,parseImport,prepareImport,ocrParameters,detectRegions,prepareCrop,canvasFor,extractImage};
+const api={normalizePos,cleanWord,meaningInfo,reviewIssues,clean,parse,serialize,importLetters,parseImport,prepareImport,pdfText,ocrParameters,detectRegions,prepareCrop,canvasFor,extractImage};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;root.YMExtraction=api;
 })(typeof window!=='undefined'?window:globalThis);
