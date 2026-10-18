@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-18",
+  "site": "https://ms-1-2956.vercel.app",
+  "codeCommit": "e115da300756918f9da552f708eb938d1d28465c",
+  "vercelGitHubStatus": "success",
+  "vercelStatusUrl": "https://vercel.com/theymkr-4140/ms-1-2956/36TfUAVvToxjxz8LYG1NP5LQa15R",
+  "directVercelManagementApi": "403 forbidden; no CLI available; verified via GitHub Vercel status and actual production page/assets instead.",
+  "wordListUnchanged": true,
+  "productionMappingMatchesBuild": true,
+  "total": 2956,
+  "mapped": 2319,
+  "remaining": 637,
+  "assets": [
+    {
+      "word": "feather",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-feather.mp3",
+      "httpStatus": 200,
+      "sha256": "266c7494b6f080e6b0825a8ed46fe8e4d1c389f80d592c6aff947796753185cc",
+      "bytes": 7165,
+      "contentType": "audio/mpeg"
+    },
+    {
+      "word": "atom",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-atom.mp3",
+      "httpStatus": 200,
+      "sha256": "416d23b1513ec51f1e825fa0b50adac0cf58cd89d7380633857cbe4f58e06150",
+      "bytes": 14523,
+      "contentType": "audio/mpeg"
+    },
+    {
+      "word": "stripe",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-stripe.mp3",
+      "httpStatus": 200,
+      "sha256": "dbe65586aa9bd16aa3c1c9895ed94139fcd16dff79108371525e8223aae6160e",
+      "bytes": 14365,
+      "contentType": "audio/mpeg"
+    }
+  ],
+  "catalogManifestCount": 2319,
+  "remainingCsvEntries": 637
+}

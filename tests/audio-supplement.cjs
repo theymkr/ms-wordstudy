@@ -9,9 +9,10 @@ const html = fs.readFileSync(process.env.AUDIO_HTML_PATH || 'public/index.html',
   .replace(/<script([^>]*)>([\s\S]*?)<\/script>/g, (all, attrs, code) => attrs.includes('src=') || code.includes('client.auth.onAuthStateChange') ? '' : all);
 
 (async () => {
-  const browser = await chromium.launch({headless:true, executablePath:process.env.CHROME_PATH, args:['--no-sandbox']});
+  const proxy = process.env.AUDIO_BASE_URL && process.env.HTTPS_PROXY ? {server:process.env.HTTPS_PROXY} : undefined;
+  const browser = await chromium.launch({headless:true, executablePath:process.env.CHROME_PATH, args:['--no-sandbox'], proxy});
   try {
-    const page = await browser.newPage({viewport:{width:393,height:680}});
+    const page = await browser.newPage({viewport:{width:393,height:680}, ignoreHTTPSErrors:!!proxy});
     const errors = [], responses = [];
     page.on('pageerror', error => errors.push(error.message));
     page.on('response', response => {if (response.url().includes('/audio-pilot/extra-us-')) responses.push({url:response.url(),status:response.status()});});
@@ -56,7 +57,7 @@ const html = fs.readFileSync(process.env.AUDIO_HTML_PATH || 'public/index.html',
     for (const entry of entries) {
       await page.evaluate(() => {window.mediaEvents=[];});
       await page.locator('.ym-memo-word').filter({has:page.locator('strong',{hasText:new RegExp('^'+entry.word+'$')})}).click();
-      await page.waitForFunction(() => document.getElementById('ymMemoProgress').textContent.includes('3회 재생 완료'), {timeout:30000});
+      await page.waitForFunction(() => document.getElementById('ymMemoProgress').textContent.includes('3회 재생 완료'), undefined, {timeout:30000});
       const events = await page.evaluate(() => mediaEvents);
       assert.equal(events.filter(event=>event.type==='playing').length,3,entry.word);
       assert.equal(events.filter(event=>event.type==='ended').length,3,entry.word);
