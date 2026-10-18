@@ -23,8 +23,8 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 360 originally missing rows (number 7 through 1796) were reviewed.
-  Continue at number 1800 (alert), preserving unresolved earlier rows.
+- The first 400 originally missing rows (number 7 through 1907) were reviewed.
+  Continue at number 1916 (predominant), preserving unresolved earlier rows.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
@@ -72,6 +72,13 @@ local decoding, app playback and deployment verification are separate stages.
   CMU ARCTIC is a promising independent human-recording source (BDL/SLT US only),
   but its official index returned 502. Respect its separate retry time in the run
   record; exclude included synthetic voices and Canadian/Scottish recordings.
+- The tenth batch added no recordings: 21 US metadata candidates remain
+  unverified, three Lingua Libre rows lack dialect evidence, and 15 rows need
+  other sources. Discern was rejected because its recorder explicitly says
+  they are not a native speaker; a US category alone is insufficient.
+  Incline has different noun/verb stresses, supplement has different noun/verb
+  final vowels, and recreation must match the leisure sense rather than creating
+  again. Do not count one ambiguous clip as all senses of a mixed-POS app row.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown
