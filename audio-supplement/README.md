@@ -23,8 +23,8 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 320 originally missing rows (number 7 through 1689) were reviewed.
-  Continue at number 1690 (oracle), preserving unresolved earlier rows.
+- The first 360 originally missing rows (number 7 through 1796) were reviewed.
+  Continue at number 1800 (alert), preserving unresolved earlier rows.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
@@ -64,6 +64,14 @@ local decoding, app playback and deployment verification are separate stages.
   New corpus reviews are recorded: Mozilla's US subset has hosting conditions
   and no established exact-word workflow; UCSB's conversation corpus is BY-ND,
   so isolated-word cropping permission is not established. Neither was downloaded.
+- The ninth batch added no recordings: 20 rows have US metadata candidates
+  (outlook/invert need POS verification and mock lacks a named recorder), three
+  Lingua Libre rows lack dialect evidence, and 17 rows need other sources.
+  Outlook's OGA candidate explicitly says verb; a separate Ogg candidate was found
+  but noun stress is not yet verified. Never map the verb clip to the app noun.
+  CMU ARCTIC is a promising independent human-recording source (BDL/SLT US only),
+  but its official index returned 502. Respect its separate retry time in the run
+  record; exclude included synthetic voices and Canadian/Scottish recordings.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown
