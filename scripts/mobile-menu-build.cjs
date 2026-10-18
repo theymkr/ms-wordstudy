@@ -6,11 +6,11 @@ module.exports = function applyMobileMenu(page) {
   if (!page.includes('id="ym-book-range-script"')) throw Error('Mobile menu requires book/range controls.');
   const oldFit = "c.style.zoom='1';const v=window.visualViewport;";
   if (!page.includes(oldFit)) throw Error('Screen fitting hook changed.');
-  page = page.replace(oldFit, "if(c.querySelector('#ymBookSelect, #scoreHistory, #ymImportEditor')){c.style.zoom='1';c.style.maxWidth='';return;}" + oldFit);
+  page = page.replace(oldFit, "if(c.querySelector('#ymBookSelect, #scoreHistory, #ymImportEditor, #ymMemorizeScreen')){c.style.zoom='1';c.style.maxWidth='';return;}" + oldFit);
   const pagination = / function paginate\(\)\{[^\n]*\}\n/;
   if (!pagination.test(page)) throw Error('History pagination hook changed.');
   page = page.replace(pagination, ' function paginate(){window.YMHistoryLayout?.();}\n');
-  page = page.replace(/(<meta name="ym-build" content=")[^"]+/, (_, prefix) => prefix + '20261018-import-layout-v1');
+  page = page.replace(/(<meta name="ym-build" content=")[^"]+/, (_, prefix) => prefix + '20261018-memorize-v1');
   const shrink = "const scale=Math.min(1,(h-16)/Math.max(1,c.scrollHeight+16),(w-16)/Math.max(1,c.scrollWidth));c.style.zoom=String(Math.max(.1,scale));";
   if (!page.includes(shrink)) throw Error('Quiz fitting hook changed.');
   page = page.replace(shrink, "if(!c.querySelector('#question')){" + shrink + "}");
@@ -18,7 +18,7 @@ module.exports = function applyMobileMenu(page) {
   const restHook = "const overlay=document.createElement('div');restOverlay=overlay;";
   if (!page.includes(restHook)) throw Error('Rest screen hook changed.');
   page = page.replace(restHook, restHook + "overlay.id='ymRestScreen';");
-  const css = ['mobile-menu.css', 'voice-resume.css', 'history-layout.css'].map(file => fs.readFileSync(path.join(__dirname, file), 'utf8')).join('\n');
-  const js = ['mobile-menu.js', 'audio-playback.js', 'voice-resume.js', 'history-layout.js'].map(file => fs.readFileSync(path.join(__dirname, file), 'utf8')).join('\n');
+  const css = ['mobile-menu.css', 'voice-resume.css', 'history-layout.css', 'memorize.css'].map(file => fs.readFileSync(path.join(__dirname, file), 'utf8')).join('\n');
+  const js = ['mobile-menu.js', 'audio-playback.js', 'voice-resume.js', 'history-layout.js', 'memorize.js'].map(file => fs.readFileSync(path.join(__dirname, file), 'utf8')).join('\n');
   return page.replace('</body>', '<style id="ym-mobile-menu-style">\n' + css + '\n</style>\n<script id="ym-mobile-menu-script">\n' + js + '\n</script>\n</body>');
 };

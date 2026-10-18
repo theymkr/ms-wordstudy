@@ -12,7 +12,7 @@
     utterance = null;
     return previousStop.apply(this, arguments);
   };
-  playWordPronunciation = function (word, id, onend, onerror) {
+  playWordPronunciation = function (word, id, onend, onerror, options = {}) {
     const run = ++generation, rate = getPronunciationRate();
     let settled = false;
     const current = () => id === token && run === generation && !settled;
@@ -28,7 +28,7 @@
     const finished = () => {
       if (!current()) return;
       settled = true; clearTimeout(watchdog); activeRecordedAudio = null; utterance = null;
-      afterPronunciation(id,onend);
+      if (options.study) { if (onend) onend(); } else afterPronunciation(id,onend);
     };
     const speak = () => {
       if (!current()) return;

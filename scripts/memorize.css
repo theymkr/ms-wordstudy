@@ -1,0 +1,14 @@
+.quiz-container:has(#ymMemorizeScreen){box-sizing:border-box!important;width:calc(100% - 16px)!important;max-width:1000px!important;height:calc(var(--ym-exam-height,100dvh) - 16px)!important;margin:8px auto!important;padding:12px!important;zoom:1!important;overflow:hidden!important;}
+#ymMemorizeScreen{display:flex;flex-direction:column;height:100%;min-height:0;text-align:left;gap:8px;}
+#ymMemorizeScreen header{flex:none;}#ymMemorizeScreen h2{font-size:20px;margin:8px 0 4px;}#ymMemorizeScreen p{font-size:13px;margin:0;color:#bbb;}
+#ymMemorizeScreen button{cursor:pointer;min-height:44px;margin:0;white-space:normal;}#ymMemorizeScreen button:disabled{opacity:.45;cursor:default;}
+.ym-memo-controls{display:flex;justify-content:space-between;align-items:center;gap:8px;}#ymMemoSpeed{min-height:40px;font-size:16px;}
+#ymMemoProgress,#ymMemorizeScreen #audioStatus{font-size:13px;margin:0;flex:none;}#ymMemorizeScreen #audioStatus:empty{display:none;}
+#ymMemoList{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));align-content:start;gap:6px;}
+#ymMemoList .ym-memo-word{display:grid;grid-template-columns:32px minmax(0,1fr);gap:3px 8px;text-align:left;padding:10px;background:#292929;color:#eee;border:1px solid #555;border-radius:8px;overflow-wrap:anywhere;}
+.ym-memo-word small{grid-row:span 2;color:#aaa;}.ym-memo-word strong{font-size:18px;}.ym-memo-word span{font-size:14px;line-height:1.4;}
+#ymMemoList .ym-memo-word[aria-pressed="true"]{border-color:#65b5ff;background:#173b60;}#ymMemoPager{display:flex;align-items:center;gap:6px;flex:none;}#ymMemoPage{flex:1;text-align:center;font-size:12px;}#ymMemoPager button{font-size:13px;padding:8px;}
+#ymMemoOpen{width:100%;margin-bottom:12px!important;}
+@media(max-height:450px){#ymMemorizeScreen header h2,#ymMemorizeScreen header p{display:none;}#ymMemorizeScreen{gap:4px;}}
+#ymMemoList{grid-auto-rows:max-content;}#ymMemoList .ym-memo-word{height:auto;min-height:max-content;overflow:visible;}
+#ymMemorizeScreen header button,#ymMemoPager button,#ymMemoStop{background:#2878d8;color:white;border:0;border-radius:8px;padding:10px;}
