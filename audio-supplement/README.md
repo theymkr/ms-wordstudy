@@ -23,12 +23,17 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 80 originally missing rows (number 7 through 769) were reviewed.
-  Continue at number 779 (stare), preserving unresolved earlier rows.
+- The first 120 originally missing rows (number 7 through 1045) were reviewed.
+  Continue at number 1048, preserving unresolved earlier rows.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
   Candidate metadata is not a download or playback verification.
+- The third batch added no recordings: 17 US candidates are deferred, six
+  Lingua Libre candidates lack dialect evidence, and 17 rows need other sources.
+  The entire original WimsEdu Mary index (4,876 entries) was checked against the
+  current missing set: zero exact matches. See `source-audits/`; do not download
+  the unchanged 313 MB archive or retry its broken index links again.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown

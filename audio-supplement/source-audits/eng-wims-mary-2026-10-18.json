@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-18T21:37:32+09:00",
+  "source": "https://fsi-languages.yojik.eu/audiocollections/archives/eng-wims-mary_flac.tar.xz",
+  "sourceIndexPage": "https://fsi-languages.yojik.eu/audiocollections/audiocollections.html",
+  "rights": "https://fsi-languages.yojik.eu/audiocollections/detailled/eng-wims-mary/readme.txt",
+  "archiveBytes": 313004020,
+  "archiveSha256": "99ecc32de782e8543fae7296fa17c2776f4bd25fe21dc67e923748503d101723",
+  "indexMember": "flac/index.xml",
+  "indexSha256": "3e5a714de7f17154b46cf214d310af7b9b77b81abb2271304aae866a11a15452",
+  "collectionEntries": 4876,
+  "speaker": "Mary Maury",
+  "nativeLanguage": "eng",
+  "languageRegion": "Midwest",
+  "currentResidence": "Paris, FR (residence not used as accent evidence)",
+  "authors": "Bernadette Perrin-Riou, Csilla Ducrocq, Mary Maury",
+  "copyright": "2009 Bernadette Perrin-Riou, Mary Maury",
+  "license": "CC BY 3.0 US",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0/us/",
+  "audit": {
+    "wordListMain": "8872fa5c52aa2e78f0aa62c587d32f61d0b58a9a",
+    "appEntries": 2956,
+    "remainingEntries": 637,
+    "comparison": "Exact swac_text after trim+casefold; no prefix removal, baseform substitution, inflection matching, or phrase cropping.",
+    "matchesAllAppEntries": 994,
+    "matchesCurrentlyMissing": 0,
+    "matchesBatch779Through1045": 0,
+    "individualNewRecordingsDownloaded": 0,
+    "localAppPlaybackVerified": 0,
+    "productionAppPlaybackVerified": 0
+  },
+  "nextAction": "No further acquisition coverage from this unchanged corpus for the current word list. Do not download this 313 MB pack or retry its broken individual index URLs on subsequent runs unless the corpus or target word list changes.",
+  "localNote": "Archive was downloaded and index read. tar extraction reported unsupported ownership changes; extracted index parsed successfully and was checksum-verified. No source ownership changes attempted."
+}

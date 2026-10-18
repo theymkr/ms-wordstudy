@@ -1,0 +1,602 @@
+{
+  "date": "2026-10-18T21:37:32+09:00",
+  "baseMain": "8872fa5c52aa2e78f0aa62c587d32f61d0b58a9a",
+  "baseline": {
+    "total": 2956,
+    "mapped": 2319,
+    "remaining": 637,
+    "deployedWordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true
+  },
+  "batch": {
+    "size": 40,
+    "firstNumber": 779,
+    "lastNumber": 1045,
+    "scope": "Finite candidate source review; no Wikimedia original downloads during host cooldown."
+  },
+  "processed": [
+    {
+      "number": 779,
+      "word": "stare",
+      "meaning": "v. 응시하다, 노려보다 / n. 응시",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-stare.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 782,
+      "word": "hydrogen",
+      "meaning": "n. 수소",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-hydrogen.ogg"
+      ],
+      "checkedTitle": "File:En-us-hydrogen.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 784,
+      "word": "theater",
+      "meaning": "n. 극장",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-theater.ogg"
+      ],
+      "checkedTitle": "File:En-us-theater.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 788,
+      "word": "prairie",
+      "meaning": "n. 대초원",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-prairie.ogg"
+      ],
+      "checkedTitle": "File:En-us-prairie.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 794,
+      "word": "dye",
+      "meaning": "n. 염료, 물감 / v. 염색하다",
+      "status": "needs_dialect_evidence",
+      "reason": "English and CC0 alone do not establish US pronunciation. No original download or playback; dialect evidence required.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-dye.wav"
+      ],
+      "checkedTitle": "File:LL-Q1860 (eng)-Arlo Barnes-dye.wav",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 796,
+      "word": "elementary",
+      "meaning": "a. 기본의, 초보의, 초등교육의",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-elementary.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 799,
+      "word": "sentence",
+      "meaning": "n. 문장, 형벌, 형 / v. (형을) 선고하다",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-sentence.ogg"
+      ],
+      "checkedTitle": "File:En-us-sentence.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 800,
+      "word": "pepper",
+      "meaning": "n. 후추",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-pepper.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 809,
+      "word": "schedule",
+      "meaning": "n. 일정, 스케줄 / v. 일정을 잡다, 예정하다",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-schedule.ogg"
+      ],
+      "checkedTitle": "File:En-us-schedule.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 814,
+      "word": "wink",
+      "meaning": "v. 윙크하다, (빛이) 깜빡거리다 / n. 윙크",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-wink.ogg"
+      ],
+      "checkedTitle": "File:En-us-wink.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 862,
+      "word": "attract",
+      "meaning": "v. (주의, 흥미를) 끌다, 매혹하다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-attract.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 863,
+      "word": "butterfly",
+      "meaning": "n. 나비",
+      "status": "needs_dialect_evidence",
+      "reason": "English and CC0 alone do not establish US pronunciation. No original download or playback; dialect evidence required.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Simplificationalizer-butterfly.wav"
+      ],
+      "checkedTitle": "File:LL-Q1860 (eng)-Simplificationalizer-butterfly.wav",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 872,
+      "word": "stormy",
+      "meaning": "a. 폭풍의, 격렬한",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-stormy.ogg"
+      ],
+      "checkedTitle": "File:En-us-stormy.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 873,
+      "word": "warn",
+      "meaning": "v. 경고하다",
+      "status": "needs_dialect_evidence",
+      "reason": "English and CC0 alone do not establish US pronunciation. No original download or playback; dialect evidence required.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-warn.wav"
+      ],
+      "checkedTitle": "File:LL-Q1860 (eng)-Arlo Barnes-warn.wav",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 874,
+      "word": "bother",
+      "meaning": "v. 걱정하다, 근심하다, 괴롭히다, 잔소리하다 / n. 성가심, 귀찮음",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-bother.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 876,
+      "word": "however",
+      "meaning": "conj. 아무리 ~해도 / ad. 그러나, 아무리",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-however.ogg"
+      ],
+      "checkedTitle": "File:En-us-however.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 892,
+      "word": "tourist",
+      "meaning": "n. 여행자, 관광객",
+      "status": "needs_dialect_evidence",
+      "reason": "English and CC0 alone do not establish US pronunciation. No original download or playback; dialect evidence required.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-tourist.wav"
+      ],
+      "checkedTitle": "File:LL-Q1860 (eng)-Arlo Barnes-tourist.wav",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 893,
+      "word": "dining-room",
+      "meaning": "n. 식당",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-dining-room.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 897,
+      "word": "operator",
+      "meaning": "n. 조작자, 운전자",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-operator.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 909,
+      "word": "fountain-pen",
+      "meaning": "n. 만년필",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-fountain-pen.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 912,
+      "word": "squirrel",
+      "meaning": "n. 다람쥐",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-squirrel.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 917,
+      "word": "whisker",
+      "meaning": "n. 구레나룻",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-whisker.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 922,
+      "word": "puritan",
+      "meaning": "n. 청교도, 엄격한 사람 / a. 딱딱한, 엄격한",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-puritan.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 954,
+      "word": "pilot",
+      "meaning": "n. 조종사, 안내인",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-pilot.ogg"
+      ],
+      "checkedTitle": "File:En-us-pilot.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 968,
+      "word": "pollution",
+      "meaning": "n. 오염",
+      "status": "needs_dialect_evidence",
+      "reason": "English and CC0 alone do not establish US pronunciation. No original download or playback; dialect evidence required.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-pollution.wav"
+      ],
+      "checkedTitle": "File:LL-Q1860 (eng)-Arlo Barnes-pollution.wav",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 970,
+      "word": "restaurant",
+      "meaning": "n. 식당",
+      "status": "needs_dialect_evidence",
+      "reason": "English and CC0 alone do not establish US pronunciation. No original download or playback; dialect evidence required.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Simplificationalizer-restaurant.wav"
+      ],
+      "checkedTitle": "File:LL-Q1860 (eng)-Simplificationalizer-restaurant.wav",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 973,
+      "word": "Mars",
+      "meaning": "n. 화성",
+      "status": "deferred_host_cooldown",
+      "reason": "Selected uppercase Mars recording, explicitly categorized as a planet name; do not substitute lowercase mars metadata. US/CC BY-SA source verified, original download deferred until host cooldown ends.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-Mars.ogg"
+      ],
+      "checkedTitle": "File:En-us-Mars.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 994,
+      "word": "cage",
+      "meaning": "n. 새장, 우리 / v. 우리에 가두다",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-cage.ogg"
+      ],
+      "checkedTitle": "File:En-us-cage.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 996,
+      "word": "junior",
+      "meaning": "a. 손 아래의, 연하의 / n. 연소자",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-junior.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1007,
+      "word": "assume",
+      "meaning": "v. 인식하다, 추정하다, 가정하다",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-assume.ogg"
+      ],
+      "checkedTitle": "File:En-us-assume.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1008,
+      "word": "curse",
+      "meaning": "n. 저주 / v. 저주하다, 피를 뽑다",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-curse.ogg"
+      ],
+      "checkedTitle": "File:En-us-curse.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1018,
+      "word": "plea",
+      "meaning": "n. 변명, 탄원",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-plea.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1020,
+      "word": "model",
+      "meaning": "n. 견본, 모형, 모범 / v. ~을 만들다",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-model.ogg"
+      ],
+      "checkedTitle": "File:En-us-model.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1022,
+      "word": "paralyze",
+      "meaning": "v. 마비시키다, 불능이 되게 하다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-paralyze.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1024,
+      "word": "trifle",
+      "meaning": "n. 사소한 일, 조금",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-trifle.ogg"
+      ],
+      "checkedTitle": "File:En-us-trifle.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1025,
+      "word": "inflict",
+      "meaning": "v. (형벌, 고통, 손해를) 주다",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-inflict.ogg"
+      ],
+      "checkedTitle": "File:En-us-inflict.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1033,
+      "word": "combine",
+      "meaning": "v. 결합하다, 혼합하다",
+      "status": "needs_sense_review",
+      "reason": "App requires verb pronunciation, not noun combine harvester. Exact En-us Ogg/OGA/WAV and explicit combine-verb Ogg titles missing.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-combine.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1040,
+      "word": "trait",
+      "meaning": "n. 특성, 특징",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-trait.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1041,
+      "word": "prophecy",
+      "meaning": "n. 예언, 예측",
+      "status": "deferred_host_cooldown",
+      "reason": "Source metadata indicates US pronunciation and free license. Candidate only, not downloaded or played; host cooldown retained.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-prophecy.ogg"
+      ],
+      "checkedTitle": "File:En-us-prophecy.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1045,
+      "word": "caricature",
+      "meaning": "n. (풍자적) 만화",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing; do not repeat checked titles. WimsEdu original index has no exact remaining-word match.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-caricature.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    }
+  ],
+  "sourceReview": {
+    "metadataFile": "candidate-metadata-2026-10-18T2137.json",
+    "commonsRequests": 2,
+    "commonsTitles": 78,
+    "usMetadataCandidates": 17,
+    "linguaLibreDialectUnverified": 6,
+    "rowsWithoutCandidate": 17,
+    "missingTitlesFile": "candidate-metadata-2026-10-18T2137.json",
+    "independentSourceAudit": "source-audits/eng-wims-mary-2026-10-18.json",
+    "independentSourceSummary": "Downloaded original WimsEdu corpus; all 4,876 swac_text entries audited. Zero exact matches among current 637 missing entries. Pack download is not new-word acquisition.",
+    "otherSourcesReviewed": [
+      {
+        "url": "https://www.openslr.org/45/",
+        "reason": "US speech corpus consists of utterances and carries CC BY-NC-ND 4.0; not selected for word extraction or redistribution."
+      },
+      {
+        "url": "https://citizen-dj.labs.loc.gov/loc-american-english-dialect-recordings/use/",
+        "reason": "Freely reusable interviews/conversations, not verified exact word pronunciation clips. No download or acquired credit."
+      }
+    ]
+  },
+  "sourceFailures": [
+    {
+      "source": "https://upload.wikimedia.org",
+      "status": 429,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Respect host cooldown. No mirror, alternate hostname, or parameter change to evade it."
+    },
+    {
+      "source": "https://en.wiktionary.org/w/api.php",
+      "status": 403,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Do not repeat blocked API endpoint."
+    },
+    {
+      "source": "https://fsi-languages.yojik.eu/audiocollections/detailled/eng-wims-mary/flac/index.tags.txt",
+      "status": 404,
+      "policy": "Do not retry. Original archive index successfully obtained; collection coverage audit is complete."
+    }
+  ],
+  "next": {
+    "afterWordNumber": 1045,
+    "nextWordNumber": 1048,
+    "batchSize": 40,
+    "downloadHostCooldownUntil": "2026-10-19T19:45:00+09:00",
+    "instructions": "Recalculate main/site missing set. Next new-source batch begins at 1048; preserve unresolved earlier entries. Existing candidate metadata can support small download batches after cooldown; stop on another 429. Do not redownload unchanged eng-wims-mary corpus: current missing set has no exact matches."
+  },
+  "result": {
+    "additionalDownloaded": 0,
+    "additionalLocalAppPlaybackVerified": 0,
+    "additionalProductionPlaybackVerified": 0,
+    "totalMappedAfterBuild": 2319,
+    "remainingAfterBuild": 637,
+    "productionVerification": "Fresh production word list and audio map equal current main build. No audio mappings changed and no new playback credit. This run only advances research records."
+  }
+}
