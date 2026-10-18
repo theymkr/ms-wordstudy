@@ -23,8 +23,8 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 400 originally missing rows (number 7 through 1907) were reviewed.
-  Continue at number 1916 (predominant), preserving unresolved earlier rows.
+- The first 440 originally missing rows (number 7 through 2024) were reviewed.
+  Continue at number 2026 (antiquity), preserving unresolved earlier rows.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
@@ -79,6 +79,14 @@ local decoding, app playback and deployment verification are separate stages.
   Incline has different noun/verb stresses, supplement has different noun/verb
   final vowels, and recreation must match the leisure sense rather than creating
   again. Do not count one ambiguous clip as all senses of a mixed-POS app row.
+- The eleventh batch added no recordings: 22 rows have US metadata candidates
+  (astray still requires rights-holder permission evidence), four Lingua Libre
+  rows lack dialect evidence, and 14 rows need other sources. Inherent has a new
+  NaomiAmethyst candidate explicitly linked as General American; that label must
+  not be attributed to the previous Simplificationalizer recording. Contrast needs
+  noun/verb stress coverage. Ally allows an initial-stressed verb variant, but a
+  final-stressed clip alone cannot cover the noun. The previous browser socket
+  permission blocker was not retried or bypassed; no new playback was claimed.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown
