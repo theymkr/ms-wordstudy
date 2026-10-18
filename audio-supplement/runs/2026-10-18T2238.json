@@ -1,0 +1,606 @@
+{
+  "date": "2026-10-18T22:38:21+09:00",
+  "baseMain": "fee9a4479f41ae37b5f1517e737b5fe986d9bd2d",
+  "baseline": {
+    "total": 2956,
+    "mapped": 2319,
+    "remaining": 637,
+    "deployedWordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true
+  },
+  "batch": {
+    "size": 40,
+    "firstNumber": 1048,
+    "lastNumber": 1167,
+    "scope": "Candidate metadata and independent source coverage review only; download host cooldown retained."
+  },
+  "processed": [
+    {
+      "number": 1048,
+      "word": "summon",
+      "meaning": "v. 호출하다, 소환하다 / n. 소환장, 호출",
+      "status": "needs_sense_review",
+      "reason": "Exact US summon recording is available, but the app also labels a noun sense. Dictionary source confirms summon as a verb; do not credit the full mixed-POS entry without sense review. No app vocabulary changes made.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-summon.ogg"
+      ],
+      "checkedTitle": "File:En-us-summon.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1052,
+      "word": "modesty",
+      "meaning": "n. 겸손",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-modesty.ogg"
+      ],
+      "checkedTitle": "File:En-us-modesty.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1054,
+      "word": "multiply",
+      "meaning": "v. 증가하다, 증식하다; 곱하다",
+      "status": "needs_alternate_source",
+      "reason": "No exact En-us Ogg/OGA/WAV candidate. App needs the verb with final /aɪ/; no alternative form or different part of speech may be substituted.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-multiply.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1055,
+      "word": "talent",
+      "meaning": "n. 재능, 재주",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-talent.ogg"
+      ],
+      "checkedTitle": "File:En-us-talent.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1059,
+      "word": "school",
+      "meaning": "n. 학파, 학교, 수업 / v. 교육하다, 가르치다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-school.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1060,
+      "word": "imitation",
+      "meaning": "n. 모방",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-imitation.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1062,
+      "word": "dismiss",
+      "meaning": "v. 해고하다, 내쫓다; 떠나게 하다, 해산시키다; 무시하다",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-dismiss.ogg"
+      ],
+      "checkedTitle": "File:En-us-dismiss.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1063,
+      "word": "reckon",
+      "meaning": "v. 세다, 계산하다",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-reckon.ogg"
+      ],
+      "checkedTitle": "File:En-us-reckon.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1064,
+      "word": "throb",
+      "meaning": "v. 심장이 뛰다, 두근거리다, 고동치다 / n. 진동, 욱신거림",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-throb.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1066,
+      "word": "fade",
+      "meaning": "v. 사라지다, 쇠약해지다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-fade.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1069,
+      "word": "muse",
+      "meaning": "v. 명상하다, 숙고하다",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-muse.ogg"
+      ],
+      "checkedTitle": "File:En-us-muse.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1075,
+      "word": "strenuous",
+      "meaning": "a. 격렬한, 열심히 하는",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-strenuous.ogg"
+      ],
+      "checkedTitle": "File:En-us-strenuous.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1083,
+      "word": "precede",
+      "meaning": "v. 앞서가다, 앞서다, 우선하다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-precede.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1084,
+      "word": "proposal",
+      "meaning": "n. 제의, 신청",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-proposal.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1091,
+      "word": "cowardice",
+      "meaning": "n. 겁, 비겁함",
+      "status": "needs_dialect_evidence",
+      "reason": "English language and CC0 alone do not establish US pronunciation. No original download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Simplificationalizer-cowardice.wav"
+      ],
+      "checkedTitle": "File:LL-Q1860 (eng)-Simplificationalizer-cowardice.wav",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1092,
+      "word": "assist",
+      "meaning": "v. 돕다; 도움이 되다 / n. 어시스트, 도움",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-assist.ogg"
+      ],
+      "checkedTitle": "File:En-us-assist.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1094,
+      "word": "extinguish",
+      "meaning": "v. 불을 끄다; 소멸시키다",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-extinguish.ogg"
+      ],
+      "checkedTitle": "File:En-us-extinguish.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1095,
+      "word": "soil",
+      "meaning": "n. 흙, 땅",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-soil.ogg"
+      ],
+      "checkedTitle": "File:En-us-soil.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1096,
+      "word": "assert",
+      "meaning": "v. 단언하다, 주장하다",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-assert.ogg"
+      ],
+      "checkedTitle": "File:En-us-assert.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1097,
+      "word": "vogue",
+      "meaning": "n. 유행, 성행",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-vogue.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1102,
+      "word": "focus",
+      "meaning": "n. 주목, 집중 / v. 집중하다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-focus.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1103,
+      "word": "bronze",
+      "meaning": "n. 청동",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-bronze.ogg"
+      ],
+      "checkedTitle": "File:En-us-bronze.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1110,
+      "word": "offend",
+      "meaning": "v. 성나게 하다, 괴롭히다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-offend.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1112,
+      "word": "aviation",
+      "meaning": "n. 비행, 항공",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-aviation.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1114,
+      "word": "upright",
+      "meaning": "a. 수직의, 올바른",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-upright.ogg"
+      ],
+      "checkedTitle": "File:En-us-upright.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1115,
+      "word": "inevitable",
+      "meaning": "a. 피할 수 없는",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-inevitable.ogg"
+      ],
+      "checkedTitle": "File:En-us-inevitable.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1117,
+      "word": "implore",
+      "meaning": "v. 간청하다, 애원하다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-implore.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1120,
+      "word": "encumber",
+      "meaning": "v. 부담을 주다; 저해하다, 방해하다, 막다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-encumber.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1124,
+      "word": "haunt",
+      "meaning": "v. 괴롭히다, 따라다니다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-haunt.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1129,
+      "word": "challenge",
+      "meaning": "n. 문제, 어려움, 도전 / v. 도전하다, 반박하다",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-challenge.ogg"
+      ],
+      "checkedTitle": "File:En-us-challenge.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1132,
+      "word": "chivalry",
+      "meaning": "n. 기사도",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-chivalry.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1136,
+      "word": "posterity",
+      "meaning": "n. 자손, 후세 사람들",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-posterity.ogg"
+      ],
+      "checkedTitle": "File:En-us-posterity.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1141,
+      "word": "glacier",
+      "meaning": "n. 빙하",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-glacier.ogg"
+      ],
+      "checkedTitle": "File:En-us-glacier.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1145,
+      "word": "technology",
+      "meaning": "n. 과학기술",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-technology.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1150,
+      "word": "transparent",
+      "meaning": "a. 투명한, 비쳐 보이는",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-transparent.ogg"
+      ],
+      "checkedTitle": "File:En-us-transparent.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1152,
+      "word": "recover",
+      "meaning": "v. 회복하다, 되찾다",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-recover.ogg"
+      ],
+      "checkedTitle": "File:En-us-recover.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1158,
+      "word": "phenomenon",
+      "meaning": "n. 현상, 사건",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-phenomenon.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1162,
+      "word": "refer",
+      "meaning": "v. 언급하다",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-refer.ogg"
+      ],
+      "checkedTitle": "File:En-us-refer.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1166,
+      "word": "concede",
+      "meaning": "v. 양보하다, 인정하다",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV candidates missing. Do not repeat checked titles. Audited Shtooka Emmanuel and WimsEdu Mary collections have no exact match in the current missing set.",
+      "candidatePages": [],
+      "checkedTitle": "File:En-us-concede.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 1167,
+      "word": "indebted",
+      "meaning": "a. 감사하는; 부채가 있는",
+      "status": "deferred_host_cooldown",
+      "reason": "Exact-word source metadata identifies US pronunciation and a free license. Not downloaded or played; existing upload host cooldown remains in effect.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-indebted.ogg"
+      ],
+      "checkedTitle": "File:En-us-indebted.ogg",
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    }
+  ],
+  "sourceReview": {
+    "metadataFile": "candidate-metadata-2026-10-18T2238.json",
+    "commonsRequests": 2,
+    "commonsTitles": 76,
+    "usMetadataCandidates": 21,
+    "usCandidatesRequiringSenseReview": 1,
+    "linguaLibreDialectUnverified": 1,
+    "rowsWithoutCandidate": 18,
+    "independentSourceAudit": "source-audits/eng-balm-emmanuel-2026-10-18.json",
+    "independentSourceSummary": "All 986 swac_text entries audited against the current missing set: zero exact matches. No original audio downloaded.",
+    "senseReferences": [
+      {
+        "word": "summon",
+        "url": "https://dictionary.cambridge.org/dictionary/english/summon",
+        "finding": "Retrieved dictionary describes summon as a verb. Extra noun meaning in app requires review; original word list remains untouched."
+      },
+      {
+        "word": "multiply",
+        "url": "https://dictionary.cambridge.org/pronunciation/english/multiply",
+        "finding": "US target pronunciation ends in /aɪ/. Reference only; dictionary audio not downloaded or reused."
+      }
+    ]
+  },
+  "sourceFailures": [
+    {
+      "source": "https://upload.wikimedia.org",
+      "status": 429,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "No audio downloads before existing cooldown. No alternate hosts/parameters or mirrors to evade limits."
+    },
+    {
+      "source": "https://en.wiktionary.org/w/api.php",
+      "status": 403,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Do not repeat blocked API endpoint."
+    },
+    {
+      "source": "https://dictionary.cambridge.org",
+      "status": 403,
+      "paths": [
+        "/dictionary/english/summons",
+        "/dictionary/english/multiply"
+      ],
+      "policy": "Direct pages returned 403. Do not retry these routes or use alternate access methods to bypass restriction. Retrieved summon entry and separate pronunciation reference only support limited sense notes."
+    }
+  ],
+  "next": {
+    "afterWordNumber": 1167,
+    "nextWordNumber": 1168,
+    "batchSize": 40,
+    "downloadHostCooldownUntil": "2026-10-19T19:45:00+09:00",
+    "instructions": "Recompute current main/site missing list. Next new-source batch begins at 1168 (controversy). Preserve earlier unresolved candidates and sense holds. Do not redownload unchanged WimsEdu Mary or Shtooka Emmanuel corpora: audited missing-set exact coverage is zero. After cooldown, use small bounded original download batches and stop on another 429."
+  },
+  "result": {
+    "additionalDownloaded": 0,
+    "additionalLocalAppPlaybackVerified": 0,
+    "additionalProductionPlaybackVerified": 0,
+    "totalMappedAfterBuild": 2319,
+    "remainingAfterBuild": 637,
+    "productionVerification": "Fresh production HTML word list and audio map equal current main build. Audio mappings unchanged; no new playback claim. Only research records updated."
+  }
+}

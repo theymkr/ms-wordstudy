@@ -23,8 +23,8 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 120 originally missing rows (number 7 through 1045) were reviewed.
-  Continue at number 1048, preserving unresolved earlier rows.
+- The first 160 originally missing rows (number 7 through 1167) were reviewed.
+  Continue at number 1168 (controversy), preserving unresolved earlier rows.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
@@ -34,6 +34,11 @@ local decoding, app playback and deployment verification are separate stages.
   The entire original WimsEdu Mary index (4,876 entries) was checked against the
   current missing set: zero exact matches. See `source-audits/`; do not download
   the unchanged 313 MB archive or retry its broken index links again.
+- The fourth batch added no recordings: 21 US candidates are deferred (summon
+  also needs the app's mixed-POS meaning reviewed), one Lingua Libre candidate
+  lacks dialect evidence, and 18 rows need other sources. The original Shtooka
+  Emmanuel index (986 entries) also has zero exact matches in the current missing
+  set. Its coverage audit is complete; do not download the full archive again.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown

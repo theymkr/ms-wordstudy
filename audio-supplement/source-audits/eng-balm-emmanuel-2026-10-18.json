@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-10-18T22:38:21+09:00",
+  "sourceIndex": "https://fsi-languages.yojik.eu/audiocollections/detailled/eng-balm-emmanuel/flac/index.xml",
+  "rights": "https://fsi-languages.yojik.eu/audiocollections/detailled/eng-balm-emmanuel/readme.txt",
+  "downloadBytes": 14380,
+  "responseFormat": "bzip2-compressed XML despite .xml path",
+  "downloadSha256": "e9bff2f91a170d9a4d39beddb8e6f21020480e87161435f91f3f8b2e6cf558e1",
+  "indexSha256": "4779f613e01a156fd759a5e6f95d6c71fca62383de3d79fd7db7f327e3c377a8",
+  "collectionEntries": 986,
+  "speaker": "Emmanuel Revah",
+  "nativeLanguage": "eng",
+  "languageCountry": "US",
+  "languageRegion": "Philadelphia",
+  "currentResidence": "Paris, FR (not used as accent evidence)",
+  "authors": "Emmanuel Revah, Vion Nicolas",
+  "copyright": "Emmanuel Revah 2009",
+  "license": "CC BY 2.0 France",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0/fr/",
+  "audit": {
+    "wordListMain": "fee9a4479f41ae37b5f1517e737b5fe986d9bd2d",
+    "appEntries": 2956,
+    "remainingEntries": 637,
+    "comparison": "Exact swac_text after trim+casefold, without prefix stripping, word substitution or phrase cropping.",
+    "matchesAllAppEntries": 118,
+    "matchesCurrentlyMissing": 0,
+    "matchesBatch1048Through1167": 0,
+    "audioFilesDownloaded": 0,
+    "localAppPlaybackVerified": 0,
+    "productionAppPlaybackVerified": 0
+  },
+  "nextAction": "Coverage exhausted for the unchanged current missing set. Do not download the full archive or repeat this index review unless the collection or target word list changes."
+}
