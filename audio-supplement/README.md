@@ -25,9 +25,10 @@ local decoding, app playback and deployment verification are separate stages.
 
 - All 640 originally missing rows (number 7 through 2941) have first-pass
   source-review records. This is NOT acquisition completion: 637 remain missing.
-  Do not repeat the completed exact-title scans. Next, review native-US speaker
-  provenance for deferred candidates starting at solitude (2484), in finite batches,
-  preserving unresolved rows below that number. See the latest run's next phase.
+  Do not repeat the completed exact-title scans. The 298-row deferred-host
+  provenance scan is complete, not acquisition. Next review the eight earlier
+  rate-limited rows (funeral 386 through actually 478), using saved evidence.
+  Preserve all unresolved rows and cooldowns. See the latest run's next phase.
   The first second-pass batch reviewed 40 deferred candidates (joke 481 through
   muse 1069): 31 have native-English recorder evidence plus file-specific US
   descriptions; nine still lack recorder/native-language evidence. This is not
@@ -71,6 +72,11 @@ local decoding, app playback and deployment verification are separate stages.
   tied to its exact New Jersey file link. Toll's recorder declares native American
   English on the primary profile linked from Commons. Exempt adjective and verb
   share a pronunciation. No new download, decode, playback or mapping was claimed.
+  The eighth provenance batch reviewed the final 18 deferred-host candidates
+  (solitude 2484 through sir 2941): 8 have supporting provenance; 10 remain unresolved.
+  Sacred and zoo descriptions name their recorders despite machine-assumed
+  author fields, but native-language evidence is missing. Video's recorder also
+  remains unverified. Burnt must not be replaced by burned. No media was acquired.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.

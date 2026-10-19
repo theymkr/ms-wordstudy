@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-19T18:33:33+09:00",
+  "phase": "speaker-provenance-pass-8",
+  "scope": "18 final deferred_host_cooldown candidates: solitude 2484 through sir 2941. This completes this queue's provenance scan, not acquisition or all unresolved work.",
+  "reusedAudits": [
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1430.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1543.json"
+  ],
+  "reusedSpeakers": [
+    "Dvortygirl",
+    "Mx. Granger",
+    "TreeMama",
+    "Sylvanmoon",
+    "Paul2520",
+    "TheDaveRoss"
+  ],
+  "findings": [
+    {
+      "recorder": "Xnux",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=User:Xnux&oldid=12361143",
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-sacred.ogg&oldid=1229160291",
+        "https://en.wikipedia.org/wiki/User:Xnux"
+      ],
+      "finding": "Sacred description explicitly names Xnux as recorder despite machine-assumed author/source fields; PD-self and US classification present. Commons profile has cross-project links but no native-language evidence. Linked Wikipedia retrieval disabled; no bypass."
+    },
+    {
+      "recorder": "Neoglitch",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=User:Neoglitch&oldid=62051230",
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-zoo.ogg&oldid=1229174443",
+        "https://en.wiktionary.org/wiki/User:Neoglitch"
+      ],
+      "finding": "Zoo description explicitly names recorder despite machine-assumed author/source fields; self-CC BY-SA 3.0 and US classification present. Commons profile only a greeting; Wiktionary retrieval failed. Do not infer native language from name or US label."
+    },
+    {
+      "recorder": "Spacecat2",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-video.ogg&oldid=947792730",
+        "https://commons.wikimedia.org/wiki/User:Spacecat2",
+        "https://en.wiktionary.org/wiki/User:Spacecat2"
+      ],
+      "finding": "Video page names Spacecat2, male American-English voice, PD-user and source Image:Video.ogg. Commons profile missing; Wiktionary retrieval failed. Native-language evidence remains unresolved; preserve source-chain requirement."
+    }
+  ],
+  "pronunciationChecks": [
+    {
+      "word": "tulip",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/tulip"
+      ],
+      "finding": "OAAD flower noun /ˈtuləp/ provides a pronunciation reference. Candidate is Mx. Granger, whose native-US provenance was checked in 1543 audit; actual clip remains unheard."
+    },
+    {
+      "word": "burnt",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/burn_1"
+      ],
+      "finding": "OAAD burn verb forms list both burnt and burned. The app requires exact burnt; do not substitute burned or reject burnt solely as British spelling. Actual spoken form and accent still need verification."
+    }
+  ],
+  "failures": [
+    {
+      "source": "Commons web profile renderer",
+      "paths": [
+        "User:Xnux",
+        "User:Neoglitch"
+      ],
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons revision query succeeded."
+    },
+    {
+      "source": "https://en.wikipedia.org/wiki/User:Xnux",
+      "status": "web_retrieval_disabled",
+      "policy": "No bypass or immediate repeat."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Spacecat2",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; native-speaker evidence unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Neoglitch",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; native-speaker evidence unresolved."
+    },
+    {
+      "source": "https://www.oxfordlearnersdictionaries.com/definition/american_english/burnt",
+      "status": "web_internal_error",
+      "resolution": "Parent burn entry provides verb-form reference; failed burnt URL not repeated."
+    }
+  ],
+  "mediaDownloads": 0,
+  "decoded": 0,
+  "appPlaybackVerified": 0
+}
