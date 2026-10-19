@@ -26,8 +26,14 @@ local decoding, app playback and deployment verification are separate stages.
 - All 640 originally missing rows (number 7 through 2941) have first-pass
   source-review records. This is NOT acquisition completion: 637 remain missing.
   Do not repeat the completed exact-title scans. Next, review native-US speaker
-  provenance for deferred candidates starting at joke (481), in finite batches,
+  provenance for deferred candidates starting at strenuous (1075), in finite batches,
   preserving unresolved rows below that number. See the latest run's next phase.
+  The first second-pass batch reviewed 40 deferred candidates (joke 481 through
+  muse 1069): 31 have native-English recorder evidence plus file-specific US
+  descriptions; nine still lack recorder/native-language evidence. This is not
+  audio verification or acquisition. Reuse the speaker audit rather than repeat
+  profile searches. Neskaya's own nonstandard-accent warning requires file-by-file
+  review; hydrogen's raw page names Muke, while hit's raw page names no recorder.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.

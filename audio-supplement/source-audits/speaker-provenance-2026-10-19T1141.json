@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-19T11:41:28+09:00",
+  "phase": "speaker-provenance-pass-1",
+  "scope": "40 existing deferred candidates, joke 481 through muse 1069. Reused saved exact-file metadata; no repeated exact-title discovery scans or media requests.",
+  "criteria": "A native-English self declaration plus the same recorder's file-specific US description supports provenance only. It does not verify actual spoken content, POS, audio quality, download, decode or app playback.",
+  "speakers": [
+    {
+      "id": "Dvortygirl",
+      "nativeEnglishEvidence": true,
+      "usEvidence": "Existing exact-file descriptions identify US English; linked Wiktionary profile gives California location. Location alone is not native-language evidence.",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=User:Dvortygirl&oldid=148473937",
+        "https://en.wiktionary.org/w/index.php?title=User:Dvortygirl&oldid=89900856"
+      ],
+      "finding": "Both profiles have en-N; Commons describes manual audio recording. Exact-file descriptions and author names remain in the referenced candidate metadata.",
+      "status": "provenance_supported_actual_audio_pending"
+    },
+    {
+      "id": "Neskaya",
+      "nativeEnglishEvidence": true,
+      "usEvidence": "Commons profile explicitly states English native speaker and Southern California upbringing.",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=User:Neskaya&oldid=77440801"
+      ],
+      "finding": "Profile also warns that some recordings have nonstandard accent. Do not blanket-approve audio or reject merely because of this warning; review every actual file.",
+      "status": "provenance_supported_actual_audio_pending"
+    },
+    {
+      "id": "EncycloPetey",
+      "nativeEnglishEvidence": true,
+      "usEvidence": "Existing exact-file descriptions identify US English; not inferred from username.",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=User:EncycloPetey&oldid=345988347",
+        "https://en.wiktionary.org/w/index.php?title=User:EncycloPetey&oldid=91917273"
+      ],
+      "finding": "Both profiles declare en-N. Pet and sentence descriptions explicitly name recorder even though machine-readable artist is empty.",
+      "status": "provenance_supported_actual_audio_pending"
+    },
+    {
+      "id": "DroEsperanto",
+      "nativeEnglishEvidence": true,
+      "usEvidence": "Saved twin file description explicitly identifies native male American-English speaker.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/File:En-us-twin.ogg",
+        "https://commons.wikimedia.org/w/index.php?title=User:Vanished_user_58234729&oldid=453091266"
+      ],
+      "finding": "Commons user page redirects to renamed account; voice-recording statement and warning about occasional faulty files. Preserve original file attribution; verify actual twin clip before inclusion.",
+      "status": "provenance_supported_actual_audio_pending"
+    },
+    {
+      "id": "TheDaveRoss",
+      "nativeEnglishEvidence": false,
+      "usEvidence": "Commons profile describes own recorded voice as Vermont/east-coast accent.",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=User:TheDaveRoss&oldid=2163624"
+      ],
+      "finding": "Million description explicitly names recorder despite assumed-author machine field. Native-speaker declaration not established; Wiktionary profile retrieval failed.",
+      "status": "needs_native_speaker_evidence"
+    },
+    {
+      "id": "Sylvanmoon",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/wiki/User:Sylvanmoon",
+        "https://en.wiktionary.org/wiki/User:Sylvanmoon"
+      ],
+      "finding": "Commons metadata API reports missing user page; Wiktionary web retrieval failed. Exact-file US classification remains candidate evidence, not a native-speaker declaration.",
+      "status": "needs_native_speaker_evidence"
+    },
+    {
+      "id": "BirdHopper",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/wiki/User:BirdHopper"
+      ],
+      "finding": "Commons metadata API reports missing user page. Carve's existing description names recorder, but no native-language evidence obtained.",
+      "status": "needs_native_speaker_evidence"
+    },
+    {
+      "id": "TreeMama",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/wiki/User:TreeMama"
+      ],
+      "finding": "Commons metadata API reports missing user page. Introduce's existing description names recorder, but no native-language evidence obtained.",
+      "status": "needs_native_speaker_evidence"
+    },
+    {
+      "id": "Montgolfière",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=User:Montgolfière&oldid=129332102",
+        "https://en.wikipedia.org/wiki/User:Montgolfière"
+      ],
+      "finding": "Commons profile only points to English Wikipedia; target retrieval disabled. Modesty describes a human speaker with General American accent, not explicit native-language evidence.",
+      "status": "needs_native_speaker_evidence"
+    },
+    {
+      "id": "Muke",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-hydrogen.ogg&oldid=1229138315",
+        "https://en.wiktionary.org/w/index.php?title=User:Muke&oldid=79274241"
+      ],
+      "finding": "Hydrogen raw page names Muke Tever and General American IPA under PD-self. Linked profile confirms name but has no native-English declaration in inspected content.",
+      "status": "needs_native_speaker_evidence"
+    },
+    {
+      "id": "unidentified-hit-recorder",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-hit.ogg&oldid=1229137221"
+      ],
+      "finding": "Raw page contains hit, IPA, PD-self and US category, but no recorder name. Do not infer recorder from uploader.",
+      "status": "needs_recorder_evidence"
+    }
+  ],
+  "mediaDownloads": 0,
+  "decoded": 0,
+  "appPlaybackVerified": 0,
+  "retrievalNotes": "Commons metadata API revisions query succeeded for eight pages. Web rendering errors were not repeated. No private profile data collected; only public audio attribution and language provenance summarized."
+}
