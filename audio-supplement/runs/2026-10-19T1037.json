@@ -1,0 +1,712 @@
+{
+  "date": "2026-10-19T10:37:27+09:00",
+  "baseMain": "ccf0555a437d2002079fd0ed243239a3de081822",
+  "baseline": {
+    "total": 2956,
+    "mapped": 2319,
+    "remaining": 637,
+    "deployedWordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true
+  },
+  "batch": {
+    "size": 40,
+    "firstNumber": 2493,
+    "lastNumber": 2941,
+    "scope": "Finite metadata/provenance review; no original media downloads during existing cooldown.",
+    "initialMissingScanComplete": true,
+    "uniqueOriginallyMissingRowsReviewed": 640
+  },
+  "processed": [
+    {
+      "number": 2493,
+      "word": "decay",
+      "meaning": "n. 부패, 부식, 쇠퇴 / v. 부식하다, 썩다",
+      "checkedTitle": "File:En-us-decay.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2494,
+      "word": "wither",
+      "meaning": "v. 시들다, 움츠러들다",
+      "checkedTitle": "File:En-us-wither.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2498,
+      "word": "sacred",
+      "meaning": "a. 신성한",
+      "checkedTitle": "File:En-us-sacred.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-sacred.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2511,
+      "word": "candy",
+      "meaning": "n. 사탕, 캔디",
+      "checkedTitle": "File:En-us-candy.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-candy.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2548,
+      "word": "guitar",
+      "meaning": "n. 기타",
+      "checkedTitle": "File:En-us-guitar.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-guitar.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2562,
+      "word": "supermarket",
+      "meaning": "n. 슈퍼마켓",
+      "checkedTitle": "File:LL-Q1860 (eng)-Simplificationalizer-supermarket.wav",
+      "status": "needs_dialect_evidence",
+      "reason": "English/CC0 metadata names a speaker but does not establish US dialect. Not downloaded or counted. Inspected entries link UK/Southern England audio. General American IPA is not dialect evidence for the separate Lingua Libre files. Original candidates remain dialect-unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Simplificationalizer-supermarket.wav"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2581,
+      "word": "thing",
+      "meaning": "n. 물건",
+      "checkedTitle": "File:En-us-thing.ogg",
+      "status": "needs_provenance_evidence",
+      "reason": "Raw pages for this/knock/thing contain exact-word text, IPA, US category and PD-self but no named recorder. Story has only assumed author/own-work and a volume-improvement note. Recorder/native-US provenance and actual audio quality are unresolved; uploader inference is not treated as proof. Host cooldown respected.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-thing.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2586,
+      "word": "film",
+      "meaning": "n. 필름, 영화",
+      "checkedTitle": "File:En-us-film.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2612,
+      "word": "medal",
+      "meaning": "n. 메달, 훈장",
+      "checkedTitle": "File:En-us-medal.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2616,
+      "word": "this",
+      "meaning": "pron. 이~, 이 사람, 이것",
+      "checkedTitle": "File:En-us-this.ogg",
+      "status": "needs_provenance_evidence",
+      "reason": "Raw pages for this/knock/thing contain exact-word text, IPA, US category and PD-self but no named recorder. Story has only assumed author/own-work and a volume-improvement note. Recorder/native-US provenance and actual audio quality are unresolved; uploader inference is not treated as proof. Host cooldown respected.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-this.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2620,
+      "word": "rose",
+      "meaning": "n. 장미 / v. rise의 과거형",
+      "checkedTitle": "File:LL-Q1860 (eng)-Simplificationalizer-rose.wav",
+      "status": "needs_dialect_evidence",
+      "reason": "English/CC0 metadata names a speaker but does not establish US dialect. Not downloaded or counted. US /roʊz/ and a US audio link found, but web retrieval could not resolve the exact linked file. Do not transfer that label to the independently found Simplificationalizer file. Flower/past-rise coverage still needs exact file/provenance verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Simplificationalizer-rose.wav"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2635,
+      "word": "south",
+      "meaning": "n. 남쪽",
+      "checkedTitle": "File:En-us-south.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-south.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2636,
+      "word": "tea",
+      "meaning": "n. 차, 홍차",
+      "checkedTitle": "File:En-us-tea.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-tea.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2644,
+      "word": "hamburger",
+      "meaning": "n. 햄버거",
+      "checkedTitle": "File:En-us-hamburger.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2663,
+      "word": "basket",
+      "meaning": "n. 바구니",
+      "checkedTitle": "File:En-us-basket.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-basket.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2665,
+      "word": "tulip",
+      "meaning": "n. 튤립",
+      "checkedTitle": "File:En-us-tulip.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-tulip.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2666,
+      "word": "tennis",
+      "meaning": "n. 정구, 테니스",
+      "checkedTitle": "File:En-us-tennis.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2677,
+      "word": "dial",
+      "meaning": "v. 전화 걸다, 다이얼을 돌리다",
+      "checkedTitle": "File:En-us-dial.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2689,
+      "word": "piano",
+      "meaning": "n. 피아노",
+      "checkedTitle": "File:En-us-piano.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles. App is instrument noun /piˈænoʊ/, not musical-direction adverb /piˈɑnoʊ/. Exact US Ogg/OGA/WAV/MP3 titles missing; do not substitute the different sense.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2706,
+      "word": "hose",
+      "meaning": "n. 호스",
+      "checkedTitle": "File:LL-Q1860 (eng)-Arlo Barnes-hose.wav",
+      "status": "needs_dialect_evidence",
+      "reason": "English/CC0 metadata names a speaker but does not establish US dialect. Not downloaded or counted. Inspected entries link UK/Southern England audio. General American IPA is not dialect evidence for the separate Lingua Libre files. Original candidates remain dialect-unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-hose.wav"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2707,
+      "word": "classmate",
+      "meaning": "n. 급우, 반 친구",
+      "checkedTitle": "File:LL-Q1860 (eng)-Arlo Barnes-classmate.wav",
+      "status": "needs_dialect_evidence",
+      "reason": "English/CC0 metadata names a speaker but does not establish US dialect. Not downloaded or counted. Inspected entries link UK/Southern England audio. General American IPA is not dialect evidence for the separate Lingua Libre files. Original candidates remain dialect-unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Arlo_Barnes-classmate.wav"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2717,
+      "word": "album",
+      "meaning": "n. 앨범, 사진첩",
+      "checkedTitle": "File:En-us-album.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2745,
+      "word": "jet",
+      "meaning": "n. 제트기",
+      "checkedTitle": "File:En-us-jet.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2746,
+      "word": "cassette",
+      "meaning": "n. 카세트테이프",
+      "checkedTitle": "File:En-us-cassette.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2751,
+      "word": "soccer",
+      "meaning": "n. 축구",
+      "checkedTitle": "File:En-us-soccer.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2779,
+      "word": "crayon",
+      "meaning": "n. 크레용",
+      "checkedTitle": "File:En-us-crayon.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification. Dictionary allows two-syllable and one-syllable US variants. Syllable count alone is not a reason to reject the Paul2520 candidate; actual word, dialect and playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-crayon.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2800,
+      "word": "zoo",
+      "meaning": "n. 동물원",
+      "checkedTitle": "File:En-us-zoo.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-zoo.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2801,
+      "word": "story",
+      "meaning": "n. 이야기",
+      "checkedTitle": "File:En-us-story.ogg",
+      "status": "needs_provenance_evidence",
+      "reason": "Raw pages for this/knock/thing contain exact-word text, IPA, US category and PD-self but no named recorder. Story has only assumed author/own-work and a volume-improvement note. Recorder/native-US provenance and actual audio quality are unresolved; uploader inference is not treated as proof. Host cooldown respected.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-story.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2827,
+      "word": "comic book",
+      "meaning": "n. 만화책",
+      "checkedTitle": "File:En-us-comic book.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2850,
+      "word": "zero",
+      "meaning": "n. 영(0) / a. 영의",
+      "checkedTitle": "File:En-us-zero.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-zero.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2855,
+      "word": "burnt",
+      "meaning": "v. burn의 과거·과거분사형",
+      "checkedTitle": "File:En-us-burnt.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-burnt.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2861,
+      "word": "grandma",
+      "meaning": "n. 할머니",
+      "checkedTitle": "File:En-us-grandma.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2862,
+      "word": "knock",
+      "meaning": "v. 문을 두드리다, 노크하다",
+      "checkedTitle": "File:En-us-knock.ogg",
+      "status": "needs_provenance_evidence",
+      "reason": "Raw pages for this/knock/thing contain exact-word text, IPA, US category and PD-self but no named recorder. Story has only assumed author/own-work and a volume-improvement note. Recorder/native-US provenance and actual audio quality are unresolved; uploader inference is not treated as proof. Host cooldown respected.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-knock.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2866,
+      "word": "video",
+      "meaning": "n. 비디오",
+      "checkedTitle": "File:En-us-video.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-video.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2878,
+      "word": "blank",
+      "meaning": "a. 비어 있는",
+      "checkedTitle": "File:LL-Q1860 (eng)-Simplificationalizer-blank.wav",
+      "status": "needs_dialect_evidence",
+      "reason": "English/CC0 metadata names a speaker but does not establish US dialect. Not downloaded or counted. Wiktionary entry returned an Internal Error; not repeated.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Simplificationalizer-blank.wav"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2894,
+      "word": "pine",
+      "meaning": "n. 솔, 소나무",
+      "checkedTitle": "File:En-us-pine.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2906,
+      "word": "thousand",
+      "meaning": "n. 천(1,000) / a. 천의",
+      "checkedTitle": "File:En-us-thousand.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-thousand.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2920,
+      "word": "carpenter",
+      "meaning": "n. 목공",
+      "checkedTitle": "File:En-us-carpenter.ogg",
+      "status": "needs_alternate_source",
+      "reason": "Exact En-us Ogg/OGA/WAV/MP3 metadata titles were missing. No audio downloaded; use another source rather than repeating these titles.",
+      "candidatePages": [],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2933,
+      "word": "up",
+      "meaning": "ad. 위로, 위쪽으로",
+      "checkedTitle": "File:En-us-up.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification. Commons describes noun/adjective but app is adverb. OAAD adjective and adverb share /ʌp/, so the POS label alone is not a pronunciation mismatch. Verify actual clip before mapping.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-up.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    },
+    {
+      "number": 2941,
+      "word": "sir",
+      "meaning": "n. 님, 귀하, 선생님",
+      "checkedTitle": "File:En-us-sir.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "US word/category and named-recorder license metadata found. Original host cooldown respected; native-speaker provenance, actual spoken content and app playback still require verification.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-sir.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false
+    }
+  ],
+  "sourceReview": {
+    "metadataFile": "candidate-metadata-2026-10-19T1037.json",
+    "commonsImageInfoRequests": 3,
+    "commonsImageInfoFileTitles": 93,
+    "commonsProvenanceRequests": 1,
+    "usMetadataCandidateRows": 19,
+    "provenanceUnresolvedWithinUsRows": 4,
+    "linguaLibreDialectUnverified": 5,
+    "rowsWithoutSuitableCandidate": 16,
+    "senseReferences": [
+      {
+        "word": "piano",
+        "urls": [
+          "https://www.oxfordlearnersdictionaries.com/us/definition/american_english/piano_1",
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/piano_2"
+        ],
+        "finding": "App is instrument noun /piˈænoʊ/, not musical-direction adverb /piˈɑnoʊ/. Exact US Ogg/OGA/WAV/MP3 titles missing; do not substitute the different sense."
+      },
+      {
+        "word": "crayon",
+        "urls": [
+          "https://www.merriam-webster.com/dictionary/crayon"
+        ],
+        "finding": "Dictionary allows two-syllable and one-syllable US variants. Syllable count alone is not a reason to reject the Paul2520 candidate; actual word, dialect and playback remain unverified."
+      },
+      {
+        "word": "up",
+        "urls": [
+          "https://commons.wikimedia.org/wiki/File:En-us-up.ogg",
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/up_1",
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/up_4"
+        ],
+        "finding": "Commons describes noun/adjective but app is adverb. OAAD adjective and adverb share /ʌp/, so the POS label alone is not a pronunciation mismatch. Verify actual clip before mapping."
+      },
+      {
+        "word": "rose",
+        "urls": [
+          "https://en.wiktionary.org/wiki/rose",
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/rose_1"
+        ],
+        "finding": "US /roʊz/ and a US audio link found, but web retrieval could not resolve the exact linked file. Do not transfer that label to the independently found Simplificationalizer file. Flower/past-rise coverage still needs exact file/provenance verification."
+      },
+      {
+        "word": "supermarket / hose / classmate",
+        "urls": [
+          "https://en.wiktionary.org/wiki/supermarket",
+          "https://en.wiktionary.org/wiki/hose",
+          "https://en.wiktionary.org/wiki/classmate"
+        ],
+        "finding": "Inspected entries link UK/Southern England audio. General American IPA is not dialect evidence for the separate Lingua Libre files. Original candidates remain dialect-unverified."
+      },
+      {
+        "word": "this / knock / thing / story",
+        "urls": [
+          "https://commons.wikimedia.org/wiki/File:En-us-this.ogg",
+          "https://commons.wikimedia.org/wiki/File:En-us-knock.ogg",
+          "https://commons.wikimedia.org/wiki/File:En-us-thing.ogg",
+          "https://commons.wikimedia.org/wiki/File:En-us-story.ogg"
+        ],
+        "finding": "Raw pages for this/knock/thing contain exact-word text, IPA, US category and PD-self but no named recorder. Story has only assumed author/own-work and a volume-improvement note. Recorder/native-US provenance and actual audio quality are unresolved; uploader inference is not treated as proof."
+      }
+    ],
+    "previousSourceAuditsPreserved": true
+  },
+  "sourceFailures": [
+    {
+      "source": "https://upload.wikimedia.org",
+      "status": 429,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Do not download originals until existing cooldown ends; no alternate hosts, mirrors or parameters to evade limit."
+    },
+    {
+      "source": "https://en.wiktionary.org/w/api.php",
+      "status": 403,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Do not retry blocked API endpoint."
+    },
+    {
+      "source": "https://dictionary.cambridge.org",
+      "status": 403,
+      "observedInRun": "2026-10-18T2238.json",
+      "paths": [
+        "/dictionary/english/summons",
+        "/dictionary/english/multiply"
+      ],
+      "retriedThisRun": false,
+      "policy": "Blocked direct pages not retried."
+    },
+    {
+      "source": "https://lingualibre.org/wiki/Q532035",
+      "resolvedUrl": "https://archive.lingualibre.org/wiki/Q532035",
+      "status": 500,
+      "retriedThisRun": false,
+      "policy": "Profile unavailable through retrieval tool; do not immediately repeat. English/CC0 does not establish US dialect."
+    },
+    {
+      "source": "https://www.festvox.org/cmu_arctic/",
+      "status": 502,
+      "observedInRun": "2026-10-19T0335.json",
+      "retriedThisRun": false,
+      "retryNotBefore": "2026-10-20T03:35:11+09:00",
+      "policy": "One curl check after web timeout; stop for this run. Retry only after stated time. No media acquired."
+    },
+    {
+      "source": "https://www.youtube.com/watch?v=enJxEQrNXPk",
+      "status": "web_retrieval_disabled",
+      "observedInRun": "2026-10-19T0538.json",
+      "retriedThisRun": false,
+      "policy": "No bypass or alternate video extraction; astray rights provenance unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/undergo",
+      "status": "web_internal_error",
+      "observedInRun": "2026-10-19T0936.json",
+      "retriedThisRun": false,
+      "policy": "No immediate repeat; candidate dialect remains unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/blank",
+      "status": "web_internal_error",
+      "observedInRun": "2026-10-19T1037.json",
+      "retriedThisRun": false,
+      "policy": "No immediate repeat; dialect unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/rose",
+      "status": "web_file_link_resolution_error",
+      "observedInRun": "2026-10-19T1037.json",
+      "retriedThisRun": true,
+      "attempts": 2,
+      "policy": "Page readable but US file-link clicks failed even after refreshing page. Stop repeating clicks; exact file identity remains unresolved."
+    }
+  ],
+  "next": {
+    "afterWordNumber": 2941,
+    "nextWordNumber": 481,
+    "batchSize": 40,
+    "phase": "unresolved-speaker-provenance-and-acquisition",
+    "initialMissingScanComplete": true,
+    "downloadHostCooldownUntil": "2026-10-19T19:45:00+09:00",
+    "instructions": "Initial exact-title scan of all 640 originally missing rows is complete, NOT acquisition complete. Freshly recompute remaining set; do not restart completed exact-title scans. Next finite pass: review named-recorder/native-US provenance of deferred candidates starting with joke 481 (up to 40), using saved file metadata and independent explicit speaker evidence, not repeated metadata-only guesses. Preserve all earlier unresolved rows including numbers below 481. Track second-pass position separately. No original-host request before cooldown. After cooldown, bounded original-download attempt only if source provenance supports native US; stop on rate limiting. App playback remains blocked until authorized environment capability is restored; do not bypass permission restrictions. No auto-disable for scan completion. CMU retry time remains separate; no repeat completed corpus audits."
+  },
+  "result": {
+    "additionalDownloaded": 0,
+    "additionalLocalAppPlaybackVerified": 0,
+    "additionalProductionPlaybackVerified": 0,
+    "totalMappedAfterBuild": 2319,
+    "remainingAfterBuild": 637,
+    "productionVerification": "Fresh production word list and mapping matched fresh main before review. No audio/app-code changes or new playback claim. Research records require post-publication live comparison."
+  },
+  "validation": {
+    "build": "passed",
+    "wordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true,
+    "localBrowserPlayback": {
+      "status": "not_retried_known_permission_blocker",
+      "observedInRun": "2026-10-19T0436.json",
+      "error": "Chrome socket() failed: Operation not permitted (1)",
+      "policy": "No browser/security-setting retries. Only research records changed; prior playback success is not presented as new."
+    }
+  }
+}

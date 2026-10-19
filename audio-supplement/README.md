@@ -23,8 +23,11 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 600 originally missing rows (number 7 through 2492) were reviewed.
-  Continue at number 2493 (decay), preserving unresolved earlier rows.
+- All 640 originally missing rows (number 7 through 2941) have first-pass
+  source-review records. This is NOT acquisition completion: 637 remain missing.
+  Do not repeat the completed exact-title scans. Next, review native-US speaker
+  provenance for deferred candidates starting at joke (481), in finite batches,
+  preserving unresolved rows below that number. See the latest run's next phase.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
@@ -117,6 +120,13 @@ local decoding, app playback and deployment verification are separate stages.
   Affect needs verb stress and must not be replaced with effect. Simultaneous has
   multiple dictionary-supported US variants. Host cooldowns and the known browser
   permission blocker were respected; no new download or playback was claimed.
+- The sixteenth batch added no recordings: 19 rows have US metadata candidates
+  (this/knock/thing/story need recorder provenance), five Lingua Libre rows lack
+  dialect evidence, and 16 need other sources. Raw PD-self pages do not establish
+  who recorded the audio. Piano must match the instrument noun, not the musical
+  direction. Up's adjective/adverb pronunciations match despite different POS
+  labels; crayon allows multiple US syllable patterns. Rose's US file link could
+  not be resolved, so that dialect label was not assigned to an unrelated file.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown
