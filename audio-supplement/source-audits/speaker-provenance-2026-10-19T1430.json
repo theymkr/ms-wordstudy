@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-19T14:30:26+09:00",
+  "phase": "speaker-provenance-pass-4",
+  "scope": "40 deferred candidates: fluid 1538 through device 1787. Saved metadata and speaker audits reused; no original media requests during cooldown.",
+  "reusedAudits": [
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1238.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1336.json"
+  ],
+  "reusedSpeakers": [
+    "Neskaya",
+    "Dvortygirl",
+    "EncycloPetey",
+    "TreeMama",
+    "Sylvanmoon"
+  ],
+  "findings": [
+    {
+      "recorder": "Paul2520",
+      "nativeEnglishEvidence": false,
+      "humanRecordingEvidence": true,
+      "usEvidence": "Wiktionary profile describes own Midwestern accent and US-English recording workflow.",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=User:Paul2520&oldid=702644345",
+        "https://en.wiktionary.org/w/index.php?title=User:Paul2520&oldid=91070229",
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-vow.ogg&oldid=1229171643",
+        "https://en.wikipedia.org/w/index.php?title=User:Paul2520&oldid=1362232294"
+      ],
+      "finding": "Vow has own-work self-CC BY-SA 4.0 and US description. Recorder describes recording personally in Audacity; human/Midwestern provenance strengthened, but inspected profiles do not explicitly establish native English. Keep native-speaker qualification pending. US residence alone is not proof. Preserve individual audio license; profile text/image CC0 statement is not blanket audio relicensing. No unrelated profile details retained."
+    },
+    {
+      "recorder": "Gbeebani / Ganj unresolved",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-laboratory.ogg&oldid=900617621",
+        "https://commons.wikimedia.org/wiki/User:Gbeebani",
+        "https://commons.wikimedia.org/wiki/User:Ganj",
+        "https://en.wiktionary.org/wiki/User:Gbeebani"
+      ],
+      "finding": "Laboratory raw page has author link Gbeebani, while recording credit uses Ganj link displayed as Gbeebani. Own-work US category and free licenses present. Gbeebani Commons profile missing; other profile retrievals failed. Do not treat the two accounts as verified same person or infer native language."
+    },
+    {
+      "recorder": "தகவலுழவன்",
+      "nativeEnglishEvidence": false,
+      "humanRecordingEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-amaze.ogg&oldid=1121758738"
+      ],
+      "finding": "Amaze raw page identifies an author, own work, PD-self and a US-pronunciation category, but does not establish native-English human recording. No evidence proving TTS either; retain as unverified rather than label it synthetic or non-native. Do not infer language from the author's name or Tamil description."
+    }
+  ],
+  "pronunciationChecks": [
+    {
+      "word": "laboratory",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/laboratory"
+      ],
+      "finding": "OAAD American noun /ˈlæbrəˌtɔri/ provides initial-stress reference. Candidate's actual speech remains unheard; source description alone does not verify pronunciation."
+    },
+    {
+      "word": "destitute",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/destitute"
+      ],
+      "finding": "App adjective has OAAD /ˈdɛstəˌtut/. Do not mistake final /tut/ for evidence of a verb or TTS; actual word and accent still require listening."
+    }
+  ],
+  "failures": [
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-amaze.ogg",
+      "status": "web_internal_error",
+      "resolution": "One bounded Commons metadata API revisions request succeeded."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Gbeebani",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; native language and recorder identity unresolved."
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Ganj",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat or infer account equivalence."
+    }
+  ],
+  "mediaDownloads": 0,
+  "decoded": 0,
+  "appPlaybackVerified": 0
+}
