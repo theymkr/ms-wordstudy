@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-19T16:49:42+09:00",
+  "phase": "speaker-provenance-pass-6",
+  "scope": "40 deferred candidates: antiquity 2026 through prejudice 2262. Saved metadata and speaker audits reused; no original media requests during cooldown.",
+  "reusedAudits": [
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1336.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1430.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1543.json"
+  ],
+  "reusedSpeakers": [
+    "Neskaya",
+    "Dvortygirl",
+    "EncycloPetey",
+    "Whomping Walrus",
+    "TreeMama",
+    "Sylvanmoon",
+    "Paul2520",
+    "BirdHopper"
+  ],
+  "findings": [
+    {
+      "recorder": "Mountainmage",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-reproduce.ogg&oldid=963411713",
+        "https://commons.wikimedia.org/wiki/User:Mountainmage",
+        "https://en.wiktionary.org/wiki/User:Mountainmage"
+      ],
+      "finding": "Reproduce raw file page explicitly names recorder, own-work US-English recording and self-CC BY-SA 3.0/GFDL. Commons profile missing; Wiktionary retrieval failed. No native-language declaration established. Do not infer native English from US category or uploader name."
+    },
+    {
+      "recorder": "EncycloPetey",
+      "nativeEnglishEvidence": true,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-principle.ogg&oldid=1114899862",
+        "https://commons.wikimedia.org/w/index.php?title=User:EncycloPetey&oldid=345988347"
+      ],
+      "finding": "Principle raw page's Author field is blank, but Description explicitly names EncycloPetey as recorder. Own work and free multi-license including CC BY-SA 3.0. Reuse prior en-N profile evidence. This resolves attribution for this candidate, not actual audio verification."
+    }
+  ],
+  "pronunciationChecks": [
+    {
+      "word": "revenge",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/revenge_1",
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/revenge_2"
+      ],
+      "finding": "OAAD noun and verb both /rɪˈvɛndʒ/. Mixed app POS does not itself require separate clips; actual candidate still needs listening."
+    },
+    {
+      "word": "reproduce",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/reproduce"
+      ],
+      "finding": "OAAD verb /ˌriprəˈdus/ covers copying and biological reproduction. Verify full word and final primary stress; no noun produce substitution."
+    },
+    {
+      "word": "principle",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/principle"
+      ],
+      "finding": "OAAD noun /ˈprɪnsəpl/ matches rule/law sense. Retain exact principle source identity; do not substitute a similarly sounding different word."
+    }
+  ],
+  "failures": [
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Mountainmage",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved."
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-reproduce.ogg",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons revision query succeeded; no media requests or access-control bypass."
+    }
+  ],
+  "mediaDownloads": 0,
+  "decoded": 0,
+  "appPlaybackVerified": 0
+}

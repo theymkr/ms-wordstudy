@@ -26,7 +26,7 @@ local decoding, app playback and deployment verification are separate stages.
 - All 640 originally missing rows (number 7 through 2941) have first-pass
   source-review records. This is NOT acquisition completion: 637 remain missing.
   Do not repeat the completed exact-title scans. Next, review native-US speaker
-  provenance for deferred candidates starting at antiquity (2026), in finite batches,
+  provenance for deferred candidates starting at side (2264), in finite batches,
   preserving unresolved rows below that number. See the latest run's next phase.
   The first second-pass batch reviewed 40 deferred candidates (joke 481 through
   muse 1069): 31 have native-English recorder evidence plus file-specific US
@@ -58,6 +58,12 @@ local decoding, app playback and deployment verification are separate stages.
   Behavior and donation lack native-language evidence. Reserve and compromise
   each have matching noun/verb pronunciations; vehicle permits variants with
   and without /h/. No new download, decode, playback or mapping was claimed.
+  The sixth provenance batch reviewed 40 candidates (antiquity 2026 through
+  prejudice 2262): 30 have supporting provenance; 10 remain unresolved.
+  Reproduce's recorder Mountainmage lacks native-language evidence. Principle's
+  raw description explicitly names EncycloPetey despite the blank Author field.
+  Revenge noun/verb share final stress; reproduce needs the full verb, not produce.
+  No new audio download, decode, playback or mapping was claimed.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.

@@ -1,0 +1,1225 @@
+{
+  "date": "2026-10-19T16:49:42+09:00",
+  "baseMain": "a92c857908331e06ca784b4c92c6a616bc3dcdf0",
+  "baseline": {
+    "total": 2956,
+    "mapped": 2319,
+    "remaining": 637,
+    "deployedWordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true
+  },
+  "batch": {
+    "size": 40,
+    "firstNumber": 2026,
+    "lastNumber": 2262,
+    "phase": "speaker-provenance-pass-6",
+    "scope": "40 deferred candidates: antiquity 2026 through prejudice 2262. Saved metadata and speaker audits reused; no original media requests during cooldown.",
+    "initialMissingScanComplete": true,
+    "uniqueOriginallyMissingRowsReviewed": 640
+  },
+  "sourceReview": {
+    "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+    "provenanceSupported": 30,
+    "provenanceUnresolved": 10,
+    "previousSourceAuditsPreserved": true
+  },
+  "sourceFailures": [
+    {
+      "source": "https://upload.wikimedia.org",
+      "status": 429,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Do not download originals until existing cooldown ends; no alternate hosts, mirrors or parameters to evade limit."
+    },
+    {
+      "source": "https://en.wiktionary.org/w/api.php",
+      "status": 403,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Do not retry blocked API endpoint."
+    },
+    {
+      "source": "https://dictionary.cambridge.org",
+      "status": 403,
+      "observedInRun": "2026-10-18T2238.json",
+      "paths": [
+        "/dictionary/english/summons",
+        "/dictionary/english/multiply"
+      ],
+      "retriedThisRun": false,
+      "policy": "Blocked direct pages not retried."
+    },
+    {
+      "source": "https://lingualibre.org/wiki/Q532035",
+      "resolvedUrl": "https://archive.lingualibre.org/wiki/Q532035",
+      "status": 500,
+      "retriedThisRun": false,
+      "policy": "Profile unavailable through retrieval tool; do not immediately repeat. English/CC0 does not establish US dialect."
+    },
+    {
+      "source": "https://www.festvox.org/cmu_arctic/",
+      "status": 502,
+      "observedInRun": "2026-10-19T0335.json",
+      "retriedThisRun": false,
+      "retryNotBefore": "2026-10-20T03:35:11+09:00",
+      "policy": "One curl check after web timeout; stop for this run. Retry only after stated time. No media acquired."
+    },
+    {
+      "source": "https://www.youtube.com/watch?v=enJxEQrNXPk",
+      "status": "web_retrieval_disabled",
+      "observedInRun": "2026-10-19T0538.json",
+      "retriedThisRun": false,
+      "policy": "No bypass or alternate video extraction; astray rights provenance unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/undergo",
+      "status": "web_internal_error",
+      "observedInRun": "2026-10-19T0936.json",
+      "retriedThisRun": false,
+      "policy": "No immediate repeat; candidate dialect remains unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/blank",
+      "status": "web_internal_error",
+      "observedInRun": "2026-10-19T1037.json",
+      "retriedThisRun": false,
+      "policy": "No immediate repeat; dialect unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/rose",
+      "status": "web_file_link_resolution_error",
+      "observedInRun": "2026-10-19T1037.json",
+      "retriedThisRun": false,
+      "attempts": 2,
+      "policy": "Page readable but US file-link clicks failed even after refreshing page. Stop repeating clicks; exact file identity remains unresolved."
+    },
+    {
+      "source": "Commons profile web renderer",
+      "status": "web_internal_error",
+      "paths": [
+        "User:Sylvanmoon",
+        "User:TheDaveRoss",
+        "User:Montgolfière",
+        "File:En-us-twin.ogg"
+      ],
+      "resolution": "One bounded public metadata API query succeeded; no media or access-control bypass.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org",
+      "status": "web_internal_error",
+      "paths": [
+        "/wiki/User:TheDaveRoss",
+        "/wiki/User:Sylvanmoon"
+      ],
+      "policy": "No immediate repeat; native-speaker provenance unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wikipedia.org/wiki/User:Montgolfière",
+      "status": "web_retrieval_disabled",
+      "policy": "No bypass; native-speaker provenance unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Mikemoral",
+      "status": "web_internal_error",
+      "resolution": "Public Commons metadata API identifies redirect; resolved profile read successfully.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:SneverdleSnavis",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is missing as well.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Whomping_Walrus",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons metadata API revision query succeeded.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-epidemic.ogg",
+      "status": "web_internal_error",
+      "resolution": "Same bounded metadata API query returned exact-file own-work/license/native-US evidence.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:LegionMammal978",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat. Native-speaker evidence remains unresolved; Commons profile also missing.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-amaze.ogg",
+      "status": "web_internal_error",
+      "resolution": "One bounded Commons metadata API revisions request succeeded.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Gbeebani",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; native language and recorder identity unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Ganj",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat or infer account equivalence.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:K_schadd",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:PyroGamer",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Mountainmage",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved."
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-reproduce.ogg",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons revision query succeeded; no media requests or access-control bypass."
+    }
+  ],
+  "next": {
+    "afterWordNumber": 2262,
+    "nextWordNumber": 2264,
+    "batchSize": 40,
+    "phase": "unresolved-speaker-provenance-and-acquisition",
+    "initialMissingScanComplete": true,
+    "downloadHostCooldownUntil": "2026-10-19T19:45:00+09:00",
+    "instructions": "Recompute counts from fresh main and live site. Continue second-pass review at side 2264, up to 40 deferred candidates; reuse saved explicit speaker evidence. Preserve all earlier unresolved rows and POS/rights/dialect exclusions. Initial 640-row discovery is complete, not acquisition complete. No original-media request before 2026-10-19T19:45:00+09:00. Afterwards bounded supported-native-US downloads only, stop on 429; actual word/POS/native-US speech, decode and app playback must pass before mapping. No browser permission bypass or repeated known failed launch. Do not repeat missing/blocked profile pages without new evidence. Keep CMU retry time separate. Do not disable for metadata-review completion.",
+    "secondPassReviewed": 240
+  },
+  "result": {
+    "additionalDownloaded": 0,
+    "additionalLocalAppPlaybackVerified": 0,
+    "additionalProductionPlaybackVerified": 0,
+    "totalMappedAfterBuild": 2319,
+    "remainingAfterBuild": 637,
+    "productionVerification": "Fresh production word list and mapping matched fresh main before review. No audio/app-code changes or new playback claim. Research records require post-publication live comparison."
+  },
+  "validation": {
+    "build": "passed",
+    "wordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true,
+    "localBrowserPlayback": {
+      "status": "not_retried_known_blocker",
+      "error": "Earlier Chrome socket permission blocker; last run also found default Playwright executable absent.",
+      "policy": "No browser launch/install/security override. Research records only; no new playback claim."
+    }
+  },
+  "processed": [
+    {
+      "number": 2026,
+      "word": "antiquity",
+      "meaning": "n. 고대, 태고",
+      "checkedTitle": "File:En-us-antiquity.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-antiquity.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "6a3cda7bdf6cbdd6df7edbe6cf9c6bceef38e9f8",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2027,
+      "word": "awkward",
+      "meaning": "a. 서투른, 어색한, 당혹스러운, 난처한",
+      "checkedTitle": "File:En-us-awkward.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-awkward.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "fa7626cfaf1daf921d2b1aa19c6f094ab1118adb",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2028,
+      "word": "phase",
+      "meaning": "n. 시기, 단계",
+      "checkedTitle": "File:En-us-phase.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-phase.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "6cd17cc2f43daf4d084a4cbb1a8ac38c92477fed",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2029,
+      "word": "astound",
+      "meaning": "v. 깜짝 놀라게 하다",
+      "checkedTitle": "File:En-us-astound.oga",
+      "status": "needs_provenance_evidence",
+      "reason": "Native-speaker evidence remains incomplete; see source audit. Existing missing/failed profiles were not repeated without new evidence. No audio download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-astound.oga"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Paul2520",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Paul2520",
+        "nativeEnglishEvidence": false,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "45f8254eae04a518a7aaba979c11ca5ce37443be",
+        "status": "needs_native_speaker_evidence"
+      }
+    },
+    {
+      "number": 2030,
+      "word": "perpetual",
+      "meaning": "a. 끊임없는, 영구의",
+      "checkedTitle": "File:En-us-perpetual.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-perpetual.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "bd53286e56651acd9232f9b9740486ee66218af4",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2032,
+      "word": "aim",
+      "meaning": "v. 목표하다, 겨누다 / n. 목적",
+      "checkedTitle": "File:En-us-aim.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-aim.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "b88ba784709f383505997f621aa79dad1dc1578f",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2041,
+      "word": "twilight",
+      "meaning": "n. 황혼, 희미한 빛",
+      "checkedTitle": "File:En-us-twilight.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-twilight.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "c36b676805bb67be7e88ef4b98bfddf8142228eb",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2043,
+      "word": "penetrate",
+      "meaning": "v. 꿰뚫다, 감동시키다, 들어가다, 침투하다",
+      "checkedTitle": "File:En-us-penetrate.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-penetrate.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "9f79fa4fc453140c67476241e17d5ca709e501eb",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2053,
+      "word": "atomic",
+      "meaning": "a. 원자의, 핵의",
+      "checkedTitle": "File:En-us-atomic.ogg",
+      "status": "needs_provenance_evidence",
+      "reason": "Native-speaker evidence remains incomplete; see source audit. Existing missing/failed profiles were not repeated without new evidence. No audio download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-atomic.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Sylvanmoon",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Sylvanmoon",
+        "nativeEnglishEvidence": false,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "95d00045decad7d770bb850547e3e2a36d717a2c",
+        "status": "needs_native_speaker_evidence"
+      }
+    },
+    {
+      "number": 2056,
+      "word": "legislation",
+      "meaning": "n. 제정, 법령, 입법",
+      "checkedTitle": "File:En-us-legislation.ogg",
+      "status": "needs_provenance_evidence",
+      "reason": "Native-speaker evidence remains incomplete; see source audit. Existing missing/failed profiles were not repeated without new evidence. No audio download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-legislation.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "TreeMama",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "TreeMama",
+        "nativeEnglishEvidence": false,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "e57dcdccbb4c79a2f596ed7b46ab19910e2f8522",
+        "status": "needs_native_speaker_evidence"
+      }
+    },
+    {
+      "number": 2057,
+      "word": "slumber",
+      "meaning": "v. 꾸벅꾸벅 졸다 / n. 잠, 선잠",
+      "checkedTitle": "File:En-us-slumber.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-slumber.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "319324fffd4e076df3a280a780e6749184ed987d",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2058,
+      "word": "temperance",
+      "meaning": "n. 자제, 절제",
+      "checkedTitle": "File:En-us-temperance.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-temperance.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "698f648564c7df1a6432fa5e23d3ea5cc36f203c",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2076,
+      "word": "urge",
+      "meaning": "v. 강요하다, 재촉하다 / n. 충동",
+      "checkedTitle": "File:En-us-urge.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-urge.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Whomping Walrus",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Whomping Walrus",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "745ba9ada9958531366ac32330bc48f9aea0539b",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2084,
+      "word": "impoverish",
+      "meaning": "v. 가난하게 하다, 질을 저하시키다",
+      "checkedTitle": "File:En-us-impoverish.oga",
+      "status": "needs_provenance_evidence",
+      "reason": "Native-speaker evidence remains incomplete; see source audit. Existing missing/failed profiles were not repeated without new evidence. No audio download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-impoverish.oga"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Paul2520",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Paul2520",
+        "nativeEnglishEvidence": false,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "d4f0a37d3c18b402b6b3526b8baa2752556e79e8",
+        "status": "needs_native_speaker_evidence"
+      }
+    },
+    {
+      "number": 2116,
+      "word": "transmit",
+      "meaning": "v. 보내다, 지식이나 보도를 전하다",
+      "checkedTitle": "File:En-us-transmit.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-transmit.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "c3bc0ee28f5e00c50f72d9056eb8a287aed4e8db",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2122,
+      "word": "cure",
+      "meaning": "n. 치료, 치료법, 치료제 / v. 치료하다",
+      "checkedTitle": "File:En-us-cure.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-cure.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "6b5008efa664f1dcc161b4ba72aee5e9bff879e8",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2124,
+      "word": "perpendicular",
+      "meaning": "a. 직각의, 수직적인 / n. 수직",
+      "checkedTitle": "File:En-us-perpendicular.ogg",
+      "status": "needs_provenance_evidence",
+      "reason": "Native-speaker evidence remains incomplete; see source audit. Existing missing/failed profiles were not repeated without new evidence. No audio download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-perpendicular.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "BirdHopper",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "BirdHopper",
+        "nativeEnglishEvidence": false,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "c2c2cda15c05ca4dcbff395e2be12fe6375217f0",
+        "status": "needs_native_speaker_evidence"
+      }
+    },
+    {
+      "number": 2128,
+      "word": "patriotism",
+      "meaning": "n. 애국심",
+      "checkedTitle": "File:En-us-patriotism.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-patriotism.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "00b4f6a521c8b0806c057d9ba37a00458dc5f773",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2130,
+      "word": "stuff",
+      "meaning": "n. 물건, 일 / v. 밀어 넣다",
+      "checkedTitle": "File:En-us-stuff.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-stuff.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "356492924f850a085e23ede2e31c731bef241e90",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2137,
+      "word": "overcome",
+      "meaning": "v. 이기다, 극복하다",
+      "checkedTitle": "File:En-us-overcome.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-overcome.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0638.json",
+        "sourceSha1": "d83e8667d77e7f87dc9953af20f8e93f7fffdc6d",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2140,
+      "word": "panic",
+      "meaning": "n. 공포, 당황",
+      "checkedTitle": "File:En-us-panic.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-panic.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "616f4a3f8de61a7e04f77dacaf212589b79ee01e",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2143,
+      "word": "principle",
+      "meaning": "n. 원리, 원칙, 법칙",
+      "checkedTitle": "File:En-us-principle.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-principle.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "EncycloPetey",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown. Machine-readable author is blank, but original description explicitly credits EncycloPetey and source is own work. Preserve this attribution evidence; do not treat author-field absence as no named recorder.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "EncycloPetey",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "0740e3972c6765f7a4a15676cf1d0953f2cfec91",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2146,
+      "word": "endeavor",
+      "meaning": "v. 노력하다, 시도하다 / n. 노력",
+      "checkedTitle": "File:En-us-endeavor.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-endeavor.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "981ec7c924e38209a33d551815c743d8bf6c6b40",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2152,
+      "word": "cave",
+      "meaning": "n. 동굴",
+      "checkedTitle": "File:En-us-cave.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-cave.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "f4761f0b9d01c6d2c01830abd4867697e7140b0b",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2155,
+      "word": "responsibility",
+      "meaning": "n. 책임",
+      "checkedTitle": "File:En-us-responsibility.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-responsibility.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "102515a5594b1e3162f252120557e0e15ba765e5",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2163,
+      "word": "interpret",
+      "meaning": "v. 해석하다, 통역하다",
+      "checkedTitle": "File:En-us-interpret.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-interpret.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "15f96d6928d217237346cdd7f5f6c37061938df1",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2165,
+      "word": "reproduce",
+      "meaning": "v. 복사하다, 복제하다, 번식하다",
+      "checkedTitle": "File:En-us-reproduce.ogg",
+      "status": "needs_provenance_evidence",
+      "reason": "Native-speaker evidence remains incomplete; see source audit. Existing missing/failed profiles were not repeated without new evidence. No audio download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-reproduce.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Mountainmage",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Mountainmage",
+        "nativeEnglishEvidence": false,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "63659d2a5fbb306a14486cc91c4b6ebe0c8cefea",
+        "status": "needs_native_speaker_evidence"
+      }
+    },
+    {
+      "number": 2182,
+      "word": "prominent",
+      "meaning": "a. 현저한, 유명한",
+      "checkedTitle": "File:En-us-prominent.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-prominent.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "4718dc80a4c50d765efb00d3af4d285c4a11d841",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2196,
+      "word": "reside",
+      "meaning": "v. 거주하다",
+      "checkedTitle": "File:En-us-reside.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-reside.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "02a845e49ea5c8f5b8d277dd98cdca25d17f41d4",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2199,
+      "word": "comprise",
+      "meaning": "v. 구성하다, 포함하다",
+      "checkedTitle": "File:En-us-comprise.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-comprise.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "c86cb9627fafeef6870b6dfa3f336301e95043d8",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2200,
+      "word": "fantasy",
+      "meaning": "n. 공상, 환상",
+      "checkedTitle": "File:En-us-fantasy.ogg",
+      "status": "needs_provenance_evidence",
+      "reason": "Native-speaker evidence remains incomplete; see source audit. Existing missing/failed profiles were not repeated without new evidence. No audio download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-fantasy.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Sylvanmoon",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Sylvanmoon",
+        "nativeEnglishEvidence": false,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "bb6e77fde99fd23c7f3f39154d9cb2416b7c4aaa",
+        "status": "needs_native_speaker_evidence"
+      }
+    },
+    {
+      "number": 2210,
+      "word": "lessen",
+      "meaning": "v. 적게 하다, 줄이다",
+      "checkedTitle": "File:En-us-lessen.ogg",
+      "status": "needs_provenance_evidence",
+      "reason": "Native-speaker evidence remains incomplete; see source audit. Existing missing/failed profiles were not repeated without new evidence. No audio download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-lessen.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Paul2520",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Paul2520",
+        "nativeEnglishEvidence": false,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "4e43fc23bad6153f20a76dbb9c48eb25a9984fb0",
+        "status": "needs_native_speaker_evidence"
+      }
+    },
+    {
+      "number": 2215,
+      "word": "befall",
+      "meaning": "v. 일어나다, 신변에 닥치다",
+      "checkedTitle": "File:En-us-befall.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-befall.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "d1ad6df5552a0b66796bbbfb1eda21d6209b1952",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2222,
+      "word": "beware",
+      "meaning": "v. 조심하다",
+      "checkedTitle": "File:En-us-beware.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-beware.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "608b59da95ccf034fb255671ecd58ae796617a0e",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2242,
+      "word": "boast",
+      "meaning": "v. 자랑하다 / n. 자랑",
+      "checkedTitle": "File:En-us-boast.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-boast.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Neskaya",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "fe7d98c806425d55f2dbcc8094b9ade671dc42aa",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2243,
+      "word": "colony",
+      "meaning": "n. 식민지, 거류지",
+      "checkedTitle": "File:En-us-colony.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-colony.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "da91218ac403562757ca41386fe8a0bf7142d8ad",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2244,
+      "word": "indolent",
+      "meaning": "a. 게으른",
+      "checkedTitle": "File:En-us-indolent.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-indolent.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "EncycloPetey",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "EncycloPetey",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "f6e06b561c01fba382db701ec672ec169110d1ec",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2254,
+      "word": "revenge",
+      "meaning": "n. 복수, 앙갚음 / v. 복수하다",
+      "checkedTitle": "File:En-us-revenge.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Named-recorder native-English and exact-file US evidence support provenance only. No original download during host cooldown. Actual word/POS, native-US speech, decoding and app playback remain unverified.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-revenge.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "5a0793235b2e0d2106f4b74fefe65a3b41b2ffca",
+        "status": "provenance_supported_actual_audio_pending"
+      }
+    },
+    {
+      "number": 2255,
+      "word": "exhaust",
+      "meaning": "v. 소모하다, 배기하다, 방출하다, 지치게 하다",
+      "checkedTitle": "File:En-us-exhaust.ogg",
+      "status": "needs_provenance_evidence",
+      "reason": "Native-speaker evidence remains incomplete; see source audit. Existing missing/failed profiles were not repeated without new evidence. No audio download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-exhaust.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Sylvanmoon",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "Sylvanmoon",
+        "nativeEnglishEvidence": false,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "bef7282f6b8cc2abafc01997254cffd257e1da5c",
+        "status": "needs_native_speaker_evidence"
+      }
+    },
+    {
+      "number": 2262,
+      "word": "prejudice",
+      "meaning": "n. 편견, 선입관",
+      "checkedTitle": "File:En-us-prejudice.ogg",
+      "status": "needs_provenance_evidence",
+      "reason": "Native-speaker evidence remains incomplete; see source audit. Existing missing/failed profiles were not repeated without new evidence. No audio download or playback.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-prejudice.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "TreeMama",
+      "previousReason": "Resolved metadata identifies US pronunciation and a free license. Candidate only; download, native-speaker provenance, exact spoken word/POS, full decode and app playback remain unverified during host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-6",
+        "recorder": "TreeMama",
+        "nativeEnglishEvidence": false,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1649.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-19T0733.json",
+        "sourceSha1": "b40b8a8e884b754584fa69d06cb1a4c2a4bdbebd",
+        "status": "needs_native_speaker_evidence"
+      }
+    }
+  ]
+}
