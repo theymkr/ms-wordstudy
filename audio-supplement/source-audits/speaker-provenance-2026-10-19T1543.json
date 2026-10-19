@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-19T15:43:10+09:00",
+  "phase": "speaker-provenance-pass-5",
+  "scope": "40 deferred candidates: rejoice 1790 through compromise 2014. Saved metadata and speaker audits reused; no original media requests during cooldown.",
+  "reusedAudits": [
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1238.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1336.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1430.json",
+    "audio-supplement/runs/2026-10-19T0538.json"
+  ],
+  "reusedSpeakers": [
+    "Neskaya",
+    "Dvortygirl",
+    "EncycloPetey",
+    "Whomping Walrus",
+    "NaomiAmethyst",
+    "TreeMama",
+    "Sylvanmoon",
+    "Paul2520",
+    "Gbeebani"
+  ],
+  "findings": [
+    {
+      "recorder": "Mx. Granger",
+      "nativeEnglishEvidence": true,
+      "usEvidence": "Commons Babel explicitly declares native American English.",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=User:Mx._Granger&oldid=835049904",
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-yearn.ogg&oldid=1229174064"
+      ],
+      "finding": "Yearn names same recorder, own-work human male US recording and self-CC0. Profile's request for a notification is phrased as a preference; no external message sent. Provenance supported only; actual audio remains unheard and undownloaded."
+    },
+    {
+      "recorder": "K schadd",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-behavior.ogg&oldid=1153743857",
+        "https://commons.wikimedia.org/wiki/User:K_schadd",
+        "https://en.wiktionary.org/wiki/User:K_schadd"
+      ],
+      "finding": "Behavior exact file names recorder, own work, US English and self-CC BY-SA 4.0. Commons profile missing and Wiktionary retrieval failed. Native-language evidence remains unresolved."
+    },
+    {
+      "recorder": "PyroGamer",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-donation.ogg&oldid=1135049671",
+        "https://commons.wikimedia.org/wiki/User:PyroGamer",
+        "https://en.wiktionary.org/wiki/User:PyroGamer"
+      ],
+      "finding": "Donation exact file names recorder, own work, US male voice and free multi-license including CC BY-SA 3.0. Commons profile missing and Wiktionary retrieval failed. Human-voice description is not native-language proof."
+    },
+    {
+      "recorder": "NaomiAmethyst",
+      "nativeEnglishEvidence": true,
+      "sources": [
+        "https://en.wiktionary.org/wiki/inherent",
+        "https://commons.wikimedia.org/wiki/User:NaomiAmethyst"
+      ],
+      "finding": "Reuse 0538 run's exact-file General American link and en-N evidence for inherent only; do not transfer this dialect evidence to the earlier Simplificationalizer file. Selected SHA1 6945945dbceb8fc60360d76d6097ec56a29f92df and CC BY-SA 4.0 retained."
+    }
+  ],
+  "pronunciationChecks": [
+    {
+      "word": "reserve",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/reserve_1",
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/reserve_2"
+      ],
+      "finding": "OAAD noun and verb share final-stressed /rɪˈzərv/. App mixed POS does not itself require different clips. Actual candidate still needs listening."
+    },
+    {
+      "word": "compromise",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/compromise_1",
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/compromise_2"
+      ],
+      "finding": "OAAD noun and verb share initial-stressed /ˈkɑmprəˌmaɪz/, including verb endanger sense. Candidate native-speaker provenance and actual audio remain unverified."
+    },
+    {
+      "word": "vehicle",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/vehicle"
+      ],
+      "finding": "OAAD accepts /ˈviɪkl/ and /ˈvihɪkl/ for the noun. Presence or absence of /h/ alone does not establish US dialect or disqualify a recording. Gbeebani native-speaker provenance remains unresolved."
+    }
+  ],
+  "failures": [
+    {
+      "source": "https://en.wiktionary.org/wiki/User:K_schadd",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:PyroGamer",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved."
+    }
+  ],
+  "mediaDownloads": 0,
+  "decoded": 0,
+  "appPlaybackVerified": 0
+}
