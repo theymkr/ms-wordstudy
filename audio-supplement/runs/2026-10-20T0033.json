@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-20T00:33:07+09:00",
+  "baseMain": "be3be17b211948bbd9503813ffb4ea257046b378",
+  "baseTree": "804a811a0466c86352c79fca1f69b0b5d2dec32d",
+  "verification": {
+    "freshMainViaGitHub": true,
+    "localTrackedTreeEqualsFreshMain": true,
+    "manifestBlobSha": "7f6df69166af979c791f241b10278b448520d2e5",
+    "build": "node build.js passed; extracts site.tar.gz.part-0 through part-6 before overlay.",
+    "originalArchiveMapped": 2316,
+    "supplementEntries": 20,
+    "total": 2956,
+    "mapped": 2336,
+    "remaining": 620,
+    "missingMappedLocalFiles": 0,
+    "deployment": {
+      "id": "dpl_93zY9UbFDGTTBsY8maMLL3Y7qvaB",
+      "state": "READY",
+      "target": "production",
+      "branch": "main",
+      "commit": "be3be17b211948bbd9503813ffb4ea257046b378",
+      "alias": "https://ms-1-2956.vercel.app/"
+    },
+    "freshDeployedHtmlMappingComparison": false,
+    "freshProductionPlayback": false,
+    "limitation": "Deployment commit matches fresh main, but public HTML/audio could not be fetched this run. Counts independently rebuilt from exact current main tree; do not claim fresh live media verification."
+  },
+  "batch": {
+    "size": 10,
+    "phase": "finite_source_refresh_download_deferred",
+    "candidates": [
+      {
+        "number": 994,
+        "word": "cage",
+        "author": "Neskaya",
+        "readable": true,
+        "hold": "Recorder accent warning requires individual audio review.",
+        "source": "https://commons.wikimedia.org/wiki/File:En-us-cage.ogg",
+        "fileSpecificUsDescription": true,
+        "selectedLicense": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "nativeSpeakerAudit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "downloadedThisRun": false,
+        "decodedThisRun": false,
+        "appPlaybackThisRun": false,
+        "mappedThisRun": false
+      },
+      {
+        "number": 1007,
+        "word": "assume",
+        "readable": false,
+        "source": "https://commons.wikimedia.org/wiki/File:En-us-assume.ogg",
+        "failure": "web_internal_error",
+        "policy": "No immediate repeat; reuse prior metadata, not a missing-file or pronunciation rejection.",
+        "downloadedThisRun": false,
+        "decodedThisRun": false,
+        "appPlaybackThisRun": false,
+        "mappedThisRun": false
+      },
+      {
+        "number": 1008,
+        "word": "curse",
+        "author": "Dvortygirl",
+        "readable": true,
+        "sense": "noun/verb same pronunciation; app's extra Korean gloss is not changed.",
+        "source": "https://commons.wikimedia.org/wiki/File:En-us-curse.ogg",
+        "fileSpecificUsDescription": true,
+        "selectedLicense": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "nativeSpeakerAudit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "downloadedThisRun": false,
+        "decodedThisRun": false,
+        "appPlaybackThisRun": false,
+        "mappedThisRun": false
+      },
+      {
+        "number": 1020,
+        "word": "model",
+        "readable": false,
+        "source": "https://commons.wikimedia.org/wiki/File:En-us-model.ogg",
+        "failure": "web_internal_error",
+        "policy": "No immediate repeat; reuse prior metadata, not a missing-file or pronunciation rejection.",
+        "downloadedThisRun": false,
+        "decodedThisRun": false,
+        "appPlaybackThisRun": false,
+        "mappedThisRun": false
+      },
+      {
+        "number": 1024,
+        "word": "trifle",
+        "author": "Neskaya",
+        "readable": true,
+        "hold": "Recorder accent warning requires individual audio review.",
+        "source": "https://commons.wikimedia.org/wiki/File:En-us-trifle.ogg",
+        "fileSpecificUsDescription": true,
+        "selectedLicense": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "nativeSpeakerAudit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "downloadedThisRun": false,
+        "decodedThisRun": false,
+        "appPlaybackThisRun": false,
+        "mappedThisRun": false
+      },
+      {
+        "number": 1025,
+        "word": "inflict",
+        "author": "Neskaya",
+        "readable": true,
+        "hold": "Recorder accent warning requires individual audio review.",
+        "source": "https://commons.wikimedia.org/wiki/File:En-us-inflict.ogg",
+        "fileSpecificUsDescription": true,
+        "selectedLicense": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "nativeSpeakerAudit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "downloadedThisRun": false,
+        "decodedThisRun": false,
+        "appPlaybackThisRun": false,
+        "mappedThisRun": false
+      },
+      {
+        "number": 1041,
+        "word": "prophecy",
+        "readable": false,
+        "source": "https://commons.wikimedia.org/wiki/File:En-us-prophecy.ogg",
+        "failure": "web_internal_error",
+        "policy": "No immediate repeat; reuse prior metadata, not a missing-file or pronunciation rejection.",
+        "downloadedThisRun": false,
+        "decodedThisRun": false,
+        "appPlaybackThisRun": false,
+        "mappedThisRun": false
+      },
+      {
+        "number": 1055,
+        "word": "talent",
+        "author": "Dvortygirl",
+        "readable": true,
+        "sense": "noun, ability",
+        "source": "https://commons.wikimedia.org/wiki/File:En-us-talent.ogg",
+        "fileSpecificUsDescription": true,
+        "selectedLicense": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "nativeSpeakerAudit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "downloadedThisRun": false,
+        "decodedThisRun": false,
+        "appPlaybackThisRun": false,
+        "mappedThisRun": false
+      },
+      {
+        "number": 1062,
+        "word": "dismiss",
+        "readable": false,
+        "source": "https://commons.wikimedia.org/wiki/File:En-us-dismiss.ogg",
+        "failure": "web_internal_error",
+        "policy": "No immediate repeat; reuse prior metadata, not a missing-file or pronunciation rejection.",
+        "downloadedThisRun": false,
+        "decodedThisRun": false,
+        "appPlaybackThisRun": false,
+        "mappedThisRun": false
+      },
+      {
+        "number": 1063,
+        "word": "reckon",
+        "readable": false,
+        "source": "https://commons.wikimedia.org/wiki/File:En-us-reckon.ogg",
+        "failure": "web_internal_error",
+        "policy": "No immediate repeat; reuse prior metadata, not a missing-file or pronunciation rejection.",
+        "downloadedThisRun": false,
+        "decodedThisRun": false,
+        "appPlaybackThisRun": false,
+        "mappedThisRun": false
+      }
+    ]
+  },
+  "outcome": {
+    "addedAcquired": 0,
+    "downloaded": 0,
+    "mapped": 0,
+    "siteAudioChanged": false,
+    "personalDataChanged": false,
+    "freeDictionaryApiUsed": false,
+    "ttsCounted": false
+  },
+  "blockers": [
+    {
+      "scope": "local git fetch, HTTPS download and public site fetch",
+      "error": "Failed to connect to browser-proxy port 8889 (connection refused)",
+      "classification": "transient infrastructure connection failure",
+      "attempts": "git fetch and one independent curl HEAD; no repeat loop, no proxy bypass",
+      "action": "Retry configured normal connection once next run before downloading any candidate."
+    },
+    {
+      "scope": "Vercel web_fetch_vercel_url",
+      "status": 403,
+      "code": "forbidden",
+      "stage": "read_protection_bypass",
+      "action": "No permission bypass and no further calls to denied endpoint. Metadata inspection succeeded; public site can be checked through normal public retrieval once connection recovers."
+    },
+    {
+      "scope": "public site web reader",
+      "error": "web_internal_error",
+      "paths": [
+        "/",
+        "/audio-pilot/",
+        "/audio-pilot/remaining-audio.csv"
+      ],
+      "action": "No fresh live HTML/playback claim."
+    }
+  ],
+  "next": {
+    "acquisitionResumeAt": {
+      "number": 994,
+      "word": "cage"
+    },
+    "acquisitionBatchNumbers": [
+      994,
+      1007,
+      1008,
+      1020,
+      1024,
+      1025,
+      1041,
+      1055,
+      1062,
+      1063
+    ],
+    "sourceReviewNext": {
+      "number": 1064,
+      "word": "throb"
+    },
+    "instructions": "Resume the ten unacquired candidates after connection recovers; fetch exact original only once, respect all prior host cooldowns and source failures. Do not count five refreshed metadata pages as acquired recordings. Preserve older pending originals and unresolved accent/ASR reviews. Do not re-download saved originals or alter accounts/scores/word lists. Recurrence remains active because failure is transient and 620 targets remain."
+  }
+}
