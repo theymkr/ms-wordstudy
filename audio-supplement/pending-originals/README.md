@@ -17,3 +17,24 @@ All are CC BY-SA 3.0; original source metadata and verification hashes are in
 
 No modifications or endorsements are claimed. Preserve attribution, license and
 source links, and retain source license for later converted copies.
+
+## Additional originals downloaded 2026-10-19
+
+Unchanged originals; still pending speech and app playback verification.
+
+| File title | Creator | Source | License |
+| --- | --- | --- | --- |
+| En-us-joke.ogg | Dvortygirl | [Commons](https://commons.wikimedia.org/wiki/File:En-us-joke.ogg) | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) |
+| En-us-solution.ogg | Dvortygirl | [Commons](https://commons.wikimedia.org/wiki/File:En-us-solution.ogg) | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) |
+| En-us-pulse.ogg | Neskaya | [Commons](https://commons.wikimedia.org/wiki/File:En-us-pulse.ogg) | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) |
+| En-us-twin.ogg | DroEsperanto | [Commons](https://commons.wikimedia.org/wiki/File:En-us-twin.ogg) | [Public domain](https://commons.wikimedia.org/wiki/File:En-us-twin.ogg) |
+| En-us-relative.ogg | Dvortygirl | [Commons](https://commons.wikimedia.org/wiki/File:En-us-relative.ogg) | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) |
+| En-us-outline.ogg | Neskaya | [Commons](https://commons.wikimedia.org/wiki/File:En-us-outline.ogg) | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) |
+| En-us-silly.ogg | Dvortygirl | [Commons](https://commons.wikimedia.org/wiki/File:En-us-silly.ogg) | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) |
+| En-us-election.ogg | Dvortygirl | [Commons](https://commons.wikimedia.org/wiki/File:En-us-election.ogg) | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) |
+| En-us-pet.ogg | EncycloPetey | [Commons](https://commons.wikimedia.org/wiki/File:En-us-pet.ogg) | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) |
+| En-us-trousers.ogg | Dvortygirl | [Commons](https://commons.wikimedia.org/wiki/File:En-us-trousers.ogg) | [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) |
+
+Twin is released under PD-self by its recorder. The other nine files retain
+CC BY-SA 3.0, including attribution and source/license links. See the matching
+2142 metadata snapshot for original permission and attribution details.

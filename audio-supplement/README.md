@@ -220,3 +220,17 @@ for file titles, creator attribution, source/license URLs, hashes and verificati
 stages; all seven retain CC BY-SA 3.0 and are unchanged originals. The metadata
 snapshot preserves original attribution/permission details. The Commons download
 cooldown has elapsed and seven originals succeeded; stop on any new HTTP 429.
+
+## 2026-10-19 second pending download batch
+
+Ten more originals (joke, solution, pulse, twin, relative, outline, silly,
+election, pet, trousers) returned HTTP 200, matched fresh Commons SHA-1/size,
+and passed full ffmpeg decoding. Total downloaded-but-unmapped originals: 17.
+Nine new files retain CC BY-SA 3.0; twin is PD-self. Exact titles, authors and
+source/license links are in `pending-downloads-2026-10-19T2142.json` and
+`pending-originals/README.md`. Pet's description explicitly names EncycloPetey.
+Neskaya's pulse/outline still need individual accent review. Outline noun/verb
+share initial stress; trousers must remain the exact plural form. No speech
+listening or app playback claim, no new mapping: 2,319 mapped, 637 remaining.
+See latest run for next batch (bedside 751 onward); do not re-download pending
+originals or repeat known browser permission/executable failures.
