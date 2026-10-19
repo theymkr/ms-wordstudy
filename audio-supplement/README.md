@@ -26,7 +26,7 @@ local decoding, app playback and deployment verification are separate stages.
 - All 640 originally missing rows (number 7 through 2941) have first-pass
   source-review records. This is NOT acquisition completion: 637 remain missing.
   Do not repeat the completed exact-title scans. Next, review native-US speaker
-  provenance for deferred candidates starting at side (2264), in finite batches,
+  provenance for deferred candidates starting at solitude (2484), in finite batches,
   preserving unresolved rows below that number. See the latest run's next phase.
   The first second-pass batch reviewed 40 deferred candidates (joke 481 through
   muse 1069): 31 have native-English recorder evidence plus file-specific US
@@ -64,6 +64,13 @@ local decoding, app playback and deployment verification are separate stages.
   raw description explicitly names EncycloPetey despite the blank Author field.
   Revenge noun/verb share final stress; reproduce needs the full verb, not produce.
   No new audio download, decode, playback or mapping was claimed.
+  The seventh provenance batch reviewed 40 candidates (side 2264 through
+  mixture 2480): 27 have supporting provenance; 13 remain unresolved.
+  The New Mikemoral resolves to Chaetodipus; preserve original attribution.
+  Simplificationalizer declares native English; anarchy's US evidence remains
+  tied to its exact New Jersey file link. Toll's recorder declares native American
+  English on the primary profile linked from Commons. Exempt adjective and verb
+  share a pronunciation. No new download, decode, playback or mapping was claimed.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.

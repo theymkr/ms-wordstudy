@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-19T17:38:47+09:00",
+  "phase": "speaker-provenance-pass-7",
+  "scope": "40 deferred candidates: side 2264 through mixture 2480. Saved metadata and speaker audits reused; no original media requests during cooldown.",
+  "reusedAudits": [
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1238.json",
+    "audio-supplement/runs/2026-10-19T0835.json"
+  ],
+  "reusedSpeakers": [
+    "Neskaya",
+    "Dvortygirl",
+    "DroEsperanto",
+    "TreeMama",
+    "Sylvanmoon",
+    "BirdHopper"
+  ],
+  "findings": [
+    {
+      "recorder": "The New Mikemoral",
+      "nativeEnglishEvidence": true,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-correspond.ogg&oldid=1190036921",
+        "https://commons.wikimedia.org/wiki/User:The_New_Mikemoral",
+        "https://commons.wikimedia.org/w/index.php?title=User:Chaetodipus&oldid=798354708"
+      ],
+      "finding": "Commons resolves The New Mikemoral to Chaetodipus, whose native-English declaration was reviewed in the 1238 audit. Correspond exact file has own-work attribution and saved CC BY-SA 3.0/California-English metadata. Preserve original attribution; redirect is not permission to change license. Actual audio still unverified."
+    },
+    {
+      "recorder": "Simplificationalizer",
+      "nativeEnglishEvidence": true,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=User:Simplificationalizer&oldid=432156443",
+        "https://commons.wikimedia.org/w/index.php?title=Template:User_en&oldid=358321650",
+        "https://en.wiktionary.org/wiki/anarchy"
+      ],
+      "finding": "Raw Commons profile uses user en; template explicitly means native English and categorizes en-N. Reuse 0835 exact-file New Jersey audio link for selected CC0 anarchy recording. This supports this candidate's provenance, not US dialect for every English upload; Wodencafe is a separate alternative. No download, listening or playback."
+    },
+    {
+      "recorder": "Whoop whoop pull up",
+      "nativeEnglishEvidence": true,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=User:Whoop_whoop_pull_up&oldid=568955229",
+        "https://en.wikipedia.org/w/index.php?title=User:Whoop_whoop_pull_up&oldid=1380336108",
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-toll.ogg&oldid=936242949"
+      ],
+      "finding": "Commons explicitly links primary Wikipedia profile, which declares native American English. Toll exact raw page names same recorder, own work, American English and self-CC BY-SA 4.0. Only recording attribution/language evidence retained; unrelated personal profile information not collected. Audio still unheard."
+    }
+  ],
+  "pronunciationChecks": [
+    {
+      "word": "exempt",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/exempt_1",
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/exempt_2"
+      ],
+      "finding": "OAAD adjective and verb both /ɪɡˈzɛmpt/. Mixed app POS does not itself require separate clips; actual candidate still needs listening."
+    }
+  ],
+  "failures": [
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Simplificationalizer",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons revision query succeeded; no media requests or access-control bypass."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Simplificationalizer",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat. Commons profile provides native-English evidence, but dialect remains file-specific."
+    }
+  ],
+  "mediaDownloads": 0,
+  "decoded": 0,
+  "appPlaybackVerified": 0
+}
