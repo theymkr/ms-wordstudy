@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-19T12:38:35+09:00",
+  "phase": "speaker-provenance-pass-2",
+  "scope": "40 deferred candidates: strenuous 1075 through deceive 1316. No media requests; saved file metadata and prior speaker audit reused.",
+  "reusedAudit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+  "reusedSpeakers": [
+    "Neskaya",
+    "Dvortygirl",
+    "Sylvanmoon",
+    "BirdHopper",
+    "EncycloPetey",
+    "TreeMama",
+    "DroEsperanto"
+  ],
+  "findings": [
+    {
+      "recorder": "Mikemoral",
+      "nativeEnglishEvidence": true,
+      "usEvidence": "Maxim's saved exact-file metadata explicitly describes California English.",
+      "sources": [
+        "https://commons.wikimedia.org/wiki/User:Mikemoral",
+        "https://commons.wikimedia.org/w/index.php?title=User:Chaetodipus&oldid=798354708",
+        "https://commons.wikimedia.org/wiki/File:En-us-maxim.ogg"
+      ],
+      "finding": "Commons API resolves Mikemoral to Chaetodipus. Resolved profile explicitly declares native English. Retain Mikemoral as original recording attribution. Supports provenance only; no download/listening or playback claim."
+    },
+    {
+      "recorder": "SneverdleSnavis",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-controversy.ogg&oldid=1229125018",
+        "https://commons.wikimedia.org/wiki/User:SneverdleSnavis",
+        "https://en.wiktionary.org/wiki/User:SneverdleSnavis"
+      ],
+      "finding": "Exact file raw page names SneverdleSnavis, own work, CC BY-SA 4.0 and General American IPA. Commons profile missing; Wiktionary page retrieval failed. Native-speaker evidence remains unresolved. Preserve standalone-file selection; do not use disputed two-variant alternative. Earlier shorthand attributing this file to Sylvanmoon is not supported by saved metadata or current raw page."
+    },
+    {
+      "recorder": "Steve Shives",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-refer.ogg&oldid=1174576895",
+        "https://www.youtube.com/embed/kZnIVPZkwnM"
+      ],
+      "finding": "Refer is a third-party-uploaded excerpt attributed to Steve Shives with CC0 tag, YouTube source and empty permission field. Rights-holder grant not independently established; do not assume uploader may waive another person's rights. No YouTube extraction or retry of disabled retrieval. Hold for rights and native-speaker evidence."
+    }
+  ],
+  "pronunciationChecks": [
+    {
+      "word": "recall",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/us/definition/american_english/recall_1",
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/recall_2"
+      ],
+      "finding": "App contains remembering verb and memory noun. OAAD verb is final-stressed; memory noun allows initial or final stress. A verified final-stressed clip may cover both; initial-stressed clip alone does not cover verb. Actual candidate stress not heard or approved."
+    },
+    {
+      "word": "dispute",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/us/definition/american_english/dispute_1",
+        "https://www.oxfordlearnersdictionaries.com/us/definition/american_english/dispute_2"
+      ],
+      "finding": "OAAD noun and verb both have final stress /dɪˈspjut/. Mixed POS alone does not force two clips. Actual audio must match."
+    },
+    {
+      "word": "upright",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/us/definition/american_english/upright_1"
+      ],
+      "finding": "App adjective vertical/morally honest has initial-stress /ˈʌpraɪt/. Verify this in actual recording."
+    }
+  ],
+  "failures": [
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Mikemoral",
+      "status": "web_internal_error",
+      "resolution": "Public Commons metadata API identifies redirect; resolved profile read successfully."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:SneverdleSnavis",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is missing as well."
+    }
+  ],
+  "mediaDownloads": 0,
+  "decoded": 0,
+  "appPlaybackVerified": 0
+}
