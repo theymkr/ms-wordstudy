@@ -206,3 +206,17 @@ and `AUDIO_HTML_PATH` to a freshly fetched production HTML file: the fixture ret
 production HTML/audio mappings and loads real production audio, while disabling
 account calls. Independently check production asset hashes, word-list equality,
 the Vercel deployment state, and main before declaring site verification.
+
+## 2026-10-19 downloaded, not yet acquired
+
+Seven original Oggs (funeral, tomb, dollar, statue, whisper, explode, actually)
+are saved in `pending-originals/`. All returned HTTP 200, match the fresh Commons
+SHA-1 and byte size, and passed complete ffmpeg decoding. These files are NOT
+included in `manifest.json` or the build overlay: spoken-content review and actual
+app playback remain unverified. Existing browser permission/executable blockers
+were not retried or bypassed. Mapped coverage remains 2,319/2,956 (637 missing).
+Do not re-download these pending files. See `pending-downloads-2026-10-19T2039.json`
+for file titles, creator attribution, source/license URLs, hashes and verification
+stages; all seven retain CC BY-SA 3.0 and are unchanged originals. The metadata
+snapshot preserves original attribution/permission details. The Commons download
+cooldown has elapsed and seven originals succeeded; stop on any new HTTP 429.
