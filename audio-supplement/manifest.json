@@ -114,7 +114,8 @@
       "durationSeconds": 1.044898,
       "speechRecognition": "verification/2026-10-19T2244-speech.json",
       "accentVerification": "Published file-specific US/California English attribution plus previously audited native-speaker provenance. ASR confirms word identity only; no claim of human listening or automated accent assessment.",
-      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json."
+      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json.",
+      "productionAppPlayback": "Passed: deployed app HTML and real https://ms-1-2956.vercel.app/audio-pilot assets, isolated account-free fixture, 3 play calls and 3 ended events with no TTS. Source/asset SHA records and actual media events are in verification/2026-10-19T2244-production-assets.json and -production-playback.json. Commit 53bb1af60181e46d1555399ab00b4f2cdffa30bf."
     }
   },
   {
@@ -145,7 +146,8 @@
       "durationSeconds": 1.097143,
       "speechRecognition": "verification/2026-10-19T2244-speech.json",
       "accentVerification": "Published file-specific US/California English attribution plus previously audited native-speaker provenance. ASR confirms word identity only; no claim of human listening or automated accent assessment.",
-      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json."
+      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json.",
+      "productionAppPlayback": "Passed: deployed app HTML and real https://ms-1-2956.vercel.app/audio-pilot assets, isolated account-free fixture, 3 play calls and 3 ended events with no TTS. Source/asset SHA records and actual media events are in verification/2026-10-19T2244-production-assets.json and -production-playback.json. Commit 53bb1af60181e46d1555399ab00b4f2cdffa30bf."
     }
   },
   {
@@ -176,7 +178,8 @@
       "durationSeconds": 1.044898,
       "speechRecognition": "verification/2026-10-19T2244-speech.json",
       "accentVerification": "Published file-specific US/California English attribution plus previously audited native-speaker provenance. ASR confirms word identity only; no claim of human listening or automated accent assessment.",
-      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json."
+      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json.",
+      "productionAppPlayback": "Passed: deployed app HTML and real https://ms-1-2956.vercel.app/audio-pilot assets, isolated account-free fixture, 3 play calls and 3 ended events with no TTS. Source/asset SHA records and actual media events are in verification/2026-10-19T2244-production-assets.json and -production-playback.json. Commit 53bb1af60181e46d1555399ab00b4f2cdffa30bf."
     }
   },
   {
@@ -207,7 +210,8 @@
       "durationSeconds": 1.097143,
       "speechRecognition": "verification/2026-10-19T2244-speech.json",
       "accentVerification": "Published file-specific US/California English attribution plus previously audited native-speaker provenance. ASR confirms word identity only; no claim of human listening or automated accent assessment.",
-      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json."
+      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json.",
+      "productionAppPlayback": "Passed: deployed app HTML and real https://ms-1-2956.vercel.app/audio-pilot assets, isolated account-free fixture, 3 play calls and 3 ended events with no TTS. Source/asset SHA records and actual media events are in verification/2026-10-19T2244-production-assets.json and -production-playback.json. Commit 53bb1af60181e46d1555399ab00b4f2cdffa30bf."
     }
   },
   {
@@ -238,7 +242,8 @@
       "durationSeconds": 1.332245,
       "speechRecognition": "verification/2026-10-19T2244-speech.json",
       "accentVerification": "Published file-specific US/California English attribution plus previously audited native-speaker provenance. ASR confirms word identity only; no claim of human listening or automated accent assessment.",
-      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json."
+      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json.",
+      "productionAppPlayback": "Passed: deployed app HTML and real https://ms-1-2956.vercel.app/audio-pilot assets, isolated account-free fixture, 3 play calls and 3 ended events with no TTS. Source/asset SHA records and actual media events are in verification/2026-10-19T2244-production-assets.json and -production-playback.json. Commit 53bb1af60181e46d1555399ab00b4f2cdffa30bf."
     }
   },
   {
@@ -269,7 +274,8 @@
       "durationSeconds": 0.783673,
       "speechRecognition": "verification/2026-10-19T2244-speech.json",
       "accentVerification": "Published file-specific US/California English attribution plus previously audited native-speaker provenance. ASR confirms word identity only; no claim of human listening or automated accent assessment.",
-      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json."
+      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json.",
+      "productionAppPlayback": "Passed: deployed app HTML and real https://ms-1-2956.vercel.app/audio-pilot assets, isolated account-free fixture, 3 play calls and 3 ended events with no TTS. Source/asset SHA records and actual media events are in verification/2026-10-19T2244-production-assets.json and -production-playback.json. Commit 53bb1af60181e46d1555399ab00b4f2cdffa30bf."
     }
   },
   {
@@ -300,7 +306,8 @@
       "durationSeconds": 1.044898,
       "speechRecognition": "verification/2026-10-19T2244-speech.json",
       "accentVerification": "Published file-specific US/California English attribution plus previously audited native-speaker provenance. ASR confirms word identity only; no claim of human listening or automated accent assessment.",
-      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json."
+      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json.",
+      "productionAppPlayback": "Passed: deployed app HTML and real https://ms-1-2956.vercel.app/audio-pilot assets, isolated account-free fixture, 3 play calls and 3 ended events with no TTS. Source/asset SHA records and actual media events are in verification/2026-10-19T2244-production-assets.json and -production-playback.json. Commit 53bb1af60181e46d1555399ab00b4f2cdffa30bf."
     }
   },
   {
@@ -331,7 +338,8 @@
       "durationSeconds": 1.201633,
       "speechRecognition": "verification/2026-10-19T2244-speech.json",
       "accentVerification": "Published file-specific US/California English attribution plus previously audited native-speaker provenance. ASR confirms word identity only; no claim of human listening or automated accent assessment.",
-      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json."
+      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json.",
+      "productionAppPlayback": "Passed: deployed app HTML and real https://ms-1-2956.vercel.app/audio-pilot assets, isolated account-free fixture, 3 play calls and 3 ended events with no TTS. Source/asset SHA records and actual media events are in verification/2026-10-19T2244-production-assets.json and -production-playback.json. Commit 53bb1af60181e46d1555399ab00b4f2cdffa30bf."
     }
   },
   {
@@ -362,7 +370,8 @@
       "durationSeconds": 0.992653,
       "speechRecognition": "verification/2026-10-19T2244-speech.json",
       "accentVerification": "Published file-specific US/California English attribution plus previously audited native-speaker provenance. ASR confirms word identity only; no claim of human listening or automated accent assessment.",
-      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json."
+      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json.",
+      "productionAppPlayback": "Passed: deployed app HTML and real https://ms-1-2956.vercel.app/audio-pilot assets, isolated account-free fixture, 3 play calls and 3 ended events with no TTS. Source/asset SHA records and actual media events are in verification/2026-10-19T2244-production-assets.json and -production-playback.json. Commit 53bb1af60181e46d1555399ab00b4f2cdffa30bf."
     }
   },
   {
@@ -393,7 +402,8 @@
       "durationSeconds": 1.097143,
       "speechRecognition": "verification/2026-10-19T2244-speech.json",
       "accentVerification": "Published file-specific US/California English attribution plus previously audited native-speaker provenance. ASR confirms word identity only; no claim of human listening or automated accent assessment.",
-      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json."
+      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json.",
+      "productionAppPlayback": "Passed: deployed app HTML and real https://ms-1-2956.vercel.app/audio-pilot assets, isolated account-free fixture, 3 play calls and 3 ended events with no TTS. Source/asset SHA records and actual media events are in verification/2026-10-19T2244-production-assets.json and -production-playback.json. Commit 53bb1af60181e46d1555399ab00b4f2cdffa30bf."
     }
   },
   {
@@ -424,7 +434,8 @@
       "durationSeconds": 0.992653,
       "speechRecognition": "verification/2026-10-19T2244-speech.json",
       "accentVerification": "Published file-specific US/California English attribution plus previously audited native-speaker provenance. ASR confirms word identity only; no claim of human listening or automated accent assessment.",
-      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json."
+      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json.",
+      "productionAppPlayback": "Passed: deployed app HTML and real https://ms-1-2956.vercel.app/audio-pilot assets, isolated account-free fixture, 3 play calls and 3 ended events with no TTS. Source/asset SHA records and actual media events are in verification/2026-10-19T2244-production-assets.json and -production-playback.json. Commit 53bb1af60181e46d1555399ab00b4f2cdffa30bf."
     }
   },
   {
@@ -455,7 +466,8 @@
       "durationSeconds": 1.149388,
       "speechRecognition": "verification/2026-10-19T2244-speech.json",
       "accentVerification": "Published file-specific US/California English attribution plus previously audited native-speaker provenance. ASR confirms word identity only; no claim of human listening or automated accent assessment.",
-      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json."
+      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json.",
+      "productionAppPlayback": "Passed: deployed app HTML and real https://ms-1-2956.vercel.app/audio-pilot assets, isolated account-free fixture, 3 play calls and 3 ended events with no TTS. Source/asset SHA records and actual media events are in verification/2026-10-19T2244-production-assets.json and -production-playback.json. Commit 53bb1af60181e46d1555399ab00b4f2cdffa30bf."
     }
   },
   {
@@ -486,7 +498,8 @@
       "durationSeconds": 0.783673,
       "speechRecognition": "verification/2026-10-19T2244-speech.json",
       "accentVerification": "Published file-specific US/California English attribution plus previously audited native-speaker provenance. ASR confirms word identity only; no claim of human listening or automated accent assessment.",
-      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json."
+      "appPlayback": "Passed: actual memorization screen, 3 play() calls and 3 ended events, every attempt has playing, no TTS fallback. Account requests and score writes blocked. See verification/2026-10-19T2244-local-playback.json.",
+      "productionAppPlayback": "Passed: deployed app HTML and real https://ms-1-2956.vercel.app/audio-pilot assets, isolated account-free fixture, 3 play calls and 3 ended events with no TTS. Source/asset SHA records and actual media events are in verification/2026-10-19T2244-production-assets.json and -production-playback.json. Commit 53bb1af60181e46d1555399ab00b4f2cdffa30bf."
     }
   }
 ]

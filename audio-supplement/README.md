@@ -257,3 +257,10 @@ package extracted into `/tmp/ms-chrome`, with authorized execution. Playwright
 CDN installers returned truncated archives. The test now distinguishes buffering
 resume events from three independent complete `play()` calls; every attempt
 must start and end, with no fourth call or TTS fallback.
+
+Production verification completed for the thirteen additions: deployment
+`dpl_Cov2UcAtntFPjXKM21ADToTGeBrE`, audio commit `53bb1af60181e46d1555399ab00b4f2cdffa30bf`.
+Live word list/mapping match the build, all thirteen MP3 hashes match, and
+each played and ended three times using deployed code and actual site assets
+in an isolated fixture with no account/score requests. Current total:
+2,332/2,956 acquired; 624 remaining. Production reports above retain the evidence.

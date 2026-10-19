@@ -1,0 +1,104 @@
+{
+  "deploymentId": "dpl_Cov2UcAtntFPjXKM21ADToTGeBrE",
+  "commit": "53bb1af60181e46d1555399ab00b4f2cdffa30bf",
+  "site": "https://ms-1-2956.vercel.app/",
+  "liveHtmlSha256": "2beb3fb09e92309228c8ebff2dbaeec253091ca212cbffb8224ec3904cad7191",
+  "wordListAndMappingEqual": true,
+  "total": 2956,
+  "mapped": 2332,
+  "remaining": 624,
+  "files": [
+    {
+      "word": "funeral",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-funeral.mp3",
+      "sha256": "370273757e489388fafe4d5c0825e5b7ebed20f76c39c897e01bd3acb7e8a9ff",
+      "bytes": 13113,
+      "matchesVerifiedAppFile": true
+    },
+    {
+      "word": "tomb",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-tomb.mp3",
+      "sha256": "b61ebca0f9933f82fb14b93ba5b7a4ee68e89900aacc8d7e6abf70790a1f6bd5",
+      "bytes": 13531,
+      "matchesVerifiedAppFile": true
+    },
+    {
+      "word": "dollar",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-dollar.mp3",
+      "sha256": "7bc47363e071e4597358f152761212969cacd5e96953d2076ea6ae2274dbfa59",
+      "bytes": 12748,
+      "matchesVerifiedAppFile": true
+    },
+    {
+      "word": "whisper",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-whisper.mp3",
+      "sha256": "c06b7078e3b5b8500f893cb121871d5d7f66705b5a66306fcd22cb3fa554d504",
+      "bytes": 13581,
+      "matchesVerifiedAppFile": true
+    },
+    {
+      "word": "explode",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-explode.mp3",
+      "sha256": "e1afa2b9f17e8b3319f9445b741fdf80121f03dde205a2c6e98fadb35100eb80",
+      "bytes": 17023,
+      "matchesVerifiedAppFile": true
+    },
+    {
+      "word": "actually",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-actually.mp3",
+      "sha256": "8d856722665e01f4e542d230804728d2f35774febe9ff951849ea18a81f9222e",
+      "bytes": 10504,
+      "matchesVerifiedAppFile": true
+    },
+    {
+      "word": "joke",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-joke.mp3",
+      "sha256": "f6b67821cb472105257fcf709600c26abebf49401d158471068c656669d211ff",
+      "bytes": 12644,
+      "matchesVerifiedAppFile": true
+    },
+    {
+      "word": "solution",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-solution.mp3",
+      "sha256": "24ece813d0d2d3bd589fb23dc9d5c6e3887b101d731fea7c75d648007fe8dcf4",
+      "bytes": 15042,
+      "matchesVerifiedAppFile": true
+    },
+    {
+      "word": "twin",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-twin.mp3",
+      "sha256": "84a33b3dc4786351c085e7a11cfdc716c3c8b27564e201bda0f02c03065cb4c6",
+      "bytes": 14416,
+      "matchesVerifiedAppFile": true
+    },
+    {
+      "word": "relative",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-relative.mp3",
+      "sha256": "2df294ee86cb814d150d21bfadd81bcfd4e38f1c4b8304752f5a81dbb53ea1bb",
+      "bytes": 13270,
+      "matchesVerifiedAppFile": true
+    },
+    {
+      "word": "silly",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-silly.mp3",
+      "sha256": "b79498dc3a08b0ae45ad49339c2fe39087bd72f0afb5aaaacccd3f33d944a54c",
+      "bytes": 12486,
+      "matchesVerifiedAppFile": true
+    },
+    {
+      "word": "election",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-election.mp3",
+      "sha256": "98282c46738bea2270ccf2e755745e66b539e9fce244fb0791de3c4fd94c4d06",
+      "bytes": 14209,
+      "matchesVerifiedAppFile": true
+    },
+    {
+      "word": "pet",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-pet.mp3",
+      "sha256": "c79fd697ff2fdb20df5e2bc7258f28bccf6eff3963f2785c688b02446d8431ed",
+      "bytes": 10190,
+      "matchesVerifiedAppFile": true
+    }
+  ],
+  "personalDataWrites": false
+}

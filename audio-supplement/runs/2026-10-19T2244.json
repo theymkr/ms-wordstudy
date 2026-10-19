@@ -275,12 +275,12 @@
   "result": {
     "additionalDownloaded": 0,
     "additionalLocalAppPlaybackVerified": 13,
-    "additionalProductionPlaybackVerified": 0,
+    "additionalProductionPlaybackVerified": 13,
     "additionalAcquiredVerified": 13,
     "totalMappedAfterBuild": 2332,
     "remainingAfterBuild": 624,
     "pendingDownloadedUnmapped": 4,
-    "productionVerification": "Pending deployment. Live baseline 2319/2956, remaining637 was verified before changes; only local acquisition/app replay passed so far."
+    "productionVerification": "Passed: Vercel production READY, exact commit and alias verified; deployed word list/mapping equal the build; all 13 added asset hashes match; actual app media completed 3 replays each in isolated deployed-code/deployed-assets fixture. No account or score requests."
   },
   "validation": {
     "build": "passed",
@@ -293,7 +293,11 @@
     ],
     "ttsFallback": false,
     "personalDataWrites": false,
-    "browserRecovery": "Official Chrome .deb successfully downloaded/extracted; previous missing executable/socket blocker is resolved with authorized execution. Installer CDN returned truncated archives, not repeated."
+    "browserRecovery": "Official Chrome .deb successfully downloaded/extracted; previous missing executable/socket blocker is resolved with authorized execution. Installer CDN returned truncated archives, not repeated.",
+    "productionDeploymentId": "dpl_Cov2UcAtntFPjXKM21ADToTGeBrE",
+    "productionAudioCommit": "53bb1af60181e46d1555399ab00b4f2cdffa30bf",
+    "productionAssets": "audio-supplement/verification/2026-10-19T2244-production-assets.json",
+    "productionAppPlayback": "audio-supplement/verification/2026-10-19T2244-production-playback.json"
   },
   "processed": [
     {
@@ -305,9 +309,9 @@
         "https://commons.wikimedia.org/wiki/File:En-us-funeral.ogg"
       ],
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
-      "status": "local_app_verified_pending_production",
-      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment."
+      "productionPlaybackVerified": true,
+      "status": "verified_acquired",
+      "reason": "Original and app hashes, two independent unprompted exact-word recognition matches, native-US provenance, license and sense/POS review, full decode, and local/deployed app 3-play/3-ended checks passed. Not TTS; no personal data writes."
     },
     {
       "number": 402,
@@ -318,9 +322,9 @@
         "https://commons.wikimedia.org/wiki/File:En-us-tomb.ogg"
       ],
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
-      "status": "local_app_verified_pending_production",
-      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment."
+      "productionPlaybackVerified": true,
+      "status": "verified_acquired",
+      "reason": "Original and app hashes, two independent unprompted exact-word recognition matches, native-US provenance, license and sense/POS review, full decode, and local/deployed app 3-play/3-ended checks passed. Not TTS; no personal data writes."
     },
     {
       "number": 419,
@@ -331,9 +335,9 @@
         "https://commons.wikimedia.org/wiki/File:En-us-dollar.ogg"
       ],
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
-      "status": "local_app_verified_pending_production",
-      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment."
+      "productionPlaybackVerified": true,
+      "status": "verified_acquired",
+      "reason": "Original and app hashes, two independent unprompted exact-word recognition matches, native-US provenance, license and sense/POS review, full decode, and local/deployed app 3-play/3-ended checks passed. Not TTS; no personal data writes."
     },
     {
       "number": 451,
@@ -357,9 +361,9 @@
         "https://commons.wikimedia.org/wiki/File:En-us-whisper.ogg"
       ],
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
-      "status": "local_app_verified_pending_production",
-      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment."
+      "productionPlaybackVerified": true,
+      "status": "verified_acquired",
+      "reason": "Original and app hashes, two independent unprompted exact-word recognition matches, native-US provenance, license and sense/POS review, full decode, and local/deployed app 3-play/3-ended checks passed. Not TTS; no personal data writes."
     },
     {
       "number": 472,
@@ -370,9 +374,9 @@
         "https://commons.wikimedia.org/wiki/File:En-us-explode.ogg"
       ],
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
-      "status": "local_app_verified_pending_production",
-      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment."
+      "productionPlaybackVerified": true,
+      "status": "verified_acquired",
+      "reason": "Original and app hashes, two independent unprompted exact-word recognition matches, native-US provenance, license and sense/POS review, full decode, and local/deployed app 3-play/3-ended checks passed. Not TTS; no personal data writes."
     },
     {
       "number": 478,
@@ -383,23 +387,23 @@
         "https://commons.wikimedia.org/wiki/File:En-us-actually.ogg"
       ],
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
-      "status": "local_app_verified_pending_production",
-      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment."
+      "productionPlaybackVerified": true,
+      "status": "verified_acquired",
+      "reason": "Original and app hashes, two independent unprompted exact-word recognition matches, native-US provenance, license and sense/POS review, full decode, and local/deployed app 3-play/3-ended checks passed. Not TTS; no personal data writes."
     },
     {
       "number": 481,
       "word": "joke",
       "meaning": "n. 농담 / v. 농담을 하다",
-      "status": "local_app_verified_pending_production",
-      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "status": "verified_acquired",
+      "reason": "Original and app hashes, two independent unprompted exact-word recognition matches, native-US provenance, license and sense/POS review, full decode, and local/deployed app 3-play/3-ended checks passed. Not TTS; no personal data writes.",
       "candidatePages": [
         "https://commons.wikimedia.org/wiki/File:En-us-joke.ogg"
       ],
       "checkedTitle": "File:En-us-joke.ogg",
       "downloaded": true,
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
+      "productionPlaybackVerified": true,
       "recorder": "Dvortygirl",
       "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
       "provenanceReview": {
@@ -418,15 +422,15 @@
       "number": 488,
       "word": "solution",
       "meaning": "n. 해결책, 용매, 용액",
-      "status": "local_app_verified_pending_production",
-      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "status": "verified_acquired",
+      "reason": "Original and app hashes, two independent unprompted exact-word recognition matches, native-US provenance, license and sense/POS review, full decode, and local/deployed app 3-play/3-ended checks passed. Not TTS; no personal data writes.",
       "candidatePages": [
         "https://commons.wikimedia.org/wiki/File:En-us-solution.ogg"
       ],
       "checkedTitle": "File:En-us-solution.ogg",
       "downloaded": true,
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
+      "productionPlaybackVerified": true,
       "recorder": "Dvortygirl",
       "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
       "provenanceReview": {
@@ -472,15 +476,15 @@
       "number": 513,
       "word": "twin",
       "meaning": "a. 한 쌍의 / n. 쌍둥이의 한 사람",
-      "status": "local_app_verified_pending_production",
-      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "status": "verified_acquired",
+      "reason": "Original and app hashes, two independent unprompted exact-word recognition matches, native-US provenance, license and sense/POS review, full decode, and local/deployed app 3-play/3-ended checks passed. Not TTS; no personal data writes.",
       "candidatePages": [
         "https://commons.wikimedia.org/wiki/File:En-us-twin.ogg"
       ],
       "checkedTitle": "File:En-us-twin.ogg",
       "downloaded": true,
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
+      "productionPlaybackVerified": true,
       "recorder": "DroEsperanto",
       "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
       "provenanceReview": {
@@ -499,15 +503,15 @@
       "number": 527,
       "word": "relative",
       "meaning": "n. 친척 / a. 비교상의, 상대적인",
-      "status": "local_app_verified_pending_production",
-      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "status": "verified_acquired",
+      "reason": "Original and app hashes, two independent unprompted exact-word recognition matches, native-US provenance, license and sense/POS review, full decode, and local/deployed app 3-play/3-ended checks passed. Not TTS; no personal data writes.",
       "candidatePages": [
         "https://commons.wikimedia.org/wiki/File:En-us-relative.ogg"
       ],
       "checkedTitle": "File:En-us-relative.ogg",
       "downloaded": true,
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
+      "productionPlaybackVerified": true,
       "recorder": "Dvortygirl",
       "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
       "provenanceReview": {
@@ -553,15 +557,15 @@
       "number": 638,
       "word": "silly",
       "meaning": "a. 어리석은",
-      "status": "local_app_verified_pending_production",
-      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "status": "verified_acquired",
+      "reason": "Original and app hashes, two independent unprompted exact-word recognition matches, native-US provenance, license and sense/POS review, full decode, and local/deployed app 3-play/3-ended checks passed. Not TTS; no personal data writes.",
       "candidatePages": [
         "https://commons.wikimedia.org/wiki/File:En-us-silly.ogg"
       ],
       "checkedTitle": "File:En-us-silly.ogg",
       "downloaded": true,
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
+      "productionPlaybackVerified": true,
       "recorder": "Dvortygirl",
       "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
       "provenanceReview": {
@@ -580,15 +584,15 @@
       "number": 648,
       "word": "election",
       "meaning": "n. 선거",
-      "status": "local_app_verified_pending_production",
-      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "status": "verified_acquired",
+      "reason": "Original and app hashes, two independent unprompted exact-word recognition matches, native-US provenance, license and sense/POS review, full decode, and local/deployed app 3-play/3-ended checks passed. Not TTS; no personal data writes.",
       "candidatePages": [
         "https://commons.wikimedia.org/wiki/File:En-us-election.ogg"
       ],
       "checkedTitle": "File:En-us-election.ogg",
       "downloaded": true,
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
+      "productionPlaybackVerified": true,
       "recorder": "Dvortygirl",
       "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
       "provenanceReview": {
@@ -607,15 +611,15 @@
       "number": 657,
       "word": "pet",
       "meaning": "n. 애완동물",
-      "status": "local_app_verified_pending_production",
-      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "status": "verified_acquired",
+      "reason": "Original and app hashes, two independent unprompted exact-word recognition matches, native-US provenance, license and sense/POS review, full decode, and local/deployed app 3-play/3-ended checks passed. Not TTS; no personal data writes.",
       "candidatePages": [
         "https://commons.wikimedia.org/wiki/File:En-us-pet.ogg"
       ],
       "checkedTitle": "File:En-us-pet.ogg",
       "downloaded": true,
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
+      "productionPlaybackVerified": true,
       "recorder": "EncycloPetey",
       "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
       "provenanceReview": {
