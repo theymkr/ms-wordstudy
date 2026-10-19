@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-19T13:36:33+09:00",
+  "phase": "speaker-provenance-pass-3",
+  "scope": "40 deferred candidates: manuscript 1327 through repent 1535. Original-host cooldown respected; no media requests.",
+  "reusedAudits": [
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1238.json"
+  ],
+  "reusedSpeakers": [
+    "Neskaya",
+    "Dvortygirl",
+    "EncycloPetey",
+    "Mikemoral",
+    "TreeMama",
+    "Sylvanmoon"
+  ],
+  "findings": [
+    {
+      "recorder": "Whomping Walrus",
+      "nativeEnglishEvidence": true,
+      "usEvidence": "Commons profile explicitly self-identifies as native US-English speaker contributing pronunciation recordings.",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=User:Whomping_Walrus&oldid=423367180",
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-dissolute.ogg&oldid=1229128280"
+      ],
+      "finding": "Dissolute raw page names same recorder, own work, US English and self-CC0. Native-US human-recorder provenance supported; actual recording remains unheard/undownloaded. No unrelated profile/contact data retained."
+    },
+    {
+      "recorder": "Gamingforfun365",
+      "nativeEnglishEvidence": true,
+      "usEvidence": "Exact epidemic file description explicitly identifies American-English pronunciation by a native speaker.",
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-epidemic.ogg&oldid=1229130386",
+        "https://commons.wikimedia.org/wiki/User:Gamingforfun365"
+      ],
+      "finding": "Exact file names recorder, own work and self-CC BY-SA 4.0. User profile is missing, but the file-specific native-speaker declaration is explicit. Support applies to this file, not a blanket approval of every upload. Audio content/quality still unverified."
+    },
+    {
+      "recorder": "LegionMammal978",
+      "nativeEnglishEvidence": false,
+      "sources": [
+        "https://commons.wikimedia.org/w/index.php?title=File:En-us-creed.ogg&oldid=1229125521",
+        "https://commons.wikimedia.org/wiki/User:LegionMammal978",
+        "https://en.wiktionary.org/wiki/User:LegionMammal978"
+      ],
+      "finding": "Creed names recorder and identifies own-work self-CC BY-SA 4.0 US recording, but no explicit native-language declaration. Commons profile missing; Wiktionary web retrieval failed. No inference from US category alone."
+    }
+  ],
+  "pronunciationChecks": [
+    {
+      "word": "feminine",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/us/definition/american_english/feminine_1"
+      ],
+      "finding": "App adjective has OAAD initial stress /ˈfɛmənən/. Verify actual final vowel and word identity; source provenance does not establish heard pronunciation."
+    },
+    {
+      "word": "refrain",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/us/definition/american_english/refrain_1"
+      ],
+      "finding": "App is abstain verb, OAAD /rɪˈfreɪn/. Verify final stress and actual spoken word; no dictionary audio downloaded."
+    }
+  ],
+  "failures": [
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Whomping_Walrus",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons metadata API revision query succeeded."
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-epidemic.ogg",
+      "status": "web_internal_error",
+      "resolution": "Same bounded metadata API query returned exact-file own-work/license/native-US evidence."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:LegionMammal978",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat. Native-speaker evidence remains unresolved; Commons profile also missing."
+    }
+  ],
+  "mediaDownloads": 0,
+  "decoded": 0,
+  "appPlaybackVerified": 0
+}

@@ -26,7 +26,7 @@ local decoding, app playback and deployment verification are separate stages.
 - All 640 originally missing rows (number 7 through 2941) have first-pass
   source-review records. This is NOT acquisition completion: 637 remain missing.
   Do not repeat the completed exact-title scans. Next, review native-US speaker
-  provenance for deferred candidates starting at manuscript (1327), in finite batches,
+  provenance for deferred candidates starting at fluid (1538), in finite batches,
   preserving unresolved rows below that number. See the latest run's next phase.
   The first second-pass batch reviewed 40 deferred candidates (joke 481 through
   muse 1069): 31 have native-English recorder evidence plus file-specific US
@@ -40,6 +40,12 @@ local decoding, app playback and deployment verification are separate stages.
   whose profile declares native English. Controversy's exact recorder is
   SneverdleSnavis, not Sylvanmoon. Recall's final-stressed variant may cover both
   app senses; initial stress alone cannot cover the verb. No media was acquired.
+  The third provenance batch reviewed 40 candidates (manuscript 1327 through
+  repent 1535): 36 have supporting provenance; four remain unresolved.
+  Whomping Walrus explicitly identifies as a native US-English speaker, and
+  epidemic's exact file explicitly says native American-English recording.
+  Creed's recorder lacks native-language evidence. No download or playback claim;
+  the original media-host cooldown and existing browser blocker remain in place.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
