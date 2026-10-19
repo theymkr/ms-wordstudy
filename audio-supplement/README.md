@@ -23,8 +23,8 @@ local decoding, app playback and deployment verification are separate stages.
 
 ## Continuing after 2026-10-18
 
-- The first 560 originally missing rows (number 7 through 2377) were reviewed.
-  Continue at number 2379 (suffrage), preserving unresolved earlier rows.
+- The first 600 originally missing rows (number 7 through 2492) were reviewed.
+  Continue at number 2493 (decay), preserving unresolved earlier rows.
   The second batch added no recordings: 19 Commons US candidates are deferred,
   including absent which also needs adjective/verb stress review; four Lingua
   Libre candidates lack dialect evidence, and 17 exact Ogg titles were missing.
@@ -109,6 +109,14 @@ local decoding, app playback and deployment verification are separate stages.
   alone cannot cover the noun. Repose noun and verb share a pronunciation. Defense
   must match the protection/legal sense, not just sporting stress. Draft's linked
   US clip is titled draught and was not selected as an exact-spelling recording.
+- The fifteenth batch added no recordings: 23 rows have US metadata candidates
+  (idealist needs rights-holder permission evidence), four Lingua Libre rows lack
+  dialect evidence, and 13 need other sources. Patent's New Jersey label belongs
+  to Simplificationalizer's file, not Arlo Barnes's. A verified short-a patent clip
+  may cover the app's noun/verb/adjective senses; a long-a clip requires sense review.
+  Affect needs verb stress and must not be replaced with effect. Simultaneous has
+  multiple dictionary-supported US variants. Host cooldowns and the known browser
+  permission blocker were respected; no new download or playback was claimed.
 - Three recordings passed source, download, full decode and actual browser
   playback checks: feather (331), stripe (404), atom (449).
 - Eight original download attempts returned HTTP 429. Respect the host cooldown
