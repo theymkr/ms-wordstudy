@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-19T19:37:19+09:00",
+  "phase": "initial-rate-limited-candidate-provenance",
+  "scope": "Eight previously deferred_rate_limit candidates from initial 2026-10-18 batch, not repeated discovery. Original saved metadata is a top-level array, unlike later .records files.",
+  "reusedAudits": [
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1238.json",
+    "audio-supplement/source-audits/speaker-provenance-2026-10-19T1738.json"
+  ],
+  "reusedSpeakers": [
+    "Dvortygirl",
+    "EncycloPetey",
+    "The New Mikemoral",
+    "BirdHopper"
+  ],
+  "findings": [
+    {
+      "recorder": "Dvortygirl",
+      "words": [
+        "funeral",
+        "tomb",
+        "dollar",
+        "whisper",
+        "actually"
+      ],
+      "nativeEnglishEvidence": true,
+      "finding": "Saved exact-file US descriptions and own-work/manual-recording credit match previously audited native-English recorder. CC BY-SA 3.0 metadata; attribution, source/license link and adaptation disclosure required. Original versions and permission text remain in initial snapshot."
+    },
+    {
+      "recorder": "EncycloPetey",
+      "words": [
+        "statue"
+      ],
+      "nativeEnglishEvidence": true,
+      "finding": "Exact title, own-work author, US description and CC BY-SA 3.0 match saved metadata. Native-English evidence reused from 1141 audit."
+    },
+    {
+      "recorder": "The New Mikemoral",
+      "words": [
+        "explode"
+      ],
+      "nativeEnglishEvidence": true,
+      "finding": "Exact-file description specifies California English and Shtooka recording; self-CC BY-SA 3.0. Alias resolves to native-English Chaetodipus per 1738/1238 audits. Retain original recording attribution."
+    },
+    {
+      "recorder": "BirdHopper",
+      "words": [
+        "comedy"
+      ],
+      "nativeEnglishEvidence": false,
+      "finding": "Exact description names human recorder and US English, own-work CC BY-SA 4.0. Native-language evidence still missing; missing Commons profile was not repeated. No recording approved."
+    }
+  ],
+  "pronunciationChecks": [
+    {
+      "word": "funeral",
+      "finding": "Noun burial ceremony; initial stress /ˈfyunərəl/ in OAAD. Actual clip not heard.",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/funeral"
+      ]
+    },
+    {
+      "word": "tomb",
+      "finding": "Noun grave /tum/; final b is silent. Do not substitute tombstone.",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/tomb"
+      ]
+    },
+    {
+      "word": "dollar",
+      "finding": "Currency noun /ˈdɑlər/, not doll.",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/dollar"
+      ]
+    },
+    {
+      "word": "comedy",
+      "finding": "Entertainment noun /ˈkɑmədi/. Dictionary reference does not establish BirdHopper's native language.",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/comedy"
+      ]
+    },
+    {
+      "word": "statue",
+      "finding": "Figure/sculpture noun /ˈstætʃu/, not statute or status.",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/statue"
+      ]
+    },
+    {
+      "word": "whisper",
+      "finding": "OAAD noun and verb both /ˈwɪspər/; one verified clip may cover both app senses.",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/whisper_1",
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/whisper_2"
+      ]
+    },
+    {
+      "word": "explode",
+      "finding": "Verb /ɪkˈsploʊd/ with final stress; exact base form, not explosion or exploded.",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/explode"
+      ]
+    },
+    {
+      "word": "actually",
+      "finding": "Adverb; OAAD lists /ˈæktʃuəli/, /ˈæktʃəli/, /ˈækʃəli/. Do not reject an attested US reduction merely for syllable count.",
+      "sources": [
+        "https://www.oxfordlearnersdictionaries.com/definition/american_english/actually"
+      ]
+    }
+  ],
+  "failures": [],
+  "mediaDownloads": 0,
+  "decoded": 0,
+  "appPlaybackVerified": 0,
+  "note": "Saved metadata reused, not freshly re-fetched binary metadata. No source SHA-1 in original snapshot; acquire/verify bytes and hash later. All actual clips remain unheard and unverified."
+}

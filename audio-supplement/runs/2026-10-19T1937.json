@@ -1,0 +1,544 @@
+{
+  "date": "2026-10-19T19:37:19+09:00",
+  "baseMain": "7562779bb18421a98800c922660f22f1a7bfec79",
+  "baseline": {
+    "total": 2956,
+    "mapped": 2319,
+    "remaining": 637,
+    "deployedWordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true
+  },
+  "batch": {
+    "size": 8,
+    "firstNumber": 386,
+    "lastNumber": 478,
+    "phase": "initial-rate-limited-candidate-provenance",
+    "scope": "Eight previously deferred_rate_limit candidates from initial 2026-10-18 batch, not repeated discovery. Original saved metadata is a top-level array, unlike later .records files.",
+    "initialMissingScanComplete": true,
+    "uniqueOriginallyMissingRowsReviewed": 640
+  },
+  "sourceReview": {
+    "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1937.json",
+    "provenanceSupported": 7,
+    "provenanceUnresolved": 1,
+    "previousSourceAuditsPreserved": true
+  },
+  "sourceFailures": [
+    {
+      "source": "https://upload.wikimedia.org",
+      "status": 429,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Do not download originals until existing cooldown ends; no alternate hosts, mirrors or parameters to evade limit."
+    },
+    {
+      "source": "https://en.wiktionary.org/w/api.php",
+      "status": 403,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Do not retry blocked API endpoint."
+    },
+    {
+      "source": "https://dictionary.cambridge.org",
+      "status": 403,
+      "observedInRun": "2026-10-18T2238.json",
+      "paths": [
+        "/dictionary/english/summons",
+        "/dictionary/english/multiply"
+      ],
+      "retriedThisRun": false,
+      "policy": "Blocked direct pages not retried."
+    },
+    {
+      "source": "https://lingualibre.org/wiki/Q532035",
+      "resolvedUrl": "https://archive.lingualibre.org/wiki/Q532035",
+      "status": 500,
+      "retriedThisRun": false,
+      "policy": "Profile unavailable through retrieval tool; do not immediately repeat. English/CC0 does not establish US dialect."
+    },
+    {
+      "source": "https://www.festvox.org/cmu_arctic/",
+      "status": 502,
+      "observedInRun": "2026-10-19T0335.json",
+      "retriedThisRun": false,
+      "retryNotBefore": "2026-10-20T03:35:11+09:00",
+      "policy": "One curl check after web timeout; stop for this run. Retry only after stated time. No media acquired."
+    },
+    {
+      "source": "https://www.youtube.com/watch?v=enJxEQrNXPk",
+      "status": "web_retrieval_disabled",
+      "observedInRun": "2026-10-19T0538.json",
+      "retriedThisRun": false,
+      "policy": "No bypass or alternate video extraction; astray rights provenance unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/undergo",
+      "status": "web_internal_error",
+      "observedInRun": "2026-10-19T0936.json",
+      "retriedThisRun": false,
+      "policy": "No immediate repeat; candidate dialect remains unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/blank",
+      "status": "web_internal_error",
+      "observedInRun": "2026-10-19T1037.json",
+      "retriedThisRun": false,
+      "policy": "No immediate repeat; dialect unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/rose",
+      "status": "web_file_link_resolution_error",
+      "observedInRun": "2026-10-19T1037.json",
+      "retriedThisRun": false,
+      "attempts": 2,
+      "policy": "Page readable but US file-link clicks failed even after refreshing page. Stop repeating clicks; exact file identity remains unresolved."
+    },
+    {
+      "source": "Commons profile web renderer",
+      "status": "web_internal_error",
+      "paths": [
+        "User:Sylvanmoon",
+        "User:TheDaveRoss",
+        "User:Montgolfière",
+        "File:En-us-twin.ogg"
+      ],
+      "resolution": "One bounded public metadata API query succeeded; no media or access-control bypass.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org",
+      "status": "web_internal_error",
+      "paths": [
+        "/wiki/User:TheDaveRoss",
+        "/wiki/User:Sylvanmoon"
+      ],
+      "policy": "No immediate repeat; native-speaker provenance unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wikipedia.org/wiki/User:Montgolfière",
+      "status": "web_retrieval_disabled",
+      "policy": "No bypass; native-speaker provenance unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Mikemoral",
+      "status": "web_internal_error",
+      "resolution": "Public Commons metadata API identifies redirect; resolved profile read successfully.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:SneverdleSnavis",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is missing as well.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Whomping_Walrus",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons metadata API revision query succeeded.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-epidemic.ogg",
+      "status": "web_internal_error",
+      "resolution": "Same bounded metadata API query returned exact-file own-work/license/native-US evidence.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:LegionMammal978",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat. Native-speaker evidence remains unresolved; Commons profile also missing.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-amaze.ogg",
+      "status": "web_internal_error",
+      "resolution": "One bounded Commons metadata API revisions request succeeded.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Gbeebani",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; native language and recorder identity unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Ganj",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat or infer account equivalence.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:K_schadd",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:PyroGamer",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Mountainmage",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-reproduce.ogg",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons revision query succeeded; no media requests or access-control bypass.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Simplificationalizer",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons revision query succeeded; no media requests or access-control bypass.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Simplificationalizer",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat. Commons profile provides native-English evidence, but dialect remains file-specific.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "Commons web profile renderer",
+      "paths": [
+        "User:Xnux",
+        "User:Neoglitch"
+      ],
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons revision query succeeded."
+    },
+    {
+      "source": "https://en.wikipedia.org/wiki/User:Xnux",
+      "status": "web_retrieval_disabled",
+      "policy": "No bypass or immediate repeat."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Spacecat2",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; native-speaker evidence unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Neoglitch",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; native-speaker evidence unresolved."
+    },
+    {
+      "source": "https://www.oxfordlearnersdictionaries.com/definition/american_english/burnt",
+      "status": "web_internal_error",
+      "resolution": "Parent burn entry provides verb-form reference; failed burnt URL not repeated."
+    }
+  ],
+  "next": {
+    "afterWordNumber": 478,
+    "nextWordNumber": 386,
+    "batchSize": 7,
+    "phase": "supported-native-us-acquisition",
+    "initialMissingScanComplete": true,
+    "downloadHostCooldownUntil": "2026-10-19T19:45:00+09:00",
+    "instructions": "Recompute counts from fresh main/live. Both the 298-row deferred-host provenance queue and eight initial rate-limited candidates have provenance reviews, not acquisition. Next finite acquisition batch: funeral 386, tomb 402, dollar 419, statue 451, whisper 470, explode 472, actually 478. Keep comedy on native-language hold. No original-media request before 2026-10-19T19:45:00+09:00. After cooldown, one exact original attempt first; stop entire media host on 429 and record Retry-After/new cooldown. No alternate host/parameter evasion. Verify actual word/POS/native-US human speech, decode and app playback before mapping. Do not repeat the known browser socket/executable failures or bypass permissions. If downloaded but playback unavailable, store as unverified, not mapped/acquired. Preserve all unresolved POS/dialect/rights and CMU retry time. No repeated discovery/profile scans without new evidence. Do not disable for metadata review completion.",
+    "secondPassReviewed": 298,
+    "deferredHostProvenanceScanComplete": true,
+    "initialRateLimitedProvenanceScanComplete": true,
+    "initialRateLimitedProvenanceReviewed": 8
+  },
+  "result": {
+    "additionalDownloaded": 0,
+    "additionalLocalAppPlaybackVerified": 0,
+    "additionalProductionPlaybackVerified": 0,
+    "totalMappedAfterBuild": 2319,
+    "remainingAfterBuild": 637,
+    "productionVerification": "Fresh production word list and mapping matched fresh main before review. No audio/app-code changes or new playback claim. Research records require post-publication live comparison."
+  },
+  "validation": {
+    "build": "passed",
+    "wordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true,
+    "localBrowserPlayback": {
+      "status": "not_retried_known_blocker",
+      "error": "Earlier Chrome socket permission blocker; last run also found default Playwright executable absent.",
+      "policy": "No browser launch/install/security override. Research records only; no new playback claim."
+    }
+  },
+  "processed": [
+    {
+      "number": 386,
+      "word": "funeral",
+      "meaning": "n. 장례식",
+      "checkedTitle": "File:En-us-funeral.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Native-English and exact-file US provenance supported; host cooldown respected. Actual speech/POS, download, decode and app playback remain unverified.",
+      "previousReason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-funeral.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "provenanceReview": {
+        "phase": "initial-rate-limited-candidate-provenance",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1937.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18.json",
+        "sourceSha1": null,
+        "status": "provenance_supported_actual_audio_pending"
+      },
+      "pronunciationReview": {
+        "word": "funeral",
+        "finding": "Noun burial ceremony; initial stress /ˈfyunərəl/ in OAAD. Actual clip not heard.",
+        "sources": [
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/funeral"
+        ]
+      }
+    },
+    {
+      "number": 402,
+      "word": "tomb",
+      "meaning": "n. 묘, 무덤",
+      "checkedTitle": "File:En-us-tomb.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Native-English and exact-file US provenance supported; host cooldown respected. Actual speech/POS, download, decode and app playback remain unverified.",
+      "previousReason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-tomb.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "provenanceReview": {
+        "phase": "initial-rate-limited-candidate-provenance",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1937.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18.json",
+        "sourceSha1": null,
+        "status": "provenance_supported_actual_audio_pending"
+      },
+      "pronunciationReview": {
+        "word": "tomb",
+        "finding": "Noun grave /tum/; final b is silent. Do not substitute tombstone.",
+        "sources": [
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/tomb"
+        ]
+      }
+    },
+    {
+      "number": 419,
+      "word": "dollar",
+      "meaning": "n. 달러",
+      "checkedTitle": "File:En-us-dollar.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Native-English and exact-file US provenance supported; host cooldown respected. Actual speech/POS, download, decode and app playback remain unverified.",
+      "previousReason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-dollar.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "provenanceReview": {
+        "phase": "initial-rate-limited-candidate-provenance",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1937.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18.json",
+        "sourceSha1": null,
+        "status": "provenance_supported_actual_audio_pending"
+      },
+      "pronunciationReview": {
+        "word": "dollar",
+        "finding": "Currency noun /ˈdɑlər/, not doll.",
+        "sources": [
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/dollar"
+        ]
+      }
+    },
+    {
+      "number": 435,
+      "word": "comedy",
+      "meaning": "n. 희극, 코미디",
+      "checkedTitle": "File:En-us-comedy.ogg",
+      "status": "needs_provenance_evidence",
+      "reason": "US label and named human recorder found, but native-language evidence unresolved. Existing missing profile not repeated.",
+      "previousReason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-comedy.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "BirdHopper",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "provenanceReview": {
+        "phase": "initial-rate-limited-candidate-provenance",
+        "recorder": "BirdHopper",
+        "nativeEnglishEvidence": false,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1937.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18.json",
+        "sourceSha1": null,
+        "status": "needs_native_speaker_evidence"
+      },
+      "pronunciationReview": {
+        "word": "comedy",
+        "finding": "Entertainment noun /ˈkɑmədi/. Dictionary reference does not establish BirdHopper's native language.",
+        "sources": [
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/comedy"
+        ]
+      }
+    },
+    {
+      "number": 451,
+      "word": "statue",
+      "meaning": "n. 상, 모형, 인물상",
+      "checkedTitle": "File:En-us-statue.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Native-English and exact-file US provenance supported; host cooldown respected. Actual speech/POS, download, decode and app playback remain unverified.",
+      "previousReason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-statue.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "EncycloPetey",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provenanceReview": {
+        "phase": "initial-rate-limited-candidate-provenance",
+        "recorder": "EncycloPetey",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1937.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18.json",
+        "sourceSha1": null,
+        "status": "provenance_supported_actual_audio_pending"
+      },
+      "pronunciationReview": {
+        "word": "statue",
+        "finding": "Figure/sculpture noun /ˈstætʃu/, not statute or status.",
+        "sources": [
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/statue"
+        ]
+      }
+    },
+    {
+      "number": 470,
+      "word": "whisper",
+      "meaning": "v. 속삭이다, 은밀히 말하다 / n. 속삭임, 소곤거리는 소리",
+      "checkedTitle": "File:En-us-whisper.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Native-English and exact-file US provenance supported; host cooldown respected. Actual speech/POS, download, decode and app playback remain unverified.",
+      "previousReason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-whisper.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "provenanceReview": {
+        "phase": "initial-rate-limited-candidate-provenance",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1937.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18.json",
+        "sourceSha1": null,
+        "status": "provenance_supported_actual_audio_pending"
+      },
+      "pronunciationReview": {
+        "word": "whisper",
+        "finding": "OAAD noun and verb both /ˈwɪspər/; one verified clip may cover both app senses.",
+        "sources": [
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/whisper_1",
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/whisper_2"
+        ]
+      }
+    },
+    {
+      "number": 472,
+      "word": "explode",
+      "meaning": "v. 폭발하다, 격발하다",
+      "checkedTitle": "File:En-us-explode.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Native-English and exact-file US provenance supported; host cooldown respected. Actual speech/POS, download, decode and app playback remain unverified.",
+      "previousReason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-explode.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "The New Mikemoral",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "provenanceReview": {
+        "phase": "initial-rate-limited-candidate-provenance",
+        "recorder": "The New Mikemoral",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1937.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18.json",
+        "sourceSha1": null,
+        "status": "provenance_supported_actual_audio_pending"
+      },
+      "pronunciationReview": {
+        "word": "explode",
+        "finding": "Verb /ɪkˈsploʊd/ with final stress; exact base form, not explosion or exploded.",
+        "sources": [
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/explode"
+        ]
+      }
+    },
+    {
+      "number": 478,
+      "word": "actually",
+      "meaning": "ad. 사실상, 실제로",
+      "checkedTitle": "File:En-us-actually.ogg",
+      "status": "deferred_host_cooldown",
+      "reason": "Native-English and exact-file US provenance supported; host cooldown respected. Actual speech/POS, download, decode and app playback remain unverified.",
+      "previousReason": "Original download returned HTTP 429; no download obtained. Do not count as acquired. Cooldown before retry.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-actually.ogg"
+      ],
+      "downloaded": false,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "provenanceReview": {
+        "phase": "initial-rate-limited-candidate-provenance",
+        "recorder": "Dvortygirl",
+        "nativeEnglishEvidence": true,
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1937.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18.json",
+        "sourceSha1": null,
+        "status": "provenance_supported_actual_audio_pending"
+      },
+      "pronunciationReview": {
+        "word": "actually",
+        "finding": "Adverb; OAAD lists /ˈæktʃuəli/, /ˈæktʃəli/, /ˈækʃəli/. Do not reject an attested US reduction merely for syllable count.",
+        "sources": [
+          "https://www.oxfordlearnersdictionaries.com/definition/american_english/actually"
+        ]
+      }
+    }
+  ]
+}

@@ -26,8 +26,12 @@ local decoding, app playback and deployment verification are separate stages.
 - All 640 originally missing rows (number 7 through 2941) have first-pass
   source-review records. This is NOT acquisition completion: 637 remain missing.
   Do not repeat the completed exact-title scans. The 298-row deferred-host
-  provenance scan is complete, not acquisition. Next review the eight earlier
-  rate-limited rows (funeral 386 through actually 478), using saved evidence.
+  provenance scan is complete, not acquisition. The eight earlier rate-limited
+  rows (funeral 386 through actually 478) also have provenance reviews: seven
+  supported, comedy still lacks native-language evidence. Next attempt a finite
+  supported-candidate acquisition batch only after the recorded host cooldown.
+  Whisper noun/verb share a pronunciation; actually has accepted US reductions.
+  No download, decode, new playback or mapping was claimed for this review.
   Preserve all unresolved rows and cooldowns. See the latest run's next phase.
   The first second-pass batch reviewed 40 deferred candidates (joke 481 through
   muse 1069): 31 have native-English recorder evidence plus file-specific US
