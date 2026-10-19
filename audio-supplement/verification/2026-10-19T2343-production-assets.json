@@ -1,0 +1,35 @@
+{
+  "commit": "945191c3dcca2dacf904dc39ca1a6c12d7bbe29e",
+  "deploymentId": "dpl_377mABoNVPLvsT1SVTMr7hBCCUUf",
+  "productionState": "READY",
+  "total": 2956,
+  "mapped": 2336,
+  "remaining": 620,
+  "wordListAndMappingEqual": true,
+  "files": [
+    {
+      "word": "unlike",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-unlike.mp3",
+      "sha256": "1a9da01860def5439851b01da4e4e1b3569e45cd1928d14636c7e885c381afa3",
+      "bytes": 15149
+    },
+    {
+      "word": "sentence",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-sentence.mp3",
+      "sha256": "afac13f126af78b3064201337d55ce799289cefb0cdbbc246df736e1aacd1419",
+      "bytes": 16032
+    },
+    {
+      "word": "schedule",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-schedule.mp3",
+      "sha256": "839ff5a58d27bb25c04dfe96f70763cdb18e3bdbc32e10dc0a4176405186384d",
+      "bytes": 10918
+    },
+    {
+      "word": "however",
+      "url": "https://ms-1-2956.vercel.app/audio-pilot/extra-us-however.mp3",
+      "sha256": "aaa3aac8c1b246723e89f60cc3acf716be19419ea3273164c2bac8fd7557956e",
+      "bytes": 9096
+    }
+  ]
+}

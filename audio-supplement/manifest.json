@@ -530,7 +530,8 @@
       "decode": "Full original and converted-file ffmpeg decode passed; original matches fresh Commons SHA-1 and size.",
       "speechRecognition": "verification/2026-10-19T2343-speech.json",
       "accentVerification": "Exact-file published US English designation plus audited native-English recorder provenance. ASR verifies identity only; no human listening or automated accent-classification claim.",
-      "appPlayback": "Passed actual memorization screen: 3 play calls and 3 ended events; no TTS or account/score requests. See verification/2026-10-19T2343-local-playback.json."
+      "appPlayback": "Passed actual memorization screen: 3 play calls and 3 ended events; no TTS or account/score requests. See verification/2026-10-19T2343-local-playback.json.",
+      "productionAppPlayback": "Passed actual deployed-code/deployed-assets isolated app: 3 play calls and 3 ends, no TTS or account/score writes; see verification/2026-10-19T2343-production-playback.json and -production-assets.json. Audio commit 945191c3dcca2dacf904dc39ca1a6c12d7bbe29e."
     }
   },
   {
@@ -561,7 +562,8 @@
       "decode": "Full original and converted-file ffmpeg decode passed; original matches fresh Commons SHA-1 and size.",
       "speechRecognition": "verification/2026-10-19T2343-speech.json",
       "accentVerification": "Exact-file published US English designation plus audited native-English recorder provenance. ASR verifies identity only; no human listening or automated accent-classification claim.",
-      "appPlayback": "Passed actual memorization screen: 3 play calls and 3 ended events; no TTS or account/score requests. See verification/2026-10-19T2343-local-playback.json."
+      "appPlayback": "Passed actual memorization screen: 3 play calls and 3 ended events; no TTS or account/score requests. See verification/2026-10-19T2343-local-playback.json.",
+      "productionAppPlayback": "Passed actual deployed-code/deployed-assets isolated app: 3 play calls and 3 ends, no TTS or account/score writes; see verification/2026-10-19T2343-production-playback.json and -production-assets.json. Audio commit 945191c3dcca2dacf904dc39ca1a6c12d7bbe29e."
     }
   },
   {
@@ -592,7 +594,8 @@
       "decode": "Full original and converted-file ffmpeg decode passed; original matches fresh Commons SHA-1 and size.",
       "speechRecognition": "verification/2026-10-19T2343-speech.json",
       "accentVerification": "Exact-file published US English designation plus audited native-English recorder provenance. ASR verifies identity only; no human listening or automated accent-classification claim.",
-      "appPlayback": "Passed actual memorization screen: 3 play calls and 3 ended events; no TTS or account/score requests. See verification/2026-10-19T2343-local-playback.json."
+      "appPlayback": "Passed actual memorization screen: 3 play calls and 3 ended events; no TTS or account/score requests. See verification/2026-10-19T2343-local-playback.json.",
+      "productionAppPlayback": "Passed actual deployed-code/deployed-assets isolated app: 3 play calls and 3 ends, no TTS or account/score writes; see verification/2026-10-19T2343-production-playback.json and -production-assets.json. Audio commit 945191c3dcca2dacf904dc39ca1a6c12d7bbe29e."
     }
   },
   {
@@ -623,7 +626,8 @@
       "decode": "Full original and converted-file ffmpeg decode passed; original matches fresh Commons SHA-1 and size.",
       "speechRecognition": "verification/2026-10-19T2343-speech.json",
       "accentVerification": "Exact-file published US English designation plus audited native-English recorder provenance. ASR verifies identity only; no human listening or automated accent-classification claim.",
-      "appPlayback": "Passed actual memorization screen: 3 play calls and 3 ended events; no TTS or account/score requests. See verification/2026-10-19T2343-local-playback.json."
+      "appPlayback": "Passed actual memorization screen: 3 play calls and 3 ended events; no TTS or account/score requests. See verification/2026-10-19T2343-local-playback.json.",
+      "productionAppPlayback": "Passed actual deployed-code/deployed-assets isolated app: 3 play calls and 3 ends, no TTS or account/score writes; see verification/2026-10-19T2343-production-playback.json and -production-assets.json. Audio commit 945191c3dcca2dacf904dc39ca1a6c12d7bbe29e."
     }
   }
 ]

@@ -297,15 +297,15 @@
     {
       "number": 769,
       "word": "unlike",
-      "status": "local_app_verified_pending_production",
-      "reason": "Source, native-US provenance, license, SHA and two independent exact-word checks passed; app playback pending.",
+      "status": "verified_acquired",
+      "reason": "Original download, hashes, complete decode, two independent unprompted lexical checks, source-specific native-US provenance, license and sense/POS review, and actual local/production app three-replay checks passed. No TTS or personal data writes.",
       "candidatePages": [
         "https://commons.wikimedia.org/wiki/File:En-us-unlike.ogg"
       ],
       "downloaded": true,
       "decoded": true,
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
+      "productionPlaybackVerified": true,
       "recorder": "Dvortygirl",
       "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
       "pendingOriginal": "audio-supplement/pending-originals/unlike.ogg"
@@ -329,15 +329,15 @@
     {
       "number": 799,
       "word": "sentence",
-      "status": "local_app_verified_pending_production",
-      "reason": "Source, native-US provenance, license, SHA and two independent exact-word checks passed; app playback pending.",
+      "status": "verified_acquired",
+      "reason": "Original download, hashes, complete decode, two independent unprompted lexical checks, source-specific native-US provenance, license and sense/POS review, and actual local/production app three-replay checks passed. No TTS or personal data writes.",
       "candidatePages": [
         "https://commons.wikimedia.org/wiki/File:En-us-sentence.ogg"
       ],
       "downloaded": true,
       "decoded": true,
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
+      "productionPlaybackVerified": true,
       "recorder": "EncycloPetey",
       "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
       "pendingOriginal": "audio-supplement/pending-originals/sentence.ogg"
@@ -345,15 +345,15 @@
     {
       "number": 809,
       "word": "schedule",
-      "status": "local_app_verified_pending_production",
-      "reason": "Source, native-US provenance, license, SHA and two independent exact-word checks passed; app playback pending.",
+      "status": "verified_acquired",
+      "reason": "Original download, hashes, complete decode, two independent unprompted lexical checks, source-specific native-US provenance, license and sense/POS review, and actual local/production app three-replay checks passed. No TTS or personal data writes.",
       "candidatePages": [
         "https://commons.wikimedia.org/wiki/File:En-us-schedule.ogg"
       ],
       "downloaded": true,
       "decoded": true,
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
+      "productionPlaybackVerified": true,
       "recorder": "Dvortygirl",
       "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
       "pendingOriginal": "audio-supplement/pending-originals/schedule.ogg"
@@ -393,15 +393,15 @@
     {
       "number": 876,
       "word": "however",
-      "status": "local_app_verified_pending_production",
-      "reason": "Source, native-US provenance, license, SHA and two independent exact-word checks passed; app playback pending.",
+      "status": "verified_acquired",
+      "reason": "Original download, hashes, complete decode, two independent unprompted lexical checks, source-specific native-US provenance, license and sense/POS review, and actual local/production app three-replay checks passed. No TTS or personal data writes.",
       "candidatePages": [
         "https://commons.wikimedia.org/wiki/File:En-us-however.ogg"
       ],
       "downloaded": true,
       "decoded": true,
       "localPlaybackVerified": true,
-      "productionPlaybackVerified": false,
+      "productionPlaybackVerified": true,
       "recorder": "Dvortygirl",
       "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
       "pendingOriginal": "audio-supplement/pending-originals/however.ogg"
@@ -442,19 +442,23 @@
   "result": {
     "additionalDownloaded": 10,
     "additionalLocalAppPlaybackVerified": 4,
-    "additionalProductionPlaybackVerified": 0,
-    "additionalAcquiredVerified": 0,
+    "additionalProductionPlaybackVerified": 4,
+    "additionalAcquiredVerified": 4,
     "candidateAdditions": 4,
     "totalMappedAfterBuild": 2336,
     "remainingAfterBuild": 620,
     "pendingDownloadedUnmapped": 10,
-    "productionVerification": "Pending actual app replay and deployment."
+    "productionVerification": "Production READY at exact audio commit; deployed word list/mapping equal build, new file hashes match and all supplements completed three app media replays without TTS/account/score writes."
   },
   "validation": {
     "baselineLiveWordListAndMappingEqual": true,
     "personalDataWrites": false,
     "build": "passed",
     "localAppPlayback": "audio-supplement/verification/2026-10-19T2343-local-playback.json",
-    "ttsFallback": false
+    "ttsFallback": false,
+    "productionDeploymentId": "dpl_377mABoNVPLvsT1SVTMr7hBCCUUf",
+    "productionAudioCommit": "945191c3dcca2dacf904dc39ca1a6c12d7bbe29e",
+    "productionAssets": "audio-supplement/verification/2026-10-19T2343-production-assets.json",
+    "productionAppPlayback": "audio-supplement/verification/2026-10-19T2343-production-playback.json"
   }
 }

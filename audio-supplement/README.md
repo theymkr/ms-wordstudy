@@ -10,6 +10,15 @@ file-specific US designation and license/POS review. Local and production media
 verification are recorded separately in `verification/2026-10-19T2343-*.json`.
 Use the latest run for current totals and deployment status.
 
+Production checks completed: audio commit
+`945191c3dcca2dacf904dc39ca1a6c12d7bbe29e`, deployment
+`dpl_377mABoNVPLvsT1SVTMr7hBCCUUf` was READY on the production alias.
+Live word list/mapping matched the build and all four new MP3 hashes matched.
+All twenty supplement recordings, including the four additions, played and
+ended three times using the actual deployed HTML and audio in an isolated
+account-free fixture, with no TTS fallback or score changes. Current verified
+coverage: 2,336/2,956; remaining 620. Six new originals are held unapproved.
+
 Do not re-download these ten saved originals. Bedside, theater, wink, stormy and
 pilot remain pending due to the recorder's accent warning; Mars remains pending
 because independent lexical recognizers disagreed (Lars/Mars). This is not a

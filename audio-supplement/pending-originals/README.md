@@ -1,5 +1,22 @@
 # Pending originals — not app-approved
 
+## Latest status: 2026-10-19 23:43 batch
+
+This folder retains historical staging copies, including recordings subsequently
+approved in `../manifest.json`. The latest run, not this folder's filename or
+older notes below, determines approval. The ten newly downloaded originals and
+their individual attribution, CC BY-SA 3.0 links and checksums are recorded in
+`../pending-downloads-2026-10-19T2343.json` and the matching metadata snapshot.
+
+Unlike, sentence, schedule and however passed source and local app verification;
+production checks are separately recorded in `../verification/2026-10-19T2343-*`.
+Ten originals remain unmapped: statue, trousers, pulse, outline, bedside, theater,
+wink, stormy, pilot and Mars. Do not re-download them or treat ASR as accent proof.
+The first two and Mars need content review; the other seven require individual
+accent review due to the recorder's warning. No human listening is claimed.
+
+The older tables and status notes below are retained as historical records.
+
 These unchanged files are licensed separately from application code. They are not
 counted as acquired or mapped until spoken-content and app playback checks pass.
 All are CC BY-SA 3.0; original source metadata and verification hashes are in
