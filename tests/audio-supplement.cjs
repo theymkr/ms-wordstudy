@@ -57,9 +57,15 @@ const html = fs.readFileSync(process.env.AUDIO_HTML_PATH || 'public/index.html',
     const before = await page.evaluate(() => ({count:pronunciationCount,records:JSON.stringify(records)}));
     const results = [];
     for (const entry of entries) {
+      console.log('Checking app replay: '+entry.word);
       await page.evaluate(() => {window.mediaEvents=[];window.mediaPlayCalls=[];});
       await page.locator('.ym-memo-word').filter({has:page.locator('strong',{hasText:new RegExp('^'+entry.word+'$')})}).click();
-      await page.waitForFunction(() => document.getElementById('ymMemoProgress').textContent.includes('3회 재생 완료'), undefined, {timeout:30000});
+      try {
+        await page.waitForFunction(() => document.getElementById('ymMemoProgress').textContent.includes('3회 재생 완료'), undefined, {timeout:30000});
+      } catch (error) {
+        console.error('Replay failure: '+entry.word, await page.evaluate(() => ({progress:document.getElementById('ymMemoProgress')?.textContent,events:mediaEvents,calls:mediaPlayCalls,tts:ttsCalls})));
+        throw error;
+      }
       const events = await page.evaluate(() => mediaEvents);
       const calls = await page.evaluate(() => mediaPlayCalls);
       assert.equal(calls.length,3,entry.word);

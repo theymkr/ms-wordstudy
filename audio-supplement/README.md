@@ -1,5 +1,26 @@
 # Incremental US recordings
 
+## 2026-10-19 23:43 finite acquisition batch
+
+Ten exact Commons originals (bedside through Mars, word numbers 751–973)
+were downloaded once, matched against fresh source SHA-1 and size, and fully
+decoded. Four (unlike, sentence, schedule, however) passed independent,
+unprompted tiny.en/base.en identity checks, native-English recorder provenance,
+file-specific US designation and license/POS review. Local and production media
+verification are recorded separately in `verification/2026-10-19T2343-*.json`.
+Use the latest run for current totals and deployment status.
+
+Do not re-download these ten saved originals. Bedside, theater, wink, stormy and
+pilot remain pending due to the recorder's accent warning; Mars remains pending
+because independent lexical recognizers disagreed (Lars/Mars). This is not a
+claim the source is wrong. ASR does not classify dialect or replace a human
+listening claim. Four previously unresolved clips remain pending too.
+
+Continue the next finite source-supported batch at cage (994), assume (1007),
+curse (1008), model (1020), trifle (1024), inflict (1025), prophecy (1041),
+talent (1055), dismiss (1062), reckon (1063), preserving older unresolved work
+and host cooldowns. Do not touch user accounts, scores or word lists.
+
 `build.js` first extracts the seven original archive parts. The existing final
 `scripts/mobile-menu-build.cjs` stage calls a separate audio overlay, which
 then copies `files/` into `public/audio-pilot/`, extends the original immutable app

@@ -1,0 +1,103 @@
+{
+  "models": {
+    "tiny.en": [
+      {
+        "word": "bedside",
+        "transcript": "bedside."
+      },
+      {
+        "word": "unlike",
+        "transcript": "Unlike."
+      },
+      {
+        "word": "theater",
+        "transcript": "detail"
+      },
+      {
+        "word": "sentence",
+        "transcript": "sentence."
+      },
+      {
+        "word": "schedule",
+        "transcript": "Schedule."
+      },
+      {
+        "word": "wink",
+        "transcript": "wink"
+      },
+      {
+        "word": "stormy",
+        "transcript": "Stoy me"
+      },
+      {
+        "word": "however",
+        "transcript": "However."
+      },
+      {
+        "word": "pilot",
+        "transcript": "pilot"
+      },
+      {
+        "word": "mars",
+        "transcript": "Lars."
+      }
+    ],
+    "base.en": [
+      {
+        "word": "bedside",
+        "transcript": "bedside."
+      },
+      {
+        "word": "unlike",
+        "transcript": "Unlike"
+      },
+      {
+        "word": "theater",
+        "transcript": "Later!"
+      },
+      {
+        "word": "sentence",
+        "transcript": "Sentence."
+      },
+      {
+        "word": "schedule",
+        "transcript": "Schedule."
+      },
+      {
+        "word": "wink",
+        "transcript": "Wink"
+      },
+      {
+        "word": "stormy",
+        "transcript": "Stormy."
+      },
+      {
+        "word": "however",
+        "transcript": "However,"
+      },
+      {
+        "word": "pilot",
+        "transcript": "Pilot."
+      },
+      {
+        "word": "mars",
+        "transcript": "Mars"
+      }
+    ]
+  },
+  "limits": "Unprompted lexical recognition only; US dialect supported by exact file descriptions and audited native speakers, not ASR. No human listening claim.",
+  "approvedWords": [
+    "unlike",
+    "sentence",
+    "schedule",
+    "however"
+  ],
+  "notApproved": {
+    "bedside": "Recorder accent warning: actual accent review required.",
+    "theater": "Recorder accent warning: actual accent review required.",
+    "wink": "Recorder accent warning: actual accent review required.",
+    "stormy": "Recorder accent warning: actual accent review required.",
+    "pilot": "Recorder accent warning: actual accent review required.",
+    "mars": "Independent lexical recognizers did not both match exact word; retain pending."
+  }
+}

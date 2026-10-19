@@ -1,0 +1,460 @@
+{
+  "date": "2026-10-19T23:47:37.401075+09:00",
+  "baseMain": "132be2424b15aba84cd38425f10cba43180c4506",
+  "baseline": {
+    "total": 2956,
+    "mapped": 2332,
+    "remaining": 624,
+    "deployedWordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true
+  },
+  "batch": {
+    "size": 10,
+    "phase": "supported-originals-download-and-verification",
+    "firstNumber": 751,
+    "lastNumber": 973
+  },
+  "sourceReview": {
+    "freshMetadata": "audio-supplement/candidate-metadata-2026-10-19T2343.json",
+    "speech": "audio-supplement/verification/2026-10-19T2343-speech.json",
+    "nativeProvenanceAudit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+    "noHumanListeningClaim": true
+  },
+  "sourceFailures": [
+    {
+      "source": "https://upload.wikimedia.org",
+      "status": 429,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": true,
+      "policy": "Cooldown elapsed; exact original requests succeeded. No alternate hosts or query evasion. Future 429 stops entire host.",
+      "resolvedThisRun": true,
+      "currentStatus": 200,
+      "successfulOriginalDownloads": 10
+    },
+    {
+      "source": "https://en.wiktionary.org/w/api.php",
+      "status": 403,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Do not retry blocked API endpoint."
+    },
+    {
+      "source": "https://dictionary.cambridge.org",
+      "status": 403,
+      "observedInRun": "2026-10-18T2238.json",
+      "paths": [
+        "/dictionary/english/summons",
+        "/dictionary/english/multiply"
+      ],
+      "retriedThisRun": false,
+      "policy": "Blocked direct pages not retried."
+    },
+    {
+      "source": "https://lingualibre.org/wiki/Q532035",
+      "resolvedUrl": "https://archive.lingualibre.org/wiki/Q532035",
+      "status": 500,
+      "retriedThisRun": false,
+      "policy": "Profile unavailable through retrieval tool; do not immediately repeat. English/CC0 does not establish US dialect."
+    },
+    {
+      "source": "https://www.festvox.org/cmu_arctic/",
+      "status": 502,
+      "observedInRun": "2026-10-19T0335.json",
+      "retriedThisRun": false,
+      "retryNotBefore": "2026-10-20T03:35:11+09:00",
+      "policy": "One curl check after web timeout; stop for this run. Retry only after stated time. No media acquired."
+    },
+    {
+      "source": "https://www.youtube.com/watch?v=enJxEQrNXPk",
+      "status": "web_retrieval_disabled",
+      "observedInRun": "2026-10-19T0538.json",
+      "retriedThisRun": false,
+      "policy": "No bypass or alternate video extraction; astray rights provenance unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/undergo",
+      "status": "web_internal_error",
+      "observedInRun": "2026-10-19T0936.json",
+      "retriedThisRun": false,
+      "policy": "No immediate repeat; candidate dialect remains unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/blank",
+      "status": "web_internal_error",
+      "observedInRun": "2026-10-19T1037.json",
+      "retriedThisRun": false,
+      "policy": "No immediate repeat; dialect unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/rose",
+      "status": "web_file_link_resolution_error",
+      "observedInRun": "2026-10-19T1037.json",
+      "retriedThisRun": false,
+      "attempts": 2,
+      "policy": "Page readable but US file-link clicks failed even after refreshing page. Stop repeating clicks; exact file identity remains unresolved."
+    },
+    {
+      "source": "Commons profile web renderer",
+      "status": "web_internal_error",
+      "paths": [
+        "User:Sylvanmoon",
+        "User:TheDaveRoss",
+        "User:Montgolfière",
+        "File:En-us-twin.ogg"
+      ],
+      "resolution": "One bounded public metadata API query succeeded; no media or access-control bypass.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org",
+      "status": "web_internal_error",
+      "paths": [
+        "/wiki/User:TheDaveRoss",
+        "/wiki/User:Sylvanmoon"
+      ],
+      "policy": "No immediate repeat; native-speaker provenance unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wikipedia.org/wiki/User:Montgolfière",
+      "status": "web_retrieval_disabled",
+      "policy": "No bypass; native-speaker provenance unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Mikemoral",
+      "status": "web_internal_error",
+      "resolution": "Public Commons metadata API identifies redirect; resolved profile read successfully.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:SneverdleSnavis",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is missing as well.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Whomping_Walrus",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons metadata API revision query succeeded.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-epidemic.ogg",
+      "status": "web_internal_error",
+      "resolution": "Same bounded metadata API query returned exact-file own-work/license/native-US evidence.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:LegionMammal978",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat. Native-speaker evidence remains unresolved; Commons profile also missing.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-amaze.ogg",
+      "status": "web_internal_error",
+      "resolution": "One bounded Commons metadata API revisions request succeeded.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Gbeebani",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; native language and recorder identity unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Ganj",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat or infer account equivalence.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:K_schadd",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:PyroGamer",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Mountainmage",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-reproduce.ogg",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons revision query succeeded; no media requests or access-control bypass.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Simplificationalizer",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons revision query succeeded; no media requests or access-control bypass.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Simplificationalizer",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat. Commons profile provides native-English evidence, but dialect remains file-specific.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "Commons web profile renderer",
+      "paths": [
+        "User:Xnux",
+        "User:Neoglitch"
+      ],
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons revision query succeeded.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wikipedia.org/wiki/User:Xnux",
+      "status": "web_retrieval_disabled",
+      "policy": "No bypass or immediate repeat.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Spacecat2",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Neoglitch",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://www.oxfordlearnersdictionaries.com/definition/american_english/burnt",
+      "status": "web_internal_error",
+      "resolution": "Parent burn entry provides verb-form reference; failed burnt URL not repeated.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-funeral.ogg",
+      "status": "web_internal_error",
+      "resolution": "Fresh bounded Commons imageinfo metadata API succeeded. Binary download separately succeeded and matched source SHA-1; no access bypass.",
+      "retriedThisRun": false
+    }
+  ],
+  "next": {
+    "afterWordNumber": 973,
+    "nextWordNumber": 994,
+    "batchSize": 10,
+    "phase": "continue-supported-downloads-and-verify-pending",
+    "initialMissingScanComplete": true,
+    "downloadHostCooldownUntil": null,
+    "instructions": "Recompute fresh main/live data. This finite batch downloaded 10 exact Commons originals, five Neskaya clips held for accent review regardless of ASR. Continue supported candidates after Mars 973. Do not re-download any saved originals. Preserve prior unresolved statue/trousers/pulse/outline and all source cooldowns. Use official cached Chrome and cached tiny.en/base.en. Authorized elevated execution restores ordinary network/socket access; no access-control bypass.",
+    "secondPassReviewed": 298,
+    "deferredHostProvenanceScanComplete": true,
+    "initialRateLimitedProvenanceScanComplete": true,
+    "initialRateLimitedProvenanceReviewed": 8,
+    "pendingPlaybackWords": [
+      "statue",
+      "trousers",
+      "pulse",
+      "outline"
+    ],
+    "pendingReviewWords": [
+      "statue",
+      "trousers",
+      "pulse",
+      "outline",
+      "bedside",
+      "theater",
+      "wink",
+      "stormy",
+      "pilot",
+      "mars"
+    ]
+  },
+  "processed": [
+    {
+      "number": 751,
+      "word": "bedside",
+      "status": "downloaded_pending_content_or_accent_review",
+      "reason": "Recorder accent warning: actual accent review required.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-bedside.ogg"
+      ],
+      "downloaded": true,
+      "decoded": true,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
+      "pendingOriginal": "audio-supplement/pending-originals/bedside.ogg"
+    },
+    {
+      "number": 769,
+      "word": "unlike",
+      "status": "local_app_verified_pending_production",
+      "reason": "Source, native-US provenance, license, SHA and two independent exact-word checks passed; app playback pending.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-unlike.ogg"
+      ],
+      "downloaded": true,
+      "decoded": true,
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
+      "pendingOriginal": "audio-supplement/pending-originals/unlike.ogg"
+    },
+    {
+      "number": 784,
+      "word": "theater",
+      "status": "downloaded_pending_content_or_accent_review",
+      "reason": "Recorder accent warning: actual accent review required.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-theater.ogg"
+      ],
+      "downloaded": true,
+      "decoded": true,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
+      "pendingOriginal": "audio-supplement/pending-originals/theater.ogg"
+    },
+    {
+      "number": 799,
+      "word": "sentence",
+      "status": "local_app_verified_pending_production",
+      "reason": "Source, native-US provenance, license, SHA and two independent exact-word checks passed; app playback pending.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-sentence.ogg"
+      ],
+      "downloaded": true,
+      "decoded": true,
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "recorder": "EncycloPetey",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
+      "pendingOriginal": "audio-supplement/pending-originals/sentence.ogg"
+    },
+    {
+      "number": 809,
+      "word": "schedule",
+      "status": "local_app_verified_pending_production",
+      "reason": "Source, native-US provenance, license, SHA and two independent exact-word checks passed; app playback pending.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-schedule.ogg"
+      ],
+      "downloaded": true,
+      "decoded": true,
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
+      "pendingOriginal": "audio-supplement/pending-originals/schedule.ogg"
+    },
+    {
+      "number": 814,
+      "word": "wink",
+      "status": "downloaded_pending_content_or_accent_review",
+      "reason": "Recorder accent warning: actual accent review required.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-wink.ogg"
+      ],
+      "downloaded": true,
+      "decoded": true,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
+      "pendingOriginal": "audio-supplement/pending-originals/wink.ogg"
+    },
+    {
+      "number": 872,
+      "word": "stormy",
+      "status": "downloaded_pending_content_or_accent_review",
+      "reason": "Recorder accent warning: actual accent review required.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-stormy.ogg"
+      ],
+      "downloaded": true,
+      "decoded": true,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
+      "pendingOriginal": "audio-supplement/pending-originals/stormy.ogg"
+    },
+    {
+      "number": 876,
+      "word": "however",
+      "status": "local_app_verified_pending_production",
+      "reason": "Source, native-US provenance, license, SHA and two independent exact-word checks passed; app playback pending.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-however.ogg"
+      ],
+      "downloaded": true,
+      "decoded": true,
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
+      "pendingOriginal": "audio-supplement/pending-originals/however.ogg"
+    },
+    {
+      "number": 954,
+      "word": "pilot",
+      "status": "downloaded_pending_content_or_accent_review",
+      "reason": "Recorder accent warning: actual accent review required.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-pilot.ogg"
+      ],
+      "downloaded": true,
+      "decoded": true,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
+      "pendingOriginal": "audio-supplement/pending-originals/pilot.ogg"
+    },
+    {
+      "number": 973,
+      "word": "Mars",
+      "status": "downloaded_pending_content_or_accent_review",
+      "reason": "Independent lexical recognizers did not both match exact word; retain pending.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-Mars.ogg"
+      ],
+      "downloaded": true,
+      "decoded": true,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "EncycloPetey",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2343.json",
+      "pendingOriginal": "audio-supplement/pending-originals/mars.ogg"
+    }
+  ],
+  "result": {
+    "additionalDownloaded": 10,
+    "additionalLocalAppPlaybackVerified": 4,
+    "additionalProductionPlaybackVerified": 0,
+    "additionalAcquiredVerified": 0,
+    "candidateAdditions": 4,
+    "totalMappedAfterBuild": 2336,
+    "remainingAfterBuild": 620,
+    "pendingDownloadedUnmapped": 10,
+    "productionVerification": "Pending actual app replay and deployment."
+  },
+  "validation": {
+    "baselineLiveWordListAndMappingEqual": true,
+    "personalDataWrites": false,
+    "build": "passed",
+    "localAppPlayback": "audio-supplement/verification/2026-10-19T2343-local-playback.json",
+    "ttsFallback": false
+  }
+}
