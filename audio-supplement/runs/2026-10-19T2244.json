@@ -1,0 +1,661 @@
+{
+  "date": "2026-10-19T22:44:18+09:00",
+  "baseMain": "b0ca5a595345851f5139835793d3d29ad14acd20",
+  "baseline": {
+    "total": 2956,
+    "mapped": 2319,
+    "remaining": 637,
+    "deployedWordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true
+  },
+  "batch": {
+    "size": 17,
+    "phase": "verify-saved-originals",
+    "firstNumber": 386,
+    "lastNumber": 712,
+    "noMediaRedownloads": true
+  },
+  "sourceReview": {
+    "freshMetadata": "audio-supplement/candidate-metadata-2026-10-19T2244.json",
+    "sourceSha1AndSizeMatched": 13,
+    "speech": "audio-supplement/verification/2026-10-19T2244-speech.json",
+    "method": "Independent unprompted tiny.en and base.en word identity checks. No word prompts/lexicons or forced output. US/native evidence is source-specific and separately audited; no human listening claim. Four disputed/accent-warning clips remain unmapped."
+  },
+  "sourceFailures": [
+    {
+      "source": "https://upload.wikimedia.org",
+      "status": 429,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": true,
+      "policy": "Cooldown elapsed; exact original requests succeeded. No alternate hosts or query evasion. Future 429 stops entire host.",
+      "resolvedThisRun": true,
+      "currentStatus": 200,
+      "successfulOriginalDownloads": 10
+    },
+    {
+      "source": "https://en.wiktionary.org/w/api.php",
+      "status": 403,
+      "observedInRun": "2026-10-18.json",
+      "retriedThisRun": false,
+      "policy": "Do not retry blocked API endpoint."
+    },
+    {
+      "source": "https://dictionary.cambridge.org",
+      "status": 403,
+      "observedInRun": "2026-10-18T2238.json",
+      "paths": [
+        "/dictionary/english/summons",
+        "/dictionary/english/multiply"
+      ],
+      "retriedThisRun": false,
+      "policy": "Blocked direct pages not retried."
+    },
+    {
+      "source": "https://lingualibre.org/wiki/Q532035",
+      "resolvedUrl": "https://archive.lingualibre.org/wiki/Q532035",
+      "status": 500,
+      "retriedThisRun": false,
+      "policy": "Profile unavailable through retrieval tool; do not immediately repeat. English/CC0 does not establish US dialect."
+    },
+    {
+      "source": "https://www.festvox.org/cmu_arctic/",
+      "status": 502,
+      "observedInRun": "2026-10-19T0335.json",
+      "retriedThisRun": false,
+      "retryNotBefore": "2026-10-20T03:35:11+09:00",
+      "policy": "One curl check after web timeout; stop for this run. Retry only after stated time. No media acquired."
+    },
+    {
+      "source": "https://www.youtube.com/watch?v=enJxEQrNXPk",
+      "status": "web_retrieval_disabled",
+      "observedInRun": "2026-10-19T0538.json",
+      "retriedThisRun": false,
+      "policy": "No bypass or alternate video extraction; astray rights provenance unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/undergo",
+      "status": "web_internal_error",
+      "observedInRun": "2026-10-19T0936.json",
+      "retriedThisRun": false,
+      "policy": "No immediate repeat; candidate dialect remains unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/blank",
+      "status": "web_internal_error",
+      "observedInRun": "2026-10-19T1037.json",
+      "retriedThisRun": false,
+      "policy": "No immediate repeat; dialect unresolved."
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/rose",
+      "status": "web_file_link_resolution_error",
+      "observedInRun": "2026-10-19T1037.json",
+      "retriedThisRun": false,
+      "attempts": 2,
+      "policy": "Page readable but US file-link clicks failed even after refreshing page. Stop repeating clicks; exact file identity remains unresolved."
+    },
+    {
+      "source": "Commons profile web renderer",
+      "status": "web_internal_error",
+      "paths": [
+        "User:Sylvanmoon",
+        "User:TheDaveRoss",
+        "User:Montgolfière",
+        "File:En-us-twin.ogg"
+      ],
+      "resolution": "One bounded public metadata API query succeeded; no media or access-control bypass.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org",
+      "status": "web_internal_error",
+      "paths": [
+        "/wiki/User:TheDaveRoss",
+        "/wiki/User:Sylvanmoon"
+      ],
+      "policy": "No immediate repeat; native-speaker provenance unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wikipedia.org/wiki/User:Montgolfière",
+      "status": "web_retrieval_disabled",
+      "policy": "No bypass; native-speaker provenance unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Mikemoral",
+      "status": "web_internal_error",
+      "resolution": "Public Commons metadata API identifies redirect; resolved profile read successfully.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:SneverdleSnavis",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is missing as well.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Whomping_Walrus",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons metadata API revision query succeeded.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-epidemic.ogg",
+      "status": "web_internal_error",
+      "resolution": "Same bounded metadata API query returned exact-file own-work/license/native-US evidence.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:LegionMammal978",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat. Native-speaker evidence remains unresolved; Commons profile also missing.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-amaze.ogg",
+      "status": "web_internal_error",
+      "resolution": "One bounded Commons metadata API revisions request succeeded.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Gbeebani",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; native language and recorder identity unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Ganj",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat or infer account equivalence.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:K_schadd",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:PyroGamer",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Mountainmage",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; Commons profile is also missing. Native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-reproduce.ogg",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons revision query succeeded; no media requests or access-control bypass.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/User:Simplificationalizer",
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons revision query succeeded; no media requests or access-control bypass.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Simplificationalizer",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat. Commons profile provides native-English evidence, but dialect remains file-specific.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "Commons web profile renderer",
+      "paths": [
+        "User:Xnux",
+        "User:Neoglitch"
+      ],
+      "status": "web_internal_error",
+      "resolution": "One bounded public Commons revision query succeeded.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wikipedia.org/wiki/User:Xnux",
+      "status": "web_retrieval_disabled",
+      "policy": "No bypass or immediate repeat.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Spacecat2",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://en.wiktionary.org/wiki/User:Neoglitch",
+      "status": "web_internal_error",
+      "policy": "Do not immediately repeat; native-speaker evidence unresolved.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://www.oxfordlearnersdictionaries.com/definition/american_english/burnt",
+      "status": "web_internal_error",
+      "resolution": "Parent burn entry provides verb-form reference; failed burnt URL not repeated.",
+      "retriedThisRun": false
+    },
+    {
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-funeral.ogg",
+      "status": "web_internal_error",
+      "resolution": "Fresh bounded Commons imageinfo metadata API succeeded. Binary download separately succeeded and matched source SHA-1; no access bypass.",
+      "retriedThisRun": false
+    }
+  ],
+  "next": {
+    "afterWordNumber": 712,
+    "nextWordNumber": 751,
+    "batchSize": 10,
+    "phase": "continue-supported-downloads-and-verify-pending",
+    "initialMissingScanComplete": true,
+    "downloadHostCooldownUntil": null,
+    "instructions": "Recompute fresh main/live lists and mapping. This run completes 13 of the 17 saved originals after independent unprompted tiny.en/base.en exact-word checks, published native-US provenance, license and actual app replay. Four originals remain deliberately unapproved: statue/trousers need independent content review; pulse/outline need accent review because recorder warns about accent. Do not treat ASR as accent evidence or repeat the same failed tiny decoding. Next finite supported download batch remains bedside 751, unlike 769, theater 784, sentence 799, schedule 809, wink 814, stormy 872, however 876, pilot 954, Mars 973. Browser environment recovered using official Google Chrome package, extracted to /tmp/ms-chrome; use CHROME_PATH=/tmp/ms-chrome/opt/google/chrome/chrome and authorized execution when normal network/socket permission fails. Bundled Playwright Chromium downloads returned truncated archives; do not repeat. Models cached in /tmp/ms-whisper-models; faster-whisper 1.2.1 installed only in /tmp/ms-audio-speech. ffmpeg f32le/16kHz/mono input avoids incompatible av metadata_errors argument. Neither models nor browser artifacts are committed.",
+    "secondPassReviewed": 298,
+    "deferredHostProvenanceScanComplete": true,
+    "initialRateLimitedProvenanceScanComplete": true,
+    "initialRateLimitedProvenanceReviewed": 8,
+    "pendingPlaybackWords": [
+      "statue",
+      "trousers",
+      "pulse",
+      "outline"
+    ],
+    "pendingReviewWords": [
+      "statue",
+      "trousers",
+      "pulse",
+      "outline"
+    ]
+  },
+  "result": {
+    "additionalDownloaded": 0,
+    "additionalLocalAppPlaybackVerified": 13,
+    "additionalProductionPlaybackVerified": 0,
+    "additionalAcquiredVerified": 13,
+    "totalMappedAfterBuild": 2332,
+    "remainingAfterBuild": 624,
+    "pendingDownloadedUnmapped": 4,
+    "productionVerification": "Pending deployment. Live baseline 2319/2956, remaining637 was verified before changes; only local acquisition/app replay passed so far."
+  },
+  "validation": {
+    "build": "passed",
+    "baselineLiveWordListAndMappingEqual": true,
+    "allMappedLocalFilesPresent": true,
+    "localAppPlayback": "audio-supplement/verification/2026-10-19T2244-local-playback.json",
+    "independentASRModels": [
+      "Systran/faster-whisper-tiny.en",
+      "Systran/faster-whisper-base.en"
+    ],
+    "ttsFallback": false,
+    "personalDataWrites": false,
+    "browserRecovery": "Official Chrome .deb successfully downloaded/extracted; previous missing executable/socket blocker is resolved with authorized execution. Installer CDN returned truncated archives, not repeated."
+  },
+  "processed": [
+    {
+      "number": 386,
+      "word": "funeral",
+      "downloaded": true,
+      "decoded": true,
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-funeral.ogg"
+      ],
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "status": "local_app_verified_pending_production",
+      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment."
+    },
+    {
+      "number": 402,
+      "word": "tomb",
+      "downloaded": true,
+      "decoded": true,
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-tomb.ogg"
+      ],
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "status": "local_app_verified_pending_production",
+      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment."
+    },
+    {
+      "number": 419,
+      "word": "dollar",
+      "downloaded": true,
+      "decoded": true,
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-dollar.ogg"
+      ],
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "status": "local_app_verified_pending_production",
+      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment."
+    },
+    {
+      "number": 451,
+      "word": "statue",
+      "downloaded": true,
+      "decoded": true,
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-statue.ogg"
+      ],
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "status": "downloaded_pending_content_or_accent_review",
+      "reason": "Tiny.en recognized statute, not exact statue. Keep pending; this is an ASR disagreement, not evidence the source is mislabeled."
+    },
+    {
+      "number": 470,
+      "word": "whisper",
+      "downloaded": true,
+      "decoded": true,
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-whisper.ogg"
+      ],
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "status": "local_app_verified_pending_production",
+      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment."
+    },
+    {
+      "number": 472,
+      "word": "explode",
+      "downloaded": true,
+      "decoded": true,
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-explode.ogg"
+      ],
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "status": "local_app_verified_pending_production",
+      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment."
+    },
+    {
+      "number": 478,
+      "word": "actually",
+      "downloaded": true,
+      "decoded": true,
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-actually.ogg"
+      ],
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "status": "local_app_verified_pending_production",
+      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment."
+    },
+    {
+      "number": 481,
+      "word": "joke",
+      "meaning": "n. 농담 / v. 농담을 하다",
+      "status": "local_app_verified_pending_production",
+      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-joke.ogg"
+      ],
+      "checkedTitle": "File:En-us-joke.ogg",
+      "downloaded": true,
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-1",
+        "recorder": "Dvortygirl",
+        "status": "provenance_supported_actual_audio_pending",
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18T2035.json",
+        "nativeEnglishEvidence": true
+      },
+      "decoded": true,
+      "pendingOriginal": "audio-supplement/pending-originals/joke.ogg",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2142.json"
+    },
+    {
+      "number": 488,
+      "word": "solution",
+      "meaning": "n. 해결책, 용매, 용액",
+      "status": "local_app_verified_pending_production",
+      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-solution.ogg"
+      ],
+      "checkedTitle": "File:En-us-solution.ogg",
+      "downloaded": true,
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-1",
+        "recorder": "Dvortygirl",
+        "status": "provenance_supported_actual_audio_pending",
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18T2035.json",
+        "nativeEnglishEvidence": true
+      },
+      "decoded": true,
+      "pendingOriginal": "audio-supplement/pending-originals/solution.ogg",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2142.json"
+    },
+    {
+      "number": 494,
+      "word": "pulse",
+      "meaning": "n. 맥박 / v. 맥박치다, 고동치다, 활기가 넘치다",
+      "status": "downloaded_pending_content_or_accent_review",
+      "reason": "Neskaya native/US provenance supported, but profile warns about nonstandard accent. Needs actual accent review; ASR alone insufficient.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-pulse.ogg"
+      ],
+      "checkedTitle": "File:En-us-pulse.ogg",
+      "downloaded": true,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-1",
+        "recorder": "Neskaya",
+        "status": "provenance_supported_actual_audio_pending",
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18T2035.json",
+        "nativeEnglishEvidence": true
+      },
+      "decoded": true,
+      "pendingOriginal": "audio-supplement/pending-originals/pulse.ogg",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2142.json"
+    },
+    {
+      "number": 513,
+      "word": "twin",
+      "meaning": "a. 한 쌍의 / n. 쌍둥이의 한 사람",
+      "status": "local_app_verified_pending_production",
+      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-twin.ogg"
+      ],
+      "checkedTitle": "File:En-us-twin.ogg",
+      "downloaded": true,
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "recorder": "DroEsperanto",
+      "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-1",
+        "recorder": "DroEsperanto",
+        "status": "provenance_supported_actual_audio_pending",
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18T2035.json",
+        "nativeEnglishEvidence": true
+      },
+      "decoded": true,
+      "pendingOriginal": "audio-supplement/pending-originals/twin.ogg",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2142.json"
+    },
+    {
+      "number": 527,
+      "word": "relative",
+      "meaning": "n. 친척 / a. 비교상의, 상대적인",
+      "status": "local_app_verified_pending_production",
+      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-relative.ogg"
+      ],
+      "checkedTitle": "File:En-us-relative.ogg",
+      "downloaded": true,
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-1",
+        "recorder": "Dvortygirl",
+        "status": "provenance_supported_actual_audio_pending",
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18T2035.json",
+        "nativeEnglishEvidence": true
+      },
+      "decoded": true,
+      "pendingOriginal": "audio-supplement/pending-originals/relative.ogg",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2142.json"
+    },
+    {
+      "number": 547,
+      "word": "outline",
+      "meaning": "n. 윤곽, 약도 / v. 윤곽을 그리다, 요약하다",
+      "status": "downloaded_pending_content_or_accent_review",
+      "reason": "Neskaya native/US provenance supported, but profile warns about nonstandard accent. Needs actual accent review; ASR alone insufficient.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-outline.ogg"
+      ],
+      "checkedTitle": "File:En-us-outline.ogg",
+      "downloaded": true,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Neskaya",
+      "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-1",
+        "recorder": "Neskaya",
+        "status": "provenance_supported_actual_audio_pending",
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18T2035.json",
+        "nativeEnglishEvidence": true
+      },
+      "decoded": true,
+      "pendingOriginal": "audio-supplement/pending-originals/outline.ogg",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2142.json"
+    },
+    {
+      "number": 638,
+      "word": "silly",
+      "meaning": "a. 어리석은",
+      "status": "local_app_verified_pending_production",
+      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-silly.ogg"
+      ],
+      "checkedTitle": "File:En-us-silly.ogg",
+      "downloaded": true,
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-1",
+        "recorder": "Dvortygirl",
+        "status": "provenance_supported_actual_audio_pending",
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18T2035.json",
+        "nativeEnglishEvidence": true
+      },
+      "decoded": true,
+      "pendingOriginal": "audio-supplement/pending-originals/silly.ogg",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2142.json"
+    },
+    {
+      "number": 648,
+      "word": "election",
+      "meaning": "n. 선거",
+      "status": "local_app_verified_pending_production",
+      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-election.ogg"
+      ],
+      "checkedTitle": "File:En-us-election.ogg",
+      "downloaded": true,
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-1",
+        "recorder": "Dvortygirl",
+        "status": "provenance_supported_actual_audio_pending",
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18T2035.json",
+        "nativeEnglishEvidence": true
+      },
+      "decoded": true,
+      "pendingOriginal": "audio-supplement/pending-originals/election.ogg",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2142.json"
+    },
+    {
+      "number": 657,
+      "word": "pet",
+      "meaning": "n. 애완동물",
+      "status": "local_app_verified_pending_production",
+      "reason": "Exact original hashes, two independent unprompted ASR matches, native-US provenance, license and sense/POS review, full decode and 3 app replays passed. Production verification follows deployment.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-pet.ogg"
+      ],
+      "checkedTitle": "File:En-us-pet.ogg",
+      "downloaded": true,
+      "localPlaybackVerified": true,
+      "productionPlaybackVerified": false,
+      "recorder": "EncycloPetey",
+      "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-1",
+        "recorder": "EncycloPetey",
+        "status": "provenance_supported_actual_audio_pending",
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18T2035.json",
+        "nativeEnglishEvidence": true
+      },
+      "decoded": true,
+      "pendingOriginal": "audio-supplement/pending-originals/pet.ogg",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2142.json"
+    },
+    {
+      "number": 712,
+      "word": "trousers",
+      "meaning": "n. 바지",
+      "status": "downloaded_pending_content_or_accent_review",
+      "reason": "Tiny.en recognized trowzers. Exact spelling criterion not satisfied; defer to a later independent content review.",
+      "candidatePages": [
+        "https://commons.wikimedia.org/wiki/File:En-us-trousers.ogg"
+      ],
+      "checkedTitle": "File:En-us-trousers.ogg",
+      "downloaded": true,
+      "localPlaybackVerified": false,
+      "productionPlaybackVerified": false,
+      "recorder": "Dvortygirl",
+      "previousReason": "Commons metadata indicates US pronunciation and free license. Not downloaded or played; respect existing upload host cooldown.",
+      "provenanceReview": {
+        "phase": "speaker-provenance-pass-1",
+        "recorder": "Dvortygirl",
+        "status": "provenance_supported_actual_audio_pending",
+        "audit": "audio-supplement/source-audits/speaker-provenance-2026-10-19T1141.json",
+        "metadataFile": "audio-supplement/candidate-metadata-2026-10-18T2035.json",
+        "nativeEnglishEvidence": true
+      },
+      "decoded": true,
+      "pendingOriginal": "audio-supplement/pending-originals/trousers.ogg",
+      "downloadRecord": "audio-supplement/pending-downloads-2026-10-19T2142.json"
+    }
+  ]
+}

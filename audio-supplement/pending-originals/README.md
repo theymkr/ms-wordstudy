@@ -38,3 +38,10 @@ Unchanged originals; still pending speech and app playback verification.
 Twin is released under PD-self by its recorder. The other nine files retain
 CC BY-SA 3.0, including attribution and source/license links. See the matching
 2142 metadata snapshot for original permission and attribution details.
+
+## Current approval status after 2026-10-19 verification
+
+Thirteen files also have approved, unchanged originals in `../originals/` and
+converted app copies; consult the current `../manifest.json` and latest run.
+The historical staging copies above remain for reproducibility. Only statue,
+trousers, pulse and outline are still unapproved. No human listening is claimed.

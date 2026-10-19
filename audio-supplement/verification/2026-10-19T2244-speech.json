@@ -1,0 +1,390 @@
+{
+  "tiny": {
+    "model": "Systran/faster-whisper-tiny.en",
+    "prompt": null,
+    "wordContext": null,
+    "records": [
+      {
+        "word": "funeral",
+        "transcript": "funeral",
+        "segments": [
+          {
+            "text": " funeral",
+            "logProb": -0.3277563974261284,
+            "noSpeechProb": 0.04961695149540901
+          }
+        ]
+      },
+      {
+        "word": "tomb",
+        "transcript": "Tomb",
+        "segments": [
+          {
+            "text": " Tomb",
+            "logProb": -0.5799491554498672,
+            "noSpeechProb": 0.06382191181182861
+          }
+        ]
+      },
+      {
+        "word": "dollar",
+        "transcript": "dollar",
+        "segments": [
+          {
+            "text": " dollar",
+            "logProb": -0.37073611468076706,
+            "noSpeechProb": 0.05588352307677269
+          }
+        ]
+      },
+      {
+        "word": "statue",
+        "transcript": "Statute",
+        "segments": [
+          {
+            "text": " Statute",
+            "logProb": -0.7712177276611328,
+            "noSpeechProb": 0.10109299421310425
+          }
+        ]
+      },
+      {
+        "word": "whisper",
+        "transcript": "Whisper",
+        "segments": [
+          {
+            "text": " Whisper",
+            "logProb": -0.5129264831542969,
+            "noSpeechProb": 0.10152313858270645
+          }
+        ]
+      },
+      {
+        "word": "explode",
+        "transcript": "Explode",
+        "segments": [
+          {
+            "text": " Explode",
+            "logProb": -0.3687125205993652,
+            "noSpeechProb": 0.05344435200095177
+          }
+        ]
+      },
+      {
+        "word": "actually",
+        "transcript": "Actually.",
+        "segments": [
+          {
+            "text": " Actually.",
+            "logProb": -0.8226081848144531,
+            "noSpeechProb": 0.03854933753609657
+          }
+        ]
+      },
+      {
+        "word": "joke",
+        "transcript": "joke",
+        "segments": [
+          {
+            "text": " joke",
+            "logProb": -0.48187829554080963,
+            "noSpeechProb": 0.15615805983543396
+          }
+        ]
+      },
+      {
+        "word": "solution",
+        "transcript": "Solution",
+        "segments": [
+          {
+            "text": " Solution",
+            "logProb": -0.5571938753128052,
+            "noSpeechProb": 0.14802220463752747
+          }
+        ]
+      },
+      {
+        "word": "pulse",
+        "transcript": "pulse",
+        "segments": [
+          {
+            "text": " pulse",
+            "logProb": -0.5695016384124756,
+            "noSpeechProb": 0.21517378091812134
+          }
+        ]
+      },
+      {
+        "word": "twin",
+        "transcript": "twin",
+        "segments": [
+          {
+            "text": " twin",
+            "logProb": -0.5258500725030899,
+            "noSpeechProb": 0.25448113679885864
+          }
+        ]
+      },
+      {
+        "word": "relative",
+        "transcript": "relative.",
+        "segments": [
+          {
+            "text": " relative.",
+            "logProb": -0.7346534729003906,
+            "noSpeechProb": 0.12167221307754517
+          }
+        ]
+      },
+      {
+        "word": "outline",
+        "transcript": "Outline.",
+        "segments": [
+          {
+            "text": " Outline.",
+            "logProb": -0.7994388043880463,
+            "noSpeechProb": 0.05386942997574806
+          }
+        ]
+      },
+      {
+        "word": "silly",
+        "transcript": "silly",
+        "segments": [
+          {
+            "text": " silly",
+            "logProb": -0.42330501973629,
+            "noSpeechProb": 0.12972842156887054
+          }
+        ]
+      },
+      {
+        "word": "election",
+        "transcript": "Election.",
+        "segments": [
+          {
+            "text": " Election.",
+            "logProb": -0.7740272521972656,
+            "noSpeechProb": 0.19254866242408752
+          }
+        ]
+      },
+      {
+        "word": "pet",
+        "transcript": "pet",
+        "segments": [
+          {
+            "text": " pet",
+            "logProb": -0.532045841217041,
+            "noSpeechProb": 0.26403355598449707
+          }
+        ]
+      },
+      {
+        "word": "trousers",
+        "transcript": "Trowzers.",
+        "segments": [
+          {
+            "text": " Trowzers.",
+            "logProb": -0.9416050570351737,
+            "noSpeechProb": 0.04946111887693405
+          }
+        ]
+      }
+    ]
+  },
+  "base": {
+    "model": "Systran/faster-whisper-base.en",
+    "prompt": null,
+    "wordContext": null,
+    "records": [
+      {
+        "word": "funeral",
+        "transcript": "funeral",
+        "segments": [
+          {
+            "text": " funeral",
+            "logProb": -0.35727766156196594,
+            "noSpeechProb": 0.017635252326726913
+          }
+        ]
+      },
+      {
+        "word": "tomb",
+        "transcript": "Tomb",
+        "segments": [
+          {
+            "text": " Tomb",
+            "logProb": -0.2801731824874878,
+            "noSpeechProb": 0.043728627264499664
+          }
+        ]
+      },
+      {
+        "word": "dollar",
+        "transcript": "dollar",
+        "segments": [
+          {
+            "text": " dollar",
+            "logProb": -0.47119201719760895,
+            "noSpeechProb": 0.024348650127649307
+          }
+        ]
+      },
+      {
+        "word": "whisper",
+        "transcript": "Whisper",
+        "segments": [
+          {
+            "text": " Whisper",
+            "logProb": -0.3898712158203125,
+            "noSpeechProb": 0.02330959215760231
+          }
+        ]
+      },
+      {
+        "word": "explode",
+        "transcript": "Explode!",
+        "segments": [
+          {
+            "text": " Explode!",
+            "logProb": -0.6864000856876373,
+            "noSpeechProb": 0.0187198668718338
+          }
+        ]
+      },
+      {
+        "word": "actually",
+        "transcript": "Actually",
+        "segments": [
+          {
+            "text": " Actually",
+            "logProb": -0.6042100936174393,
+            "noSpeechProb": 0.008802074939012527
+          }
+        ]
+      },
+      {
+        "word": "joke",
+        "transcript": "joke",
+        "segments": [
+          {
+            "text": " joke",
+            "logProb": -0.30180003494024277,
+            "noSpeechProb": 0.030848104506731033
+          }
+        ]
+      },
+      {
+        "word": "solution",
+        "transcript": "Solution",
+        "segments": [
+          {
+            "text": " Solution",
+            "logProb": -0.872284322977066,
+            "noSpeechProb": 0.019483229145407677
+          }
+        ]
+      },
+      {
+        "word": "twin",
+        "transcript": "twin",
+        "segments": [
+          {
+            "text": " twin",
+            "logProb": -0.7526327669620514,
+            "noSpeechProb": 0.037903793156147
+          }
+        ]
+      },
+      {
+        "word": "relative",
+        "transcript": "Relative",
+        "segments": [
+          {
+            "text": " Relative",
+            "logProb": -0.7502516806125641,
+            "noSpeechProb": 0.008102276362478733
+          }
+        ]
+      },
+      {
+        "word": "silly",
+        "transcript": "Silly",
+        "segments": [
+          {
+            "text": " Silly",
+            "logProb": -0.21149742603302002,
+            "noSpeechProb": 0.023661436513066292
+          }
+        ]
+      },
+      {
+        "word": "election",
+        "transcript": "Election.",
+        "segments": [
+          {
+            "text": " Election.",
+            "logProb": -0.766231107711792,
+            "noSpeechProb": 0.019969714805483818
+          }
+        ]
+      },
+      {
+        "word": "pet",
+        "transcript": "Pet.",
+        "segments": [
+          {
+            "text": " Pet.",
+            "logProb": -0.8577471733093261,
+            "noSpeechProb": 0.09726611524820328
+          }
+        ]
+      }
+    ]
+  },
+  "approvedWords": [
+    "actually",
+    "dollar",
+    "election",
+    "explode",
+    "funeral",
+    "joke",
+    "pet",
+    "relative",
+    "silly",
+    "solution",
+    "tomb",
+    "twin",
+    "whisper"
+  ],
+  "notApproved": {
+    "statue": "tiny.en recognized statute; unresolved identity, not a conclusion that source is wrong.",
+    "trousers": "tiny.en recognized trowzers; exact-spelling criterion not met.",
+    "pulse": "Recorder warns about nonstandard accent; requires actual phonetic/accent review.",
+    "outline": "Recorder warns about nonstandard accent; requires actual phonetic/accent review."
+  },
+  "limits": "Machine lexical cross-check, not human listening or independent accent assessment. US/native provenance comes from source attribution and public speaker statements.",
+  "reproduction": {
+    "engine": "faster-whisper 1.2.1",
+    "compute": "CPU int8",
+    "decoding": {
+      "beam_size": 5,
+      "language": "en",
+      "temperature": 0,
+      "vad_filter": false,
+      "condition_on_previous_text": false,
+      "initial_prompt": null,
+      "hotwords": null
+    },
+    "waveformInput": "ffmpeg -v error -i ORIGINAL -f f32le -ar 16000 -ac 1 -; numpy float32, supplied directly to transcribe",
+    "modelRevisions": {
+      "tiny.en": [
+        "0d3d19a32d3338f10357c0889762bd8d64bbdeba"
+      ],
+      "base.en": [
+        "3d3d5dee26484f91867d81cb899cfcf72b96be6c"
+      ]
+    }
+  }
+}

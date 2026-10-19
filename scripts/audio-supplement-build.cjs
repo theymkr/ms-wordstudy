@@ -51,7 +51,7 @@ module.exports = function applyAudioSupplement(page, root) {
     .replace('전체 범위에 확보된 ' + fmt(baselineCount) + '개 음원을 적용했습니다.', '전체 범위에 확보된 ' + fmt(count) + '개 음원을 적용했습니다.')
     .replace('640개는 미확보이며 photographer도 포함됩니다.', remaining.length + '개는 미확보이며 photographer도 포함됩니다.');
   sources = sources.replace('| 원출처 |', '아래 표는 원본 아카이브 2,316개의 구성입니다. 추가 확보분은 아래 날짜별 기록과 최신 manifest.json을 참고하세요.\n\n| 원출처 |');
-  sources += '\n## 2026-10-18 추가 확보\n\n' + additions.length + '개 추가: ' + additions.map(item => item.word).join(', ') + '. 원본 Ogg와 SHA-256, 파일별 미국식 근거·라이선스·다운로드 및 재생 검증은 저장소 audio-supplement에 보존했습니다. 앱용 MP3로 형식만 변환했으며 원 라이선스를 유지합니다. 현재 manifest.json이 최신 확보 목록입니다. collection-progress.json에 처리 범위와 보류 사유를 기록했습니다.\n';
+  sources += '\n## 추가 확보 (파일별 검증일은 manifest.json 참조)\n\n' + additions.length + '개 추가: ' + additions.map(item => item.word).join(', ') + '. 원본 Ogg와 SHA-256, 파일별 미국식 근거·라이선스·다운로드 및 재생 검증은 저장소 audio-supplement에 보존했습니다. 앱용 MP3로 형식만 변환했으며 원 라이선스를 유지합니다. 현재 manifest.json이 최신 확보 목록입니다. collection-progress.json에 처리 범위와 보류 사유를 기록했습니다.\n';
   fs.writeFileSync(path.join(target, 'SOURCES-KO.md'), sources);
   const csv = value => '"' + String(value).replaceAll('"', '""') + '"';
   const located = JSON.parse(fs.readFileSync(path.join(target, 'located-audio.json'), 'utf8'));

@@ -234,3 +234,26 @@ share initial stress; trousers must remain the exact plural form. No speech
 listening or app playback claim, no new mapping: 2,319 mapped, 637 remaining.
 See latest run for next batch (bedside 751 onward); do not re-download pending
 originals or repeat known browser permission/executable failures.
+
+## 2026-10-19 verified saved originals
+
+Thirteen previously downloaded originals now pass two independent, unprompted
+word-recognition checks, source-specific native-US provenance, license and
+app sense/POS review, full decode, and real memorization-screen replay (three
+play calls and three ends per word, no TTS or account/score requests).
+Local mapping is 2,332/2,956, remaining 624. Production evidence is recorded
+separately after deployment. See `verification/2026-10-19T2244-*.json`.
+
+ASR confirms lexical identity; it does not classify accent or substitute for a
+human listening claim. Statue/trousers remain unresolved content checks, and
+pulse/outline require accent review because the recorder warns about accent.
+Native-US evidence for approved clips comes from exact-file descriptions and
+public recorder statements, with original attribution and CC BY-SA/PD retained.
+Historical staging copies remain in pending-originals to preserve old hash records;
+current manifest and latest run determine approval, not the staging folder name.
+
+Browser playback verification was recovered using the official Google Chrome
+package extracted into `/tmp/ms-chrome`, with authorized execution. Playwright
+CDN installers returned truncated archives. The test now distinguishes buffering
+resume events from three independent complete `play()` calls; every attempt
+must start and end, with no fourth call or TTS fallback.

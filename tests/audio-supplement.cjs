@@ -29,12 +29,14 @@ const html = fs.readFileSync(process.env.AUDIO_HTML_PATH || 'public/index.html',
       // Disable network APIs used for account/scoring; leave browser media untouched.
       window.fetch = async () => ({ok:false,json:async()=>({})});
       window.alert = () => {};
-      window.mediaEvents = []; window.ttsCalls = 0;
+      window.mediaEvents = []; window.mediaPlayCalls = []; window.ttsCalls = 0;
       const originalPlay = HTMLMediaElement.prototype.play;
       HTMLMediaElement.prototype.play = function () {
+        this.dataset.playAttempt = String(Number(this.dataset.playAttempt || 0) + 1);
+        mediaPlayCalls.push({attempt:this.dataset.playAttempt,src:this.src});
         if (!this.dataset.observed) {
           this.dataset.observed = 'true';
-          for (const type of ['playing','ended','error']) this.addEventListener(type, () => mediaEvents.push({type,src:this.currentSrc,error:this.error?.code || null,duration:this.duration}));
+          for (const type of ['playing','ended','error']) this.addEventListener(type, () => mediaEvents.push({type,attempt:this.dataset.playAttempt,src:this.currentSrc,error:this.error?.code || null,duration:this.duration}));
         }
         return originalPlay.apply(this,arguments);
       };
@@ -55,14 +57,22 @@ const html = fs.readFileSync(process.env.AUDIO_HTML_PATH || 'public/index.html',
     const before = await page.evaluate(() => ({count:pronunciationCount,records:JSON.stringify(records)}));
     const results = [];
     for (const entry of entries) {
-      await page.evaluate(() => {window.mediaEvents=[];});
+      await page.evaluate(() => {window.mediaEvents=[];window.mediaPlayCalls=[];});
       await page.locator('.ym-memo-word').filter({has:page.locator('strong',{hasText:new RegExp('^'+entry.word+'$')})}).click();
       await page.waitForFunction(() => document.getElementById('ymMemoProgress').textContent.includes('3회 재생 완료'), undefined, {timeout:30000});
       const events = await page.evaluate(() => mediaEvents);
-      assert.equal(events.filter(event=>event.type==='playing').length,3,entry.word);
+      const calls = await page.evaluate(() => mediaPlayCalls);
+      assert.equal(calls.length,3,entry.word);
+      assert(calls.every(call=>call.src.endsWith('/'+entry.file)),entry.word);
       assert.equal(events.filter(event=>event.type==='ended').length,3,entry.word);
+      // Buffering may emit playing again within one play() attempt. Verify three
+      // complete attempts rather than mistaking resume events for extra replays.
+      for (const call of calls) {
+        assert(events.some(event=>event.attempt===call.attempt && event.type==='playing'),entry.word);
+        assert.equal(events.filter(event=>event.attempt===call.attempt && event.type==='ended').length,1,entry.word);
+      }
       assert(events.every(event=>event.src.endsWith('/'+entry.file) && !event.error),entry.word);
-      results.push({word:entry.word,file:entry.file,playing:3,ended:3,ttsFallback:false,events});
+      results.push({word:entry.word,file:entry.file,playCalls:3,playing:events.filter(event=>event.type==='playing').length,ended:3,ttsFallback:false,events});
     }
     assert.equal(await page.evaluate(()=>ttsCalls),0);
     assert.deepEqual(await page.evaluate(() => ({count:pronunciationCount,records:JSON.stringify(records)})),before);
