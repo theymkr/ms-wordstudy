@@ -58,6 +58,10 @@
     }
     const study = panels.study, review = panels.study, settings = panels.settings;
     const fields = c.querySelector('.range-fields');
+    // Keep the original selector and its listeners available in every tab,
+    // including settings where edit/delete act on the selected book.
+    const bookField = byId('ymBookSelect').closest('label');
+    bookField.id = 'ymMenuBook';
     const intro = fields?.previousElementSibling;
     if (intro?.classList.contains('hint')) intro.hidden = true;
     const sources = c.querySelector('.pronunciation-source-buttons');
@@ -96,7 +100,7 @@
       rules.before(details); details.append(title,rules);
     }
     if (speedHelp.children.length) settings.append(speedHelp);
-    c.append(header,nav,panels.memorize,study,settings);
+    c.append(header,bookField,nav,panels.memorize,study,settings);
     selectTab('memorize'); refreshSummary();
   }
   const previousMenu = menu;

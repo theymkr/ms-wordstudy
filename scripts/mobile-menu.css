@@ -18,6 +18,8 @@
   #ymMenuTabs button[aria-selected="true"] {color:#fff;background:#2c67bf}
   #ymMenuTabs button:focus-visible {outline:3px solid #9dd0ff;outline-offset:1px}
   .ym-menu-panel {min-height:0;min-width:0;overflow-y:auto;overflow-x:hidden;flex:1;overscroll-behavior:contain;padding:2px}
+  #ymMenuBook {display:block;flex:none;margin:0}
+  #ymMenuBook select {display:block;box-sizing:border-box;width:100%}
   .quiz-container:has(#ymMenuTabs) .range-fields {grid-template-columns:minmax(0,1fr);gap:10px;margin:0}
   .quiz-container:has(#ymMenuTabs) .mode-field {font-size:13px;color:#bac5d3;min-width:0}
   .quiz-container:has(#ymMenuTabs) .mode-field select {font-size:16px;min-height:44px;margin-top:4px;padding:8px 10px;max-width:100%}
@@ -46,7 +48,7 @@
   #ymPanel-settings .pronunciation-speed-scale {display:none}
   @media(min-width:600px) {
     .quiz-container:has(#ymMenuTabs) {padding:20px!important}
-    .quiz-container:has(#ymMenuTabs) .range-fields {grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+    .quiz-container:has(#ymMenuTabs) .range-fields {grid-template-columns:minmax(0,1fr)}
   }
   @media(max-width:370px) {
     .quiz-container:has(#ymMenuTabs) {padding:10px!important;gap:8px}
