@@ -2,7 +2,7 @@
 (() => {
   'use strict';
   let saved = null, owner = null;
-  const originalMenu = menu, originalHistory = showHistory;
+  const originalMenu = menu, originalHistory = showHistory, originalResult = result;
   const bookId = () => window.YMBookRange?.selection().bookId;
   function prepare() { if(owner !== activeUser){saved=null;owner=activeUser;} }
   function remember() {
@@ -31,5 +31,6 @@
   }
   menu=function(){prepare();if(document.getElementById('scoreHistory')&&!document.getElementById('question'))remember();const result=originalMenu.apply(this,arguments);mount(false);return result;};
   showHistory=function(){prepare();const result=originalHistory.apply(this,arguments);mount(true);return result;};
+  result=function(){prepare();const value=originalResult.apply(this,arguments);mount(true);return value;};
   if(document.getElementById('scoreHistory'))mount(true);else if(document.getElementById('ymMenuTabs'))mount(false);
 })();

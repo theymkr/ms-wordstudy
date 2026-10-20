@@ -172,7 +172,7 @@
    const input = document.createElement('input'); input.id = id; input.type = 'number'; input.step = '1'; input.inputMode = 'numeric'; input.setAttribute('aria-describedby','rangeCount'); input.addEventListener('input',captureRange); label.append(input); custom.append(label);
   }
   fields.after(custom);
-  const edit = document.createElement('button'); edit.type = 'button'; edit.id = 'ymEditSelectedBook'; edit.className = 'option-btn'; edit.textContent = '✏️ 단어·뜻 수정';
+  const edit = document.createElement('button'); edit.type = 'button'; edit.id = 'ymEditSelectedBook'; edit.className = 'restart-btn'; edit.textContent = '✏️ 단어·뜻 수정';
   edit.onclick = openSelectedBookEditor;
   byId('ymFileImportOpen')?.after(edit);
   const list = byId('ymImportedSets'); if (list) list.hidden = true;

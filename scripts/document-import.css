@@ -70,3 +70,14 @@
   .ym-import-add-sense {justify-self:start}
   @media(max-width:370px) {.ym-import-sense {grid-template-columns:80px minmax(0,1fr) 44px}}
 }
+
+.ym-dictionary-toolbar{flex:none;display:flex;gap:8px;align-items:center;min-width:0}
+.ym-dictionary-toolbar p{margin:0;font-size:12px;line-height:1.4;flex:1}
+.ym-dictionary-toolbar button{flex:none}
+.ym-dictionary-panel{grid-column:1/-1;min-width:0;border-top:1px solid #435165;padding-top:8px}
+.ym-dictionary-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.ym-dictionary-panel a{color:#9ee4b6;font-size:13px;overflow-wrap:anywhere}
+.ym-dictionary-panel p{font-size:13px;line-height:1.5;margin:6px 0;overflow-wrap:anywhere}
+.ym-dictionary-note{color:#f4d496}
+.ym-dictionary-panel summary{cursor:pointer;min-height:40px;padding:8px 0;font-size:14px}
+.ym-dictionary-synonyms>div{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:6px 0}
