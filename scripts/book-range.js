@@ -56,7 +56,12 @@
    const input = byId(id); input.min = '1'; input.max = String(book.count); input.value = String(val);
   }
   byId('ymCustomRange').hidden = select.value !== 'custom';
-  const edit = byId('ymEditSelectedBook'); if (edit) edit.hidden = !book.set || typeof imports()?.edit !== 'function';
+  const edit = byId('ymEditSelectedBook');
+  if (edit) {
+   edit.hidden = false;
+   edit.disabled = typeof imports()?.edit !== 'function';
+   edit.title = book.set ? book.name + '의 단어·뜻·품사·동의어 수정' : '직접 추가한 책을 골라 수정합니다.';
+  }
   updateAudio(); captureRange();
  }
  function chooseBook(id, options = {}) {
@@ -114,6 +119,40 @@
   }
   return enabled;
  };
+ function openSelectedBookEditor() {
+  const selected = selectedBook().set;
+  if (selected) { imports()?.edit?.(selected); return; }
+  if (byId('ymEditBookDialog')) return;
+  const saved = imports()?.sets?.() || [];
+  const dialog = document.createElement('dialog'); dialog.id = 'ymEditBookDialog';
+  dialog.setAttribute('aria-labelledby', 'ymEditBookTitle');
+  dialog.setAttribute('aria-describedby', 'ymEditBookHelp');
+  const title = document.createElement('h2'); title.id = 'ymEditBookTitle'; title.textContent = '수정할 책 선택';
+  const help = document.createElement('p'); help.id = 'ymEditBookHelp';
+  help.textContent = saved.length ? '기본 MS 단어장은 수정할 수 없습니다. 직접 추가한 책을 선택해 주세요.' : '아직 직접 추가한 책이 없습니다. 사진·파일로 단어장을 만든 뒤 수정할 수 있습니다.';
+  const actions = document.createElement('div'); actions.className = 'ym-edit-book-actions';
+  const cancel = document.createElement('button'); cancel.type = 'button'; cancel.textContent = '취소';
+  cancel.onclick = () => dialog.close();
+  dialog.addEventListener('close', () => { dialog.remove(); byId('ymEditSelectedBook')?.focus(); });
+  dialog.append(title, help);
+  const submit = document.createElement('button'); submit.type = 'button';
+  if (saved.length) {
+   const label = document.createElement('label'); label.textContent = '책 선택';
+   const select = document.createElement('select'); select.id = 'ymEditBookSelect';
+   for (const set of saved) select.append(option(set.id, set.name + ' · ' + (set.words.length + (set.pendingWords?.length || 0)) + '개'));
+   label.append(select); dialog.append(label);
+   submit.textContent = '선택한 책 수정';
+   submit.onclick = () => {
+    const set = imports()?.sets?.().find(item => item.id === select.value);
+    if (!set) { help.textContent = '책 목록이 변경되었습니다. 닫고 다시 선택해 주세요.'; return; }
+    dialog.close(); dialog.remove(); chooseBook(set.id); imports()?.edit?.(set);
+   };
+  } else {
+   submit.textContent = '새 단어장 만들기';
+   submit.onclick = () => { dialog.close(); dialog.remove(); imports()?.open?.(); };
+  }
+  actions.append(cancel, submit); dialog.append(actions); container.append(dialog); dialog.showModal();
+ }
  function mount() {
   const marker = byId('rangeStartSelect'); if (!marker || byId('ymBookSelect')) return;
   prepareOwner();
@@ -133,8 +172,8 @@
    const input = document.createElement('input'); input.id = id; input.type = 'number'; input.step = '1'; input.inputMode = 'numeric'; input.setAttribute('aria-describedby','rangeCount'); input.addEventListener('input',captureRange); label.append(input); custom.append(label);
   }
   fields.after(custom);
-  const edit = document.createElement('button'); edit.type = 'button'; edit.id = 'ymEditSelectedBook'; edit.className = 'option-btn'; edit.textContent = '선택한 책 수정'; edit.hidden = true;
-  edit.onclick = () => { const set = selectedBook().set; if (set) imports()?.edit?.(set); };
+  const edit = document.createElement('button'); edit.type = 'button'; edit.id = 'ymEditSelectedBook'; edit.className = 'option-btn'; edit.textContent = '✏️ 단어·뜻 수정';
+  edit.onclick = openSelectedBookEditor;
   byId('ymFileImportOpen')?.after(edit);
   const list = byId('ymImportedSets'); if (list) list.hidden = true;
   const heading = container.querySelector('h2'); if (heading) heading.textContent = '단어 공부';
