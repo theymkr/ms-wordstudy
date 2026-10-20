@@ -97,7 +97,7 @@
     <textarea id="ymImportRaw" aria-label="추출된 원문" placeholder="추출된 원문 · 직접 입력도 가능&#10;apple | 사과 | n"></textarea>
     <div id="ymImportTools"></div>
    </details>
-   <p class="hint" id="ymImportStatus" role="status">영어·한국어만 인식하며 숫자·특수문자는 제외합니다. 단어·유의어·뜻을 확인한 뒤 저장해 주세요.</p>
+   <p class="hint" id="ymImportStatus" role="status">영어·한국어를 인식하며 불필요한 기호는 제외합니다. 동의어의 쉼표와 구문 안의 띄어쓰기는 유지합니다.</p>
    <div id="ymImportProgress" hidden><progress value="0" max="100" aria-label="진행률"></progress><span aria-live="polite">0%</span></div>
    <div id="ymImportEditor"></div>
    <div id="ymImportBottom"></div>`;

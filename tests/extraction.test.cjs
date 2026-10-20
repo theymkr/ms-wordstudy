@@ -20,9 +20,9 @@ test('new file imports keep English and Korean while stripping symbols and other
  const source='① ★apple*** | 사과🍎, 과일! 123 | n.\n12. clout | influence, pull, power ★ | n. 권력, 영향력 / v. 때리다\n日本語 | 中文';
  assert.deepEqual(core.parseImport(source),[
   {word:'apple',meaning:'사과 과일',pos:'n',synonyms:''},
-  {word:'clout',meaning:'n. 권력 영향력 / v. 때리다',pos:'',synonyms:'influence pull power'}
+  {word:'clout',meaning:'n. 권력 영향력 / v. 때리다',pos:'',synonyms:'influence, pull, power'}
  ]);
- for(const row of core.parseImport(source))for(const value of [row.word,row.synonyms,...core.splitSenses(row).map(s=>s.meaning)])assert.match(value,/^[A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3 ]*$/);
+ for(const row of core.parseImport(source))for(const value of [row.word,...core.splitSenses(row).map(s=>s.meaning)])assert.match(value,/^[A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3 ]*$/);
 });
 test('file filtering preserves columns and incomplete rows, and does not change legacy parsing',()=>{
  const rows=[{word:'uncertain?',meaning:'',pos:'',synonyms:'trial★'},{word:'',meaning:'불확실!',pos:'',synonyms:''}];
@@ -81,4 +81,18 @@ test('synonyms stay paired to senses, with lossless fallback for ambiguous old g
  assert.deepEqual(core.sensesWithSynonyms({...row,synonyms:'power, strike'}).map(s=>s.synonyms),['power, strike','']);
  const stored={...row,senses:[{pos:'n',meaning:'권력',synonyms:''},{pos:'v',meaning:'때리다',synonyms:'hit'}]};
  assert.deepEqual(core.sensesWithSynonyms(stored).map(s=>s.synonyms),['','hit']);
+});
+
+test('file import preserves comma-separated synonyms and multiword phrases through repeated preparation',()=>{
+ for(const source of ['obsolete | Unused, out of use | a. 구식의','obsolete\tUnused, out of use\ta. 구식의','"obsolete","Unused, out of use","a. 구식의"']){
+  const once=core.parseImport(source);
+  assert.equal(once[0].synonyms,'Unused, out of use');
+  assert.equal(core.parse(core.prepareImport(core.prepareImport(source)))[0].synonyms,'Unused, out of use');
+ }
+ const row={word:'clout',meaning:'n. 권력 / v. 때리다',pos:'',synonyms:'influence, pull, power / strike, hit'};
+ const result=core.parse(core.prepareImport(core.serialize([row])))[0];
+ assert.deepEqual(core.sensesWithSynonyms(result).map(s=>s.synonyms),['influence, pull, power','strike, hit']);
+ assert.equal(core.parseImport('obsolete | Unused，out of use★ | a. 구식의')[0].synonyms,'Unused, out of use');
+ assert.equal(core.parseImport('emergent | emerging, nascent, developing; immature | a. 떠오르는')[0].synonyms,'emerging, nascent, developing, immature');
+ assert.equal(core.parseImport('obsolete | unused out of use | a. 구식의')[0].synonyms,'unused out of use','never invent commas missing in the source');
 });

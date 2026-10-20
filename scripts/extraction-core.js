@@ -81,11 +81,16 @@ const withoutPhonetics=value=>String(value||'').replace(/\p{S}/gu,char=>char.nor
 function importLetters(value,word=false){
  return withoutPhonetics(value).replace(/[^A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3\s]/g,word?'':' ').replace(/\s+/g,' ').trim();
 }
+// Commas separate synonyms; spaces inside phrases and slashes between senses
+// are meaningful. Filter each entry without erasing those separators.
+function importSynonyms(value){
+ return withoutPhonetics(value).split('/').map(group=>group.split(/[,;]/).map(part=>importLetters(part)).filter(Boolean).join(', ')).join(' / ').trim();
+}
 function parseImport(text){
- // Keep delimiters and POS markers until columns are parsed; none reach fields.
+ // Keep delimiters and POS markers until columns are parsed; retain synonym separators.
  const source=withoutPhonetics(text).replace(/[^A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3\s0-9|,;."'()\/*-]/g,'')
   .replace(/^[ \d.)*]+/gm,'').replace(/\d+/g,'');
- return parse(source).map(row=>({word:importLetters(row.word,true),...joinSenses(splitSenses(row).map(s=>({pos:s.pos,meaning:importLetters(s.meaning)}))),synonyms:importLetters(row.synonyms),...(row.review?{review:true}:{})})).filter(row=>row.word||row.meaning);
+ return parse(source).map(row=>({word:importLetters(row.word,true),...joinSenses(splitSenses(row).map(s=>({pos:s.pos,meaning:importLetters(s.meaning)}))),synonyms:importSynonyms(row.synonyms),...(row.review?{review:true}:{})})).filter(row=>row.word||row.meaning);
 }
 // PDF text items can be individual letters, words or cells. Reassemble nearby
 // fragments before introducing column separators; hasEOL is not reading order.
