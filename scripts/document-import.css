@@ -36,7 +36,7 @@
   #ymImportProgress progress {flex:1;min-width:0;height:18px;width:100%}
   #ymImportProgress span {min-width:42px;text-align:right}
   #ymImportEditor {display:flex;flex-direction:column;gap:6px;min-height:0;min-width:0;flex:1;overflow:hidden}
-  .ym-import-review-tools {display:flex;justify-content:space-between;gap:8px;flex:none}
+  .ym-import-review-tools {display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;flex:none}
   .ym-import-count {margin:0;font-size:12px;color:#b4c5d9;flex:none}
   #ymImportRows {flex:1;min-height:0;min-width:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:2px 2px 8px;scroll-padding:8px;touch-action:pan-y}
   .ym-import-row {display:grid;grid-template-columns:minmax(0,1fr) 96px 44px;gap:6px;margin-bottom:10px;padding:8px;border:1px solid #465368;border-radius:9px;background:#202731}

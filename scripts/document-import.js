@@ -81,10 +81,10 @@
  function prepareOwner(){if(activeUser!==owner){reset();owner=activeUser;baseKey=SCORE_KEY;}if(!baseKey)baseKey=SCORE_KEY;}
  function button(text,onclick){const b=document.createElement('button');b.type='button';b.className='restart-btn';b.textContent=text;b.onclick=onclick;return b;}
  function mount(){if(!document.getElementById('rangeStartSelect')||document.getElementById('ymFileImportOpen'))return;prepareOwner();document.getElementById('ymPhotoImport')?.setAttribute('hidden','');const b=button('📷 사진 · PDF · Word로 단어장 만들기',open);b.id='ymFileImportOpen';container.append(b);const list=document.createElement('div');list.id='ymImportedSets';container.append(list);
-  for(const set of sets()){const row=document.createElement('div');row.style.cssText='display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0';const label=document.createElement('span');label.textContent=set.name+' · 시험 가능 '+set.words.length+'개 · 확인 필요 '+(set.pendingWords?.length||0)+'개 보관';row.append(label,button('뜻 시험',()=>start(set,'meaning')),button('듣고 쓰기',()=>start(set,'listen')),button('성적',()=>{activate(set);showHistory();}),button('단어 수정',()=>{open();document.getElementById('ymImportName').value=set.name;document.getElementById('ymImportEditor').dataset.setId=set.id;editorRows=[...set.words,...(set.pendingWords||[])].map(copyRow);document.getElementById('ymImportSource').open=!editorRows.length;draw(true);}));list.append(row);}
+  for(const set of sets()){const row=document.createElement('div');row.style.cssText='display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0';const label=document.createElement('span');label.textContent=set.name+' · 시험 가능 '+set.words.length+'개 · 확인 필요 '+(set.pendingWords?.length||0)+'개 보관';row.append(label,button('뜻 시험',()=>start(set,'meaning')),button('듣고 쓰기',()=>start(set,'listen')),button('성적',()=>{activate(set);showHistory();}),button('단어 수정',()=>edit(set)));list.append(row);}
  }
- function open(){
-  dictionary.reset();invalidOnly=false;editorGeneration++;cancelled=true;prepareOwner();const resumedDraft=readDraft();stop();stopClock();busy=false;cancelled=false;editorRows=[];
+ function open(options={}){
+  dictionary.reset();invalidOnly=false;editorGeneration++;cancelled=true;prepareOwner();const resumedDraft=options.resume===false?null:readDraft();stop();stopClock();busy=false;cancelled=false;editorRows=[];
   container.innerHTML=`
    <h2>내 자료로 단어장 만들기</h2>
    <label class="ym-import-name">단어장 이름<input id="ymImportName" maxlength="80" placeholder="예: 영어 3과"></label>
@@ -106,13 +106,22 @@
   document.getElementById('ymImportFiles').onchange=readFiles;document.getElementById('ymImportCamera').onchange=readFiles;
   document.getElementById('ymImportTools').append(button('원문에서 단어 추출',()=>{dictionary.reset();editorRows=parse(document.getElementById('ymImportRaw').value);invalidOnly=false;if(editorRows.length)source.open=false;draw(true);notice(editorRows.length+'개 추출 · 단어와 뜻을 확인해 주세요.');dictionary.run();}));
   document.getElementById('ymImportBottom').append(button('확인 완료 · 단어장 저장',save),button('닫기',()=>{if(busy){cancelled=true;for(const cancel of cancelJobs){try{Promise.resolve(cancel()).catch(()=>{});}catch(e){}}notice('인식 중지 중 · 완료된 페이지는 남깁니다.');return;}menu();}));
-  if(resumedDraft&&Array.isArray(resumedDraft.rows)){editorRows=resumedDraft.rows;document.getElementById('ymImportName').value=resumedDraft.name||'';document.getElementById('ymImportRaw').value=resumedDraft.raw||'';if(resumedDraft.setId)document.getElementById('ymImportEditor').dataset.setId=resumedDraft.setId;notice('임시 저장한 '+editorRows.length+'개 항목을 복원했습니다. 저장 버튼을 누르세요.');}
+  if(resumedDraft&&Array.isArray(resumedDraft.rows)){editorRows=resumedDraft.rows;document.getElementById('ymImportName').value=resumedDraft.name||'';document.getElementById('ymImportRaw').value=resumedDraft.raw||'';if(resumedDraft.setId)document.getElementById('ymImportEditor').dataset.setId=resumedDraft.setId;if(editorRows.length)notice('임시 저장한 '+editorRows.length+'개 항목을 복원했습니다. 계속 수정하거나 “인식 결과 전체 지우기”를 누르세요.');}
   source.open=!editorRows.length;
   document.getElementById('ymImportName').addEventListener('input',storeDraft);document.getElementById('ymImportRaw').addEventListener('input',storeDraft);draw(true);
  }
+ function clearResults(){
+  if(busy)return;
+  if((editorRows.length||document.getElementById('ymImportRaw').value.trim())&&!confirm('현재 인식 결과와 원문을 모두 지울까요? 저장한 단어장과 시험 기록은 유지됩니다.'))return;
+  dictionary.reset();editorGeneration++;cancelled=false;editorRows=[];invalidOnly=false;extractionReview=0;progressValue=0;
+  document.getElementById('ymImportRaw').value='';
+  document.getElementById('ymImportFiles').value='';document.getElementById('ymImportCamera').value='';
+  document.getElementById('ymImportProgress').hidden=true;document.getElementById('ymImportSource').open=true;
+  draw(true);notice('인식 결과와 원문을 모두 지웠습니다. 새 사진·파일을 선택해 주세요.');
+ }
  async function readFiles(event){
   if(busy)return;const files=[...event.target.files];if(!files.length)return;
-  dictionary.reset();busy=true;cancelled=false;extractionReview=0;invalidOnly=false;progressValue=0;progress(0);document.getElementById('ymImportSource').open=false;draw(true);const user=owner,generation=editorGeneration;const controls=[...document.querySelectorAll('#ymImportActions button,#ymImportTools button,#ymImportBottom button,#ymPdfFrom,#ymPdfTo')];
+  dictionary.reset();editorRows=[];document.getElementById('ymImportRaw').value='';busy=true;cancelled=false;extractionReview=0;invalidOnly=false;progressValue=0;progress(0);document.getElementById('ymImportSource').open=false;draw(true);const user=owner,generation=editorGeneration;const controls=[...document.querySelectorAll('#ymImportActions button,#ymImportTools button,#ymImportBottom button,#ymPdfFrom,#ymPdfTo')];
   controls.forEach(b=>{b.disabled=true;b.dataset.normalText=b.textContent;b.title='파일을 읽는 중입니다. 인식이 완료되면 사용할 수 있습니다.';});
   const cancelButton=controls.find(b=>b.textContent==='닫기');if(cancelButton){cancelButton.disabled=false;cancelButton.textContent='인식 중지';}
   const rawBox=document.getElementById('ymImportRaw');rawBox.readOnly=true;const texts=[],errors=[];
@@ -139,7 +148,7 @@
   const toggle=button(invalidOnly?'전체 보기':'인식 확인 '+bad+'개 보기',()=>{invalidOnly=!invalidOnly;draw(true);});
   toggle.setAttribute('aria-pressed',String(invalidOnly));
   const add=button('단어 추가',()=>{editorRows.push({word:'',meaning:'',pos:'',synonyms:''});invalidOnly=false;document.getElementById('ymImportSource').open=false;draw();const list=document.getElementById('ymImportRows');list.scrollTop=list.scrollHeight;list.lastElementChild?.querySelector('input')?.focus({preventScroll:true});});add.disabled=busy;
-  tools.append(toggle,add);root.append(tools);dictionary.toolbar(root);
+  const clear=button('인식 결과 전체 지우기',clearResults);clear.id='ymImportClear';clear.disabled=busy;tools.append(toggle,clear,add);root.append(tools);dictionary.toolbar(root);
   const count=document.createElement('p');count.className='ym-import-count';count.textContent=(invalidOnly?'확인 필요 ':'전체 ')+indexes.length+'개 · 아래로 스크롤하여 수정';root.append(count);
   const list=document.createElement('div');list.id='ymImportRows';list.tabIndex=0;list.setAttribute('role','region');list.setAttribute('aria-label','단어 목록 · 위아래로 스크롤');root.append(list);
   if(!indexes.length){const empty=document.createElement('p');empty.className='hint';empty.textContent=invalidOnly?'확인이 필요한 항목이 없습니다.':busy?'인식된 단어가 여기에 표시됩니다.':'사진·파일을 선택하거나 원문을 입력해 주세요.';list.append(empty);}
@@ -197,7 +206,7 @@
  const previousParts=loadParts;loadParts=function(q){if(!currentSet||splitSenses(currentSet.words[q.sourceIndex-BASE]).every(s=>s.pos))return previousParts(q);document.getElementById('question').textContent=q.word;const area=document.getElementById('area');area.replaceChildren();area.className='options';document.getElementById('feedback').textContent='뜻을 선택하세요. (품사 미지정)';for(const value of [...q.options].sort(()=>Math.random()-.5)){const b=button(value,()=>grade(value===q.options[q.answer],value));b.className='option-btn';area.append(b);}};
  const previousLoad=load;load=function(...args){const r=previousLoad.apply(this,args);if(currentSet){const label=document.createElement('p');label.className='hint';label.textContent='단어장: '+currentSet.name+' · 미국식 기기 음성';container.prepend(label);}return r;};
  const previousSave=saveScore;saveScore=function(...args){const r=previousSave.apply(this,args);if(currentSet&&savedAttemptId){const entries=readScores();const entry=entries.find(x=>x.id===savedAttemptId);if(entry){entry.setName=currentSet.name;entry.setId=currentSet.id;memoryHistory=entries;try{localStorage.setItem(SCORE_KEY,JSON.stringify(entries));}catch(e){scoreMemoryDirty=true;}}}return r;};
- function edit(set){open();document.getElementById('ymImportName').value=set.name;document.getElementById('ymImportEditor').dataset.setId=set.id;editorRows=[...set.words,...(set.pendingWords||[])].map(copyRow);document.getElementById('ymImportSource').open=!editorRows.length;draw(true);}
+ function edit(set){open({resume:false});document.getElementById('ymImportName').value=set.name;document.getElementById('ymImportEditor').dataset.setId=set.id;editorRows=[...set.words,...(set.pendingWords||[])].map(copyRow);document.getElementById('ymImportSource').open=!editorRows.length;draw(true);}
  function setDeleted(id,deleted){prepareOwner();const all=sets(true),item=all.find(x=>x.id===id);if(!item)return false;const now=Math.max(Date.now(),Number(item.updatedAt||0)+1);item.deletedAt=deleted?now:null;item.updatedAt=now;localStorage.setItem(key(),JSON.stringify(all));menu();return true;}
  window.YMImportStudy={parse,extract,open,sets,start,activate,reset,edit,currentSet:()=>currentSet,trash:id=>setDeleted(id,true),restore:id=>setDeleted(id,false)};mount();
 })();
