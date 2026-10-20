@@ -20,9 +20,9 @@ test('new file imports keep English and Korean while stripping symbols and other
  const source='① ★apple*** | 사과🍎, 과일! 123 | n.\n12. clout | influence, pull, power ★ | n. 권력, 영향력 / v. 때리다\n日本語 | 中文';
  assert.deepEqual(core.parseImport(source),[
   {word:'apple',meaning:'사과 과일',pos:'n',synonyms:''},
-  {word:'clout',meaning:'n 권력 영향력 v 때리다',pos:'',synonyms:'influence pull power'}
+  {word:'clout',meaning:'n. 권력 영향력 / v. 때리다',pos:'',synonyms:'influence pull power'}
  ]);
- for(const row of core.parseImport(source))for(const value of Object.values(row))assert.match(value,/^[A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3 ]*$/);
+ for(const row of core.parseImport(source))for(const value of [row.word,row.synonyms,...core.splitSenses(row).map(s=>s.meaning)])assert.match(value,/^[A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3 ]*$/);
 });
 test('file filtering preserves columns and incomplete rows, and does not change legacy parsing',()=>{
  const rows=[{word:'uncertain?',meaning:'',pos:'',synonyms:'trial★'},{word:'',meaning:'불확실!',pos:'',synonyms:''}];
@@ -59,4 +59,15 @@ test('low confidence survives import serialization and suspicious words require 
  assert(core.reviewIssues({word:'obsolete',meaning:'unused'}).length);
  assert.deepEqual(core.reviewIssues({...row,reviewed:true}),[]);
  assert(core.reviewIssues({...row,word:'',reviewed:true}).length);
+});
+
+test('multiple senses keep POS pairs, recover stripped markers, and flag ambiguous OCR',()=>{
+ const expected=[{pos:'n',meaning:'권력, 영향력'},{pos:'v',meaning:'때리다'}];
+ assert.deepEqual(core.splitSenses({meaning:'n. 권력, 영향력 / v. 때리다',pos:''}),expected);
+ assert.deepEqual(core.splitSenses({meaning:'n 권력, 영향력 v 때리다',pos:''}),expected);
+ const bad={word:'clout',meaning:'Γ. 권력, 영향력 / v. 때리다',pos:'v'};
+ assert.equal(core.splitSenses(bad)[0].pos,'');
+ assert(core.reviewIssues({...bad,reviewed:true}).length);
+ assert.deepEqual(core.splitSenses(core.joinSenses(expected)),expected);
+ assert(core.reviewIssues({word:'clout',meaning:'권력',senses:[{pos:'n',meaning:'권력'},{pos:'v',meaning:''}],reviewed:true}).length);
 });

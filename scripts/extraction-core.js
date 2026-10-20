@@ -10,9 +10,26 @@ function meaningInfo(value){
  const senses=[...meaning.matchAll(/(?:^|\s\/\s)(n|v|adj|adv|ad|a)[.,]\s*/gi)];
  return {meaning:senses.length===1&&senses[0].index===0?meaning.slice(senses[0][0].length).trim():meaning,pos:senses.length===1?normalizePos(senses[0][1]):''};
 }
+// Keep one headword with separately editable POS/meaning pairs. Also recognize
+// older imports whose punctuation filtering removed the POS dots and slashes.
+function splitSenses(row){
+ if(Array.isArray(row.senses)&&row.senses.length)return row.senses.map(s=>({pos:normalizePos(s.pos),meaning:clean(s.meaning)}));
+ const value=clean(row.meaning);
+ const marks=[...value.matchAll(/(?:^|\s*\/\s*|\s+)(adj|adv|ad|n|v|a)(?:[.,]\s*|\s+(?=[가-힣]))/gi)];
+ if(!marks.length)return value.split(/\s+\/\s+/).map(meaning=>({pos:normalizePos(row.pos),meaning}));
+ const result=[];
+ if(marks[0].index>0)result.push({pos:'',meaning:value.slice(0,marks[0].index).trim()});
+ marks.forEach((m,i)=>result.push({pos:normalizePos(m[1]),meaning:value.slice(m.index+m[0].length,marks[i+1]?.index??value.length).trim()}));
+ return result;
+}
+function joinSenses(senses){
+ return {pos:senses.length===1?normalizePos(senses[0].pos):'',meaning:senses.map(s=>(senses.length>1&&s.pos?normalizePos(s.pos)+'. ':'')+s.meaning).join(' / ')};
+}
 function reviewIssues(row){
  const word=clean(row.word),meaning=clean(row.meaning),issues=[];
  if(!word||!meaning)issues.push('단어 또는 뜻이 비어 있습니다.');
+ const senses=splitSenses(row);
+ if(senses.length>1&&senses.some(s=>!s.pos||!s.meaning.trim()))issues.push('각 뜻의 품사와 내용을 확인해 주세요.');
  if(row.reviewed)return issues;
  if(row.review)issues.push('인식 신뢰도가 낮습니다. 원문과 비교해 주세요.');
  if(/[가-힣]/.test(word)||word.split(/\s+/).length>5||/\b[b-hj-z]\b/i.test(word)||/[a-z]\s+[A-Z][a-z]/.test(word))issues.push('단어에 다른 글자나 예문이 섞였는지 확인해 주세요.');
@@ -62,7 +79,7 @@ function parseImport(text){
  // Keep delimiters and POS markers until columns are parsed; none reach fields.
  const source=withoutPhonetics(text).replace(/[^A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3\s0-9|,;."'()\/*-]/g,'')
   .replace(/^[ \d.)*]+/gm,'').replace(/\d+/g,'');
- return parse(source).map(row=>({word:importLetters(row.word,true),meaning:importLetters(row.meaning),pos:normalizePos(row.pos),synonyms:importLetters(row.synonyms),...(row.review?{review:true}:{})})).filter(row=>row.word||row.meaning);
+ return parse(source).map(row=>({word:importLetters(row.word,true),...joinSenses(splitSenses(row).map(s=>({pos:s.pos,meaning:importLetters(s.meaning)}))),synonyms:importLetters(row.synonyms),...(row.review?{review:true}:{})})).filter(row=>row.word||row.meaning);
 }
 // PDF text items can be individual letters, words or cells. Reassemble nearby
 // fragments before introducing column separators; hasEOL is not reading order.
@@ -144,6 +161,6 @@ async function extractImage(source,recognize,check=()=>{},progress=()=>{}){
  }
  return {rows,regions:regions.length};
 }
-const api={normalizePos,cleanWord,meaningInfo,reviewIssues,clean,parse,serialize,importLetters,parseImport,prepareImport,pdfText,ocrParameters,detectRegions,prepareCrop,canvasFor,extractImage};
+const api={normalizePos,cleanWord,meaningInfo,splitSenses,joinSenses,reviewIssues,clean,parse,serialize,importLetters,parseImport,prepareImport,pdfText,ocrParameters,detectRegions,prepareCrop,canvasFor,extractImage};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;root.YMExtraction=api;
 })(typeof window!=='undefined'?window:globalThis);

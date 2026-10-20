@@ -37,10 +37,6 @@
   #ymImportProgress span {min-width:42px;text-align:right}
   #ymImportEditor {display:flex;flex-direction:column;gap:6px;min-height:0;min-width:0;flex:1;overflow:hidden}
   .ym-import-review-tools {display:flex;justify-content:space-between;gap:8px;flex:none}
-  #ymImportPager {display:grid;grid-template-columns:64px minmax(0,1fr) 64px;align-items:center;gap:6px;flex:none}
-  .ym-import-page-number {display:flex;justify-content:center;align-items:center;gap:6px;font-size:13px;white-space:nowrap;min-width:0}
-  #ymImportPager input {width:64px;text-align:center;padding:6px;appearance:textfield;-moz-appearance:textfield}
-  #ymImportPager input::-webkit-inner-spin-button {appearance:none}
   .ym-import-count {margin:0;font-size:12px;color:#b4c5d9;flex:none}
   #ymImportRows {flex:1;min-height:0;min-width:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;padding:2px 2px 8px;scroll-padding:8px;touch-action:pan-y}
   .ym-import-row {display:grid;grid-template-columns:minmax(0,1fr) 96px 44px;gap:6px;margin-bottom:10px;padding:8px;border:1px solid #465368;border-radius:9px;background:#202731}
@@ -64,15 +60,13 @@
     .ym-import-row {grid-template-columns:minmax(0,1fr) 80px 44px;padding:6px}
     .ym-import-pdf label {flex-direction:column;align-items:flex-start}
   }
-  @media(min-width:600px) {
-    #ymImportEditor {display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto minmax(0,1fr);column-gap:16px}
-    .ym-import-review-tools {grid-column:1;grid-row:1}
-    #ymImportPager {grid-column:2;grid-row:1}
-    .ym-import-count {grid-column:1/-1;grid-row:2}
-    #ymImportRows {grid-column:1/-1;grid-row:3}
-    .ym-import-row {grid-template-columns:minmax(0,1fr) minmax(0,1fr) 100px 44px}
-    .ym-import-meaning {grid-column:2;grid-row:1}
-    .ym-import-pos {grid-column:3}
-    .ym-import-remove {grid-column:4}
-  }
+  .ym-import-row {grid-template-columns:minmax(0,1fr) 44px}
+  .ym-import-word {grid-column:1;grid-row:1}
+  .ym-import-remove {grid-column:2;grid-row:1}
+  .ym-import-senses,.ym-import-add-sense {grid-column:1/-1}
+  .ym-import-senses {display:flex;flex-direction:column;gap:8px}
+  .ym-import-sense {display:grid;grid-template-columns:96px minmax(0,1fr) 44px;gap:6px;align-items:end}
+  .ym-import-sense label:nth-child(2) {grid-column:2}
+  .ym-import-add-sense {justify-self:start}
+  @media(max-width:370px) {.ym-import-sense {grid-template-columns:80px minmax(0,1fr) 44px}}
 }

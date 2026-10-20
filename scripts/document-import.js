@@ -1,7 +1,7 @@
 
 (() => {
  'use strict';
- const BASE=2956; let owner='',baseKey='',currentSet=null,editorRows=[],page=0,busy=false,cancelled=false;
+ const BASE=2956; let owner='',baseKey='',currentSet=null,editorRows=[],busy=false,cancelled=false;
  const loads=new Map(),cancelJobs=new Set();let progressValue=0,invalidOnly=false;
  const reviewRow=x=>window.YMExtraction.reviewIssues?.(x)||[];
  const readyRow=x=>validRow(x)&&reviewRow(x).length===0;
@@ -9,6 +9,8 @@
  async function bounded(task,label,ms=90000){let timer;try{return await Promise.race([task,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error(label+' 시간이 오래 걸립니다. 페이지 범위를 줄여 다시 시도해 주세요.')),ms);})]);}finally{clearTimeout(timer);}}
  const normalizePos=window.YMExtraction.normalizePos;
  const parse=window.YMExtraction.parse;
+ const splitSenses=window.YMExtraction.splitSenses,joinSenses=window.YMExtraction.joinSenses;
+ const copyRow=x=>({...x,...(x.senses?{senses:x.senses.map(s=>({...s}))}:{})});
  let extractionReview=0,editorGeneration=0;
  async function script(url,global){if(window[global])return window[global];if(!loads.has(url))loads.set(url,new Promise((resolve,reject)=>{const s=document.createElement('script');s.src=url;s.onload=()=>resolve(window[global]);s.onerror=()=>{loads.delete(url);s.remove();reject(Error('인식 도구를 불러오지 못했습니다. 인터넷 연결을 확인해 주세요.'));};document.head.append(s);}));return loads.get(url);}
  let pdfPromise;
@@ -78,10 +80,10 @@
  function prepareOwner(){if(activeUser!==owner){reset();owner=activeUser;baseKey=SCORE_KEY;}if(!baseKey)baseKey=SCORE_KEY;}
  function button(text,onclick){const b=document.createElement('button');b.type='button';b.className='restart-btn';b.textContent=text;b.onclick=onclick;return b;}
  function mount(){if(!document.getElementById('rangeStartSelect')||document.getElementById('ymFileImportOpen'))return;prepareOwner();document.getElementById('ymPhotoImport')?.setAttribute('hidden','');const b=button('📷 사진 · PDF · Word로 단어장 만들기',open);b.id='ymFileImportOpen';container.append(b);const list=document.createElement('div');list.id='ymImportedSets';container.append(list);
-  for(const set of sets()){const row=document.createElement('div');row.style.cssText='display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0';const label=document.createElement('span');label.textContent=set.name+' · 시험 가능 '+set.words.length+'개 · 확인 필요 '+(set.pendingWords?.length||0)+'개 보관';row.append(label,button('뜻 시험',()=>start(set,'meaning')),button('듣고 쓰기',()=>start(set,'listen')),button('성적',()=>{activate(set);showHistory();}),button('단어 수정',()=>{open();document.getElementById('ymImportName').value=set.name;document.getElementById('ymImportEditor').dataset.setId=set.id;editorRows=[...set.words,...(set.pendingWords||[])].map(x=>({...x}));page=0;document.getElementById('ymImportSource').open=!editorRows.length;draw(true);}));list.append(row);}
+  for(const set of sets()){const row=document.createElement('div');row.style.cssText='display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0';const label=document.createElement('span');label.textContent=set.name+' · 시험 가능 '+set.words.length+'개 · 확인 필요 '+(set.pendingWords?.length||0)+'개 보관';row.append(label,button('뜻 시험',()=>start(set,'meaning')),button('듣고 쓰기',()=>start(set,'listen')),button('성적',()=>{activate(set);showHistory();}),button('단어 수정',()=>{open();document.getElementById('ymImportName').value=set.name;document.getElementById('ymImportEditor').dataset.setId=set.id;editorRows=[...set.words,...(set.pendingWords||[])].map(copyRow);document.getElementById('ymImportSource').open=!editorRows.length;draw(true);}));list.append(row);}
  }
  function open(){
-  invalidOnly=false;editorGeneration++;cancelled=true;prepareOwner();const resumedDraft=readDraft();stop();stopClock();busy=false;cancelled=false;editorRows=[];page=0;
+  invalidOnly=false;editorGeneration++;cancelled=true;prepareOwner();const resumedDraft=readDraft();stop();stopClock();busy=false;cancelled=false;editorRows=[];
   container.innerHTML=`
    <h2>내 자료로 단어장 만들기</h2>
    <label class="ym-import-name">단어장 이름<input id="ymImportName" maxlength="80" placeholder="예: 영어 3과"></label>
@@ -101,7 +103,7 @@
   const source=document.getElementById('ymImportSource'),actions=document.getElementById('ymImportActions');
   actions.append(button('📷 사진 찍기',()=>document.getElementById('ymImportCamera').click()),button('📄 파일 선택',()=>document.getElementById('ymImportFiles').click()));
   document.getElementById('ymImportFiles').onchange=readFiles;document.getElementById('ymImportCamera').onchange=readFiles;
-  document.getElementById('ymImportTools').append(button('원문에서 단어 추출',()=>{editorRows=parse(document.getElementById('ymImportRaw').value);page=0;invalidOnly=false;if(editorRows.length)source.open=false;draw(true);notice(editorRows.length+'개 추출 · 단어와 뜻을 확인해 주세요.');}));
+  document.getElementById('ymImportTools').append(button('원문에서 단어 추출',()=>{editorRows=parse(document.getElementById('ymImportRaw').value);invalidOnly=false;if(editorRows.length)source.open=false;draw(true);notice(editorRows.length+'개 추출 · 단어와 뜻을 확인해 주세요.');}));
   document.getElementById('ymImportBottom').append(button('확인 완료 · 단어장 저장',save),button('닫기',()=>{if(busy){cancelled=true;for(const cancel of cancelJobs){try{Promise.resolve(cancel()).catch(()=>{});}catch(e){}}notice('인식 중지 중 · 완료된 페이지는 남깁니다.');return;}menu();}));
   if(resumedDraft&&Array.isArray(resumedDraft.rows)){editorRows=resumedDraft.rows;document.getElementById('ymImportName').value=resumedDraft.name||'';document.getElementById('ymImportRaw').value=resumedDraft.raw||'';if(resumedDraft.setId)document.getElementById('ymImportEditor').dataset.setId=resumedDraft.setId;notice('임시 저장한 '+editorRows.length+'개 항목을 복원했습니다. 저장 버튼을 누르세요.');}
   source.open=!editorRows.length;
@@ -109,7 +111,7 @@
  }
  async function readFiles(event){
   if(busy)return;const files=[...event.target.files];if(!files.length)return;
-  busy=true;cancelled=false;extractionReview=0;page=0;invalidOnly=false;progressValue=0;progress(0);document.getElementById('ymImportSource').open=false;draw(true);const user=owner,generation=editorGeneration;const controls=[...document.querySelectorAll('#ymImportActions button,#ymImportTools button,#ymImportBottom button,#ymPdfFrom,#ymPdfTo')];
+  busy=true;cancelled=false;extractionReview=0;invalidOnly=false;progressValue=0;progress(0);document.getElementById('ymImportSource').open=false;draw(true);const user=owner,generation=editorGeneration;const controls=[...document.querySelectorAll('#ymImportActions button,#ymImportTools button,#ymImportBottom button,#ymPdfFrom,#ymPdfTo')];
   controls.forEach(b=>{b.disabled=true;b.dataset.normalText=b.textContent;b.title='파일을 읽는 중입니다. 인식이 완료되면 사용할 수 있습니다.';});
   const cancelButton=controls.find(b=>b.textContent==='닫기');if(cancelButton){cancelButton.disabled=false;cancelButton.textContent='인식 중지';}
   const rawBox=document.getElementById('ymImportRaw');rawBox.readOnly=true;const texts=[],errors=[];
@@ -133,31 +135,32 @@
   const indexes=editorRows.map((_,i)=>i).filter(i=>!invalidOnly||!validRow(editorRows[i])||reviewRow(editorRows[i]).length);
   const bad=editorRows.filter(x=>!validRow(x)||reviewRow(x).length).length;
   const tools=document.createElement('div');tools.className='ym-import-review-tools';
-  const toggle=button(invalidOnly?'전체 보기':'인식 확인 '+bad+'개 보기',()=>{invalidOnly=!invalidOnly;page=0;draw(true);});
+  const toggle=button(invalidOnly?'전체 보기':'인식 확인 '+bad+'개 보기',()=>{invalidOnly=!invalidOnly;draw(true);});
   toggle.setAttribute('aria-pressed',String(invalidOnly));
-  const add=button('단어 추가',()=>{editorRows.push({word:'',meaning:'',pos:'',synonyms:''});invalidOnly=false;page=Math.floor((editorRows.length-1)/5);document.getElementById('ymImportSource').open=false;draw(true);});add.disabled=busy;
+  const add=button('단어 추가',()=>{editorRows.push({word:'',meaning:'',pos:'',synonyms:''});invalidOnly=false;document.getElementById('ymImportSource').open=false;draw();const list=document.getElementById('ymImportRows');list.scrollTop=list.scrollHeight;list.lastElementChild?.querySelector('input')?.focus({preventScroll:true});});add.disabled=busy;
   tools.append(toggle,add);root.append(tools);
-  const pages=Math.max(1,Math.ceil(indexes.length/5));page=Math.max(0,Math.min(page,pages-1));
-  const nav=document.createElement('nav');nav.id='ymImportPager';nav.setAttribute('aria-label','단어 목록 페이지');
-  const prev=button('이전',()=>{page--;draw(true);});prev.disabled=page===0;
-  const next=button('다음',()=>{page++;draw(true);});next.disabled=page===pages-1;
-  const label=document.createElement('label');label.className='ym-import-page-number';
-  const jump=document.createElement('input');jump.type='number';jump.inputMode='numeric';jump.min='1';jump.max=String(pages);jump.value=String(page+1);jump.setAttribute('aria-label','페이지 번호');
-  function go(){const value=Number(jump.value);page=Number.isFinite(value)?Math.max(0,Math.min(pages-1,Math.floor(value)-1)):page;draw(true);}
-  jump.onchange=go;jump.onkeydown=e=>{if(e.key==='Enter'){e.preventDefault();jump.blur();}};
-  label.append(jump,document.createTextNode(' / '+pages+'쪽'));
-  nav.append(prev,label,next);root.append(nav);
-  const count=document.createElement('p');count.className='ym-import-count';count.textContent=(invalidOnly?'확인 필요 ':'전체 ')+indexes.length+'개 · '+(indexes.length?page*5+1:0)+'–'+Math.min(indexes.length,page*5+5)+'번 표시';root.append(count);
+  const count=document.createElement('p');count.className='ym-import-count';count.textContent=(invalidOnly?'확인 필요 ':'전체 ')+indexes.length+'개 · 아래로 스크롤하여 수정';root.append(count);
   const list=document.createElement('div');list.id='ymImportRows';list.tabIndex=0;list.setAttribute('role','region');list.setAttribute('aria-label','단어 목록 · 위아래로 스크롤');root.append(list);
   if(!indexes.length){const empty=document.createElement('p');empty.className='hint';empty.textContent=invalidOnly?'확인이 필요한 항목이 없습니다.':busy?'인식된 단어가 여기에 표시됩니다.':'사진·파일을 선택하거나 원문을 입력해 주세요.';list.append(empty);}
-  for(const i of indexes.slice(page*5,page*5+5)){
+  for(const i of indexes){
    const row=editorRows[i],line=document.createElement('div');line.className='ym-import-row';
-   for(const [field,title]of [['word','영단어'],['meaning','뜻']]){
-    const label=document.createElement('label');label.className='ym-import-'+field;label.append(document.createTextNode((field==='word'?(i+1)+'. ':'')+title));
-    const input=document.createElement('input');input.value=row[field];input.placeholder=title;input.setAttribute('aria-label',title+' '+(i+1));input.oninput=()=>{row[field]=input.value;delete row.reviewed;storeDraft();};label.append(input);line.append(label);
-   }
-   const posLabel=document.createElement('label');posLabel.className='ym-import-pos';posLabel.append(document.createTextNode('품사'));
-   const pos=document.createElement('select');pos.setAttribute('aria-label','품사 '+(i+1));for(const [v,t]of [['','미지정'],['n','명사'],['v','동사'],['a','형용사'],['ad','부사']]){const o=document.createElement('option');o.value=v;o.textContent=t;pos.append(o);}pos.value=row.pos;pos.onchange=()=>{row.pos=pos.value;storeDraft();};posLabel.append(pos);line.append(posLabel);
+   const wordLabel=document.createElement('label');wordLabel.className='ym-import-word';wordLabel.textContent=(i+1)+'. 영단어';
+   const word=document.createElement('input');word.value=row.word;word.setAttribute('aria-label','영단어 '+(i+1));word.oninput=()=>{row.word=word.value;delete row.reviewed;storeDraft();};wordLabel.append(word);line.append(wordLabel);
+   const senses=row.senses ||= splitSenses(row);
+   const sync=()=>{Object.assign(row,joinSenses(senses));delete row.reviewed;storeDraft();};
+   const senseList=document.createElement('div');senseList.className='ym-import-senses';line.append(senseList);
+   senses.forEach((sense,j)=>{
+    const group=document.createElement('div');group.className='ym-import-sense';
+    const posLabel=document.createElement('label');posLabel.textContent='품사 '+(j+1);
+    const pos=document.createElement('select');pos.setAttribute('aria-label','품사 '+(i+1)+'-'+(j+1));
+    for(const [v,t]of [['','미지정'],['n','명사'],['v','동사'],['a','형용사'],['ad','부사']]){const o=document.createElement('option');o.value=v;o.textContent=t;pos.append(o);}pos.value=sense.pos;pos.onchange=()=>{sense.pos=pos.value;sync();};posLabel.append(pos);
+    const label=document.createElement('label');label.textContent='뜻 '+(j+1);
+    const input=document.createElement('input');input.value=sense.meaning;input.setAttribute('aria-label','뜻 '+(i+1)+'-'+(j+1));input.oninput=()=>{sense.meaning=input.value;sync();};label.append(input);
+    group.append(posLabel,label);
+    if(senses.length>1){const removeSense=button('×',()=>{senses.splice(j,1);sync();draw();});removeSense.setAttribute('aria-label','뜻 '+(i+1)+'-'+(j+1)+' 삭제');group.append(removeSense);}
+    senseList.append(group);
+   });
+   const addSense=button('+ 뜻·품사 추가',()=>{senses.push({pos:'',meaning:''});sync();draw();document.querySelectorAll('.ym-import-row')[indexes.indexOf(i)]?.querySelector('.ym-import-sense:last-child input')?.focus({preventScroll:true});});addSense.className='restart-btn ym-import-add-sense';line.append(addSense);
    const remove=button('×',()=>{editorRows.splice(i,1);draw();});remove.classList.add('ym-import-remove');remove.setAttribute('aria-label','단어 '+(i+1)+' 삭제');line.append(remove);
    const synonyms=document.createElement('input');synonyms.className='ym-import-synonyms';synonyms.value=row.synonyms||'';synonyms.placeholder='영어 유의어 (선택)';synonyms.setAttribute('aria-label','유의어 '+(i+1));synonyms.oninput=()=>{row.synonyms=synonyms.value;delete row.reviewed;storeDraft();};line.append(synonyms);
    const issues=reviewRow(row);if(issues.length){const note=document.createElement('small');note.textContent=issues.join(' ');line.append(note);line.classList.add('ym-import-review');}if(!busy&&validRow(row)&&issues.length){const confirm=button('원문과 확인 완료',()=>{row.reviewed=true;draw();});confirm.style.gridColumn='1/-1';line.append(confirm);}if(!validRow(row))line.classList.add('ym-import-invalid');if(busy)line.querySelectorAll('input,select,button').forEach(x=>x.disabled=true);list.append(line);
@@ -167,7 +170,7 @@
  function save(){
   if(busy){notice('인식 완료 후 저장합니다.');return;}
   storeDraft();const name=document.getElementById('ymImportName').value.trim(),root=document.getElementById('ymImportEditor');
-  const entries=editorRows.map(x=>({word:window.YMExtraction.cleanWord(x.word),meaning:window.YMExtraction.clean(x.meaning),pos:normalizePos(x.pos),synonyms:String(x.synonyms||'').trim(),...(x.review?{review:true}:{}),...(x.reviewed?{reviewed:true}:{})}));
+  const entries=editorRows.map(x=>({word:window.YMExtraction.cleanWord(x.word),meaning:window.YMExtraction.clean(x.meaning),pos:normalizePos(x.pos),senses:splitSenses(x).map(s=>({pos:normalizePos(s.pos),meaning:window.YMExtraction.clean(s.meaning)})),synonyms:String(x.synonyms||'').trim(),...(x.review?{review:true}:{}),...(x.reviewed?{reviewed:true}:{})}));
   if(!name||!entries.length){notice('단어장 이름과 단어를 입력해 주세요.');return;}
   if(entries.length>2000){notice('한 단어장은 최대 2000개입니다. 나누어 저장해 주세요.');return;}
   const words=entries.filter(readyRow),pendingWords=entries.filter(x=>!readyRow(x));
@@ -181,15 +184,17 @@
   const meaning=button('뜻 시험 시작',()=>start(set,'meaning')),listen=button('듣고 쓰기 시작',()=>start(set,'listen'));meaning.disabled=listen.disabled=!set.words.length;container.append(h,label,note,meaning,listen);if(set.pendingWords?.length)container.append(button('확인 필요 항목 수정',()=>edit(set)));container.append(button('단어장 목록',()=>menu()));
  }
  function activate(set){reset();prepareOwner();currentSet=set;SCORE_KEY=baseKey+'-set-'+set.id;memoryHistory=[];wrongMemory={listen:[],meaning:[]};scoreMemoryDirty=false;rangeStart=1;rangeEnd=set.words.length;testCount=set.words.length;
-  const meanings=[...new Set(set.words.map(x=>x.meaning))];set.words.forEach((x,i)=>{const distractors=meanings.filter(m=>m!==x.meaning).sort(()=>Math.random()-.5).slice(0,3);const raw={number:i+1,q:x.word,options:[(x.pos?x.pos+'. ':'')+x.meaning,...distractors],answer:0};const sourceIndex=quizData.length;quizData.push(raw);allQuestions.push({sourceIndex,number:i+1,word:x.word,options:[x.meaning,...distractors],answer:0});});
+  const sensesFor=x=>splitSenses(x),answerFor=x=>sensesFor(x).map(s=>(s.pos?s.pos+'. ':'')+s.meaning).join(' / ');
+  const meanings=[...new Set(set.words.flatMap(x=>sensesFor(x).map(s=>s.meaning)))];
+  set.words.forEach((x,i)=>{const senses=sensesFor(x),answer=answerFor(x),distractors=meanings.filter(m=>!senses.some(s=>s.meaning===m)).sort(()=>Math.random()-.5).slice(0,3);const raw={number:i+1,q:x.word,options:[answer,...distractors],answer:0};const sourceIndex=quizData.length;quizData.push(raw);allQuestions.push({sourceIndex,number:i+1,word:x.word,options:[senses.map(s=>s.meaning).join(' / '),...distractors],answer:0});});
  }
  function start(set,exam){activate(set);mode=exam;pronunciationSource='iphone';startRun(false);}
  const previousSelected=selectedQuestions;selectedQuestions=function(){return currentSet?allQuestions.slice(BASE):previousSelected();};
  const previousMenu=menu;menu=function(...args){if(typeof finishAttempt==='function')finishAttempt();reset();const r=previousMenu.apply(this,args);mount();return r;};
- const previousParts=loadParts;loadParts=function(q){if(!currentSet||currentSet.words[q.sourceIndex-BASE]?.pos)return previousParts(q);document.getElementById('question').textContent=q.word;const area=document.getElementById('area');area.replaceChildren();area.className='options';document.getElementById('feedback').textContent='뜻을 선택하세요. (품사 미지정)';for(const value of [...q.options].sort(()=>Math.random()-.5)){const b=button(value,()=>grade(value===q.options[q.answer],value));b.className='option-btn';area.append(b);}};
+ const previousParts=loadParts;loadParts=function(q){if(!currentSet||splitSenses(currentSet.words[q.sourceIndex-BASE]).every(s=>s.pos))return previousParts(q);document.getElementById('question').textContent=q.word;const area=document.getElementById('area');area.replaceChildren();area.className='options';document.getElementById('feedback').textContent='뜻을 선택하세요. (품사 미지정)';for(const value of [...q.options].sort(()=>Math.random()-.5)){const b=button(value,()=>grade(value===q.options[q.answer],value));b.className='option-btn';area.append(b);}};
  const previousLoad=load;load=function(...args){const r=previousLoad.apply(this,args);if(currentSet){const label=document.createElement('p');label.className='hint';label.textContent='단어장: '+currentSet.name+' · 미국식 기기 음성';container.prepend(label);}return r;};
  const previousSave=saveScore;saveScore=function(...args){const r=previousSave.apply(this,args);if(currentSet&&savedAttemptId){const entries=readScores();const entry=entries.find(x=>x.id===savedAttemptId);if(entry){entry.setName=currentSet.name;entry.setId=currentSet.id;memoryHistory=entries;try{localStorage.setItem(SCORE_KEY,JSON.stringify(entries));}catch(e){scoreMemoryDirty=true;}}}return r;};
- function edit(set){open();document.getElementById('ymImportName').value=set.name;document.getElementById('ymImportEditor').dataset.setId=set.id;editorRows=[...set.words,...(set.pendingWords||[])].map(x=>({...x}));page=0;document.getElementById('ymImportSource').open=!editorRows.length;draw(true);}
+ function edit(set){open();document.getElementById('ymImportName').value=set.name;document.getElementById('ymImportEditor').dataset.setId=set.id;editorRows=[...set.words,...(set.pendingWords||[])].map(copyRow);document.getElementById('ymImportSource').open=!editorRows.length;draw(true);}
  function setDeleted(id,deleted){prepareOwner();const all=sets(true),item=all.find(x=>x.id===id);if(!item)return false;const now=Math.max(Date.now(),Number(item.updatedAt||0)+1);item.deletedAt=deleted?now:null;item.updatedAt=now;localStorage.setItem(key(),JSON.stringify(all));menu();return true;}
  window.YMImportStudy={parse,extract,open,sets,start,activate,reset,edit,currentSet:()=>currentSet,trash:id=>setDeleted(id,true),restore:id=>setDeleted(id,false)};mount();
 })();

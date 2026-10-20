@@ -10,7 +10,7 @@ module.exports = function applyMobileMenu(page) {
   const pagination = / function paginate\(\)\{[^\n]*\}\n/;
   if (!pagination.test(page)) throw Error('History pagination hook changed.');
   page = page.replace(pagination, ' function paginate(){window.YMHistoryLayout?.();}\n');
-  page = page.replace(/(<meta name="ym-build" content=")[^"]+/, (_, prefix) => prefix + '20261020-shared-book-select-v1');
+  page = page.replace(/(<meta name="ym-build" content=")[^"]+/, (_, prefix) => prefix + '20261020-editor-senses-scroll-v1');
   const shrink = "const scale=Math.min(1,(h-16)/Math.max(1,c.scrollHeight+16),(w-16)/Math.max(1,c.scrollWidth));c.style.zoom=String(Math.max(.1,scale));";
   if (!page.includes(shrink)) throw Error('Quiz fitting hook changed.');
   page = page.replace(shrink, "if(!c.querySelector('#question')){" + shrink + "}");
