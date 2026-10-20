@@ -45,23 +45,23 @@
   #ymPanel-review>[id^="wrong-"] {display:block;width:100%}
   #ymPanel-settings .hint,#ymPanel-review .hint,.ym-settings-help {font-size:12px;line-height:1.5;overflow-wrap:anywhere}
   #ymPanel-settings>.restart-btn,#ymPanel-settings>.option-btn {display:block;width:100%;margin:6px 0}
-  .quiz-container:has(#ymMenuTabs) #ymPanel-settings>:is(#ymFileImportOpen,#ymEditSelectedBook) {
+  .quiz-container:has(#ymMenuTabs) #ymPanel-settings>:is(#ymFileImportOpen,#ymEditSelectedBook,#ymTrashSelectedBook) {
     display:block;box-sizing:border-box;width:100%;min-height:44px;margin:6px 0;padding:10px 12px;
     background:#2f81f7;color:#fff;border:0;border-radius:6px;
     font-family:inherit;font-size:14px;font-weight:600;line-height:1.4;text-align:center;cursor:pointer;
   }
-  .quiz-container:has(#ymMenuTabs) #ymPanel-settings>:is(#ymFileImportOpen,#ymEditSelectedBook):hover {background:#388bfd}
-  .quiz-container:has(#ymMenuTabs) #ymPanel-settings>:is(#ymFileImportOpen,#ymEditSelectedBook):focus-visible {outline:3px solid #9dd0ff;outline-offset:2px}
-  #ymEditBookDialog {box-sizing:border-box;width:min(460px,calc(100% - 24px));max-height:calc(100dvh - 32px);overflow:auto;padding:20px;border:1px solid #60778e;border-radius:14px;background:#202832;color:#fff}
-  #ymEditBookDialog::backdrop {background:rgba(0,0,0,.65)}
-  #ymEditBookDialog h2 {font-size:20px;white-space:normal}
-  #ymEditBookDialog p {font-size:14px;line-height:1.5;color:#c5d1de}
-  #ymEditBookDialog label {display:block;font-size:14px}
-  #ymEditBookDialog select {box-sizing:border-box;width:100%;min-height:44px;margin:6px 0 16px;padding:8px;font-size:16px;background:#131b24;color:#fff;border:1px solid #60778e;border-radius:6px}
+  .quiz-container:has(#ymMenuTabs) #ymPanel-settings>:is(#ymFileImportOpen,#ymEditSelectedBook,#ymTrashSelectedBook):hover {background:#388bfd}
+  .quiz-container:has(#ymMenuTabs) #ymPanel-settings>:is(#ymFileImportOpen,#ymEditSelectedBook,#ymTrashSelectedBook):focus-visible {outline:3px solid #9dd0ff;outline-offset:2px}
+  :is(#ymEditBookDialog,#ymDeleteBookDialog) {box-sizing:border-box;width:min(460px,calc(100% - 24px));max-height:calc(100dvh - 32px);overflow:auto;padding:20px;border:1px solid #60778e;border-radius:14px;background:#202832;color:#fff}
+  :is(#ymEditBookDialog,#ymDeleteBookDialog)::backdrop {background:rgba(0,0,0,.65)}
+  :is(#ymEditBookDialog,#ymDeleteBookDialog) h2 {font-size:20px;white-space:normal}
+  :is(#ymEditBookDialog,#ymDeleteBookDialog) p {font-size:14px;line-height:1.5;color:#c5d1de}
+  :is(#ymEditBookDialog,#ymDeleteBookDialog) label {display:block;font-size:14px}
+  :is(#ymEditBookDialog,#ymDeleteBookDialog) select {box-sizing:border-box;width:100%;min-height:44px;margin:6px 0 16px;padding:8px;font-size:16px;background:#131b24;color:#fff;border:1px solid #60778e;border-radius:6px}
   .ym-edit-book-actions {display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
   .ym-edit-book-actions button {min-height:44px;padding:10px 16px;border:1px solid #60778e;border-radius:8px;background:#24364b;color:#fff;font:inherit;cursor:pointer}
   .ym-edit-book-actions button:last-child {background:#2c67bf}
-  #ymEditBookDialog :focus-visible {outline:3px solid #9dd0ff;outline-offset:2px}
+  :is(#ymEditBookDialog,#ymDeleteBookDialog) :focus-visible {outline:3px solid #9dd0ff;outline-offset:2px}
   #ymPanel-settings .pronunciation-speed-scale {display:none}
   @media(min-width:600px) {
     .quiz-container:has(#ymMenuTabs) {padding:20px!important}
