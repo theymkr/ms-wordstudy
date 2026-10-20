@@ -67,7 +67,18 @@ test('multiple senses keep POS pairs, recover stripped markers, and flag ambiguo
  assert.deepEqual(core.splitSenses({meaning:'n 권력, 영향력 v 때리다',pos:''}),expected);
  const bad={word:'clout',meaning:'Γ. 권력, 영향력 / v. 때리다',pos:'v'};
  assert.equal(core.splitSenses(bad)[0].pos,'');
+ assert.equal(core.splitSenses(bad)[0].meaning,'권력, 영향력');
+ assert.equal(core.splitSenses({meaning:'「. 권력, 영향력',pos:''})[0].meaning,'권력, 영향력');
+ assert.equal(core.splitSenses({meaning:'「인용문」, 예시 (설명)',pos:'n'})[0].meaning,'「인용문」, 예시 (설명)');
  assert(core.reviewIssues({...bad,reviewed:true}).length);
  assert.deepEqual(core.splitSenses(core.joinSenses(expected)),expected);
  assert(core.reviewIssues({word:'clout',meaning:'권력',senses:[{pos:'n',meaning:'권력'},{pos:'v',meaning:''}],reviewed:true}).length);
+});
+
+test('synonyms stay paired to senses, with lossless fallback for ambiguous old groups',()=>{
+ const row={meaning:'n. 권력 / v. 때리다',synonyms:'influence, power / strike'};
+ assert.deepEqual(core.sensesWithSynonyms(row).map(s=>s.synonyms),['influence, power','strike']);
+ assert.deepEqual(core.sensesWithSynonyms({...row,synonyms:'power, strike'}).map(s=>s.synonyms),['power, strike','']);
+ const stored={...row,senses:[{pos:'n',meaning:'권력',synonyms:''},{pos:'v',meaning:'때리다',synonyms:'hit'}]};
+ assert.deepEqual(core.sensesWithSynonyms(stored).map(s=>s.synonyms),['','hit']);
 });

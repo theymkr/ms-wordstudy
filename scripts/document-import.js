@@ -146,8 +146,8 @@
    const row=editorRows[i],line=document.createElement('div');line.className='ym-import-row';
    const wordLabel=document.createElement('label');wordLabel.className='ym-import-word';wordLabel.textContent=(i+1)+'. 영단어';
    const word=document.createElement('input');word.value=row.word;word.setAttribute('aria-label','영단어 '+(i+1));word.oninput=()=>{row.word=word.value;delete row.reviewed;storeDraft();};wordLabel.append(word);line.append(wordLabel);
-   const senses=row.senses ||= splitSenses(row);
-   const sync=()=>{Object.assign(row,joinSenses(senses));delete row.reviewed;storeDraft();};
+   const senses=row.senses=window.YMExtraction.sensesWithSynonyms(row);
+   const sync=()=>{Object.assign(row,joinSenses(senses));row.synonyms=senses.map(s=>s.synonyms||'').join(' / ');delete row.reviewed;storeDraft();};
    const senseList=document.createElement('div');senseList.className='ym-import-senses';line.append(senseList);
    senses.forEach((sense,j)=>{
     const group=document.createElement('div');group.className='ym-import-sense';
@@ -158,11 +158,12 @@
     const input=document.createElement('input');input.value=sense.meaning;input.setAttribute('aria-label','뜻 '+(i+1)+'-'+(j+1));input.oninput=()=>{sense.meaning=input.value;sync();};label.append(input);
     group.append(posLabel,label);
     if(senses.length>1){const removeSense=button('×',()=>{senses.splice(j,1);sync();draw();});removeSense.setAttribute('aria-label','뜻 '+(i+1)+'-'+(j+1)+' 삭제');group.append(removeSense);}
+    const synonymLabel=document.createElement('label');synonymLabel.className='ym-import-synonyms';synonymLabel.textContent='동의어 '+(j+1);
+    const synonyms=document.createElement('input');synonyms.value=sense.synonyms;synonyms.placeholder='이 뜻의 영어 동의어 (선택)';synonyms.setAttribute('aria-label','동의어 '+(i+1)+'-'+(j+1));synonyms.oninput=()=>{sense.synonyms=synonyms.value;sync();};synonymLabel.append(synonyms);group.append(synonymLabel);
     senseList.append(group);
    });
-   const addSense=button('+ 뜻·품사 추가',()=>{senses.push({pos:'',meaning:''});sync();draw();document.querySelectorAll('.ym-import-row')[indexes.indexOf(i)]?.querySelector('.ym-import-sense:last-child input')?.focus({preventScroll:true});});addSense.className='restart-btn ym-import-add-sense';line.append(addSense);
+   const addSense=button('+ 뜻·품사·동의어 추가',()=>{senses.push({pos:'',meaning:'',synonyms:''});sync();draw();document.querySelectorAll('.ym-import-row')[indexes.indexOf(i)]?.querySelector('.ym-import-sense:last-child input')?.focus({preventScroll:true});});addSense.className='restart-btn ym-import-add-sense';line.append(addSense);
    const remove=button('×',()=>{editorRows.splice(i,1);draw();});remove.classList.add('ym-import-remove');remove.setAttribute('aria-label','단어 '+(i+1)+' 삭제');line.append(remove);
-   const synonyms=document.createElement('input');synonyms.className='ym-import-synonyms';synonyms.value=row.synonyms||'';synonyms.placeholder='영어 유의어 (선택)';synonyms.setAttribute('aria-label','유의어 '+(i+1));synonyms.oninput=()=>{row.synonyms=synonyms.value;delete row.reviewed;storeDraft();};line.append(synonyms);
    const issues=reviewRow(row);if(issues.length){const note=document.createElement('small');note.textContent=issues.join(' ');line.append(note);line.classList.add('ym-import-review');}if(!busy&&validRow(row)&&issues.length){const confirm=button('원문과 확인 완료',()=>{row.reviewed=true;draw();});confirm.style.gridColumn='1/-1';line.append(confirm);}if(!validRow(row))line.classList.add('ym-import-invalid');if(busy)line.querySelectorAll('input,select,button').forEach(x=>x.disabled=true);list.append(line);
   }
   list.scrollTop=scrollTop;
@@ -170,7 +171,7 @@
  function save(){
   if(busy){notice('인식 완료 후 저장합니다.');return;}
   storeDraft();const name=document.getElementById('ymImportName').value.trim(),root=document.getElementById('ymImportEditor');
-  const entries=editorRows.map(x=>({word:window.YMExtraction.cleanWord(x.word),meaning:window.YMExtraction.clean(x.meaning),pos:normalizePos(x.pos),senses:splitSenses(x).map(s=>({pos:normalizePos(s.pos),meaning:window.YMExtraction.clean(s.meaning)})),synonyms:String(x.synonyms||'').trim(),...(x.review?{review:true}:{}),...(x.reviewed?{reviewed:true}:{})}));
+  const entries=editorRows.map(x=>({word:window.YMExtraction.cleanWord(x.word),...joinSenses(splitSenses(x)),senses:splitSenses(x),synonyms:String(x.synonyms||'').trim(),...(x.review?{review:true}:{}),...(x.reviewed?{reviewed:true}:{})}));
   if(!name||!entries.length){notice('단어장 이름과 단어를 입력해 주세요.');return;}
   if(entries.length>2000){notice('한 단어장은 최대 2000개입니다. 나누어 저장해 주세요.');return;}
   const words=entries.filter(readyRow),pendingWords=entries.filter(x=>!readyRow(x));

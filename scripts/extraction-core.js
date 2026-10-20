@@ -5,6 +5,8 @@ const POS={n:'n',v:'v',a:'a',adj:'a',ad:'ad',adv:'ad','명사':'n','동사':'v',
 const normalizePos=s=>POS[String(s||'').trim().toLowerCase().replace(/\.$/,'')]||'';
 const clean=s=>String(s||'').normalize('NFKC').replace(/[\u200B-\u200D\u2060\uFEFF]/g,'').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g,'').replace(/[‘’]/g,"'").replace(/[“”]/g,'"').replace(/[‐‑–—]/g,'-').replace(/\u00a0/g,' ').replace(/[ \t]+/g,' ').trim();
 const cleanWord=s=>clean(s).replace(/^[\s\d①-⑳.)·•▶▷>]+/,'').replace(/[*＊™®“”]+$/,'').trim();
+// Remove a malformed OCR POS prefix, not punctuation inside a definition.
+const cleanMeaning=s=>clean(s).replace(/^(?:[「『Γㄱ┌┐]\s*[.,。]\s*)+/u,'').trim();
 function meaningInfo(value){
  const meaning=clean(String(value||'').trim().replace(/\s*\n\s*/g,' / '));
  const senses=[...meaning.matchAll(/(?:^|\s\/\s)(n|v|adj|adv|ad|a)[.,]\s*/gi)];
@@ -13,17 +15,21 @@ function meaningInfo(value){
 // Keep one headword with separately editable POS/meaning pairs. Also recognize
 // older imports whose punctuation filtering removed the POS dots and slashes.
 function splitSenses(row){
- if(Array.isArray(row.senses)&&row.senses.length)return row.senses.map(s=>({pos:normalizePos(s.pos),meaning:clean(s.meaning)}));
+ if(Array.isArray(row.senses)&&row.senses.length)return row.senses.map(s=>({pos:normalizePos(s.pos),meaning:cleanMeaning(s.meaning),...(typeof s.synonyms==='string'?{synonyms:s.synonyms}:{})}));
  const value=clean(row.meaning);
  const marks=[...value.matchAll(/(?:^|\s*\/\s*|\s+)(adj|adv|ad|n|v|a)(?:[.,]\s*|\s+(?=[가-힣]))/gi)];
- if(!marks.length)return value.split(/\s+\/\s+/).map(meaning=>({pos:normalizePos(row.pos),meaning}));
+ if(!marks.length)return value.split(/\s+\/\s+/).map(meaning=>({pos:normalizePos(row.pos),meaning:cleanMeaning(meaning)}));
  const result=[];
  if(marks[0].index>0)result.push({pos:'',meaning:value.slice(0,marks[0].index).trim()});
  marks.forEach((m,i)=>result.push({pos:normalizePos(m[1]),meaning:value.slice(m.index+m[0].length,marks[i+1]?.index??value.length).trim()}));
- return result;
+ return result.map(s=>({...s,meaning:cleanMeaning(s.meaning)}));
 }
 function joinSenses(senses){
- return {pos:senses.length===1?normalizePos(senses[0].pos):'',meaning:senses.map(s=>(senses.length>1&&s.pos?normalizePos(s.pos)+'. ':'')+s.meaning).join(' / ')};
+ return {pos:senses.length===1?normalizePos(senses[0].pos):'',meaning:senses.map(s=>(senses.length>1&&s.pos?normalizePos(s.pos)+'. ':'')+cleanMeaning(s.meaning)).join(' / ')};
+}
+function sensesWithSynonyms(row){
+ const senses=splitSenses(row),groups=String(row.synonyms||'').split(/\s*\/\s*/);
+ return senses.map((s,i)=>({...s,synonyms:typeof s.synonyms==='string'?s.synonyms:groups.length===senses.length?groups[i]:(i===0?String(row.synonyms||''): '')}));
 }
 function reviewIssues(row){
  const word=clean(row.word),meaning=clean(row.meaning),issues=[];
@@ -161,6 +167,6 @@ async function extractImage(source,recognize,check=()=>{},progress=()=>{}){
  }
  return {rows,regions:regions.length};
 }
-const api={normalizePos,cleanWord,meaningInfo,splitSenses,joinSenses,reviewIssues,clean,parse,serialize,importLetters,parseImport,prepareImport,pdfText,ocrParameters,detectRegions,prepareCrop,canvasFor,extractImage};
+const api={normalizePos,cleanWord,meaningInfo,splitSenses,joinSenses,sensesWithSynonyms,reviewIssues,clean,parse,serialize,importLetters,parseImport,prepareImport,pdfText,ocrParameters,detectRegions,prepareCrop,canvasFor,extractImage};
 if(typeof module!=='undefined'&&module.exports)module.exports=api;root.YMExtraction=api;
 })(typeof window!=='undefined'?window:globalThis);
