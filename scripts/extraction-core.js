@@ -86,11 +86,14 @@ function importLetters(value,word=false){
 function importSynonyms(value){
  return withoutPhonetics(value).split('/').map(group=>group.split(/[,;]/).map(part=>importLetters(part)).filter(Boolean).join(', ')).join(' / ').trim();
 }
+function importMeaning(value){
+ return withoutPhonetics(value).split(',').map(part=>importLetters(part)).filter(Boolean).join(', ');
+}
 function parseImport(text){
- // Keep delimiters and POS markers until columns are parsed; retain synonym separators.
+ // Keep delimiters and POS markers until columns are parsed; retain meaning and synonym separators.
  const source=withoutPhonetics(text).replace(/[^A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3\s0-9|,;."'()\/*-]/g,'')
   .replace(/^[ \d.)*]+/gm,'').replace(/\d+/g,'');
- return parse(source).map(row=>({word:importLetters(row.word,true),...joinSenses(splitSenses(row).map(s=>({pos:s.pos,meaning:importLetters(s.meaning)}))),synonyms:importSynonyms(row.synonyms),...(row.review?{review:true}:{})})).filter(row=>row.word||row.meaning);
+ return parse(source).map(row=>({word:importLetters(row.word,true),...joinSenses(splitSenses(row).map(s=>({pos:s.pos,meaning:importMeaning(s.meaning)}))),synonyms:importSynonyms(row.synonyms),...(row.review?{review:true}:{})})).filter(row=>row.word||row.meaning);
 }
 // PDF text items can be individual letters, words or cells. Reassemble nearby
 // fragments before introducing column separators; hasEOL is not reading order.

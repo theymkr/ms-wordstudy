@@ -34,6 +34,16 @@ const dom=new JSDOM(html,{url:'https://import.test/',runScripts:'dangerously',pr
  const panels=[...d.querySelectorAll('.answer-panel')];
  for(const [i,pos,meaning]of [[0,'명사','권력, 영향력'],[1,'동사','때리다']]){panels[i].querySelector('[data-part="pos"][data-value="'+pos+'"]').click();panels[i].querySelector('[data-part="meaning"][data-value="'+meaning+'"]').click();}
  assert(w.T.state().locked);assert(d.getElementById('ymAnswerFlash').textContent.includes('정답!'));w.T.stop();
+ // Exercise the file-preparation path through editor persistence.
+ w.YMImportStudy.open({resume:false});d.getElementById('ymImportName').value='쉼표 확인';
+ d.getElementById('ymImportRaw').value=w.YMExtraction.prepareImport('clout | influence, power / strike | n. 권력, 영향력 / v. 때리다, 치다');
+ d.querySelector('#ymImportTools button').click();
+ assert.equal(d.querySelector('[aria-label="뜻 1-1"]').value,'권력, 영향력');
+ d.querySelector('#ymImportBottom button').click();
+ const commaBook=w.YMImportStudy.sets().find(s=>s.name==='쉼표 확인');assert(commaBook);
+ w.YMImportStudy.edit(commaBook);
+ assert.equal(d.querySelector('[aria-label="뜻 1-1"]').value,'권력, 영향력');
+ assert.equal(d.querySelector('[aria-label="뜻 1-2"]').value,'때리다, 치다');
  await new Promise(r=>setTimeout(r,60));assert.deepEqual(errors,[]);
  console.log('PASS: 605 continuous rows, ambiguous POS review, separate senses edit/save/reopen, add/remove sense, two-part quiz grading');
  }finally{observers.forEach(o=>o.disconnect());dom.window.close();}})().catch(e=>{console.error(e);process.exitCode=1});

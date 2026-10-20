@@ -19,16 +19,16 @@ test('uncertain structured records remain editable rather than disappearing',()=
 test('new file imports keep English and Korean while stripping symbols and other scripts',()=>{
  const source='① ★apple*** | 사과🍎, 과일! 123 | n.\n12. clout | influence, pull, power ★ | n. 권력, 영향력 / v. 때리다\n日本語 | 中文';
  assert.deepEqual(core.parseImport(source),[
-  {word:'apple',meaning:'사과 과일',pos:'n',synonyms:''},
-  {word:'clout',meaning:'n. 권력 영향력 / v. 때리다',pos:'',synonyms:'influence, pull, power'}
+  {word:'apple',meaning:'사과, 과일',pos:'n',synonyms:''},
+  {word:'clout',meaning:'n. 권력, 영향력 / v. 때리다',pos:'',synonyms:'influence, pull, power'}
  ]);
- for(const row of core.parseImport(source))for(const value of [row.word,...core.splitSenses(row).map(s=>s.meaning)])assert.match(value,/^[A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3 ]*$/);
+ for(const row of core.parseImport(source))for(const value of [row.word,...core.splitSenses(row).map(s=>s.meaning)])assert.match(value,/^[A-Za-z\u1100-\u11ff\u3131-\u318e\uac00-\ud7a3 ,]*$/);
 });
 test('file filtering preserves columns and incomplete rows, and does not change legacy parsing',()=>{
  const rows=[{word:'uncertain?',meaning:'',pos:'',synonyms:'trial★'},{word:'',meaning:'불확실!',pos:'',synonyms:''}];
  const result=core.parse(core.prepareImport(core.serialize(rows)));
  assert.deepEqual(result,[{word:'uncertain',meaning:'',pos:'',synonyms:'trial'},{word:'',meaning:'불확실',pos:'',synonyms:''}]);
- assert.equal(core.parseImport('"apple","사과, 과일!","n"')[0].meaning,'사과 과일');
+ assert.equal(core.parseImport('"apple","사과, 과일!","n"')[0].meaning,'사과, 과일');
  assert.equal(core.parseImport('apple;사과★;n')[0].pos,'n');
  assert.equal(core.parseImport('well-known | 잘 알려진!')[0].word,'wellknown');
  assert.equal(core.parse('well-known | 잘 알려진!')[0].word,'well-known');
@@ -95,4 +95,18 @@ test('file import preserves comma-separated synonyms and multiword phrases throu
  assert.equal(core.parseImport('obsolete | Unused，out of use★ | a. 구식의')[0].synonyms,'Unused, out of use');
  assert.equal(core.parseImport('emergent | emerging, nascent, developing; immature | a. 떠오르는')[0].synonyms,'emerging, nascent, developing, immature');
  assert.equal(core.parseImport('obsolete | unused out of use | a. 구식의')[0].synonyms,'unused out of use','never invent commas missing in the source');
+});
+
+
+test('imported meanings preserve commas across formats, senses and repeated preparation',()=>{
+ for(const source of ['obsolete | 구식의, 쓸모 없어진 | a','obsolete\t구식의, 쓸모 없어진\ta','"obsolete","구식의, 쓸모 없어진","a"','obsolete a. 구식의, 쓸모 없어진']){
+  assert.equal(core.parseImport(source)[0].meaning,'구식의, 쓸모 없어진');
+  assert.equal(core.parse(core.prepareImport(core.prepareImport(source)))[0].meaning,'구식의, 쓸모 없어진');
+ }
+ const row={word:'clout',meaning:'n. 권력, 영향력 / v. 때리다, 치다',pos:'',synonyms:'influence, power / hit, strike'};
+ const result=core.parse(core.prepareImport(core.serialize([row])))[0];
+ assert.deepEqual(core.sensesWithSynonyms(result),[{pos:'n',meaning:'권력, 영향력',synonyms:'influence, power'},{pos:'v',meaning:'때리다, 치다',synonyms:'hit, strike'}]);
+ assert.equal(core.parseImport('obsolete | 구식의，쓸모 없어진★ | a')[0].meaning,'구식의, 쓸모 없어진');
+ assert.equal(core.parseImport('obsolete | 구식의 쓸모 없어진 | a')[0].meaning,'구식의 쓸모 없어진','do not invent missing commas');
+ assert(core.ocrParameters('eng+kor','6').tessedit_char_whitelist.includes(','));
 });
