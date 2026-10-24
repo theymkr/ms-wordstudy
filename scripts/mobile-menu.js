@@ -54,7 +54,7 @@
       nav.append(tab);
       const panel = document.createElement('section'); panel.id = 'ymPanel-' + name;
       panel.className = 'ym-menu-panel'; panel.dataset.panel = name; panel.setAttribute('role','tabpanel');
-      panel.setAttribute('aria-labelledby',tab.id); panels[name] = panel;
+      panel.setAttribute('aria-labelledby',tab.id); panel.tabIndex = 0; panels[name] = panel;
     }
     const study = panels.study, review = panels.study, settings = panels.settings;
     const fields = c.querySelector('.range-fields');
@@ -90,7 +90,7 @@
       if (node.parentElement !== c) continue;
       if (node.hidden || node.classList.contains('range-eyebrow')) { node.hidden = true; continue; }
       const text = node.textContent || '';
-      if (node.id === 'ymFrequentActions' || node.id.startsWith('wrong-') || /성적 기록|결과 복사|틀린 문제만|각 방식의 최근 시험/.test(text)) move(review,node);
+      if (node.id === 'ymSameRangeSummary' || node.id === 'ymFrequentActions' || node.id.startsWith('wrong-') || /성적 기록|결과 복사|틀린 문제만|각 방식의 최근 시험/.test(text)) move(review,node);
       else move(settings,node);
     }
     const rules = settings.querySelector('.range-rules');

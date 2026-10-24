@@ -7,10 +7,14 @@ module.exports = function applyMobileMenu(page) {
   const oldFit = "c.style.zoom='1';const v=window.visualViewport;";
   if (!page.includes(oldFit)) throw Error('Screen fitting hook changed.');
   page = page.replace(oldFit, "if(c.querySelector('#ymBookSelect, #scoreHistory, #ymImportEditor, #ymMemorizeScreen')){c.style.zoom='1';c.style.maxWidth='';return;}" + oldFit);
+  // Range changes regenerate this section after the menu panels are mounted.
+  const rangeSummary = ' container.append(section);return ok;';
+  if (page.split(rangeSummary).length !== 2) throw Error('Range summary placement hook changed.');
+  page = page.replace(rangeSummary, " (document.getElementById('ymPanel-study') || container).append(section);return ok;");
   const pagination = / function paginate\(\)\{[^\n]*\}\n/;
   if (!pagination.test(page)) throw Error('History pagination hook changed.');
   page = page.replace(pagination, ' function paginate(){window.YMHistoryLayout?.();}\n');
-  page = page.replace(/(<meta name="ym-build" content=")[^"]+/, (_, prefix) => prefix + '20261020-meaning-comma-v1');
+  page = page.replace(/(<meta name="ym-build" content=")[^"]+/, (_, prefix) => prefix + '20261024-range-summary-scroll-v1');
   const shrink = "const scale=Math.min(1,(h-16)/Math.max(1,c.scrollHeight+16),(w-16)/Math.max(1,c.scrollWidth));c.style.zoom=String(Math.max(.1,scale));";
   if (!page.includes(shrink)) throw Error('Quiz fitting hook changed.');
   page = page.replace(shrink, "if(!c.querySelector('#question')){" + shrink + "}");

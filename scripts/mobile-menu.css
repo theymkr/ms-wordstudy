@@ -17,7 +17,7 @@
   #ymMenuTabs button {font:inherit;font-size:14px;font-weight:600;min-height:44px;padding:8px 4px;border:0;border-radius:7px;background:transparent;color:#b9c2cf;cursor:pointer}
   #ymMenuTabs button[aria-selected="true"] {color:#fff;background:#2c67bf}
   #ymMenuTabs button:focus-visible {outline:3px solid #9dd0ff;outline-offset:1px}
-  .ym-menu-panel {min-height:0;min-width:0;overflow-y:auto;overflow-x:hidden;flex:1;overscroll-behavior:contain;padding:2px}
+  .ym-menu-panel {min-height:0;min-width:0;overflow-y:auto;overflow-x:hidden;flex:1;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;padding:2px}
   #ymMenuBook {display:block;flex:none;margin:0}
   #ymMenuBook select {display:block;box-sizing:border-box;width:100%}
   .quiz-container:has(#ymMenuTabs) .range-fields {grid-template-columns:minmax(0,1fr);gap:10px;margin:0}
@@ -41,6 +41,8 @@
   .ym-menu-panel>.restart-btn,.ym-menu-panel>.option-btn {box-sizing:border-box;max-width:100%;min-height:44px;margin:5px 6px 5px 0;font-size:14px;padding:10px 12px;word-break:keep-all}
   .quiz-container:has(#ymMenuTabs) .ym-frequent-actions {grid-template-columns:repeat(2,minmax(0,1fr));margin:0 0 16px;gap:10px}
   .quiz-container:has(#ymMenuTabs) .ym-frequent-actions .restart-btn {font-size:14px;min-height:60px;word-break:keep-all;line-height:1.4}
+  #ymPanel-study #ymSameRangeSummary h3 {font-size:16px;margin:14px 0 10px}
+  #ymSameRangeSummary p {font-size:14px;line-height:1.45;overflow-wrap:anywhere}
   #ymPanel-review h3 {font-size:16px;margin:14px 0 10px}
   #ymPanel-review>[id^="wrong-"] {display:block;width:100%}
   #ymPanel-settings .hint,#ymPanel-review .hint,.ym-settings-help {font-size:12px;line-height:1.5;overflow-wrap:anywhere}
